@@ -1,0 +1,354 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // Development Tasks
+    {
+      "label": "Start Development Server",
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build Production",
+      "type": "npm",
+      "script": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      },
+      "group": "build"
+    },
+    {
+      "label": "Preview Production Build",
+      "type": "npm",
+      "script": "preview",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "group": "development"
+      }
+    },
+
+    // Testing Tasks
+    {
+      "label": "Run All Tests",
+      "type": "npm",
+      "script": "test",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      },
+      "group": "test"
+    },
+    {
+      "label": "Run Unit Tests",
+      "type": "shell",
+      "command": "npm run test:unit",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      },
+      "group": "test"
+    },
+    {
+      "label": "Run Unit Tests with Coverage",
+      "type": "shell",
+      "command": "npm run test:coverage",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      },
+      "group": "test"
+    },
+    {
+      "label": "Run E2E Tests",
+      "type": "shell",
+      "command": "npm run test:e2e",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      },
+      "group": "test"
+    },
+    {
+      "label": "Run E2E Tests with UI",
+      "type": "shell",
+      "command": "npm run test:e2e:ui",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": "test"
+    },
+    {
+      "label": "Watch Tests",
+      "type": "shell",
+      "command": "npm run test:watch",
+      "isBackground": true,
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+
+    // Linting Tasks
+    {
+      "label": "Lint JavaScript",
+      "type": "shell",
+      "command": "npm run lint",
+      "problemMatcher": ["$eslint-stylish"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Fix JavaScript Linting",
+      "type": "shell",
+      "command": "npm run lint:fix",
+      "problemMatcher": ["$eslint-stylish"],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Lint CSS",
+      "type": "shell",
+      "command": "npm run lint:css",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Lint Markdown",
+      "type": "shell",
+      "command": "npm run lint:md",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+
+    // Formatting Tasks
+    {
+      "label": "Format Code",
+      "type": "shell",
+      "command": "npm run format",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Check Formatting",
+      "type": "shell",
+      "command": "npm run format:check",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+
+    // Accessibility Tasks
+    {
+      "label": "Run Accessibility Tests",
+      "type": "shell",
+      "command": "npm run a11y",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Run Axe Accessibility Tests",
+      "type": "shell",
+      "command": "npm run a11y:axe",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Validate HTML",
+      "type": "shell",
+      "command": "npm run validate:html",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+
+    // Performance Tasks
+    {
+      "label": "Run Performance Tests",
+      "type": "shell",
+      "command": "npm run perf",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+
+    // Quality Check Tasks
+    {
+      "label": "Run All Checks",
+      "type": "shell",
+      "command": "npm run check",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Security Audit",
+      "type": "shell",
+      "command": "npm audit",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Fix Security Issues",
+      "type": "shell",
+      "command": "npm audit fix",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+
+    // Utility Tasks
+    {
+      "label": "Clean Project",
+      "type": "shell",
+      "command": "npm run clean",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "CI Install",
+      "type": "shell",
+      "command": "npm ci",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Generate Component",
+      "type": "shell",
+      "command": "npm run generate",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+
+    // Deployment Tasks
+    {
+      "label": "Deploy to Production",
+      "type": "shell",
+      "command": "npm run deploy",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Serve Distribution",
+      "type": "shell",
+      "command": "npm run serve",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+      }
+    },
+
+    // Compound Tasks
+    {
+      "label": "Full CI Pipeline",
+      "type": "shell",
+      "command": "npm run ci",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+      }
+    },
+    {
+      "label": "Lint All",
+      "dependsOn": [
+        "Lint JavaScript",
+        "Lint CSS",
+        "Lint Markdown"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Test All",
+      "dependsOn": [
+        "Run Unit Tests",
+        "Run E2E Tests",
+        "Run Accessibility Tests"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Pre-commit Checks",
+      "dependsOn": [
+        "Check Formatting",
+        "Lint JavaScript",
+        "Lint CSS",
+        "Run Unit Tests"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

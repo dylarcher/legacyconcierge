@@ -1,0 +1,342 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // Browser Debugging
+    {
+      "name": "Launch Chrome (Dev Server)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "Start Development Server",
+      "presentation": {
+        "group": "browser",
+        "order": 1
+      }
+    },
+    {
+      "name": "Launch Chrome (Production Build)",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:4173",
+      "webRoot": "${workspaceFolder}/dist",
+      "sourceMaps": false,
+      "preLaunchTask": "Preview Production Build",
+      "presentation": {
+        "group": "browser",
+        "order": 2
+      }
+    },
+    {
+      "name": "Launch Firefox (Dev Server)",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "pathMappings": [
+        {
+          "url": "http://localhost:5173",
+          "path": "${workspaceFolder}"
+        }
+      ],
+      "preLaunchTask": "Start Development Server",
+      "presentation": {
+        "group": "browser",
+        "order": 3
+      }
+    },
+    {
+      "name": "Launch Edge (Dev Server)",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "Start Development Server",
+      "presentation": {
+        "group": "browser",
+        "order": 4
+      }
+    },
+
+    // NPM Script Debugging (Portable)
+    {
+      "name": "npm: dev",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Local:.*http://localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      },
+      "presentation": {
+        "group": "npm",
+        "order": 1
+      }
+    },
+    {
+      "name": "npm: build",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "build"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 2
+      }
+    },
+    {
+      "name": "npm: test",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 3
+      }
+    },
+    {
+      "name": "npm: test:unit",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test:unit"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 4
+      }
+    },
+    {
+      "name": "npm: test:e2e",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test:e2e"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 5
+      }
+    },
+    {
+      "name": "npm: lint",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "lint"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 6
+      }
+    },
+    {
+      "name": "npm: check",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "check"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 7
+      }
+    },
+    {
+      "name": "npm: perf",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "perf"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 8
+      }
+    },
+    {
+      "name": "npm: a11y",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "a11y"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 9
+      }
+    },
+
+    // Vitest Debugging
+    {
+      "name": "Debug Vitest Current File",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vitest",
+        "run",
+        "--config",
+        "./conf/vitest.config.js",
+        "${file}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "test",
+        "order": 1
+      }
+    },
+    {
+      "name": "Debug All Vitest Tests",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vitest",
+        "run",
+        "--config",
+        "./conf/vitest.config.js"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "test",
+        "order": 2
+      }
+    },
+
+    // Playwright Debugging
+    {
+      "name": "Debug Playwright Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
+        "test",
+        "--config=./conf/playwright.config.js",
+        "--headed",
+        "--debug"
+      ],
+      "runtimeArgs": [
+        "--inspect-brk"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "test",
+        "order": 3
+      }
+    },
+
+    // Service Worker Debugging
+    {
+      "name": "Debug Service Worker",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*"
+      },
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**"
+      ],
+      "runtimeArgs": [
+        "--enable-logging",
+        "--v=1"
+      ],
+      "presentation": {
+        "group": "pwa",
+        "order": 1
+      }
+    },
+
+    // Attach to existing process
+    {
+      "name": "Attach to Chrome",
+      "type": "pwa-chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "presentation": {
+        "group": "attach",
+        "order": 1
+      }
+    },
+    {
+      "name": "Attach to Node Process",
+      "type": "node",
+      "request": "attach",
+      "processId": "${command:PickProcess}",
+      "presentation": {
+        "group": "attach",
+        "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack Debug",
+      "configurations": [
+        "npm: dev",
+        "Launch Chrome (Dev Server)"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "group": "compound",
+        "order": 1
+      }
+    },
+    {
+      "name": "Cross-Browser Debug",
+      "configurations": [
+        "Launch Chrome (Dev Server)",
+        "Launch Firefox (Dev Server)",
+        "Launch Edge (Dev Server)"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "group": "compound",
+        "order": 2
+      }
+    },
+    {
+      "name": "Test Debug Suite",
+      "configurations": [
+        "Debug All Vitest Tests",
+        "Debug Playwright Tests"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "group": "compound",
+        "order": 3
+      }
+    }
+  ]
+}
