@@ -97,7 +97,8 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "new",
+      },
+      "group": "test"
         "group": "test"
       }
     },
