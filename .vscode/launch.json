@@ -1,7 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
-    // Chrome Debugging
+    // Browser Debugging
     {
       "name": "Launch Chrome (Dev Server)",
       "type": "chrome",
@@ -31,8 +31,6 @@
         "order": 2
       }
     },
-
-    // Firefox Debugging
     {
       "name": "Launch Firefox (Dev Server)",
       "type": "firefox",
@@ -51,8 +49,6 @@
         "order": 3
       }
     },
-
-    // Edge Debugging
     {
       "name": "Launch Edge (Dev Server)",
       "type": "msedge",
@@ -70,66 +66,141 @@
       }
     },
 
-    // Node.js Debugging for Scripts
+    // NPM Script Debugging (Portable)
     {
-      "name": "Debug Dev Script",
+      "name": "npm: dev",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/dev.js",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
+      "serverReadyAction": {
+        "pattern": "Local:.*http://localhost:([0-9]+)",
+        "uriFormat": "http://localhost:%s",
+        "action": "openExternally"
+      },
       "presentation": {
-        "group": "scripts",
+        "group": "npm",
         "order": 1
       }
     },
     {
-      "name": "Debug Build Script",
+      "name": "npm: build",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/build.js",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "build"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "presentation": {
-        "group": "scripts",
+        "group": "npm",
         "order": 2
       }
     },
     {
-      "name": "Debug Test Script",
+      "name": "npm: test",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/test.js",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "presentation": {
-        "group": "scripts",
+        "group": "npm",
         "order": 3
       }
     },
     {
-      "name": "Debug Generate Script",
+      "name": "npm: test:unit",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/generate.js",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test:unit"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "presentation": {
-        "group": "scripts",
+        "group": "npm",
         "order": 4
+      }
+    },
+    {
+      "name": "npm: test:e2e",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "test:e2e"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 5
+      }
+    },
+    {
+      "name": "npm: lint",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "lint"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 6
+      }
+    },
+    {
+      "name": "npm: check",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "check"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 7
+      }
+    },
+    {
+      "name": "npm: perf",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "perf"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 8
+      }
+    },
+    {
+      "name": "npm: a11y",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "a11y"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "npm",
+        "order": 9
       }
     },
 
     // Vitest Debugging
     {
-      "name": "Debug Vitest Tests",
+      "name": "Debug Vitest Current File",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
-      "args": [
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vitest",
         "run",
         "--config",
-        "${workspaceFolder}/conf/vitest.config.js",
+        "./conf/vitest.config.js",
         "${file}"
       ],
       "cwd": "${workspaceFolder}",
@@ -143,11 +214,12 @@
       "name": "Debug All Vitest Tests",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
-      "args": [
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vitest",
         "run",
         "--config",
-        "${workspaceFolder}/conf/vitest.config.js"
+        "./conf/vitest.config.js"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
@@ -162,10 +234,11 @@
       "name": "Debug Playwright Tests",
       "type": "node",
       "request": "launch",
-      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
-      "args": [
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "playwright",
         "test",
-        "--config=${workspaceFolder}/conf/playwright.config.js",
+        "--config=./conf/playwright.config.js",
         "--headed",
         "--debug"
       ],
@@ -229,6 +302,7 @@
     {
       "name": "Full Stack Debug",
       "configurations": [
+        "npm: dev",
         "Launch Chrome (Dev Server)"
       ],
       "stopAll": true,
