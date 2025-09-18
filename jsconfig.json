@@ -42,8 +42,7 @@
 			"@test/*": ["test/*"]
 		},
 		"types": [
-			"vite/client",
-			"vitest/globals"
+			"vite/client"
 		],
 		"jsx": "preserve",
 		"experimentalDecorators": true,
