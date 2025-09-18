@@ -94,7 +94,7 @@
   "typescript.format.enable": false,
 
   // Live Server
-  "liveServer.settings.port": 5173,
+  "liveServer.settings.port": 5500,
   "liveServer.settings.root": "/dist",
   "liveServer.settings.CustomBrowser": "chrome",
   "liveServer.settings.donotShowInfoMsg": true,
