@@ -22,7 +22,6 @@
       "label": "Build Production",
       "type": "npm",
       "script": "build",
-      "problemMatcher": ["$eslint-stylish"],
       "presentation": {
         "reveal": "always",
         "panel": "shared",
