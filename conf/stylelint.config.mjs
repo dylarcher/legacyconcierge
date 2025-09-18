@@ -1,6 +1,5 @@
 export default {
 	extends: ['stylelint-config-standard'],
-	customSyntax: 'postcss-lit',
 	rules: {
 		'alpha-value-notation': 'number',
 		'at-rule-empty-line-before': [

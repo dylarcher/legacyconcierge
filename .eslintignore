@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Configuration
+*.config.js
+*.config.mjs
+*.config.cjs
+*.config.ts
+
+# Temporary files
+.tmp/
+.tmp.*/
+tmp/
+temp/
+
+# WordPress/CMS content
+.tmp.legacyconcierge/
+wp-content/
+wp-admin/
+wp-includes/
+
+# Vendor files
+vendor/
+bower_components/
+
+# Generated files
+*.min.js
+*.bundle.js
+*.map
+
+# Test files
+**/*.test.js
+**/*.spec.js
+
+# Documentation
+docs/
+*.md
+
+# Third-party libraries
+public/lib/
+public/vendor/
+
+# Database files
+*.sql
+*.sqlite
+*.db
+
+# Backup files
+*.bak
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
