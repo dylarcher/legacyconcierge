@@ -86,7 +86,8 @@
         "reveal": "always",
         "panel": "shared",
         "group": "test"
-      }
+      },
+      "group": "test"
     },
     {
       "label": "Run E2E Tests with UI",
