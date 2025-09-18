@@ -234,13 +234,15 @@
       "name": "Debug Playwright Tests",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "playwright",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
         "test",
         "--config=./conf/playwright.config.js",
         "--headed",
         "--debug"
+      ],
+      "runtimeArgs": [
+        "--inspect-brk"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
