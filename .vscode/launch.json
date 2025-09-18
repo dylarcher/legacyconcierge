@@ -4,7 +4,7 @@
     // Browser Debugging
     {
       "name": "Launch Chrome (Dev Server)",
-      "type": "chrome",
+      "type": "pwa-chrome",
       "request": "launch",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}",
@@ -20,7 +20,7 @@
     },
     {
       "name": "Launch Chrome (Production Build)",
-      "type": "chrome",
+      "type": "pwa-chrome",
       "request": "launch",
       "url": "http://localhost:4173",
       "webRoot": "${workspaceFolder}/dist",
@@ -51,7 +51,7 @@
     },
     {
       "name": "Launch Edge (Dev Server)",
-      "type": "msedge",
+      "type": "pwa-msedge",
       "request": "launch",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}",
@@ -253,7 +253,7 @@
     // Service Worker Debugging
     {
       "name": "Debug Service Worker",
-      "type": "chrome",
+      "type": "pwa-chrome",
       "request": "launch",
       "url": "http://localhost:5173",
       "webRoot": "${workspaceFolder}",
@@ -278,7 +278,7 @@
     // Attach to existing process
     {
       "name": "Attach to Chrome",
-      "type": "chrome",
+      "type": "pwa-chrome",
       "request": "attach",
       "port": 9222,
       "webRoot": "${workspaceFolder}",
