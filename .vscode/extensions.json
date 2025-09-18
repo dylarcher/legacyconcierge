@@ -1,0 +1,92 @@
+{
+  "recommendations": [
+    // Core Development Tools (Based on devDependencies)
+    "dbaeumer.vscode-eslint",                    // ESLint support
+    "esbenp.prettier-vscode",                    // Prettier formatting
+    "stylelint.vscode-stylelint",                // Stylelint CSS linting
+    "davidanson.vscode-markdownlint",            // Markdown linting
+    "editorconfig.editorconfig",                 // EditorConfig support
+
+    // Testing Tools (Vitest, Playwright)
+    "vitest.explorer",                            // Vitest test explorer
+    "ms-playwright.playwright",                  // Playwright testing
+    // Build Tools (Vite, PWA)
+    "antfu.vite",                                // Vite integration
+    "johnpapa.vscode-pwa-tools",                // PWA development tools
+
+    // HTML Validation & Accessibility
+    "html-validate.vscode-html-validate",        // HTML validation
+    "deque-systems.vscode-axe-linter",          // axe accessibility linting
+    "maxvanderschee.web-accessibility",         // WCAG compliance helper
+
+    // JavaScript/ES6+ Development
+    "christian-kohler.path-intellisense",        // Path autocomplete
+    "christian-kohler.npm-intellisense",         // npm module autocomplete
+    "wix.vscode-import-cost",                   // Display import sizes
+    "mgmcdermott.vscode-language-babel",        // ES6+ syntax support
+
+    // HTML & CSS Productivity
+    "ecmel.vscode-html-css",                    // HTML/CSS support
+    "formulahendry.auto-rename-tag",            // Auto rename paired tags
+    "formulahendry.auto-close-tag",             // Auto close tags
+    "naumovs.color-highlight",                  // Highlight colors in code
+    "pranaygp.vscode-css-peek",                 // CSS class peek
+    "zignd.html-css-class-completion",          // CSS class completion
+
+    // Git Integration
+    "eamodio.gitlens",                          // Git lens
+    "donjayamanne.githistory",                  // Git history
+    "mhutchie.git-graph",                       // Git graph visualization
+
+    // Live Development
+    "ritwickdey.liveserver",                    // Live server
+
+    // Code Quality
+    "aaron-bond.better-comments",               // Better comment highlighting
+    "streetsidesoftware.code-spell-checker",    // Spell checking
+    "usernamehw.errorlens",                     // Inline error display
+    "gruntfuggly.todo-tree",                   // TODO tracking
+
+    // Lighthouse & Performance
+    "googlechromelabs.lighthouse",              // Lighthouse integration
+
+    // NPM Scripts
+    "eg2.vscode-npm-script",                    // NPM script runner
+    "jasonnutter.search-node-modules",          // Search node_modules
+
+    // Coverage
+    "ryanluker.vscode-coverage-gutters",        // Code coverage display
+
+    // Environment Variables
+    "mikestead.dotenv",                         // .env file support
+    "irongeek.vscode-env",                      // Environment variable helper
+
+    // Markdown
+    "yzhang.markdown-all-in-one",              // Markdown tools
+    "bierner.markdown-preview-github-styles",   // GitHub markdown preview
+
+    // Productivity
+    "alefragnani.bookmarks",                    // Code bookmarks
+    "sleistner.vscode-fileutils",              // File utilities
+
+    // Icons (Optional)
+    "pkief.material-icon-theme",               // Material icon theme
+    "vscode-icons-team.vscode-icons"           // VS Code icons
+  ],
+
+  "unwantedRecommendations": [
+    // Framework-specific (we use vanilla JS)
+    "angular.ng-template",
+    "vue.volar",
+    "dsznajder.vscode-react-javascript-snippets",
+    "svelte.svelte-vscode",
+    "ms-vscode.vscode-typescript-next",
+
+    // Not needed for this project
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "mongodb.mongodb-vscode",
+    "mtxr.sqltools",
+    "ms-azuretools.vscode-docker",
+    "amazonwebservices.aws-toolkit-vscode"
+  ]
+}
