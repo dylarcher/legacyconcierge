@@ -1,0 +1,428 @@
+{
+  "specializedExpertise": [
+    {
+      "id": "als-care",
+      "title": "ALS Concierge Nursing",
+      "slug": "als-concierge-nursing",
+      "category": "neurological",
+      "shortDescription": "Specialized nursing care for ALS patients with focus on respiratory support and mobility",
+      "description": "Our ALS specialized nurses provide comprehensive care including respiratory management, mobility assistance, communication support, and nutritional monitoring. We work closely with neurologists and therapy teams to ensure optimal quality of life.",
+      "keyFeatures": [
+        "Respiratory therapy and ventilator management",
+        "Mobility and transfer assistance",
+        "Communication device support",
+        "Nutritional monitoring and feeding tube care",
+        "Medication administration",
+        "24/7 care coordination"
+      ],
+      "icon": "brain",
+      "image": "/images/services/neurological-care.jpg",
+      "order": 1
+    },
+    {
+      "id": "alzheimers-care",
+      "title": "Alzheimer's Concierge Nursing",
+      "slug": "alzheimers-concierge-nursing",
+      "category": "neurological",
+      "shortDescription": "Compassionate memory care and cognitive support for Alzheimer's patients",
+      "description": "Our Alzheimer's care specialists provide patient-centered care focusing on maintaining dignity, managing behavioral changes, and supporting cognitive function while ensuring safety and comfort.",
+      "keyFeatures": [
+        "Cognitive stimulation activities",
+        "Behavioral management strategies",
+        "Safe environment modifications",
+        "Medication management",
+        "Family education and support",
+        "Daily routine establishment"
+      ],
+      "icon": "brain",
+      "image": "/images/services/memory-care.jpg",
+      "order": 2
+    },
+    {
+      "id": "dementia-care",
+      "title": "Dementia Concierge Nursing",
+      "slug": "dementia-concierge-nursing",
+      "category": "neurological",
+      "shortDescription": "Expert care for all forms of dementia with personalized support plans",
+      "description": "Comprehensive dementia care services tailored to the unique needs of each patient, focusing on quality of life, safety, and maintaining independence as long as possible.",
+      "keyFeatures": [
+        "Person-centered care planning",
+        "Sundowning management",
+        "Wandering prevention",
+        "Nutrition and hydration monitoring",
+        "Activity programming",
+        "Caregiver respite and education"
+      ],
+      "icon": "brain",
+      "image": "/images/services/dementia-care.jpg",
+      "order": 3
+    },
+    {
+      "id": "diabetes-management",
+      "title": "Diabetes Management",
+      "slug": "diabetes-management",
+      "category": "chronic",
+      "shortDescription": "Comprehensive diabetes care including monitoring, education, and lifestyle support",
+      "description": "Our diabetes management program provides expert nursing care for Type 1 and Type 2 diabetes, including blood glucose monitoring, insulin administration, dietary counseling, and complication prevention.",
+      "keyFeatures": [
+        "Blood glucose monitoring and management",
+        "Insulin administration and pump management",
+        "Nutritional counseling",
+        "Foot care and wound management",
+        "Hypoglycemia prevention and treatment",
+        "A1C tracking and optimization"
+      ],
+      "icon": "medical",
+      "image": "/images/services/diabetes-care.jpg",
+      "order": 4
+    },
+    {
+      "id": "heart-disease-care",
+      "title": "Heart Disease Care",
+      "slug": "heart-disease-care",
+      "category": "chronic",
+      "shortDescription": "Specialized cardiac care and monitoring for heart disease patients",
+      "description": "Comprehensive cardiac care services including post-surgical recovery, CHF management, arrhythmia monitoring, and cardiac rehabilitation support.",
+      "keyFeatures": [
+        "Vital signs and cardiac monitoring",
+        "Medication management",
+        "Post-cardiac surgery care",
+        "CHF symptom management",
+        "Dietary and fluid restriction support",
+        "Exercise and rehabilitation guidance"
+      ],
+      "icon": "heart",
+      "image": "/images/services/cardiac-care.jpg",
+      "order": 5
+    },
+    {
+      "id": "ms-care",
+      "title": "MS Concierge Nursing",
+      "slug": "ms-concierge-nursing",
+      "category": "neurological",
+      "shortDescription": "Specialized care for Multiple Sclerosis patients managing symptoms and maintaining function",
+      "description": "Our MS specialists provide comprehensive care addressing the complex needs of MS patients, including symptom management, medication administration, and maintaining quality of life.",
+      "keyFeatures": [
+        "Symptom management and monitoring",
+        "Medication administration including infusions",
+        "Mobility and transfer assistance",
+        "Fatigue management strategies",
+        "Bladder and bowel management",
+        "Physical therapy coordination"
+      ],
+      "icon": "brain",
+      "image": "/images/services/ms-care.jpg",
+      "order": 6
+    },
+    {
+      "id": "oncology-care",
+      "title": "Oncology Care",
+      "slug": "oncology-care",
+      "category": "specialty",
+      "shortDescription": "Compassionate cancer care supporting patients through treatment and recovery",
+      "description": "Comprehensive oncology nursing services including chemotherapy support, symptom management, post-surgical care, and emotional support throughout the cancer journey.",
+      "keyFeatures": [
+        "Chemotherapy and radiation side effect management",
+        "Pain and symptom control",
+        "Port and PICC line care",
+        "Nutritional support",
+        "Infection prevention",
+        "Emotional and psychological support"
+      ],
+      "icon": "ribbon",
+      "image": "/images/services/oncology-care.jpg",
+      "order": 7
+    },
+    {
+      "id": "ostomy-management",
+      "title": "Ostomy Management",
+      "slug": "ostomy-management",
+      "category": "specialty",
+      "shortDescription": "Expert ostomy care and education for optimal health and comfort",
+      "description": "Specialized ostomy care services including stoma care, appliance management, skin protection, and patient education for independence.",
+      "keyFeatures": [
+        "Stoma care and assessment",
+        "Appliance selection and fitting",
+        "Skin barrier management",
+        "Dietary counseling",
+        "Complication prevention",
+        "Patient and family education"
+      ],
+      "icon": "medical",
+      "image": "/images/services/ostomy-care.jpg",
+      "order": 8
+    },
+    {
+      "id": "parkinsons-care",
+      "title": "Parkinson's Disease Care",
+      "slug": "parkinsons-disease-care",
+      "category": "neurological",
+      "shortDescription": "Specialized care for Parkinson's patients focusing on mobility and quality of life",
+      "description": "Comprehensive Parkinson's disease management including medication optimization, mobility support, and strategies to maintain independence and quality of life.",
+      "keyFeatures": [
+        "Medication timing and administration",
+        "Movement and gait training",
+        "Fall prevention strategies",
+        "Speech and swallowing support",
+        "Tremor management",
+        "Daily living activity assistance"
+      ],
+      "icon": "brain",
+      "image": "/images/services/parkinsons-care.jpg",
+      "order": 9
+    },
+    {
+      "id": "stroke-recovery",
+      "title": "Stroke Recovery",
+      "slug": "stroke-recovery",
+      "category": "neurological",
+      "shortDescription": "Post-stroke rehabilitation and recovery support for optimal outcomes",
+      "description": "Comprehensive stroke recovery services focusing on neurological rehabilitation, physical therapy support, and maximizing functional recovery.",
+      "keyFeatures": [
+        "Neurological assessment and monitoring",
+        "Physical and occupational therapy support",
+        "Speech and language therapy coordination",
+        "Medication management",
+        "Mobility and transfer training",
+        "Cognitive rehabilitation support"
+      ],
+      "icon": "brain",
+      "image": "/images/services/stroke-recovery.jpg",
+      "order": 10
+    },
+    {
+      "id": "tbi-care",
+      "title": "Trauma-Related Injuries (TBI)",
+      "slug": "traumatic-brain-injury-care",
+      "category": "neurological",
+      "shortDescription": "Specialized care for traumatic brain injury patients",
+      "description": "Expert nursing care for TBI patients including cognitive support, behavioral management, and comprehensive rehabilitation assistance.",
+      "keyFeatures": [
+        "Neurological monitoring",
+        "Cognitive rehabilitation support",
+        "Behavioral management strategies",
+        "Seizure precautions and management",
+        "Sensory stimulation programs",
+        "Family education and support"
+      ],
+      "icon": "brain",
+      "image": "/images/services/tbi-care.jpg",
+      "order": 11
+    },
+    {
+      "id": "general-specialized",
+      "title": "General Specialized Care",
+      "slug": "general-specialized-care",
+      "category": "general",
+      "shortDescription": "Customized nursing care for unique medical needs",
+      "description": "Flexible, personalized nursing care services tailored to meet unique medical conditions and individual care requirements.",
+      "keyFeatures": [
+        "Customized care planning",
+        "Complex medical management",
+        "Skilled nursing procedures",
+        "Care coordination",
+        "Family support and education",
+        "24/7 availability"
+      ],
+      "icon": "medical",
+      "image": "/images/services/specialized-care.jpg",
+      "order": 12
+    }
+  ],
+  "treatments": [
+    {
+      "id": "cardiac-pulmonary",
+      "title": "Cardiac and Pulmonary Oversight",
+      "slug": "cardiac-pulmonary-oversight",
+      "category": "monitoring",
+      "shortDescription": "Comprehensive cardiac and respiratory monitoring and management",
+      "description": "Expert monitoring and management of cardiac and pulmonary conditions including heart failure, COPD, and post-surgical recovery.",
+      "keyFeatures": [
+        "Vital signs monitoring",
+        "Oxygen therapy management",
+        "Respiratory treatments",
+        "Cardiac rhythm monitoring",
+        "Medication administration",
+        "Emergency response protocols"
+      ],
+      "icon": "heart",
+      "image": "/images/services/cardiac-monitoring.jpg",
+      "order": 1
+    },
+    {
+      "id": "eating-disorders",
+      "title": "Eating Disorders and Monitoring",
+      "slug": "eating-disorders-monitoring",
+      "category": "behavioral",
+      "shortDescription": "Specialized nutritional support and monitoring for eating disorder recovery",
+      "description": "Comprehensive care for eating disorder patients including nutritional monitoring, meal supervision, and behavioral support.",
+      "keyFeatures": [
+        "Nutritional assessment and monitoring",
+        "Meal planning and supervision",
+        "Weight restoration support",
+        "Vital signs monitoring",
+        "Medication compliance",
+        "Behavioral therapy support"
+      ],
+      "icon": "nutrition",
+      "image": "/images/services/eating-disorders.jpg",
+      "order": 2
+    },
+    {
+      "id": "iv-therapy",
+      "title": "IV and Infusion Therapy",
+      "slug": "iv-infusion-therapy",
+      "category": "treatment",
+      "shortDescription": "Professional IV therapy and infusion services in the comfort of home",
+      "description": "Expert administration of IV medications, hydration therapy, nutritional support, and specialized infusions.",
+      "keyFeatures": [
+        "IV medication administration",
+        "Hydration therapy",
+        "Nutritional IV support",
+        "Antibiotic therapy",
+        "Port and PICC line management",
+        "Infusion pump management"
+      ],
+      "icon": "iv",
+      "image": "/images/services/iv-therapy.jpg",
+      "order": 3
+    },
+    {
+      "id": "mental-health",
+      "title": "Mental Health Services",
+      "slug": "mental-health-services",
+      "category": "behavioral",
+      "shortDescription": "Comprehensive mental health support and crisis intervention",
+      "description": "Mental health nursing services including medication management, crisis intervention, and therapeutic support.",
+      "keyFeatures": [
+        "Psychiatric medication management",
+        "Crisis intervention",
+        "Behavioral monitoring",
+        "Therapeutic communication",
+        "Safety planning",
+        "Family support and education"
+      ],
+      "icon": "mind",
+      "image": "/images/services/mental-health.jpg",
+      "order": 4
+    },
+    {
+      "id": "pain-management",
+      "title": "Pain Management",
+      "slug": "pain-management",
+      "category": "treatment",
+      "shortDescription": "Comprehensive pain management strategies for improved quality of life",
+      "description": "Expert pain management services including medication administration, non-pharmacological interventions, and comfort measures.",
+      "keyFeatures": [
+        "Pain assessment and monitoring",
+        "Medication administration",
+        "Non-pharmacological pain relief",
+        "Comfort positioning",
+        "Heat and cold therapy",
+        "Relaxation techniques"
+      ],
+      "icon": "relief",
+      "image": "/images/services/pain-management.jpg",
+      "order": 5
+    },
+    {
+      "id": "post-op-recovery",
+      "title": "Post-Op Recovery (Hospital to Home)",
+      "slug": "post-op-recovery",
+      "category": "recovery",
+      "shortDescription": "Seamless transition from hospital to home with expert post-surgical care",
+      "description": "Comprehensive post-operative care ensuring smooth recovery including wound care, pain management, and monitoring for complications.",
+      "keyFeatures": [
+        "Surgical wound care",
+        "Drain and tube management",
+        "Pain control",
+        "Infection prevention",
+        "Mobility assistance",
+        "Medication management"
+      ],
+      "icon": "surgery",
+      "image": "/images/services/post-op-care.jpg",
+      "order": 6
+    },
+    {
+      "id": "rehab-addiction",
+      "title": "Rehab and Addiction Services",
+      "slug": "rehab-addiction-services",
+      "category": "recovery",
+      "shortDescription": "Supportive care for addiction recovery and rehabilitation",
+      "description": "Compassionate nursing support for addiction recovery including medical monitoring, medication management, and relapse prevention.",
+      "keyFeatures": [
+        "Withdrawal monitoring",
+        "Medication-assisted treatment",
+        "Vital signs monitoring",
+        "Relapse prevention support",
+        "Therapeutic support",
+        "Family counseling coordination"
+      ],
+      "icon": "recovery",
+      "image": "/images/services/rehab-services.jpg",
+      "order": 7
+    },
+    {
+      "id": "general-treatments",
+      "title": "General Treatment Services",
+      "slug": "general-treatment-services",
+      "category": "general",
+      "shortDescription": "Flexible treatment services for various medical needs",
+      "description": "Comprehensive nursing treatments tailored to individual medical requirements and care goals.",
+      "keyFeatures": [
+        "Skilled nursing procedures",
+        "Medication administration",
+        "Wound care",
+        "Catheter care",
+        "Tube feeding",
+        "Medical equipment management"
+      ],
+      "icon": "medical",
+      "image": "/images/services/general-treatments.jpg",
+      "order": 8
+    }
+  ],
+  "categories": {
+    "neurological": {
+      "name": "Neurological Conditions",
+      "description": "Specialized care for neurological and neurodegenerative conditions",
+      "icon": "brain"
+    },
+    "chronic": {
+      "name": "Chronic Conditions",
+      "description": "Long-term management of chronic health conditions",
+      "icon": "medical"
+    },
+    "specialty": {
+      "name": "Specialty Care",
+      "description": "Specialized nursing for specific medical needs",
+      "icon": "star"
+    },
+    "treatment": {
+      "name": "Medical Treatments",
+      "description": "Professional medical treatments and therapies",
+      "icon": "treatment"
+    },
+    "monitoring": {
+      "name": "Health Monitoring",
+      "description": "Continuous health monitoring and oversight",
+      "icon": "monitor"
+    },
+    "behavioral": {
+      "name": "Behavioral Health",
+      "description": "Mental and behavioral health support",
+      "icon": "mind"
+    },
+    "recovery": {
+      "name": "Recovery Services",
+      "description": "Post-operative and rehabilitation services",
+      "icon": "recovery"
+    },
+    "general": {
+      "name": "General Care",
+      "description": "Comprehensive general nursing services",
+      "icon": "medical"
+    }
+  }
+}

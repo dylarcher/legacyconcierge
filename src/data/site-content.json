@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "siteName": "Legacy Concierge",
+    "tagline": "Best in Class Concierge Care Provider in California",
+    "description": "Our concierge nurses provide comprehensive, bespoke care tailored to your unique needs",
+    "phone": "1-800-LEGACY-1",
+    "email": "info@legacyconcierge.com",
+    "address": {
+      "street": "",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": ""
+    }
+  },
+  "navigation": {
+    "main": [
+      {
+        "label": "Home",
+        "href": "/",
+        "order": 1
+      },
+      {
+        "label": "Services",
+        "href": "/services",
+        "order": 2,
+        "submenu": [
+          {
+            "label": "Specialized Expertise",
+            "href": "/services/specialized-expertise"
+          },
+          {
+            "label": "Concierge Treatments",
+            "href": "/services/treatments"
+          }
+        ]
+      },
+      {
+        "label": "About",
+        "href": "/about",
+        "order": 3,
+        "submenu": [
+          {
+            "label": "Our Team",
+            "href": "/team"
+          },
+          {
+            "label": "Our Mission",
+            "href": "/about/mission"
+          },
+          {
+            "label": "Partners",
+            "href": "/partners"
+          }
+        ]
+      },
+      {
+        "label": "Locations",
+        "href": "/locations",
+        "order": 4
+      },
+      {
+        "label": "News",
+        "href": "/news",
+        "order": 5
+      },
+      {
+        "label": "Careers",
+        "href": "/careers",
+        "order": 6
+      },
+      {
+        "label": "Contact",
+        "href": "/contact",
+        "order": 7,
+        "cta": true
+      }
+    ],
+    "footer": [
+      {
+        "section": "Services",
+        "links": [
+          {
+            "label": "Specialized Expertise",
+            "href": "/services/specialized-expertise"
+          },
+          {
+            "label": "Concierge Treatments",
+            "href": "/services/treatments"
+          },
+          {
+            "label": "Post-Op Care",
+            "href": "/services/post-op-recovery"
+          },
+          {
+            "label": "IV Therapy",
+            "href": "/services/iv-therapy"
+          }
+        ]
+      },
+      {
+        "section": "Company",
+        "links": [
+          {
+            "label": "About Us",
+            "href": "/about"
+          },
+          {
+            "label": "Our Team",
+            "href": "/team"
+          },
+          {
+            "label": "Locations",
+            "href": "/locations"
+          },
+          {
+            "label": "Careers",
+            "href": "/careers"
+          }
+        ]
+      },
+      {
+        "section": "Resources",
+        "links": [
+          {
+            "label": "News & Updates",
+            "href": "/news"
+          },
+          {
+            "label": "Partners",
+            "href": "/partners"
+          },
+          {
+            "label": "Contact Us",
+            "href": "/contact"
+          },
+          {
+            "label": "FAQs",
+            "href": "/faqs"
+          }
+        ]
+      },
+      {
+        "section": "Legal",
+        "links": [
+          {
+            "label": "Privacy Policy",
+            "href": "/privacy"
+          },
+          {
+            "label": "Terms of Use",
+            "href": "/terms"
+          },
+          {
+            "label": "Sitemap",
+            "href": "/sitemap"
+          }
+        ]
+      }
+    ]
+  },
+  "homepage": {
+    "hero": {
+      "title": "Best in Class Concierge Care Provider in California",
+      "subtitle": "Our concierge nurses provide comprehensive, bespoke care tailored to your unique needs",
+      "cta": {
+        "primary": {
+          "text": "Contact Us",
+          "href": "/contact"
+        },
+        "secondary": {
+          "text": "Learn More",
+          "href": "/services"
+        }
+      }
+    },
+    "features": [
+      {
+        "icon": "clock",
+        "title": "24/7 Coordination",
+        "description": "Round-the-clock care coordination and support"
+      },
+      {
+        "icon": "medical",
+        "title": "Clinical Oversight",
+        "description": "Expert clinical supervision for all care plans"
+      },
+      {
+        "icon": "user",
+        "title": "Personalized Care Plans",
+        "description": "Customized care tailored to individual needs"
+      },
+      {
+        "icon": "star",
+        "title": "Expert Nursing Staff",
+        "description": "Highly qualified and experienced nursing professionals"
+      }
+    ],
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive care solutions for every need",
+      "featured": [
+        {
+          "title": "Post-Surgical Recovery",
+          "description": "Seamless transition from hospital to home with expert nursing care",
+          "href": "/services/post-op-recovery"
+        },
+        {
+          "title": "Chronic Condition Management",
+          "description": "Ongoing support for complex chronic health conditions",
+          "href": "/services/chronic-care"
+        },
+        {
+          "title": "Wellness Optimization",
+          "description": "Proactive health management and wellness programs",
+          "href": "/services/wellness"
+        },
+        {
+          "title": "Palliative Support",
+          "description": "Compassionate comfort care and symptom management",
+          "href": "/services/palliative-care"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "items": [
+        {
+          "quote": "The care and attention provided by Legacy Concierge has been exceptional. They truly go above and beyond.",
+          "author": "Maria S.",
+          "rating": 5
+        },
+        {
+          "quote": "Professional, compassionate, and reliable. I couldn't ask for better care for my mother.",
+          "author": "John D.",
+          "rating": 5
+        },
+        {
+          "quote": "Their team made my recovery process so much easier. Highly recommended!",
+          "author": "Sarah M.",
+          "rating": 5
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Experience Exceptional Care?",
+      "subtitle": "Contact us today to learn how we can help you or your loved ones",
+      "button": {
+        "text": "Get Started",
+        "href": "/contact"
+      }
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/legacyconcierge",
+    "instagram": "https://www.instagram.com/legacyconcierge",
+    "linkedin": "https://www.linkedin.com/company/legacyconcierge",
+    "twitter": "https://twitter.com/legacyconcierge"
+  }
+}
