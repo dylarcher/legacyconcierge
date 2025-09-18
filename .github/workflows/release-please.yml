@@ -1,0 +1,85 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          # Release type and package name
+          release-type: node
+
+          # Changelog configuration
+          changelog-type: github
+          changelog-sections: |
+            [
+              {"type": "feat", "section": "Features", "hidden": false},
+              {"type": "fix", "section": "Bug Fixes", "hidden": false},
+              {"type": "perf", "section": "Performance Improvements", "hidden": false},
+              {"type": "docs", "section": "Documentation", "hidden": false},
+              {"type": "style", "section": "Styles", "hidden": false},
+              {"type": "refactor", "section": "Code Refactoring", "hidden": false},
+              {"type": "test", "section": "Tests", "hidden": false},
+              {"type": "build", "section": "Build System", "hidden": false},
+              {"type": "ci", "section": "Continuous Integration", "hidden": false},
+              {"type": "chore", "section": "Miscellaneous Chores", "hidden": false},
+              {"type": "revert", "section": "Reverts", "hidden": false}
+            ]
+
+          # Include component in changelog entries
+          include-component-in-tag: false
+
+          # Versioning strategy
+          bump-minor-pre-major: true
+          bump-patch-for-minor-pre-major: true
+
+          # PR configuration
+          pull-request-title-pattern: 'chore${scope}: release${component} ${version}'
+          pull-request-header: |
+            :robot: I have created a release
+
+          # Enable manifest file for managing multiple packages
+          config-file: .github/release-please-config.json
+          manifest-file: .github/release-please-manifest.json
+
+      # Checkout code if release was created
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+
+      # Setup Node.js if release was created
+      - uses: actions/setup-node@v4
+        if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      # Install dependencies if release was created
+      - run: npm ci
+        if: ${{ steps.release.outputs.release_created }}
+
+      # Build the project if release was created
+      - run: npm run build --if-present
+        if: ${{ steps.release.outputs.release_created }}
+
+      # Run tests if release was created
+      - run: npm test --if-present
+        if: ${{ steps.release.outputs.release_created }}
+
+      # Create GitHub release assets if needed
+      - name: Upload Release Assets
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Add any additional release assets here
+          echo "Release ${{ steps.release.outputs.tag_name }} created"

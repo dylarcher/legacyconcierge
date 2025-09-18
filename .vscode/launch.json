@@ -196,13 +196,7 @@
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "vitest",
-        "run",
-        "--config",
-        "./conf/vitest.config.js",
-        "${file}"
-      ],
+      "runtimeArgs": ["vitest", "run", "--config", "./conf/vitest.config.js", "${file}"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "presentation": {
@@ -215,12 +209,7 @@
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npx",
-      "runtimeArgs": [
-        "vitest",
-        "run",
-        "--config",
-        "./conf/vitest.config.js"
-      ],
+      "runtimeArgs": ["vitest", "run", "--config", "./conf/vitest.config.js"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "presentation": {
@@ -235,15 +224,8 @@
       "type": "node",
       "request": "launch",
       "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
-      "args": [
-        "test",
-        "--config=./conf/playwright.config.js",
-        "--headed",
-        "--debug"
-      ],
-      "runtimeArgs": [
-        "--inspect-brk"
-      ],
+      "args": ["test", "--config=./conf/playwright.config.js", "--headed", "--debug"],
+      "runtimeArgs": ["--inspect-brk"],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "presentation": {
@@ -263,14 +245,8 @@
       "sourceMapPathOverrides": {
         "/@fs/*": "${webRoot}/*"
       },
-      "skipFiles": [
-        "<node_internals>/**",
-        "${workspaceFolder}/node_modules/**"
-      ],
-      "runtimeArgs": [
-        "--enable-logging",
-        "--v=1"
-      ],
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
+      "runtimeArgs": ["--enable-logging", "--v=1"],
       "presentation": {
         "group": "pwa",
         "order": 1
@@ -303,10 +279,7 @@
   "compounds": [
     {
       "name": "Full Stack Debug",
-      "configurations": [
-        "npm: dev",
-        "Launch Chrome (Dev Server)"
-      ],
+      "configurations": ["npm: dev", "Launch Chrome (Dev Server)"],
       "stopAll": true,
       "presentation": {
         "group": "compound",
@@ -328,10 +301,7 @@
     },
     {
       "name": "Test Debug Suite",
-      "configurations": [
-        "Debug All Vitest Tests",
-        "Debug Playwright Tests"
-      ],
+      "configurations": ["Debug All Vitest Tests", "Debug Playwright Tests"],
       "stopAll": true,
       "presentation": {
         "group": "compound",

@@ -2,23 +2,32 @@
 
 ## Project Overview
 
-Legacy Concierge is a modern vanilla JavaScript website and content management system (CMS) designed for a premium healthcare concierge service provider in California. The project emphasizes accessibility (WCAG 2.2 AA), performance optimization, and SEO best practices while maintaining a framework-free architecture.
+Legacy Concierge is a modern vanilla JavaScript website and content management
+system (CMS) designed for a premium healthcare concierge service provider in
+California. The project emphasizes accessibility (WCAG 2.2 AA), performance
+optimization, and SEO best practices while maintaining a framework-free
+architecture.
 
 ## Documentation Structure
 
 ### Core Documentation
 
 #### [Website Architecture Analysis](./website-architecture-analysis.md)
+
 Comprehensive analysis of the Legacy Concierge website structure including:
+
 - Original site structure and pages
-- Service categorization (12 specialized expertise areas, 8 concierge treatments)
+- Service categorization (12 specialized expertise areas, 8 concierge
+  treatments)
 - Component requirements and specifications
 - Technical implementation roadmap
 - SEO and accessibility requirements
 - Performance targets and metrics
 
 #### [Asset Mapping](./asset-mapping.md)
+
 Complete inventory and organization strategy for project assets:
+
 - Image assets (team photos, service images, branding)
 - Content structure mapping
 - Data file schemas (JSON structures)
@@ -27,7 +36,9 @@ Complete inventory and organization strategy for project assets:
 - Build process integration
 
 #### [Project Instructions](../CLAUDE.md)
+
 Core development guidelines and standards:
+
 - Technology stack (Vanilla JS, Modern CSS, HTML5)
 - Project philosophy and principles
 - Development standards and patterns
@@ -38,11 +49,13 @@ Core development guidelines and standards:
 ## Quick Start Guide
 
 ### Prerequisites
+
 - Node.js >= 18.0.0
 - npm >= 9.0.0
 - Modern browser with ES6+ support
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone https://github.com/dylarcher/legacyconcierge.git
@@ -56,6 +69,7 @@ npm run dev
 ```
 
 ### Available Scripts
+
 ```bash
 npm run dev        # Start development server
 npm run build      # Build for production
@@ -69,6 +83,7 @@ npm run check      # Run all quality checks
 ## Project Architecture
 
 ### Directory Structure
+
 ```bash
 legacyconcierge/
 ├── bin/               # Build scripts and utilities
@@ -103,11 +118,13 @@ The project uses a component-based architecture with vanilla JavaScript:
 ### Healthcare Services
 
 #### Specialized Expertise (12 Conditions)
+
 - Neurological: ALS, Alzheimer's, Dementia, Parkinson's, MS, Stroke, TBI
 - Chronic Conditions: Diabetes, Heart Disease, Oncology, Ostomy
 - General Specialized Care
 
 #### Concierge Treatments (8 Services)
+
 - Cardiac and Pulmonary Oversight
 - IV and Infusion Therapy
 - Pain Management
@@ -120,6 +137,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 ### Technical Features
 
 #### Accessibility (WCAG 2.2 AA)
+
 - Semantic HTML structure
 - ARIA attributes and roles
 - Keyboard navigation with visual indicators
@@ -128,6 +146,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 - Reduced motion preferences
 
 #### Performance Optimization
+
 - Code splitting and lazy loading
 - Image optimization (WebP, responsive images)
 - Critical CSS inlining
@@ -135,6 +154,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 - Resource hints (preload, prefetch)
 
 #### SEO Features
+
 - Structured data (JSON-LD)
 - Meta tags optimization
 - XML sitemap generation
@@ -142,6 +162,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 - Open Graph and Twitter Cards
 
 #### Progressive Web App
+
 - Installable application
 - Offline functionality
 - Push notifications
@@ -153,6 +174,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 ### Code Standards
 
 #### JavaScript
+
 - ES6+ features (async/await, modules, destructuring)
 - JSDoc type annotations
 - Error boundaries and handling
@@ -160,6 +182,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 - Memory management
 
 #### CSS
+
 - BEM naming convention
 - CSS Custom Properties for theming
 - Modern layout (Grid, Flexbox, Container Queries)
@@ -167,6 +190,7 @@ The project uses a component-based architecture with vanilla JavaScript:
 - CSS Layers for cascade management
 
 #### HTML
+
 - Semantic elements
 - Proper heading hierarchy
 - ARIA labels and descriptions
@@ -183,18 +207,19 @@ The project uses a component-based architecture with vanilla JavaScript:
 
 ### Performance Targets
 
-| Metric | Target | Description |
-|--------|--------|-------------|
-| FCP | < 1.8s | First Contentful Paint |
-| LCP | < 2.5s | Largest Contentful Paint |
-| CLS | < 0.1 | Cumulative Layout Shift |
-| FID | < 100ms | First Input Delay |
-| INP | < 200ms | Interaction to Next Paint |
-| TBT | < 300ms | Total Blocking Time |
+| Metric | Target  | Description               |
+| ------ | ------- | ------------------------- |
+| FCP    | < 1.8s  | First Contentful Paint    |
+| LCP    | < 2.5s  | Largest Contentful Paint  |
+| CLS    | < 0.1   | Cumulative Layout Shift   |
+| FID    | < 100ms | First Input Delay         |
+| INP    | < 200ms | Interaction to Next Paint |
+| TBT    | < 300ms | Total Blocking Time       |
 
 ## Deployment
 
 ### Build Process
+
 ```bash
 # Production build
 npm run build
@@ -207,6 +232,7 @@ npm run deploy
 ```
 
 ### Environment Variables
+
 ```bash
 NODE_ENV=production
 API_URL=https://api.legacyconcierge.com
@@ -214,6 +240,7 @@ ANALYTICS_ID=UA-XXXXXXXXX
 ```
 
 ### Hosting Requirements
+
 - HTTPS enabled
 - HTTP/2 support
 - Gzip/Brotli compression
@@ -222,9 +249,11 @@ ANALYTICS_ID=UA-XXXXXXXXX
 
 ## Contributing
 
-Please read our [Contributing Guide](../.github/CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+Please read our [Contributing Guide](../.github/CONTRIBUTING.md) for details on
+our code of conduct and the process for submitting pull requests.
 
 ### Development Workflow
+
 1. Fork the repository
 2. Create a feature branch
 3. Implement changes with tests
@@ -232,6 +261,7 @@ Please read our [Contributing Guide](../.github/CONTRIBUTING.md) for details on 
 5. Submit pull request
 
 ### Quality Checklist
+
 - [ ] Code passes linting
 - [ ] Tests are passing
 - [ ] Accessibility checks pass
@@ -241,23 +271,28 @@ Please read our [Contributing Guide](../.github/CONTRIBUTING.md) for details on 
 
 ## Security
 
-For security concerns, please review our [Security Policy](../.github/SECURITY.md) and report vulnerabilities through the appropriate channels.
+For security concerns, please review our
+[Security Policy](../.github/SECURITY.md) and report vulnerabilities through the
+appropriate channels.
 
 ## Support
 
 ### Resources
+
 - [Issue Tracker](https://github.com/dylarcher/legacyconcierge/issues)
 - [Discussions](https://github.com/dylarcher/legacyconcierge/discussions)
 - Email: dylarcher@gmail.com
 
 ### Documentation Links
+
 - [Project Website](https://legacy-concierge.com)
 - [API Documentation](#) (Coming soon)
 - [Component Library](#) (Coming soon)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE)
+file for details.
 
 ## Acknowledgments
 
@@ -267,5 +302,4 @@ This project is licensed under the MIT License - see the [LICENSE](../LICENSE) f
 
 ---
 
-*Last Updated: September 2025*
-*Version: 0.1.0*
+_Last Updated: September 2025_ _Version: 0.1.0_

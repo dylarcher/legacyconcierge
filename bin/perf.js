@@ -116,7 +116,6 @@ async function measurePerformance(url = 'http://localhost:5173') {
 		await browser.close();
 
 		return metrics;
-
 	} catch (error) {
 		spinner.fail(chalk.red('Failed to collect metrics'));
 		await browser.close();
@@ -150,7 +149,7 @@ async function analyzeMetrics(metrics) {
 		}
 	});
 
-	const maxNameLength = Math.max(...results.map(r => r.metric.length));
+	const maxNameLength = Math.max(...results.map((r) => r.metric.length));
 	results.forEach((result) => {
 		const name = result.metric.padEnd(maxNameLength);
 		const value = result.value.toString().padStart(10);
@@ -203,7 +202,7 @@ async function analyzeResources(resources) {
 	});
 
 	const largestResources = resources
-		.filter(r => r.size)
+		.filter((r) => r.size)
 		.sort((a, b) => b.size - a.size)
 		.slice(0, 5);
 
@@ -247,7 +246,7 @@ async function compareToPrevious(currentScore) {
 	try {
 		const reportsDir = resolve(rootDir, 'reports');
 		const files = await fs.readdir(reportsDir);
-		const perfReports = files.filter(f => f.startsWith('performance-'));
+		const perfReports = files.filter((f) => f.startsWith('performance-'));
 
 		if (perfReports.length > 1) {
 			perfReports.sort();
@@ -259,7 +258,9 @@ async function compareToPrevious(currentScore) {
 			if (diff > 0) {
 				console.log(chalk.green(`📈 Performance improved by ${diff} points since last run!`));
 			} else if (diff < 0) {
-				console.log(chalk.yellow(`📉 Performance decreased by ${Math.abs(diff)} points since last run.`));
+				console.log(
+					chalk.yellow(`📉 Performance decreased by ${Math.abs(diff)} points since last run.`)
+				);
 			} else {
 				console.log(chalk.gray(`→ Performance unchanged since last run.`));
 			}
@@ -279,7 +280,7 @@ async function main() {
 	try {
 		if (!args[0]) {
 			server = await startDevServer();
-			await new Promise(resolve => setTimeout(resolve, 2000));
+			await new Promise((resolve) => setTimeout(resolve, 2000));
 		}
 
 		const metrics = await measurePerformance(url);
@@ -299,10 +300,9 @@ async function main() {
 		if (metrics.TTFB > performanceMetrics.TTFB.target) {
 			console.log(chalk.gray('  • Improve server response time'));
 		}
-		if (metrics.resources.filter(r => r.type === 'script').length > 10) {
+		if (metrics.resources.filter((r) => r.type === 'script').length > 10) {
 			console.log(chalk.gray('  • Consider bundling JavaScript files'));
 		}
-
 	} catch (error) {
 		console.error(chalk.red('Error:'), error);
 		process.exit(1);

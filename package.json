@@ -44,6 +44,8 @@
     "CITATION.cff"
   ],
   "scripts": {
+    "commit": "cz",
+    "prepare": "husky",
     "dev": "node ./bin/dev.js",
     "build": "node ./bin/build.js",
     "test": "node ./bin/test.js",
@@ -51,22 +53,22 @@
     "generate": "node ./bin/generate.js",
     "deploy": "node ./bin/deploy.js",
     "perf": "node ./bin/perf.js",
-    "preview": "vite preview --config ./conf/vite.config.js",
+    "preview": "vite preview",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
     "lint:css": "stylelint --config ./conf/stylelint.config.mjs --ignore-path ./conf/.stylelintignore src/**/*.css",
-    "test:unit": "vitest --config ./conf/vitest.config.js",
-    "test:coverage": "vitest --config ./conf/vitest.config.js --coverage",
-    "test:ui": "vitest --config ./conf/vitest.config.js --ui",
-    "test:watch": "vitest --config ./conf/vitest.config.js --watch",
+    "test:unit": "vitest",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest --ui",
+    "test:watch": "vitest --watch",
     "a11y": "pa11y-ci --config ./conf/.pa11yci.js",
     "a11y:axe": "axe src/**/*.html",
     "audit": "npm audit",
     "audit:fix": "npm audit fix",
     "validate:html": "html-validate --config ./conf/.htmlvalidate.mjs src/**/*.html",
     "lint:md": "markdownlint-cli2 --config ./conf/.markdownlint.yaml '**/*.md' '#node_modules' '#dist'",
-    "test:e2e": "playwright test --config ./conf/playwright.config.js",
-    "test:e2e:ui": "playwright test --config ./conf/playwright.config.js --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
     "format": "prettier --config ./conf/prettier.config.mjs --ignore-path ./conf/.prettierignore --write .",
     "format:check": "prettier --config ./conf/prettier.config.mjs --ignore-path ./conf/.prettierignore --check .",
     "clean": "rm -rf dist node_modules package-lock.json",
@@ -131,8 +133,18 @@
     "node": "20.17.0",
     "npm": "10.8.2"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@axe-core/cli": "4.10.2",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.2.0",
     "@vitest/ui": "3.2.4",
     "eslint": "9.35.0",
     "eslint-plugin-jsdoc": "59.0.1",

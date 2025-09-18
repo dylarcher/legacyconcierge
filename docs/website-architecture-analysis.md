@@ -2,15 +2,19 @@
 
 ## Overview
 
-This document outlines the findings from analyzing the Legacy Concierge website assets and provides a comprehensive plan for rebuilding the site using modern vanilla JavaScript, HTML5, and CSS3.
+This document outlines the findings from analyzing the Legacy Concierge website
+assets and provides a comprehensive plan for rebuilding the site using modern
+vanilla JavaScript, HTML5, and CSS3.
 
 ## Source Analysis
 
 ### Website Structure
 
-The original website appears to be a WordPress site using the Bridge theme with Elementor page builder. The site structure includes:
+The original website appears to be a WordPress site using the Bridge theme with
+Elementor page builder. The site structure includes:
 
 #### Main Pages
+
 - **Home** - Main landing page with hero section and service overview
 - **Contact Us** - Contact form and location information
 - **Team** - Staff profiles and credentials
@@ -22,6 +26,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 #### Service Pages
 
 ##### Specialized Expertise (12 conditions)
+
 1. ALS Concierge Nursing
 2. Alzheimer's Concierge Nursing
 3. Dementia Concierge Nursing
@@ -36,6 +41,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 12. General Specialized Care
 
 ##### Concierge Treatments (8 services)
+
 1. Cardiac and Pulmonary Oversight
 2. Eating Disorders and Monitoring
 3. IV and Infusion Therapy
@@ -46,6 +52,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 8. General Treatment Services
 
 #### Legal/Compliance Pages
+
 - Privacy Policy
 - Terms of Use
 - Sitemap
@@ -53,6 +60,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ### Assets Inventory
 
 #### Images
+
 - **Team Photos**:
   - Melissa.jpg
   - Kurt20Headshot20Tie.jpg
@@ -84,85 +92,91 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ### Core Components
 
 #### Navigation Components
+
 ```javascript
-- Header
-  - Logo
-  - MainNavigation
-  - MobileMenu
-  - ContactButton
-- Footer
-  - FooterLinks
-  - ContactInfo
-  - SocialMedia
-  - Copyright
+-Header -
+  Logo -
+  MainNavigation -
+  MobileMenu -
+  ContactButton -
+  Footer -
+  FooterLinks -
+  ContactInfo -
+  SocialMedia -
+  Copyright;
 ```
 
 #### Page Components
+
 ```javascript
-- HeroSection
-  - HeroImage
-  - HeroText
-  - CTAButtons
-- ServiceCard
-  - ServiceIcon
-  - ServiceTitle
-  - ServiceDescription
-  - LearnMoreLink
-- TeamMember
-  - ProfileImage
-  - Name
-  - Title
-  - Bio
-  - Credentials
-- ContactForm
-  - FormFields
-  - Validation
-  - SubmitHandler
-- TestimonialCard
-  - Quote
-  - Author
-  - Rating
+-HeroSection -
+  HeroImage -
+  HeroText -
+  CTAButtons -
+  ServiceCard -
+  ServiceIcon -
+  ServiceTitle -
+  ServiceDescription -
+  LearnMoreLink -
+  TeamMember -
+  ProfileImage -
+  Name -
+  Title -
+  Bio -
+  Credentials -
+  ContactForm -
+  FormFields -
+  Validation -
+  SubmitHandler -
+  TestimonialCard -
+  Quote -
+  Author -
+  Rating;
 ```
 
 #### UI Components
+
 ```javascript
-- Button
-- Card
-- Modal
-- Accordion
-- Tabs
-- Breadcrumbs
-- LoadingSpinner
-- Toast/Alert
-- ImageGallery
+-Button -
+  Card -
+  Modal -
+  Accordion -
+  Tabs -
+  Breadcrumbs -
+  LoadingSpinner -
+  Toast / Alert -
+  ImageGallery;
 ```
 
 ### Layout Components
+
 ```javascript
-- PageLayout
-- ContentSection
-- GridLayout
-- FlexContainer
-- Sidebar
-- TwoColumnLayout
-- ThreeColumnGrid
+-PageLayout -
+  ContentSection -
+  GridLayout -
+  FlexContainer -
+  Sidebar -
+  TwoColumnLayout -
+  ThreeColumnGrid;
 ```
 
 ### Services/Utilities
+
 ```javascript
-- FormValidation
-- ScrollManager
-- LazyLoader
-- AnimationController
-- SEOManager
-- AccessibilityManager
-- RouterService
-- APIService
+-FormValidation -
+  ScrollManager -
+  LazyLoader -
+  AnimationController -
+  SEOManager -
+  AccessibilityManager -
+  RouterService -
+  APIService;
 ```
 
 ## Page Templates
 
 ### 1. Homepage Template
+
 ```
 - Hero Section with CTA
 - Service Overview Grid
@@ -174,6 +188,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ```
 
 ### 2. Service Page Template
+
 ```
 - Page Hero with Service Title
 - Breadcrumbs
@@ -186,6 +201,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ```
 
 ### 3. Team Page Template
+
 ```
 - Page Header
 - Team Grid Layout
@@ -196,6 +212,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ```
 
 ### 4. Contact Page Template
+
 ```
 - Page Header
 - Contact Form
@@ -209,24 +226,28 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ## Technical Implementation Plan
 
 ### Phase 1: Foundation (Week 1)
+
 1. Set up base HTML templates
 2. Implement CSS architecture (CSS Grid, Flexbox, Custom Properties)
 3. Create core Web Components
 4. Implement routing system
 
 ### Phase 2: Components (Week 2)
+
 1. Build navigation components
 2. Create reusable UI components
 3. Implement form components with validation
 4. Build card and grid layouts
 
 ### Phase 3: Pages (Week 3)
+
 1. Develop homepage
 2. Create service pages
 3. Build team and contact pages
 4. Implement legal/compliance pages
 
 ### Phase 4: Features (Week 4)
+
 1. Add animations and transitions
 2. Implement lazy loading
 3. Add SEO optimizations
@@ -234,6 +255,7 @@ The original website appears to be a WordPress site using the Bridge theme with 
 5. Implement PWA features
 
 ### Phase 5: Testing & Optimization (Week 5)
+
 1. Cross-browser testing
 2. Accessibility audit (WCAG 2.2 AA)
 3. Performance optimization
@@ -243,27 +265,29 @@ The original website appears to be a WordPress site using the Bridge theme with 
 ## Content Structure
 
 ### Homepage Content
+
 ```yaml
 hero:
-  title: "BEST IN CLASS CONCIERGE CARE PROVIDER IN CALIFORNIA"
-  subtitle: "Our concierge nurses provide comprehensive, bespoke care"
-  cta_primary: "Contact Us"
-  cta_secondary: "Learn More"
+  title: 'BEST IN CLASS CONCIERGE CARE PROVIDER IN CALIFORNIA'
+  subtitle: 'Our concierge nurses provide comprehensive, bespoke care'
+  cta_primary: 'Contact Us'
+  cta_secondary: 'Learn More'
 
 services:
-  - title: "Post-Surgical Recovery"
-  - title: "Chronic Condition Management"
-  - title: "Wellness Optimization"
-  - title: "Palliative Support"
+  - title: 'Post-Surgical Recovery'
+  - title: 'Chronic Condition Management'
+  - title: 'Wellness Optimization'
+  - title: 'Palliative Support'
 
 features:
-  - "24/7 Coordination"
-  - "Clinical Oversight"
-  - "Personalized Care Plans"
-  - "Expert Nursing Staff"
+  - '24/7 Coordination'
+  - 'Clinical Oversight'
+  - 'Personalized Care Plans'
+  - 'Expert Nursing Staff'
 ```
 
 ### Service Areas
+
 ```yaml
 locations:
   - Los Angeles County
@@ -298,6 +322,7 @@ specialties:
 ## SEO Requirements
 
 ### Meta Tags
+
 - Title tags for each page (50-60 characters)
 - Meta descriptions (150-160 characters)
 - Open Graph tags for social sharing
@@ -305,6 +330,7 @@ specialties:
 - Canonical URLs
 
 ### Structured Data
+
 - Organization schema
 - LocalBusiness schema
 - MedicalOrganization schema
@@ -313,6 +339,7 @@ specialties:
 - BreadcrumbList schema
 
 ### Performance Targets
+
 - First Contentful Paint: < 1.8s
 - Largest Contentful Paint: < 2.5s
 - Cumulative Layout Shift: < 0.1
@@ -322,6 +349,7 @@ specialties:
 ## Accessibility Requirements
 
 ### WCAG 2.2 AA Compliance
+
 - Proper heading hierarchy (h1-h6)
 - Alt text for all images
 - ARIA labels for interactive elements
@@ -361,4 +389,8 @@ specialties:
 
 ## Conclusion
 
-The Legacy Concierge website can be successfully rebuilt as a modern, performant, and accessible web application using vanilla JavaScript, HTML5, and CSS3. The architecture outlined above provides a solid foundation for creating a maintainable and scalable solution that meets all business requirements while adhering to modern web standards and best practices.
+The Legacy Concierge website can be successfully rebuilt as a modern,
+performant, and accessible web application using vanilla JavaScript, HTML5, and
+CSS3. The architecture outlined above provides a solid foundation for creating a
+maintainable and scalable solution that meets all business requirements while
+adhering to modern web standards and best practices.

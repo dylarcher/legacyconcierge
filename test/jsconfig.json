@@ -1,12 +1,7 @@
 {
-	"extends": "../jsconfig.json",
-	"compilerOptions": {
-		"types": [
-			"vite/client",
-			"vitest/globals"
-		]
-	},
-	"include": [
-		"./**/*"
-	]
+  "extends": "../jsconfig.json",
+  "compilerOptions": {
+    "types": ["vite/client", "vitest/globals"]
+  },
+  "include": ["./**/*"]
 }

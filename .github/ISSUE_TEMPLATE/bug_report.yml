@@ -1,13 +1,13 @@
 name: Bug Report
 description: Report a bug in Legacy Concierge
-title: "[Bug]: "
-labels: ["bug", "needs-triage"]
+title: '[Bug]: '
+labels: ['bug', 'needs-triage']
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to report a bug in Legacy Concierge!
-        
+
         Before submitting, please check if a similar issue already exists.
 
   - type: textarea

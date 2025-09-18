@@ -1,0 +1,75 @@
+{
+  "bootstrap-sha": "",
+  "last-release-sha": "",
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "bump-minor-pre-major": true,
+      "bump-patch-for-minor-pre-major": true,
+      "draft": false,
+      "prerelease": false,
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "json",
+          "path": "package.json",
+          "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": "package-lock.json",
+          "jsonpath": "$.version"
+        }
+      ],
+      "version-file": "package.json",
+      "initial-version": "0.1.0"
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "release-search-depth": 400,
+  "commit-search-depth": 500,
+  "group-pull-request-title-pattern": "chore: release v${version}",
+  "pull-request-title-pattern": "chore: release v${version}",
+  "pull-request-header": "## 🚀 Release Notes",
+  "pull-request-footer": "---\n\n*This PR was generated with [Release Please](https://github.com/googleapis/release-please). See [documentation](https://github.com/googleapis/release-please#release-please).*",
+  "separate-pull-requests": false,
+  "plugins": [
+    {
+      "type": "sentence-case",
+      "specialWords": [
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "HTML",
+        "API",
+        "URL",
+        "UI",
+        "UX",
+        "PWA",
+        "CLI",
+        "JSON",
+        "XML",
+        "YAML"
+      ]
+    }
+  ],
+  "changelog-sections": [
+    { "type": "feat", "section": "✨ Features", "hidden": false },
+    { "type": "fix", "section": "🐛 Bug Fixes", "hidden": false },
+    { "type": "perf", "section": "⚡ Performance Improvements", "hidden": false },
+    { "type": "docs", "section": "📚 Documentation", "hidden": false },
+    { "type": "style", "section": "💄 Styles", "hidden": false },
+    { "type": "refactor", "section": "♻️ Code Refactoring", "hidden": false },
+    { "type": "test", "section": "✅ Tests", "hidden": false },
+    { "type": "build", "section": "🏗️ Build System", "hidden": false },
+    { "type": "ci", "section": "👷 Continuous Integration", "hidden": false },
+    { "type": "chore", "section": "🔧 Miscellaneous Chores", "hidden": false },
+    { "type": "revert", "section": "⏪ Reverts", "hidden": false },
+    { "type": "deps", "section": "📦 Dependencies", "hidden": false },
+    { "type": "security", "section": "🔒 Security", "hidden": false },
+    { "type": "breaking", "section": "💥 BREAKING CHANGES", "hidden": false }
+  ],
+  "include-v-in-tag": true,
+  "include-component-in-tag": false,
+  "changelog-type": "github"
+}

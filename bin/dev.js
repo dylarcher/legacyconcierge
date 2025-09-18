@@ -58,7 +58,6 @@ async function startDevServer() {
 				server.printUrls();
 			}
 		});
-
 	} catch (error) {
 		spinner.fail(chalk.red('Failed to start development server'));
 		console.error(error);

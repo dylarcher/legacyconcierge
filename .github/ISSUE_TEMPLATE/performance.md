@@ -7,14 +7,12 @@ labels: ['performance', 'needs-triage']
 
 ## Performance Issue Description
 
-**What performance issue are you experiencing?**
-A clear and concise description of the performance issue.
+**What performance issue are you experiencing?** A clear and concise description
+of the performance issue.
 
-**Expected Performance**
-What level of performance did you expect?
+**Expected Performance** What level of performance did you expect?
 
-**Actual Performance**
-What performance are you currently experiencing?
+**Actual Performance** What performance are you currently experiencing?
 
 ## Performance Metrics
 
@@ -74,11 +72,10 @@ What performance are you currently experiencing?
 
 ## Additional Context
 
-**Screenshots or Performance Traces**
-If applicable, add screenshots of performance tools or traces.
+**Screenshots or Performance Traces** If applicable, add screenshots of
+performance tools or traces.
 
-**Related Issues**
-Link to any related performance issues or discussions.
+**Related Issues** Link to any related performance issues or discussions.
 
 ### Priority Level
 
@@ -97,5 +94,4 @@ Link to any related performance issues or discussions.
 - [ ] Network throttling tests
 - [ ] Custom performance tests
 
-**Test Results**
-Please share any performance test results or reports.
+**Test Results** Please share any performance test results or reports.
