@@ -44,6 +44,8 @@
     "CITATION.cff"
   ],
   "scripts": {
+    "commit": "cz",
+    "prepare": "husky",
     "dev": "node ./bin/dev.js",
     "build": "node ./bin/build.js",
     "test": "node ./bin/test.js",
@@ -131,8 +133,18 @@
     "node": "20.17.0",
     "npm": "10.8.2"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "devDependencies": {
     "@axe-core/cli": "4.10.2",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.2.0",
     "@vitest/ui": "3.2.4",
     "eslint": "9.35.0",
     "eslint-plugin-jsdoc": "59.0.1",
