@@ -226,68 +226,6 @@
   "project.environment": "development",
   "project.apiUrl": "http://localhost:3000",
 
-  // Extension Recommendations (for reference)
-  "recommendations": [
-    // JavaScript/Web Development
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "stylelint.vscode-stylelint",
-    "ritwickdey.liveserver",
-    "christian-kohler.path-intellisense",
-    "christian-kohler.npm-intellisense",
-    "wix.vscode-import-cost",
-    "formulahendry.auto-rename-tag",
-    "formulahendry.auto-close-tag",
-    "naumovs.color-highlight",
-    "pranaygp.vscode-css-peek",
-    "zignd.html-css-class-completion",
-
-    // Testing
-    "vitest.explorer",
-    "ms-playwright.playwright",
-    "hbenl.vscode-test-explorer",
-
-    // Accessibility
-    "deque-systems.vscode-axe-linter",
-    "MaxvanderSchee.web-accessibility",
-
-    // HTML/CSS
-    "ecmel.vscode-html-css",
-    "html-validate.vscode-html-validate",
-    "firefox-devtools.vscode-firefox-debug",
-
-    // Markdown
-    "DavidAnson.vscode-markdownlint",
-    "yzhang.markdown-all-in-one",
-    "bierner.markdown-preview-github-styles",
-
-    // Git
-    "eamodio.gitlens",
-    "donjayamanne.githistory",
-    "mhutchie.git-graph",
-
-    // PWA/Service Worker
-    "johnpapa.vscode-pwa-tools",
-    "ms-vscode.vscode-js-debug",
-
-    // Performance
-    "kisstkondoros.vscode-gutter-preview",
-    "waderyan.nodejs-extension-pack",
-
-    // Productivity
-    "aaron-bond.better-comments",
-    "streetsidesoftware.code-spell-checker",
-    "usernamehw.errorlens",
-    "gruntfuggly.todo-tree",
-    "wayou.vscode-todo-highlight",
-    "mikestead.dotenv",
-    "EditorConfig.EditorConfig",
-
-    // Icons & Themes
-    "PKief.material-icon-theme",
-    "vscode-icons-team.vscode-icons"
-  ],
-
   // Pa11y Configuration
   "pa11y.configPath": "./conf/.pa11yci.js",
 
