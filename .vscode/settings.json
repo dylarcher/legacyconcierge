@@ -226,8 +226,8 @@
   },
 
   // Project Specific
-  "legacyconcierge.environment": "development",
-  "legacyconcierge.apiUrl": "http://localhost:3000",
+  "project.environment": "development",
+  "project.apiUrl": "http://localhost:3000",
 
   // Extension Recommendations (for reference)
   "recommendations": [
