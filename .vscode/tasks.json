@@ -10,8 +10,7 @@
       "isBackground": true,
       "presentation": {
         "reveal": "always",
-        "panel": "new",
-        "group": "development"
+        "panel": "new"
       },
       "group": {
         "kind": "build",
@@ -25,7 +24,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "build"
       },
       "group": "build"
     },
@@ -50,7 +48,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       },
       "group": "test"
     },
@@ -62,7 +59,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       },
       "group": "test"
     },
@@ -74,7 +70,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       },
       "group": "test"
     },
@@ -86,7 +81,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       },
       "group": "test"
     },
@@ -101,7 +95,6 @@
       },
       "group": "test"
     },
-  },
     {
       "label": "Watch Tests",
       "type": "shell",
@@ -110,8 +103,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "dedicated",
-        "group": "test"
+        "panel": "dedicated"
       }
     },
 
@@ -124,7 +116,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "lint"
       }
     },
     {
@@ -135,7 +126,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "lint"
       }
     },
     {
@@ -146,7 +136,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "lint"
       }
     },
     {
@@ -157,7 +146,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "lint"
       }
     },
 
@@ -170,7 +158,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "format"
       }
     },
     {
@@ -181,7 +168,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "format"
       }
     },
 
@@ -194,7 +180,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       }
     },
     {
@@ -205,7 +190,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       }
     },
     {
@@ -216,7 +200,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "validation"
       }
     },
 
@@ -229,7 +212,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "test"
       }
     },
 
@@ -242,7 +224,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "validation"
       }
     },
     {
@@ -253,7 +234,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "validation"
       }
     },
     {
@@ -264,7 +244,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "validation"
       }
     },
 
@@ -277,7 +256,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "utility"
       }
     },
     {
@@ -288,7 +266,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "utility"
       }
     },
     {
@@ -299,7 +276,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "utility"
       }
     },
     {
@@ -310,7 +286,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "utility"
       }
     },
 
@@ -323,7 +298,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "deployment"
       }
     },
     {
@@ -334,7 +308,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "new",
-        "group": "deployment"
       }
     },
 
@@ -347,7 +320,6 @@
       "presentation": {
         "reveal": "always",
         "panel": "shared",
-        "group": "validation"
       }
     },
     {

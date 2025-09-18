@@ -27,8 +27,10 @@
   },
 
   // Configuration File Paths
-  "eslint.options.configFile": "${workspaceFolder}/conf/eslint.config.js",
-  "eslint.options.ignorePath": "${workspaceFolder}/conf/.eslintignore",
+  "eslint.options": {
+    "overrideConfigFile": "${workspaceFolder}/conf/eslint.config.js",
+    "ignorePath": "${workspaceFolder}/conf/.eslintignore"
+  },
   "stylelint.configFile": "${workspaceFolder}/conf/stylelint.config.mjs",
   "stylelint.ignorePath": "${workspaceFolder}/conf/.stylelintignore",
   "prettier.configPath": "${workspaceFolder}/conf/prettier.config.mjs",
