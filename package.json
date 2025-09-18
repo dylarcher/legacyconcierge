@@ -1,0 +1,152 @@
+{
+  "name": "legacyconcierge",
+  "version": "0.1.0",
+  "description": "A modern vanilla JavaScript website and CMS with focus on accessibility, performance, and SEO",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/types/index.js"
+    },
+    "./components": {
+      "import": "./src/components/index.js"
+    },
+    "./components/*": {
+      "import": "./src/components/*/index.js"
+    },
+    "./utils": {
+      "import": "./src/utils/index.js"
+    },
+    "./hooks": {
+      "import": "./src/hooks/index.js"
+    },
+    "./services": {
+      "import": "./src/services/index.js"
+    },
+    "./constants": {
+      "import": "./src/constants/index.js"
+    },
+    "./contexts": {
+      "import": "./src/contexts/index.js"
+    },
+    "./styles": {
+      "import": "./src/styles/main.css"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "CITATION.cff"
+  ],
+  "scripts": {
+    "dev": "node ./bin/dev.js",
+    "build": "node ./bin/build.js",
+    "test": "node ./bin/test.js",
+    "check": "node ./bin/check.js",
+    "generate": "node ./bin/generate.js",
+    "deploy": "node ./bin/deploy.js",
+    "perf": "node ./bin/perf.js",
+    "preview": "vite preview --config ./conf/vite.config.js",
+    "lint": "eslint --config ./conf/eslint.config.js src/**/*.js",
+    "lint:fix": "eslint --config ./conf/eslint.config.js src/**/*.js --fix",
+    "lint:css": "stylelint --config ./conf/stylelint.config.mjs src/**/*.css",
+    "test:unit": "vitest --config ./conf/vitest.config.js",
+    "test:coverage": "vitest --config ./conf/vitest.config.js --coverage",
+    "test:ui": "vitest --config ./conf/vitest.config.js --ui",
+    "test:watch": "vitest --config ./conf/vitest.config.js --watch",
+    "a11y": "pa11y-ci --config ./conf/.pa11yci.js",
+    "a11y:axe": "axe src/**/*.html",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "validate:html": "html-validate --config ./conf/.htmlvalidate.mjs src/**/*.html",
+    "lint:md": "markdownlint-cli2 --config ./conf/.markdownlint.yaml '**/*.md' '#node_modules' '#dist'",
+    "test:e2e": "playwright test --config ./conf/playwright.config.js",
+    "test:e2e:ui": "playwright test --config ./conf/playwright.config.js --ui",
+    "format": "prettier --config ./conf/prettier.config.mjs --write .",
+    "format:check": "prettier --config ./conf/prettier.config.mjs --check .",
+    "clean": "rm -rf dist node_modules package-lock.json",
+    "serve": "npx serve dist",
+    "prepack": "npm run build && npm run test && npm run lint",
+    "prepublishOnly": "npm run prepack",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "start": "npm run dev",
+    "ci": "npm ci && npm run check && npm run build"
+  },
+  "keywords": [
+    "vanilla-js",
+    "wcag",
+    "accessibility",
+    "pwa",
+    "seo",
+    "esm",
+    "cms",
+    "performance",
+    "modern-javascript",
+    "web-components",
+    "frontend"
+  ],
+  "homepage": "https://github.com/dylarcher/legacyconcierge#readme",
+  "bugs": {
+    "url": "https://github.com/dylarcher/legacyconcierge/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylarcher/legacyconcierge.git"
+  },
+  "author": "Dylan Archer <dylarcher@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/dylarcher"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "volta": {
+    "node": "20.17.0",
+    "npm": "10.8.2"
+  },
+  "devDependencies": {
+    "@axe-core/cli": "4.10.2",
+    "@vitest/ui": "3.2.4",
+    "eslint": "9.35.0",
+    "eslint-plugin-jsdoc": "59.0.1",
+    "happy-dom": "18.0.1",
+    "html-validate": "10.0.0",
+    "lighthouse": "12.8.2",
+    "pa11y": "9.0.0",
+    "pa11y-ci": "4.0.1",
+    "prettier": "3.6.2",
+    "stylelint": "16.24.0",
+    "stylelint-config-standard": "39.0.0",
+    "vite": "7.1.6",
+    "vite-plugin-pwa": "1.0.3",
+    "vitest": "3.2.4",
+    "workbox-window": "7.3.0"
+  }
+}
