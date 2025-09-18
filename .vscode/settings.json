@@ -36,9 +36,6 @@
   "markdownlint.config": {
     "extends": "./conf/.markdownlint.yaml"
   },
-  "htmlhint.options": {
-    "configFile": "./conf/.htmlvalidate.mjs"
-  },
   "vitest.configPath": "./conf/vitest.config.js",
   "playwright.configPath": "./conf/playwright.config.js",
   "vite.configPath": "./conf/vite.config.js",
