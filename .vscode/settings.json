@@ -33,9 +33,7 @@
   "stylelint.ignorePath": "./conf/.stylelintignore",
   "prettier.configPath": "./conf/prettier.config.mjs",
   "prettier.ignorePath": "./conf/.prettierignore",
-  "markdownlint.config": {
-    "extends": "./conf/.markdownlint.yaml"
-  },
+  "markdownlint.config": "./conf/.markdownlint.yaml",
   "vitest.configPath": "./conf/vitest.config.js",
   "playwright.configPath": "./conf/playwright.config.js",
   "vite.configPath": "./conf/vite.config.js",
