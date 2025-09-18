@@ -40,7 +40,6 @@
 
     // Live Development
     "ritwickdey.liveserver",                    // Live server
-    "ms-vscode.live-server",                    // Alternative live server
 
     // Code Quality
     "aaron-bond.better-comments",               // Better comment highlighting
