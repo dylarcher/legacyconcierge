@@ -27,18 +27,18 @@
   },
 
   // Configuration File Paths
-  "eslint.options.configFile": "./conf/eslint.config.js",
-  "eslint.options.ignorePath": "./conf/.eslintignore",
-  "stylelint.configFile": "./conf/stylelint.config.mjs",
-  "stylelint.ignorePath": "./conf/.stylelintignore",
-  "prettier.configPath": "./conf/prettier.config.mjs",
-  "prettier.ignorePath": "./conf/.prettierignore",
-  "markdownlint.config": "./conf/.markdownlint.yaml",
-  "vitest.configPath": "./conf/vitest.config.js",
-  "playwright.configPath": "./conf/playwright.config.js",
-  "vite.configPath": "./conf/vite.config.js",
-
-  // ESLint
+  "eslint.options.configFile": "${workspaceFolder}/conf/eslint.config.js",
+  "eslint.options.ignorePath": "${workspaceFolder}/conf/.eslintignore",
+  "stylelint.configFile": "${workspaceFolder}/conf/stylelint.config.mjs",
+  "stylelint.ignorePath": "${workspaceFolder}/conf/.stylelintignore",
+  "prettier.configPath": "${workspaceFolder}/conf/prettier.config.mjs",
+  "prettier.ignorePath": "${workspaceFolder}/conf/.prettierignore",
+  "markdownlint.config": {
+    "extends": "${workspaceFolder}/conf/.markdownlint.yaml"
+  },
+  "vitest.configPath": "${workspaceFolder}/conf/vitest.config.js",
+  "playwright.configPath": "${workspaceFolder}/conf/playwright.config.js",
+  "vite.configPath": "${workspaceFolder}/conf/vite.config.js",
   "eslint.enable": true,
   "eslint.validate": [
     "javascript",
