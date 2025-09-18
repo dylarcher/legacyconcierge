@@ -223,8 +223,6 @@
   },
 
   // Project Specific
-  "project.environment": "development",
-  "project.apiUrl": "http://localhost:3000",
 
   // Pa11y Configuration
   "pa11y.configPath": "./conf/.pa11yci.js",
