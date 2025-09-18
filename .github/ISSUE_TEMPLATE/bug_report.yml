@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a bug in Legacy Concierge
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug in Legacy Concierge!
+        
+        Before submitting, please check if a similar issue already exists.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen
+      placeholder: |
+        A clear and concise description of what the bug is.
+        Include what you expected to happen vs what actually happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What steps can we follow to reproduce this issue?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Other (please specify in description)
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: Device type
+      options:
+        - Desktop
+        - Mobile
+        - Tablet
+        - Screen reader
+        - Other assistive technology
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      description: Run `node --version` if developing locally
+      placeholder: v20.17.0
+
+  - type: input
+    id: npm-version
+    attributes:
+      label: npm version
+      description: Run `npm --version` if developing locally
+      placeholder: 10.8.2
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell

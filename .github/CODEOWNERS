@@ -1,0 +1,27 @@
+# Code Owners for Legacy Concierge
+# https://help.github.com/articles/about-codeowners/
+
+# Default owner for everything in the repository
+* @dylarcher
+
+# Core source code
+/src/ @dylarcher
+
+# Configuration files
+*.config.js @dylarcher
+*.config.mjs @dylarcher
+/conf/ @dylarcher
+
+# Build and deployment scripts
+/bin/ @dylarcher
+
+# GitHub workflows and templates
+/.github/ @dylarcher
+
+# Documentation
+/docs/ @dylarcher
+*.md @dylarcher
+
+# Package and dependency management
+package.json @dylarcher
+package-lock.json @dylarcher

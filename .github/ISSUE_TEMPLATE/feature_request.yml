@@ -1,0 +1,90 @@
+name: Feature Request
+description: Suggest a new feature for Legacy Concierge
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature for Legacy Concierge!
+        
+        Please ensure your feature aligns with our core principles:
+        - Accessibility (WCAG compliance)
+        - Performance optimization
+        - SEO best practices
+        - Vanilla JavaScript approach
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem is.
+      placeholder: I'm always frustrated when...
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Feature Category
+      description: Which area does this feature relate to?
+      options:
+        - Accessibility
+        - Performance
+        - SEO
+        - PWA Features
+        - CMS Functionality
+        - Component System
+        - Build System
+        - Testing
+        - Developer Experience
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: accessibility
+    attributes:
+      label: Accessibility Considerations
+      description: Have you considered the accessibility impact of this feature?
+      options:
+        - label: This feature maintains or improves accessibility (WCAG compliance)
+          required: false
+        - label: This feature includes keyboard navigation support
+          required: false
+        - label: This feature includes screen reader support
+          required: false
+        - label: This feature may need accessibility review
+          required: false
+
+  - type: checkboxes
+    id: performance
+    attributes:
+      label: Performance Considerations
+      description: Have you considered the performance impact?
+      options:
+        - label: This feature maintains or improves performance
+          required: false
+        - label: This feature may impact bundle size
+          required: false
+        - label: This feature may need performance review
+          required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.

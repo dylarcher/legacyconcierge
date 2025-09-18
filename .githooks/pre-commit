@@ -1,0 +1,26 @@
+#!/bin/bash
+# pre-commit hook to run checks before committing
+
+set -e
+
+echo "Running pre-commit checks..."
+
+# Run linting
+echo "→ Running ESLint..."
+npm run lint
+
+# Run tests
+echo "→ Running tests..."
+npm run test
+
+# Check formatting
+echo "→ Checking code formatting..."
+npm run format:check
+
+# Validate HTML if any HTML files exist
+if ls src/**/*.html 1> /dev/null 2>&1; then
+    echo "→ Validating HTML..."
+    npm run validate:html
+fi
+
+echo "✅ All pre-commit checks passed!"
