@@ -19,7 +19,9 @@
 [![ESLint](https://img.shields.io/badge/linted%20with-ESLint-4B32C3?logo=eslint)](https://eslint.org/)
 [![Maintained](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://github.com/dylarcher/legacyconcierge/commits/main)
 
-[Demo](https://legacyconcierge.com) • [Documentation](./docs/README.md) • [Report Bug](https://github.com/dylarcher/legacyconcierge/issues) • [Request Feature](https://github.com/dylarcher/legacyconcierge/issues/new?template=feature_request.yml)
+[Demo](https://legacyconcierge.com) • [Documentation](./docs/README.md) •
+[Report Bug](https://github.com/dylarcher/legacyconcierge/issues) •
+[Request Feature](https://github.com/dylarcher/legacyconcierge/issues/new?template=feature_request.yml)
 
 </div>
 
@@ -44,12 +46,19 @@
 
 ## 🏥 About
 
-Legacy Concierge is a modern, vanilla JavaScript-based website and content management system (CMS) designed for premium healthcare concierge services in Southern California. Built with a framework-free approach, it emphasizes accessibility (WCAG 2.2 AA), performance optimization, and SEO best practices while maintaining zero runtime dependencies.
+Legacy Concierge is a modern, vanilla JavaScript-based website and content
+management system (CMS) designed for premium healthcare concierge services in
+Southern California. Built with a framework-free approach, it emphasizes
+accessibility (WCAG 2.2 AA), performance optimization, and SEO best practices
+while maintaining zero runtime dependencies.
 
 ### 🎯 Mission
 
-To provide comprehensive, bespoke healthcare services across Southern California with:
-- **12 Specialized Expertise Areas**: Neurological conditions, chronic disease management, and specialized care
+To provide comprehensive, bespoke healthcare services across Southern California
+with:
+
+- **12 Specialized Expertise Areas**: Neurological conditions, chronic disease
+  management, and specialized care
 - **8 Concierge Treatment Services**: From IV therapy to post-operative recovery
 - **24/7 Clinical Coordination**: Round-the-clock care management and oversight
 
@@ -66,11 +75,15 @@ To provide comprehensive, bespoke healthcare services across Southern California
 ### 🏥 Healthcare Services
 
 #### Specialized Expertise
-- **Neurological**: ALS, Alzheimer's Disease, Dementia, Parkinson's Disease, Multiple Sclerosis
+
+- **Neurological**: ALS, Alzheimer's Disease, Dementia, Parkinson's Disease,
+  Multiple Sclerosis
 - **Chronic Conditions**: Diabetes Management, Heart Disease, Stroke Recovery
-- **Specialized Care**: Oncology Support, Post-Surgical Recovery, Rehabilitation Services
+- **Specialized Care**: Oncology Support, Post-Surgical Recovery, Rehabilitation
+  Services
 
 #### Concierge Treatments
+
 - IV Therapy & Hydration
 - Pain Management Solutions
 - Mental Health Services
@@ -81,6 +94,7 @@ To provide comprehensive, bespoke healthcare services across Southern California
 - Wound Care Management
 
 #### Service Areas
+
 - Los Angeles County (Complete Coverage)
 - Orange County (Complete Coverage)
 - San Diego County (Select Areas)
@@ -89,19 +103,28 @@ To provide comprehensive, bespoke healthcare services across Southern California
 ### 💻 Technical Features
 
 #### Core Capabilities
-- **🌐 Accessibility**: WCAG 2.2 AA, keyboard navigation, screen reader optimized, focus management
-- **⚡ Performance**: Core Web Vitals optimized, lazy loading, code splitting, resource hints
-- **📱 PWA Features**: Offline support, installable, push notifications, background sync
+
+- **🌐 Accessibility**: WCAG 2.2 AA, keyboard navigation, screen reader
+  optimized, focus management
+- **⚡ Performance**: Core Web Vitals optimized, lazy loading, code splitting,
+  resource hints
+- **📱 PWA Features**: Offline support, installable, push notifications,
+  background sync
 - **🔍 SEO**: Structured data, meta tags, XML sitemap, Open Graph, Twitter Cards
-- **🎨 Modern Design**: Responsive, dark mode, reduced motion, high contrast support
-- **🔒 Security**: CSP headers, HTTPS enforced, input sanitization, XSS protection
+- **🎨 Modern Design**: Responsive, dark mode, reduced motion, high contrast
+  support
+- **🔒 Security**: CSP headers, HTTPS enforced, input sanitization, XSS
+  protection
 - **🌍 Internationalization**: RTL support, logical properties, lang attributes
-- **♿ Accessibility**: Live regions, ARIA landmarks, skip navigation, focus indicators
+- **♿ Accessibility**: Live regions, ARIA landmarks, skip navigation, focus
+  indicators
 
 #### Developer Experience
+
 - **📦 Zero Dependencies**: No runtime libraries required
 - **🛠️ Modern Tooling**: Vite, ESBuild, modern dev server
-- **🧪 Comprehensive Testing**: Unit, integration, E2E, accessibility, performance
+- **🧪 Comprehensive Testing**: Unit, integration, E2E, accessibility,
+  performance
 - **📝 Full Documentation**: JSDoc, type definitions, architecture docs
 - **🔄 CI/CD**: Automated testing, releases, deployments
 - **📊 Analytics Ready**: Privacy-first analytics integration
@@ -109,6 +132,7 @@ To provide comprehensive, bespoke healthcare services across Southern California
 ## 🛠️ Tech Stack
 
 ### Frontend Architecture
+
 ```
 ┌─────────────────────────────────────────────────┐
 │                   Frontend                       │
@@ -142,6 +166,7 @@ To provide comprehensive, bespoke healthcare services across Southern California
 ```
 
 ### Development Stack
+
 ```yaml
 Build Tools:
   - Vite: Lightning-fast HMR and building
@@ -172,6 +197,7 @@ CI/CD:
 ```
 
 ### Browser Support
+
 ```javascript
 // Modern browsers with ES6+ support
 {
@@ -355,7 +381,7 @@ export class StateContext {
   }
 
   #notify() {
-    this.#subscribers.forEach(cb => cb(this.#state));
+    this.#subscribers.forEach((cb) => cb(this.#state));
   }
 }
 ```
@@ -377,11 +403,13 @@ cp .env.example .env
 ### Development Workflow
 
 1. **Create Feature Branch**
+
    ```bash
    git checkout -b feature/your-feature
    ```
 
 2. **Make Changes**
+
    ```bash
    # Write code following conventions
    # Add tests for new features
@@ -389,6 +417,7 @@ cp .env.example .env
    ```
 
 3. **Run Quality Checks**
+
    ```bash
    npm run check        # All checks
    npm run lint:fix     # Fix linting
@@ -396,6 +425,7 @@ cp .env.example .env
    ```
 
 4. **Commit Changes**
+
    ```bash
    npm run commit       # Interactive commit
    # Follow conventional commits
@@ -410,12 +440,11 @@ cp .env.example .env
 ### Coding Standards
 
 #### JavaScript
+
 ```javascript
 // Use modern ES6+ features
 const processData = async (items = []) => {
-  const results = await Promise.all(
-    items.map(item => transform(item))
-  );
+  const results = await Promise.all(items.map((item) => transform(item)));
   return results.filter(Boolean);
 };
 
@@ -438,6 +467,7 @@ export async function processUser(user) {
 ```
 
 #### CSS
+
 ```css
 /* Use BEM naming convention */
 .button {
@@ -478,6 +508,7 @@ export async function processUser(user) {
 ```
 
 #### HTML
+
 ```html
 <!-- Semantic HTML -->
 <article class="card" itemscope itemtype="https://schema.org/Article">
@@ -493,9 +524,7 @@ export async function processUser(user) {
   </div>
 
   <footer class="card__footer">
-    <a href="/read-more"
-       class="card__link"
-       aria-label="Read more about Title">
+    <a href="/read-more" class="card__link" aria-label="Read more about Title">
       Continue Reading
     </a>
   </footer>
@@ -602,6 +631,7 @@ dist/
 ### Deployment Options
 
 #### Static Hosting (Recommended)
+
 ```bash
 # Netlify
 netlify deploy --prod --dir=dist
@@ -617,6 +647,7 @@ wrangler pages publish dist
 ```
 
 #### Docker Deployment
+
 ```dockerfile
 FROM nginx:alpine
 COPY dist /usr/share/nginx/html
@@ -641,16 +672,16 @@ export default {
 
 ### Metrics & Targets
 
-| Metric | Target | Current | Status |
-|--------|--------|---------|--------|
-| **FCP** (First Contentful Paint) | < 1.8s | 1.2s | ✅ |
-| **LCP** (Largest Contentful Paint) | < 2.5s | 1.8s | ✅ |
-| **CLS** (Cumulative Layout Shift) | < 0.1 | 0.02 | ✅ |
-| **FID** (First Input Delay) | < 100ms | 45ms | ✅ |
-| **INP** (Interaction to Next Paint) | < 200ms | 150ms | ✅ |
-| **TTI** (Time to Interactive) | < 3.8s | 2.5s | ✅ |
-| **TBT** (Total Blocking Time) | < 300ms | 180ms | ✅ |
-| **Bundle Size** (gzipped) | < 100KB | 75KB | ✅ |
+| Metric                              | Target  | Current | Status |
+| ----------------------------------- | ------- | ------- | ------ |
+| **FCP** (First Contentful Paint)    | < 1.8s  | 1.2s    | ✅     |
+| **LCP** (Largest Contentful Paint)  | < 2.5s  | 1.8s    | ✅     |
+| **CLS** (Cumulative Layout Shift)   | < 0.1   | 0.02    | ✅     |
+| **FID** (First Input Delay)         | < 100ms | 45ms    | ✅     |
+| **INP** (Interaction to Next Paint) | < 200ms | 150ms   | ✅     |
+| **TTI** (Time to Interactive)       | < 3.8s  | 2.5s    | ✅     |
+| **TBT** (Total Blocking Time)       | < 300ms | 180ms   | ✅     |
+| **Bundle Size** (gzipped)           | < 100KB | 75KB    | ✅     |
 
 ### Optimization Techniques
 
@@ -703,10 +734,7 @@ const module = await import('./heavy-module.js');
 </div>
 
 <!-- Focus management -->
-<button
-  aria-expanded="false"
-  aria-controls="menu"
-  aria-haspopup="true">
+<button aria-expanded="false" aria-controls="menu" aria-haspopup="true">
   Menu
 </button>
 ```
@@ -723,6 +751,7 @@ const module = await import('./heavy-module.js');
 ### Security Measures
 
 #### Content Security Policy
+
 ```javascript
 // CSP Header
 Content-Security-Policy:
@@ -738,6 +767,7 @@ Content-Security-Policy:
 ```
 
 #### Input Sanitization
+
 ```javascript
 // Sanitize user input
 function sanitizeHTML(input) {
@@ -756,6 +786,7 @@ function validateInput(input, pattern) {
 ```
 
 #### Security Headers
+
 ```nginx
 # nginx.conf
 add_header X-Frame-Options "DENY";
@@ -768,6 +799,7 @@ add_header Permissions-Policy "geolocation=(), microphone=(), camera=()";
 ### Vulnerability Reporting
 
 See [SECURITY.md](./SECURITY.md) for:
+
 - Security policy
 - Reporting process
 - Response timeline
@@ -810,7 +842,7 @@ in the Software without restriction...
 
 ### Core Contributors
 
-- **Dylan Archer** - *Project Lead* - [@dylarcher](https://github.com/dylarcher)
+- **Dylan Archer** - _Project Lead_ - [@dylarcher](https://github.com/dylarcher)
 
 ### Contributors
 
@@ -820,8 +852,11 @@ See [AUTHORS.md](./AUTHORS.md) for the full list of contributors.
 
 ### Getting Help
 
-- 📋 [GitHub Issues](https://github.com/dylarcher/legacyconcierge/issues) - Bug reports and feature requests
-- 💬 [GitHub Discussions](https://github.com/dylarcher/legacyconcierge/discussions) - Questions and discussions
+- 📋 [GitHub Issues](https://github.com/dylarcher/legacyconcierge/issues) - Bug
+  reports and feature requests
+- 💬
+  [GitHub Discussions](https://github.com/dylarcher/legacyconcierge/discussions) -
+  Questions and discussions
 - 📧 [Email Support](mailto:dylarcher@gmail.com) - Direct support
 - 📖 [Documentation](./docs/README.md) - Full documentation
 - 💝 [Sponsor](https://github.com/sponsors/dylarcher) - Support development
@@ -835,6 +870,7 @@ See [AUTHORS.md](./AUTHORS.md) for the full list of contributors.
 ## 🎯 Roadmap
 
 ### Version 1.0 (Q1 2025)
+
 - [x] Initial project setup
 - [x] Component architecture
 - [x] Accessibility compliance
@@ -843,6 +879,7 @@ See [AUTHORS.md](./AUTHORS.md) for the full list of contributors.
 - [ ] Documentation complete
 
 ### Version 2.0 (Q2 2025)
+
 - [ ] Advanced PWA features
 - [ ] Enhanced analytics
 - [ ] Multi-language support
@@ -850,6 +887,7 @@ See [AUTHORS.md](./AUTHORS.md) for the full list of contributors.
 - [ ] Admin dashboard
 
 ### Future Enhancements
+
 - [ ] AI-powered recommendations
 - [ ] Voice interface
 - [ ] Mobile app companion
@@ -865,10 +903,10 @@ See [AUTHORS.md](./AUTHORS.md) for the full list of contributors.
 
 ### Build Status
 
-| Branch | Build | Coverage | Security |
-|--------|-------|----------|----------|
-| main | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen) | ![Security](https://img.shields.io/badge/security-A%2B-brightgreen) |
-| develop | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Coverage](https://img.shields.io/badge/coverage-93%25-green) | ![Security](https://img.shields.io/badge/security-A-green) |
+| Branch  | Build                                                            | Coverage                                                             | Security                                                            |
+| ------- | ---------------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| main    | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen) | ![Security](https://img.shields.io/badge/security-A%2B-brightgreen) |
+| develop | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Coverage](https://img.shields.io/badge/coverage-93%25-green)       | ![Security](https://img.shields.io/badge/security-A-green)          |
 
 ## 🙏 Acknowledgments
 
@@ -884,6 +922,8 @@ See [AUTHORS.md](./AUTHORS.md) for the full list of contributors.
 
 **Built with ❤️ by the Legacy Concierge Team**
 
-[Website](https://legacyconcierge.com) • [GitHub](https://github.com/dylarcher/legacyconcierge) • [npm](https://www.npmjs.com/package/legacyconcierge)
+[Website](https://legacyconcierge.com) •
+[GitHub](https://github.com/dylarcher/legacyconcierge) •
+[npm](https://www.npmjs.com/package/legacyconcierge)
 
 </div>

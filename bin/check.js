@@ -112,8 +112,8 @@ async function runAllChecks() {
 	console.log(chalk.cyan.bold('Summary:'));
 	console.log(chalk.cyan('━'.repeat(50)));
 
-	const passed = results.filter(r => r.success).length;
-	const failed = results.filter(r => !r.success).length;
+	const passed = results.filter((r) => r.success).length;
+	const failed = results.filter((r) => !r.success).length;
 
 	console.log(chalk.green(`✓ Passed: ${passed}`));
 	if (failed > 0) {

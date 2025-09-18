@@ -42,11 +42,7 @@
   "playwright.configPath": "${workspaceFolder}/conf/playwright.config.js",
   "vite.configPath": "${workspaceFolder}/conf/vite.config.js",
   "eslint.enable": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "html"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "html"],
   "eslint.workingDirectories": [{ "mode": "auto" }],
 
   // Stylelint

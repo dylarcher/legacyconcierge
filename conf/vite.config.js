@@ -80,7 +80,8 @@ export default defineConfig({
 			manifest: {
 				name: 'Legacy Concierge',
 				short_name: 'Legacy',
-				description: 'A modern vanilla JavaScript website and CMS with focus on accessibility, performance, and SEO',
+				description:
+					'A modern vanilla JavaScript website and CMS with focus on accessibility, performance, and SEO',
 				theme_color: '#000000',
 				background_color: '#ffffff',
 				display: 'standalone',
@@ -278,7 +279,8 @@ export default defineConfig({
 			'X-XSS-Protection': '1; mode=block',
 			'Referrer-Policy': 'strict-origin-when-cross-origin',
 			'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-			'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;",
+			'Content-Security-Policy':
+				"default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:;",
 		},
 	},
 });

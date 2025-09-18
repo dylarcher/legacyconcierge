@@ -6,11 +6,14 @@ Thank you for using Legacy Concierge! Here are the best ways to get support:
 
 ### 🐛 Bug Reports
 
-If you've found a bug, please [create a new issue](https://github.com/dylarcher/legacy-concierge/issues/new/choose) using the appropriate template.
+If you've found a bug, please
+[create a new issue](https://github.com/dylarcher/legacy-concierge/issues/new/choose)
+using the appropriate template.
 
 ### 💡 Feature Requests
 
-Have an idea for a new feature? We'd love to hear it! Please [create a feature request](https://github.com/dylarcher/legacy-concierge/issues/new/choose).
+Have an idea for a new feature? We'd love to hear it! Please
+[create a feature request](https://github.com/dylarcher/legacy-concierge/issues/new/choose).
 
 ### 💬 Discussions
 
@@ -52,4 +55,5 @@ If Legacy Concierge is helpful to you, consider:
 - **Feature requests**: 1-2 weeks
 - **General questions**: 3-7 business days
 
-Please note that this is an open-source project maintained by volunteers, and response times may vary.
+Please note that this is an open-source project maintained by volunteers, and
+response times may vary.

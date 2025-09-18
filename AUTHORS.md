@@ -3,6 +3,7 @@
 ## Project Lead
 
 **Dylan Archer** - [@dylarcher](https://github.com/dylarcher)
+
 - Email: dylarcher@gmail.com
 - Role: Project Creator & Lead Developer
 - Contributions: Initial architecture, core implementation, documentation
@@ -17,7 +18,9 @@ Contributors who have made significant contributions to the project:
 
 ### Contributors
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+This project follows the
+[all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind are welcome!
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -49,7 +52,8 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## How to Contribute
 
-We welcome contributions from everyone! Please see our [Contributing Guide](./CONTRIBUTING.md) for details on how to get started.
+We welcome contributions from everyone! Please see our
+[Contributing Guide](./CONTRIBUTING.md) for details on how to get started.
 
 ### Quick Start
 
@@ -63,7 +67,8 @@ We welcome contributions from everyone! Please see our [Contributing Guide](./CO
 
 ### Special Thanks
 
-- **Open Source Community** - For the amazing tools and libraries that make this project possible
+- **Open Source Community** - For the amazing tools and libraries that make this
+  project possible
 - **Web Standards Organizations** - W3C, WHATWG for advancing web standards
 - **Accessibility Advocates** - For pushing for a more inclusive web
 - **Healthcare Professionals** - For domain expertise and guidance
@@ -76,10 +81,13 @@ We welcome contributions from everyone! Please see our [Contributing Guide](./CO
 
 ## Becoming a Contributor
 
-We value all contributions, no matter how small. Here's how you can become a contributor:
+We value all contributions, no matter how small. Here's how you can become a
+contributor:
 
-1. **Report Issues**: Found a bug? [Report it](https://github.com/dylarcher/legacyconcierge/issues)
-2. **Suggest Features**: Have an idea? [Share it](https://github.com/dylarcher/legacyconcierge/issues/new?template=feature_request.yml)
+1. **Report Issues**: Found a bug?
+   [Report it](https://github.com/dylarcher/legacyconcierge/issues)
+2. **Suggest Features**: Have an idea?
+   [Share it](https://github.com/dylarcher/legacyconcierge/issues/new?template=feature_request.yml)
 3. **Improve Documentation**: Documentation can always be better
 4. **Write Code**: Pick an issue and start coding
 5. **Review PRs**: Help review pull requests
@@ -88,16 +96,21 @@ We value all contributions, no matter how small. Here's how you can become a con
 
 ## Code of Conduct
 
-All contributors are expected to follow our [Code of Conduct](./CODE_OF_CONDUCT.md). Please ensure you read and understand it before contributing.
+All contributors are expected to follow our
+[Code of Conduct](./CODE_OF_CONDUCT.md). Please ensure you read and understand
+it before contributing.
 
 ## License
 
-By contributing to Legacy Concierge, you agree that your contributions will be licensed under the [MIT License](./LICENSE).
+By contributing to Legacy Concierge, you agree that your contributions will be
+licensed under the [MIT License](./LICENSE).
 
 ## Contact
 
-- **Project Issues**: [GitHub Issues](https://github.com/dylarcher/legacyconcierge/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/dylarcher/legacyconcierge/discussions)
+- **Project Issues**:
+  [GitHub Issues](https://github.com/dylarcher/legacyconcierge/issues)
+- **Discussions**:
+  [GitHub Discussions](https://github.com/dylarcher/legacyconcierge/discussions)
 - **Email**: dylarcher@gmail.com
 - **Website**: [legacyconcierge.com](https://legacyconcierge.com)
 
@@ -105,4 +118,5 @@ By contributing to Legacy Concierge, you agree that your contributions will be l
 
 **Thank you to all our contributors!** 🙏
 
-Your contributions make this project possible and help improve healthcare accessibility through technology.
+Your contributions make this project possible and help improve healthcare
+accessibility through technology.

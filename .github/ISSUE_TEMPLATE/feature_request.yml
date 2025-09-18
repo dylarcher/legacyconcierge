@@ -1,13 +1,13 @@
 name: Feature Request
 description: Suggest a new feature for Legacy Concierge
-title: "[Feature]: "
-labels: ["enhancement", "needs-triage"]
+title: '[Feature]: '
+labels: ['enhancement', 'needs-triage']
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for suggesting a new feature for Legacy Concierge!
-        
+
         Please ensure your feature aligns with our core principles:
         - Accessibility (WCAG compliance)
         - Performance optimization

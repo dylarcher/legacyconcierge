@@ -7,7 +7,7 @@ export default {
 		'attribute-empty-style': ['error', { style: 'empty' }],
 		'close-attr': 'error',
 		'close-order': 'error',
-		'deprecated': 'error',
+		deprecated: 'error',
 		'deprecated-rule': 'error',
 		'doctype-html': 'error',
 		'element-case': ['error', { style: 'lowercase' }],
@@ -78,20 +78,30 @@ export default {
 		'form-dup-name': 'warning',
 		'input-attributes': 'error',
 		'label-has-for': 'error',
-		'meta-viewport': ['error', {
-			allowUserScaling: true,
-			maximumScale: null,
-		}],
-		'no-autoplay': ['warning', {
-			include: ['audio', 'video'],
-		}],
+		'meta-viewport': [
+			'error',
+			{
+				allowUserScaling: true,
+				maximumScale: null,
+			},
+		],
+		'no-autoplay': [
+			'warning',
+			{
+				include: ['audio', 'video'],
+			},
+		],
 		'attr-delimiter': 'error',
 		'attr-spacing': 'error',
 		'attribute-misuse': 'error',
-		'class-pattern': ['warning', {
-			pattern: '^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z][a-z0-9]*(-[a-z0-9]+)*)?(--[a-z][a-z0-9]*(-[a-z0-9]+)*)?$',
-		}],
-		'contextmenu': 'off',
+		'class-pattern': [
+			'warning',
+			{
+				pattern:
+					'^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z][a-z0-9]*(-[a-z0-9]+)*)?(--[a-z][a-z0-9]*(-[a-z0-9]+)*)?$',
+			},
+		],
+		contextmenu: 'off',
 		'element-content': 'error',
 		'no-implicit-close': 'error',
 		'no-style-tag': 'off',
@@ -116,5 +126,8 @@ export default {
 			},
 		},
 	],
-	plugins: ['<rootDir>/node_modules/html-validate-angular', '<rootDir>/node_modules/html-validate-vue'],
+	plugins: [
+		'<rootDir>/node_modules/html-validate-angular',
+		'<rootDir>/node_modules/html-validate-vue',
+	],
 };

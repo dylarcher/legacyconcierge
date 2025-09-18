@@ -23,7 +23,7 @@
       "script": "build",
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       },
       "group": "build"
     },
@@ -47,7 +47,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       },
       "group": "test"
     },
@@ -58,7 +58,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       },
       "group": "test"
     },
@@ -69,7 +69,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       },
       "group": "test"
     },
@@ -80,7 +80,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       },
       "group": "test"
     },
@@ -115,7 +115,7 @@
       "problemMatcher": ["$eslint-stylish"],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -125,7 +125,7 @@
       "problemMatcher": ["$eslint-stylish"],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -135,7 +135,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -145,7 +145,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
 
@@ -157,7 +157,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -167,7 +167,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
 
@@ -179,7 +179,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -189,7 +189,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -199,7 +199,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
 
@@ -211,7 +211,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
 
@@ -223,7 +223,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -233,7 +233,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -243,7 +243,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
 
@@ -255,7 +255,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -265,7 +265,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -275,7 +275,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -285,7 +285,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
 
@@ -297,7 +297,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
@@ -307,7 +307,7 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "new",
+        "panel": "new"
       }
     },
 
@@ -319,35 +319,22 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
-        "panel": "shared",
+        "panel": "shared"
       }
     },
     {
       "label": "Lint All",
-      "dependsOn": [
-        "Lint JavaScript",
-        "Lint CSS",
-        "Lint Markdown"
-      ],
+      "dependsOn": ["Lint JavaScript", "Lint CSS", "Lint Markdown"],
       "problemMatcher": []
     },
     {
       "label": "Test All",
-      "dependsOn": [
-        "Run Unit Tests",
-        "Run E2E Tests",
-        "Run Accessibility Tests"
-      ],
+      "dependsOn": ["Run Unit Tests", "Run E2E Tests", "Run Accessibility Tests"],
       "problemMatcher": []
     },
     {
       "label": "Pre-commit Checks",
-      "dependsOn": [
-        "Check Formatting",
-        "Lint JavaScript",
-        "Lint CSS",
-        "Run Unit Tests"
-      ],
+      "dependsOn": ["Check Formatting", "Lint JavaScript", "Lint CSS", "Run Unit Tests"],
       "problemMatcher": []
     }
   ]

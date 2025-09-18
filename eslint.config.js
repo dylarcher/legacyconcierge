@@ -25,12 +25,15 @@ export default [
 		},
 		rules: {
 			'no-console': ['warn', { allow: ['warn', 'error', 'assert'] }],
-			'no-unused-vars': ['error', {
-				argsIgnorePattern: '^_',
-				destructuredArrayIgnorePattern: '^_',
-				varsIgnorePattern: '^_',
-				caughtErrorsIgnorePattern: '^_'
-			}],
+			'no-unused-vars': [
+				'error',
+				{
+					argsIgnorePattern: '^_',
+					destructuredArrayIgnorePattern: '^_',
+					varsIgnorePattern: '^_',
+					caughtErrorsIgnorePattern: '^_',
+				},
+			],
 			'prefer-const': 'error',
 			'no-var': 'error',
 			'arrow-spacing': 'error',
@@ -49,7 +52,7 @@ export default [
 			'consistent-return': 'error',
 			'default-case-last': 'error',
 			'default-param-last': 'error',
-			'eqeqeq': ['error', 'always', { null: 'ignore' }],
+			eqeqeq: ['error', 'always', { null: 'ignore' }],
 			'grouped-accessor-pairs': 'error',
 			'guard-for-in': 'error',
 			'no-alert': 'warn',
@@ -79,11 +82,14 @@ export default [
 			'no-sequences': 'error',
 			'no-throw-literal': 'error',
 			'no-unmodified-loop-condition': 'error',
-			'no-unused-expressions': ['error', {
-				allowShortCircuit: true,
-				allowTernary: true,
-				allowTaggedTemplates: true
-			}],
+			'no-unused-expressions': [
+				'error',
+				{
+					allowShortCircuit: true,
+					allowTernary: true,
+					allowTaggedTemplates: true,
+				},
+			],
 			'no-useless-call': 'error',
 			'no-useless-concat': 'error',
 			'no-useless-return': 'error',
@@ -91,9 +97,9 @@ export default [
 			'no-with': 'error',
 			'prefer-promise-reject-errors': 'error',
 			'prefer-regex-literals': 'error',
-			'radix': 'error',
+			radix: 'error',
 			'require-await': 'error',
-			'yoda': 'error',
+			yoda: 'error',
 			'jsdoc/check-alignment': 'error',
 			'jsdoc/check-param-names': 'error',
 			'jsdoc/check-tag-names': 'error',
@@ -111,8 +117,8 @@ export default [
 					},
 					contexts: [
 						'ExportNamedDeclaration > FunctionDeclaration',
-						'ExportDefaultDeclaration > FunctionDeclaration'
-					]
+						'ExportDefaultDeclaration > FunctionDeclaration',
+					],
 				},
 			],
 			'jsdoc/require-param': 'error',

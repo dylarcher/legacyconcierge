@@ -2,9 +2,9 @@ name: Accessibility Audit
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   schedule:
     # Run weekly on Sundays at 2 AM UTC
     - cron: '0 2 * * 0'
@@ -12,44 +12,44 @@ on:
 jobs:
   accessibility:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-        cache: 'npm'
-    
-    - name: Install dependencies
-      run: npm ci
-    
-    - name: Build application
-      run: npm run build
-    
-    - name: Start server
-      run: |
-        npm run serve &
-        sleep 10
-      
-    - name: Run Pa11y accessibility tests
-      run: npm run a11y
-      continue-on-error: true
-    
-    - name: Run axe-core accessibility tests
-      run: npm run a11y:axe
-      continue-on-error: true
-    
-    - name: Validate HTML
-      run: npm run validate:html
-    
-    - name: Upload accessibility report
-      uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: accessibility-report
-        path: |
-          reports/
-          *.json
-        retention-days: 30
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build application
+        run: npm run build
+
+      - name: Start server
+        run: |
+          npm run serve &
+          sleep 10
+
+      - name: Run Pa11y accessibility tests
+        run: npm run a11y
+        continue-on-error: true
+
+      - name: Run axe-core accessibility tests
+        run: npm run a11y:axe
+        continue-on-error: true
+
+      - name: Validate HTML
+        run: npm run validate:html
+
+      - name: Upload accessibility report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: accessibility-report
+          path: |
+            reports/
+            *.json
+          retention-days: 30

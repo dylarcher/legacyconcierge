@@ -16,14 +16,14 @@
 
 ### Maintenance Schedule Overview
 
-| Task Type | Frequency | Last Completed | Next Due | Status |
-|-----------|-----------|----------------|----------|--------|
-| Security Scan | Daily | Aug 18, 2025 | Sep 3, 2025 | ⚠️ Overdue |
-| Plugin Updates | Weekly | Aug 10, 2025 | Aug 17, 2025 | ⚠️ Overdue |
-| Core Updates | Monthly | Jul 15, 2025 | Aug 15, 2025 | ⚠️ Overdue |
-| Database Cleanup | Monthly | Never | ASAP | 🚨 Critical |
-| Performance Audit | Quarterly | Never | ASAP | 🚨 Critical |
-| Security Audit | Quarterly | Aug 18, 2025 | Nov 18, 2025 | ✅ Current |
+| Task Type         | Frequency | Last Completed | Next Due     | Status      |
+| ----------------- | --------- | -------------- | ------------ | ----------- |
+| Security Scan     | Daily     | Aug 18, 2025   | Sep 3, 2025  | ⚠️ Overdue  |
+| Plugin Updates    | Weekly    | Aug 10, 2025   | Aug 17, 2025 | ⚠️ Overdue  |
+| Core Updates      | Monthly   | Jul 15, 2025   | Aug 15, 2025 | ⚠️ Overdue  |
+| Database Cleanup  | Monthly   | Never          | ASAP         | 🚨 Critical |
+| Performance Audit | Quarterly | Never          | ASAP         | 🚨 Critical |
+| Security Audit    | Quarterly | Aug 18, 2025   | Nov 18, 2025 | ✅ Current  |
 
 ## Emergency Maintenance Procedures
 
@@ -32,13 +32,12 @@
 #### Immediate Actions (0-1 hour)
 
 1. **Isolate the Site**:
-   
 
 ```bash
    # Take site offline immediately
    echo "Site under maintenance" > wp-content/maintenance.html
    # Block all traffic except admin IP
-   ```
+```
 
 2. **Document the Incident**:
    - Record exact time of discovery
@@ -54,18 +53,17 @@
 #### Investigation Phase (1-4 hours)
 
 1. **Analyze Logs**:
-   
 
 ```bash
    # Check Apache error logs
    tail -n 100 /var/log/apache2/error.log
-   
+
    # Check WordPress debug logs
    tail -n 100 wp-content/debug.log
-   
+
    # Check system auth logs
    tail -n 100 /var/log/auth.log
-   ```
+```
 
 2. **Identify Breach Vector**:
    - Review recent file changes
@@ -110,39 +108,35 @@
 **Maintenance Steps**:
 
 1. **Backup Current State**:
-   
 
 ```bash
    # Create full backup before making changes
    cp -r wp-content wp-content-backup-$(date +%Y%m%d)
    tar -czf site-backup-$(date +%Y%m%d).tar.gz .
-   ```
+```
 
 2. **Remove Misplaced Files**:
-   
 
 ```bash
    # Delete misplaced core files
    rm wp-content/about.php
    rm wp-content/includes/class-wp-site-health.php
-   ```
+```
 
 3. **Verify Core Integrity**:
-   
 
 ```bash
    # Check WordPress core files
    wp core verify-checksums
-   ```
+```
 
 4. **Run Security Scan**:
-   
 
 ```bash
    # Install and run Wordfence scan
    wp plugin install wordfence --activate
    # Run scan through admin interface
-   ```
+```
 
 #### 2. Child Theme Implementation - HIGH PRIORITY
 
@@ -153,17 +147,15 @@
 **Maintenance Steps**:
 
 1. **Create Child Theme Structure**:
-   
 
 ```bash
    mkdir wp-content/themes/bridge-child
-   ```
+```
 
 2. **Create style.css**:
-   
 
 ```css
-   /*
+/*
    Theme Name: Bridge Child
    Description: Child theme for Bridge
    Author: Legacy Concierge Development Team
@@ -171,13 +163,12 @@
    Version: 1.0.0
    */
 
-   @import url("../bridge/style.css");
+@import url('../bridge/style.css');
 
-   /* Custom styles go here */
+/* Custom styles go here */
 ```
 
 3. **Create functions.php**:
-   
 
 ```php
    <?php
@@ -186,10 +177,10 @@
        wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
    }
    add_action('wp_enqueue_scripts', 'bridge_child_enqueue_styles');
-   
+
    // Custom functions go here
    ?>
-   ```
+```
 
 4. **Identify Current Customizations**:
    - Review parent theme modifications
@@ -216,28 +207,25 @@
 #### Security Monitoring
 
 1. **Check Failed Login Attempts**:
-   
 
 ```bash
    # Review WordPress login logs
    grep "wp-login" /var/log/apache2/access.log | grep -E "(POST|404)"
-   ```
+```
 
 2. **Monitor File Changes**:
-   
 
 ```bash
    # Check for unauthorized file modifications
    find wp-content -mtime -1 -type f -exec ls -la {} \;
-   ```
+```
 
 3. **Review Error Logs**:
-   
 
 ```bash
    # Check for PHP errors and warnings
    tail -n 50 wp-content/debug.log
-   ```
+```
 
 #### Performance Monitoring
 
@@ -248,32 +236,30 @@
    - Verify image optimization
 
 2. **Database Health Check**:
-   
 
 ```sql
    -- Check database size
-   SELECT 
+   SELECT
        table_schema AS 'Database',
        ROUND(SUM(data_length + index_length) / 1024 / 1024, 2) AS 'Size (MB)'
-   FROM information_schema.tables 
+   FROM information_schema.tables
    WHERE table_schema = 'your_database_name'
    GROUP BY table_schema;
-   ```
+```
 
 ### Weekly Maintenance Tasks
 
 #### Plugin Management
 
 1. **Update Available Plugins**:
-   
 
 ```bash
    # Check for plugin updates
    wp plugin list --update=available
-   
+
    # Update all plugins (with caution)
    wp plugin update --all
-   ```
+```
 
 2. **Plugin Security Audit**:
    - Review installed plugins
@@ -284,15 +270,14 @@
 #### Content Maintenance
 
 1. **Database Optimization**:
-   
 
 ```bash
    # Optimize database tables
    wp db optimize
-   
+
    # Clean up revisions and spam
    wp post delete $(wp post list --post_status=trash --format=ids)
-   ```
+```
 
 2. **Media Library Cleanup**:
    - Remove unused images
@@ -305,27 +290,25 @@
 #### WordPress Core Updates
 
 1. **Backup Before Updates**:
-   
 
 ```bash
    # Create full site backup
    wp db export backup-$(date +%Y%m%d).sql
    tar -czf files-backup-$(date +%Y%m%d).tar.gz wp-content/
-   ```
+```
 
 2. **Update WordPress Core**:
-   
 
 ```bash
    # Check for core updates
    wp core check-update
-   
+
    # Update WordPress core
    wp core update
-   
+
    # Update database if needed
    wp core update-db
-   ```
+```
 
 3. **Post-Update Testing**:
    - Verify all pages load correctly
@@ -380,47 +363,56 @@
 #### Actions Taken
 
 **✅ Documentation Restructuring**:
-* Consolidated overlapping documents
-* Created comprehensive documentation structure
-* Fixed cross-references and links
-* Updated maintenance procedures
+
+- Consolidated overlapping documents
+- Created comprehensive documentation structure
+- Fixed cross-references and links
+- Updated maintenance procedures
 
 **✅ Critical Issues Identification**:
-* Identified misplaced WordPress core files
-* Documented child theme implementation urgency
-* Highlighted performance issues with dual page builders
-* Created priority action plan
+
+- Identified misplaced WordPress core files
+- Documented child theme implementation urgency
+- Highlighted performance issues with dual page builders
+- Created priority action plan
 
 #### Critical Issues Identified
 
 **🚨 CRITICAL: Misplaced WordPress Core Files**:
-* Location: `wp-content/about.php`,  `wp-content/includes/class-wp-site-health.php`
-* Risk Level: CRITICAL - Security vulnerability
-* Status: **REQUIRES IMMEDIATE ACTION**
+
+- Location: `wp-content/about.php`,
+  `wp-content/includes/class-wp-site-health.php`
+- Risk Level: CRITICAL - Security vulnerability
+- Status: **REQUIRES IMMEDIATE ACTION**
 
 **🚨 CRITICAL: Missing Child Theme**:
-* Risk Level: CRITICAL - All customizations at risk
-* Impact: Theme updates will destroy customizations
-* Status: **REQUIRES IMMEDIATE IMPLEMENTATION**
+
+- Risk Level: CRITICAL - All customizations at risk
+- Impact: Theme updates will destroy customizations
+- Status: **REQUIRES IMMEDIATE IMPLEMENTATION**
 
 **⚠️ HIGH: Performance Issues**:
-* Issue: Dual page builders (Elementor + Visual Composer)
-* Impact: Poor Core Web Vitals, slow loading
-* Status: **MIGRATION PLANNING REQUIRED**
+
+- Issue: Dual page builders (Elementor + Visual Composer)
+- Impact: Poor Core Web Vitals, slow loading
+- Status: **MIGRATION PLANNING REQUIRED**
 
 #### Next Steps
 
 **IMMEDIATE** (Within 24 hours):
+
 1. Remove misplaced core files
 2. Run security scan
 3. Verify WordPress core integrity
 
 **HIGH PRIORITY** (Within 1 week):
+
 1. Implement child theme
 2. Audit current theme customizations
 3. Plan Visual Composer to Elementor migration
 
 **MEDIUM PRIORITY** (Within 1 month):
+
 1. Plugin audit and cleanup
 2. Performance optimization
 3. Database health check
@@ -433,10 +425,10 @@
 
 #### Previous Actions
 
-* Updated PROJECT_OVERVIEW.md with security warnings
-* Enhanced IMPROVEMENT_CHECKLIST.md
-* Reorganized documentation structure
-* Fixed markdown formatting issues
+- Updated PROJECT_OVERVIEW.md with security warnings
+- Enhanced IMPROVEMENT_CHECKLIST.md
+- Reorganized documentation structure
+- Fixed markdown formatting issues
 
 ## Maintenance Tools & Scripts
 
@@ -510,4 +502,6 @@ echo "Security check completed" >> $LOG_FILE
 
 ---
 
-**⚠️ CRITICAL REMINDER**: The identified security vulnerabilities must be addressed immediately. Delay increases risk of successful attack and potential data breach.
+**⚠️ CRITICAL REMINDER**: The identified security vulnerabilities must be
+addressed immediately. Delay increases risk of successful attack and potential
+data breach.

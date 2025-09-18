@@ -45,7 +45,6 @@ async function buildProject() {
 		console.log(chalk.cyan(`\nBuild time: ${buildTime}s`));
 
 		await analyzeBuildSize();
-
 	} catch (error) {
 		spinner.fail(chalk.red('Build failed'));
 		console.error(error);
@@ -83,10 +82,10 @@ async function analyzeBuildSize() {
 
 	await walkDir(distPath);
 
-	const jsFiles = assets.filter(a => a.path.endsWith('.js'));
-	const cssFiles = assets.filter(a => a.path.endsWith('.css'));
-	const htmlFiles = assets.filter(a => a.path.endsWith('.html'));
-	const imageFiles = assets.filter(a => /\.(png|jpg|jpeg|gif|svg|webp|avif|ico)$/i.test(a.path));
+	const jsFiles = assets.filter((a) => a.path.endsWith('.js'));
+	const cssFiles = assets.filter((a) => a.path.endsWith('.css'));
+	const htmlFiles = assets.filter((a) => a.path.endsWith('.html'));
+	const imageFiles = assets.filter((a) => /\.(png|jpg|jpeg|gif|svg|webp|avif|ico)$/i.test(a.path));
 
 	const formatSize = (bytes) => {
 		if (bytes < 1024) return `${bytes} B`;
@@ -101,12 +100,12 @@ async function analyzeBuildSize() {
 		const totalGzipSize = files.reduce((acc, f) => acc + f.gzipSize, 0);
 
 		console.log(chalk.yellow(`${name}:`));
-		files.slice(0, 5).forEach(file => {
+		files.slice(0, 5).forEach((file) => {
 			console.log(
 				chalk.gray(`  ${file.path.padEnd(50)} `) +
-				chalk.white(`${formatSize(file.size).padStart(10)} `) +
-				chalk.gray('→ ') +
-				chalk.green(`${formatSize(file.gzipSize).padStart(10)} gzip`)
+					chalk.white(`${formatSize(file.size).padStart(10)} `) +
+					chalk.gray('→ ') +
+					chalk.green(`${formatSize(file.gzipSize).padStart(10)} gzip`)
 			);
 		});
 
@@ -129,7 +128,9 @@ async function analyzeBuildSize() {
 
 	console.log(chalk.green.bold(`Total build size: ${formatSize(totalSize)}`));
 	console.log(chalk.green.bold(`Total gzip size: ${formatSize(totalGzipSize)}`));
-	console.log(chalk.gray(`Compression ratio: ${((1 - totalGzipSize / totalSize) * 100).toFixed(1)}%\n`));
+	console.log(
+		chalk.gray(`Compression ratio: ${((1 - totalGzipSize / totalSize) * 100).toFixed(1)}%\n`)
+	);
 
 	if (totalGzipSize > 500 * 1024) {
 		console.log(chalk.yellow('⚠️  Warning: Total gzip size exceeds 500KB'));

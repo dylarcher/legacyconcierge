@@ -493,10 +493,7 @@ async function generateComponent(type, name, description) {
 		await fs.mkdir(componentDir, { recursive: true });
 
 		if (templates.js) {
-			await fs.writeFile(
-				join(componentDir, `${componentName}.js`),
-				processTemplate(templates.js)
-			);
+			await fs.writeFile(join(componentDir, `${componentName}.js`), processTemplate(templates.js));
 		}
 
 		if (templates.test) {
@@ -507,10 +504,7 @@ async function generateComponent(type, name, description) {
 		}
 
 		if (templates.index) {
-			await fs.writeFile(
-				join(componentDir, 'index.js'),
-				processTemplate(templates.index)
-			);
+			await fs.writeFile(join(componentDir, 'index.js'), processTemplate(templates.index));
 		}
 
 		const cssContent = `/* ${componentName} styles */
@@ -518,10 +512,7 @@ async function generateComponent(type, name, description) {
 	/* Component styles here */
 }`;
 
-		await fs.writeFile(
-			join(componentDir, `${componentName}.css`),
-			cssContent
-		);
+		await fs.writeFile(join(componentDir, `${componentName}.css`), cssContent);
 
 		console.log(chalk.green(`✓ Component created successfully at:`));
 		console.log(chalk.cyan(`  ${componentDir}`));
@@ -530,7 +521,6 @@ async function generateComponent(type, name, description) {
 		console.log(chalk.gray(`  - ${componentName}.css`));
 		console.log(chalk.gray(`  - ${componentName}.test.js`));
 		console.log(chalk.gray(`  - index.js`));
-
 	} catch (error) {
 		console.error(chalk.red('Failed to create component:'), error);
 		process.exit(1);

@@ -3,11 +3,13 @@
 ## Development Workflow
 
 ### Getting Started
+
 1. Fork and clone the repository
 2. Install dependencies: `npm ci`
 3. Start development server: `npm run dev`
 
 ### Scripts
+
 - `npm run dev` - Start development server with custom build system
 - `npm run build` - Build for production using custom build pipeline
 - `npm run test` - Run unit tests
@@ -28,17 +30,20 @@
 - `npm run preview` - Preview production build
 
 ### Code Quality
+
 - All code must pass ESLint checks
 - Tests required for new features
 - Code must be formatted with Prettier
 - JSDoc comments required for public APIs
 
 ### Commit Guidelines
+
 - Use conventional commits format
 - Run `npm run check` before committing
 - Pre-commit hooks will run automatically
 
 ### Release Process
+
 1. Update version: `npm version [patch|minor|major]`
 2. This automatically runs tests, builds, and pushes tags
 3. GitHub Actions will handle the release
@@ -48,6 +53,7 @@
 Legacy Concierge is a modern vanilla JavaScript website and CMS with focus on:
 
 ### Core Technologies
+
 - **Vanilla JavaScript** with ES2025+ features
 - **ES Modules** for modular architecture
 - **Vite** for development and build tooling
@@ -55,6 +61,7 @@ Legacy Concierge is a modern vanilla JavaScript website and CMS with focus on:
 - **Custom build system** in `./bin/` directory
 
 ### Key Features
+
 - **Accessibility (WCAG compliance)** - Built-in a11y testing and validation
 - **Performance optimization** - Lighthouse audits and performance monitoring
 - **SEO best practices** - Structured data and meta optimization
@@ -62,6 +69,7 @@ Legacy Concierge is a modern vanilla JavaScript website and CMS with focus on:
 - **Component-based architecture** with reusable modules
 
 ### Module Structure
+
 - `src/components/` - Reusable UI components
 - `src/utils/` - Utility functions
 - `src/hooks/` - Custom hooks and lifecycle management
@@ -71,6 +79,7 @@ Legacy Concierge is a modern vanilla JavaScript website and CMS with focus on:
 - `src/types/` - Type definitions
 
 ### Development Philosophy
+
 - **Modern JavaScript** without framework dependencies
 - **Accessibility-first** design approach
 - **Performance-focused** development

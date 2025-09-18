@@ -48,10 +48,7 @@ export default defineConfig({
 				'**/*.d.ts',
 			],
 		},
-		include: [
-			'src/**/*.{test,spec}.{js,mjs}',
-			'test/**/*.{test,spec}.{js,mjs}',
-		],
+		include: ['src/**/*.{test,spec}.{js,mjs}', 'test/**/*.{test,spec}.{js,mjs}'],
 		exclude: [
 			'node_modules',
 			'dist',

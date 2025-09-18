@@ -28,7 +28,7 @@ export default defineConfig({
 		locale: 'en-US',
 		timezoneId: 'America/New_York',
 		permissions: ['geolocation', 'notifications'],
-		geolocation: { latitude: 40.7128, longitude: -74.0060 },
+		geolocation: { latitude: 40.7128, longitude: -74.006 },
 		colorScheme: 'light',
 		reducedMotion: 'no-preference',
 		forcedColors: 'none',
@@ -108,7 +108,8 @@ export default defineConfig({
 	},
 	outputDir: 'test-results',
 	snapshotDir: 'test/e2e/snapshots',
-	snapshotPathTemplate: '{snapshotDir}/{testFileDir}/{testFileName}-snapshots/{arg}{-projectName}{-snapshotSuffix}{ext}',
+	snapshotPathTemplate:
+		'{snapshotDir}/{testFileDir}/{testFileName}-snapshots/{arg}{-projectName}{-snapshotSuffix}{ext}',
 	globalSetup: './test/e2e/global-setup.js',
 	globalTeardown: './test/e2e/global-teardown.js',
 	timeout: 30000,
