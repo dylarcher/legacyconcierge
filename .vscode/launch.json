@@ -1,0 +1,266 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // Chrome Debugging
+    {
+      "name": "Launch Chrome (Dev Server)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "Start Development Server",
+      "presentation": {
+        "group": "browser",
+        "order": 1
+      }
+    },
+    {
+      "name": "Launch Chrome (Production Build)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4173",
+      "webRoot": "${workspaceFolder}/dist",
+      "sourceMaps": false,
+      "preLaunchTask": "Preview Production Build",
+      "presentation": {
+        "group": "browser",
+        "order": 2
+      }
+    },
+
+    // Firefox Debugging
+    {
+      "name": "Launch Firefox (Dev Server)",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "pathMappings": [
+        {
+          "url": "http://localhost:5173",
+          "path": "${workspaceFolder}"
+        }
+      ],
+      "preLaunchTask": "Start Development Server",
+      "presentation": {
+        "group": "browser",
+        "order": 3
+      }
+    },
+
+    // Edge Debugging
+    {
+      "name": "Launch Edge (Dev Server)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "Start Development Server",
+      "presentation": {
+        "group": "browser",
+        "order": 4
+      }
+    },
+
+    // Node.js Debugging for Scripts
+    {
+      "name": "Debug Dev Script",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/dev.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "scripts",
+        "order": 1
+      }
+    },
+    {
+      "name": "Debug Build Script",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/build.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "scripts",
+        "order": 2
+      }
+    },
+    {
+      "name": "Debug Test Script",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/test.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "scripts",
+        "order": 3
+      }
+    },
+    {
+      "name": "Debug Generate Script",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/generate.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "scripts",
+        "order": 4
+      }
+    },
+
+    // Vitest Debugging
+    {
+      "name": "Debug Vitest Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": [
+        "run",
+        "--config",
+        "${workspaceFolder}/conf/vitest.config.js",
+        "${file}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "test",
+        "order": 1
+      }
+    },
+    {
+      "name": "Debug All Vitest Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/vitest/vitest.mjs",
+      "args": [
+        "run",
+        "--config",
+        "${workspaceFolder}/conf/vitest.config.js"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "test",
+        "order": 2
+      }
+    },
+
+    // Playwright Debugging
+    {
+      "name": "Debug Playwright Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
+        "test",
+        "--config=${workspaceFolder}/conf/playwright.config.js",
+        "--headed",
+        "--debug"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "presentation": {
+        "group": "test",
+        "order": 3
+      }
+    },
+
+    // Service Worker Debugging
+    {
+      "name": "Debug Service Worker",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "/@fs/*": "${webRoot}/*"
+      },
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/node_modules/**"
+      ],
+      "runtimeArgs": [
+        "--enable-logging",
+        "--v=1"
+      ],
+      "presentation": {
+        "group": "pwa",
+        "order": 1
+      }
+    },
+
+    // Attach to existing process
+    {
+      "name": "Attach to Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceFolder}",
+      "presentation": {
+        "group": "attach",
+        "order": 1
+      }
+    },
+    {
+      "name": "Attach to Node Process",
+      "type": "node",
+      "request": "attach",
+      "processId": "${command:PickProcess}",
+      "presentation": {
+        "group": "attach",
+        "order": 2
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Full Stack Debug",
+      "configurations": [
+        "Launch Chrome (Dev Server)"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "group": "compound",
+        "order": 1
+      }
+    },
+    {
+      "name": "Cross-Browser Debug",
+      "configurations": [
+        "Launch Chrome (Dev Server)",
+        "Launch Firefox (Dev Server)",
+        "Launch Edge (Dev Server)"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "group": "compound",
+        "order": 2
+      }
+    },
+    {
+      "name": "Test Debug Suite",
+      "configurations": [
+        "Debug All Vitest Tests",
+        "Debug Playwright Tests"
+      ],
+      "stopAll": true,
+      "presentation": {
+        "group": "compound",
+        "order": 3
+      }
+    }
+  ]
+}
