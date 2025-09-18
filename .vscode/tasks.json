@@ -97,11 +97,11 @@
       "problemMatcher": [],
       "presentation": {
         "reveal": "always",
+        "panel": "shared"
       },
       "group": "test"
-        "group": "test"
-      }
     },
+  },
     {
       "label": "Watch Tests",
       "type": "shell",
