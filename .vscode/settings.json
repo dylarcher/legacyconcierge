@@ -28,7 +28,7 @@
 
   // Configuration File Paths
   "eslint.options": {
-    "overrideConfigFile": "${workspaceFolder}/conf/eslint.config.js",
+    "overrideConfigFile": "${workspaceFolder}/eslint.config.js",
     "ignorePath": "${workspaceFolder}/conf/.eslintignore"
   },
   "stylelint.configFile": "${workspaceFolder}/conf/stylelint.config.mjs",
