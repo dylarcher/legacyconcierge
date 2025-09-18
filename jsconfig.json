@@ -51,8 +51,7 @@
 		"useDefineForClassFields": true,
 		"allowUnreachableCode": false,
 		"allowUnusedLabels": false,
-		"exactOptionalPropertyTypes": true,
-		"noUncheckedSideEffectImports": true
+		"exactOptionalPropertyTypes": true
 	},
 	"include": [
 		"src/**/*",
