@@ -10,9 +10,6 @@
     // Testing Tools (Vitest, Playwright)
     "vitest.explorer",                            // Vitest test explorer
     "ms-playwright.playwright",                  // Playwright testing
-    "zixuanchen.vitest-explorer",                // Alternative Vitest explorer
-    "kavod-io.vscode-jest-test-adapter",         // Test adapter
-
     // Build Tools (Vite, PWA)
     "antfu.vite",                                // Vite integration
     "johnpapa.vscode-pwa-tools",                // PWA development tools
