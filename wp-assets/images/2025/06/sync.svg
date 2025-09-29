@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+  <g>
+    <defs stroke-width="24" style="stroke-width: 24;">
+      <clipPath id="a" stroke-width="24" style="stroke-width: 24;">
+        <path d="M0 512h512V0H0Z" fill="#fefefe" opacity="1" data-original="#000000" stroke-width="24" style="stroke-width: 24;"></path>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)" stroke-width="24" style="stroke-width: 24;">
+      <path d="M0 0v-140h140" style="stroke-width: 24; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;" transform="translate(20 476)" fill="none" stroke="#fefefe" stroke-width="24" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" opacity="1" class=""></path>
+      <path d="M0 0v140h-140" style="stroke-width: 24; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;" transform="translate(492 36)" fill="none" stroke="#fefefe" stroke-width="24" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" opacity="1" class=""></path>
+      <path d="M0 0c-32.947-93.215-117.847-156-222.344-156-132.549 0-236 103.452-236 236" style="stroke-width: 24; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;" transform="translate(478.344 176)" fill="none" stroke="#fefefe" stroke-width="24" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" opacity="1" class=""></path>
+      <path d="M0 0c32.947 93.215 117.847 156 222.344 156 132.549 0 236-103.452 236-236" style="stroke-width: 24; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; stroke-dasharray: none; stroke-opacity: 1;" transform="translate(33.656 336)" fill="none" stroke="#fefefe" stroke-width="24" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#000000" opacity="1" class=""></path>
+    </g>
+  </g>
+</svg>

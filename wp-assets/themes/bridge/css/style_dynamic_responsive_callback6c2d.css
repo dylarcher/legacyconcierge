@@ -1,0 +1,64 @@
+@media only screen and (max-width: 1000px){
+		.header_bottom {
+		background-color: #0b2935;
+	}
+				.header_bottom,
+		nav.mobile_menu{
+			background-color: #0b2935 !important;
+		}
+					.content .container .container_inner.default_template_holder,
+		.content .container .container_inner.page_container_inner {
+			padding-top:80px !important; /*important because of the inline style on page*/
+		}
+	}
+@media only screen and (min-width: 480px) and (max-width: 768px){
+	
+	        section.parallax_section_holder{
+			height: auto !important;
+			min-height: 400px;
+		}
+		}
+@media only screen and (max-width: 768px){
+	
+	
+	
+	
+	
+	
+	
+			.footer_bottom_holder{
+			padding-right:10px;
+		}
+			.footer_bottom_holder{
+			padding-left:10px;
+		}
+	
+	
+	
+	
+	
+	
+}
+@media only screen and (max-width: 600px) {
+	
+	
+	
+	
+	
+	
+	
+	
+			.title.title_size_small h1 {
+			font-size: 30px; 					}
+	
+	
+	}
+@media only screen and (max-width: 480px){
+
+			section.parallax_section_holder {
+			height: auto !important;
+			min-height: 400px;
+		}
+	
+		
+	}

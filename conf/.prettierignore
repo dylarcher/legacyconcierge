@@ -1,0 +1,123 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+.next/
+.nuxt/
+.cache/
+
+# Temporary files
+.tmp/
+.tmp.*/
+tmp/
+temp/
+
+# Version control
+.git/
+.svn/
+.hg/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# Environment files
+.env
+.env.*
+
+# Log files
+*.log
+logs/
+
+# Test coverage
+*.lcov
+.nyc_output/
+
+# Documentation build
+docs/_build/
+docs/.vitepress/dist/
+
+# Generated files
+*.min.js
+*.min.css
+*.map
+
+# Large binary files
+*.pdf
+*.zip
+*.tar.gz
+*.rar
+
+# Image files (optional, uncomment if needed)
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.svg
+# *.ico
+
+# WordPress/CMS downloaded content
+.tmp.legacyconcierge/
+wp-content/
+wp-admin/
+wp-includes/
+
+# Vendor files
+vendor/
+bower_components/
+
+# Database files
+*.sql
+*.sqlite
+*.db
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+.config
+coverage/
+InstalledFiles
+pkg/
+spec/reports/
+test/tmp/
+test/version_tmp/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# C/C++
+*.o
+*.so
+*.dylib
+*.exe
+*.out
+*.app

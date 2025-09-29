@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+coverage/
+
+# Temporary files
+.tmp/
+.tmp.*/
+tmp/
+temp/
+
+# WordPress/CMS content
+.tmp.legacyconcierge/
+wp-content/
+wp-admin/
+wp-includes/
+
+# Vendor files
+vendor/
+bower_components/
+
+# Generated/Minified CSS
+*.min.css
+*.bundle.css
+*.map
+
+# Third-party CSS
+public/lib/
+public/vendor/
+public/css/vendor/
+
+# Documentation
+docs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
