@@ -1,6 +1,4 @@
-# Enterprise Design System & Component Library
-
-## Design-to-Dev Handoff Guide
+# Design-to-Dev Handoff Guide
 
 **Version 1.0**
 
