@@ -152,14 +152,26 @@ function updateMetaTags(translations, pageKey) {
 
 async function applyTranslations() {
     const lang = document.documentElement.lang || 'en';
-    const path = window.location.pathname;
+    let path = window.location.pathname;
+
+    // Detect and handle GitHub Pages base path
+    const isGitHubPages = window.location.hostname.includes('github.io');
     const pathParts = path.replace(/\/$/, '').split('/').filter(p => p);
+
+    if (isGitHubPages && pathParts.length > 0) {
+        // Remove the repo name (first part) from the path
+        // e.g., /legacyconcierge/ becomes /
+        path = path.replace('/' + pathParts[0], '');
+        if (path === '') path = '/';
+    }
+
+    const cleanPathParts = path.replace(/\/$/, '').split('/').filter(p => p);
 
     // Determine the page identifier for fetching translations
     let page;
 
     // If it's the root index.html or just /
-    if (pathParts.length === 0 || (pathParts.length === 1 && pathParts[0] === 'index.html')) {
+    if (cleanPathParts.length === 0 || (cleanPathParts.length === 1 && cleanPathParts[0] === 'index.html')) {
         page = 'index';
     }
     // If it's a detail page in treatments or expertise
@@ -169,11 +181,11 @@ async function applyTranslations() {
     // For other pages, use the directory name (e.g., /pages/about/ → 'about')
     else {
         // Get the last meaningful directory name (not 'index.html')
-        const lastPart = pathParts[pathParts.length - 1];
-        page = lastPart === 'index.html' ? pathParts[pathParts.length - 2] : lastPart.replace('.html', '');
+        const lastPart = cleanPathParts[cleanPathParts.length - 1];
+        page = lastPart === 'index.html' ? cleanPathParts[cleanPathParts.length - 2] : lastPart.replace('.html', '');
     }
 
-    console.log('applyTranslations: path:', path, '| page:', page);
+    console.log('applyTranslations: path:', window.location.pathname, '| cleaned path:', path, '| page:', page);
 
     const translations = await fetchTranslations(lang, page);
     
