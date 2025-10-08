@@ -1,12 +1,29 @@
 async function fetchTranslations(lang, page) {
     try {
         // Determine the base path for locale files based on directory depth
-        const pathname = window.location.pathname;
-        // Remove trailing slashes and split by /
+        let pathname = window.location.pathname;
+
+        // Detect and handle GitHub Pages base path (e.g., /legacyconcierge/)
+        // GitHub Pages serves at /:username/:repo/, so we need to extract the base path
+        let basePath = '';
         const pathParts = pathname.replace(/\/$/, '').split('/').filter(p => p);
 
+        // Check if we're on GitHub Pages by looking at hostname
+        const isGitHubPages = window.location.hostname.includes('github.io');
+
+        if (isGitHubPages && pathParts.length > 0) {
+            // First part is likely the repo name (e.g., 'legacyconcierge')
+            basePath = '/' + pathParts[0];
+            // Remove base path from pathname for depth calculation
+            pathname = pathname.replace(basePath, '');
+            if (pathname === '') pathname = '/';
+        }
+
+        // Remove trailing slashes and split by /
+        const cleanPathParts = pathname.replace(/\/$/, '').split('/').filter(p => p);
+
         // Remove 'index.html' if present to get the actual directory depth
-        let cleanParts = pathParts.filter(part => part !== 'index.html');
+        let cleanParts = cleanPathParts.filter(part => part !== 'index.html');
 
         // Calculate depth based on directory structure
         // Root: [] → 0, pages/about: ['pages', 'about'] → 2, pages/treatments/views/post-op: ['pages', 'treatments', 'views', 'post-op'] → 4
@@ -15,13 +32,13 @@ async function fetchTranslations(lang, page) {
         // Build the correct relative path to _locale based on depth
         let localeBasePath;
         if (depth === 0) {
-            localeBasePath = '_locale';
+            localeBasePath = (basePath || '.') + '/_locale';
         } else {
             // Go up 'depth' directories, then into _locale
             localeBasePath = '../'.repeat(depth) + '_locale';
         }
 
-        console.log('i18n: pathname:', pathname, '| depth:', depth, '| localeBasePath:', localeBasePath);
+        console.log('i18n: pathname:', window.location.pathname, '| basePath:', basePath, '| depth:', depth, '| localeBasePath:', localeBasePath);
 
         const commonPromise = fetch(`${localeBasePath}/${lang}/common.json`)
             .then(res => {
