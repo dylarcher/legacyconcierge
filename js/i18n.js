@@ -188,13 +188,6 @@ async function applyTranslations() {
     console.log('applyTranslations: path:', window.location.pathname, '| cleaned path:', path, '| page:', page);
 
     const translations = await fetchTranslations(lang, page);
-    
-    // Update meta tags for detail pages
-    if (path.includes('/treatments/') && translations[fileName]) {
-        updateMetaTags(translations, fileName);
-    } else if (path.includes('/expertise/') && translations[fileName]) {
-        updateMetaTags(translations, fileName);
-    }
 
     // Apply translations to elements with data-i18n attributes
     document.querySelectorAll('[data-i18n]').forEach(element => {
