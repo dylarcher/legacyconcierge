@@ -1,0 +1,53 @@
+{
+  "accessibility": {
+    "skipToMain": "Saltar al contenido principal",
+    "toggleNavigation": "Alternar menú de navegación",
+    "servicesSubmenu": "Submenú de servicios",
+    "conciergeTreatmentsSubmenu": "Submenú de tratamientos concierge",
+    "specializedExpertiseSubmenu": "Submenú de experiencia especializada",
+    "switchLanguage": "Cambiar idioma",
+    "toggleTheme": "Alternar modo oscuro/claro"
+  },
+  "language": {
+    "current": "ES",
+    "switch": "EN"
+  },
+  "theme": {
+    "light": "☀️",
+    "dark": "🌙"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "services": "Servicios",
+    "team": "Equipo",
+    "contact": "Contacto",
+    "conciergeTreatments": "Tratamientos Concierge",
+    "specializedExpertise": "Experiencia Especializada",
+    "treatments": {
+      "postOp": "Recuperación Postoperatoria",
+      "mentalHealth": "Salud Mental",
+      "rehabAddiction": "Rehabilitación y Adicciones",
+      "eatingDisorders": "Trastornos Alimentarios",
+      "cardiacPulmonary": "Cardíaco y Pulmonar",
+      "ivTherapy": "Terapia IV e Infusión",
+      "painManagement": "Manejo del Dolor"
+    },
+    "expertise": {
+      "dementia": "Demencia",
+      "als": "ELA",
+      "parkinsons": "Parkinson",
+      "alzheimers": "Alzheimer",
+      "heartDisease": "Enfermedad Cardíaca",
+      "oncology": "Cuidado Oncológico",
+      "ostomy": "Manejo de Ostomía",
+      "strokeRecovery": "Recuperación de Accidente Cerebrovascular",
+      "ms": "Esclerosis Múltiple",
+      "diabetes": "Manejo de Diabetes",
+      "tbi": "Lesión Cerebral Traumática"
+    }
+  },
+  "footer": {
+    "copyright": "&copy; 2025 Legacy Concierge. Todos los Derechos Reservados."
+  }
+}

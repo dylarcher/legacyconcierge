@@ -1,0 +1,43 @@
+{
+  "title": "Nuestros Socios",
+  "subtitle": "En Legacy Concierge, nuestras asociaciones son la piedra angular de nuestro cuidado incomparable, uniendo a los mejores proveedores de atención médica del sur de California para apoyarle a usted o su ser querido.",
+  "partners": [
+    {
+      "name": "Brightside Referrals",
+      "logo": "../wp-content/uploads/2025/06/brightside-referrals.png"
+    },
+    {
+      "name": "Sollis Health",
+      "logo": "../wp-content/uploads/2025/06/sollis-health.png"
+    },
+    {
+      "name": "Prenuvo",
+      "logo": "../wp-content/uploads/2025/07/prenuvo.png"
+    },
+    {
+      "name": "Sleep Doc LA",
+      "logo": "../wp-content/uploads/2025/06/sleep-doc-la.png"
+    },
+    {
+      "name": "Appian",
+      "logo": "../wp-content/uploads/elementor/thumbs/appian-r830pfu0unnhp5obvuhqkvxb058s3vyosdfh9lova4.png"
+    },
+    {
+      "name": "T/A",
+      "logo": "../wp-content/uploads/2025/06/ta.png"
+    },
+    {
+      "name": "Wellworth",
+      "logo": "../wp-content/uploads/2025/06/wellworth.png"
+    },
+    {
+      "name": "Mindfull",
+      "logo": "../wp-content/uploads/2025/06/mindfull.png"
+    }
+  ],
+  "cta": {
+    "title": "Conviértase en Socio",
+    "text": "Estamos expandiendo esta red premier, invitando a profesionales dedicados a unirse a nosotros en el avance del cuidado transformativo. Juntos, elevamos la excelencia en atención médica.",
+    "button": "Únete a Nuestra Red"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Experiencia Especializada",
+  "subtitle": "Nuestras enfermeras no son solo cuidadoras; son especialistas en una amplia gama de condiciones complejas, asegurando el más alto nivel de cuidado experto en el hogar.",
+  "services": [
+    {
+      "title": "Demencia",
+      "description": "Cuidado compasivo y experto para individuos con demencia, enfocándose en la seguridad y calidad de vida.",
+      "link": "expertise/dementia.html"
+    },
+    {
+      "title": "ELA",
+      "description": "Apoyo especializado para individuos con ELA, brindando cuidado domiciliario integral y compasivo.",
+      "link": "expertise/als.html"
+    },
+    {
+      "title": "Parkinson",
+      "description": "Manejo experto de los síntomas del Parkinson para mejorar la movilidad e independencia.",
+      "link": "expertise/parkinsons.html"
+    },
+    {
+      "title": "Alzheimer",
+      "description": "Cuidado dedicado y centrado en el paciente para todas las etapas de la enfermedad de Alzheimer.",
+      "link": "expertise/alzheimers.html"
+    },
+    {
+      "title": "Enfermedad Cardíaca",
+      "description": "Cuidado y monitoreo cardíaco en el hogar para manejar las condiciones del corazón efectivamente.",
+      "link": "expertise/heart-disease.html"
+    },
+    {
+      "title": "Cuidado Oncológico",
+      "description": "Cuidado de apoyo para pacientes con cáncer, desde apoyo de tratamiento hasta manejo de síntomas.",
+      "link": "expertise/oncology.html"
+    },
+    {
+      "title": "Manejo de Ostomía",
+      "description": "Cuidado de ostomía profesional y discreto para asegurar comodidad y confianza.",
+      "link": "expertise/ostomy-management.html"
+    },
+    {
+      "title": "Recuperación de Accidente Cerebrovascular",
+      "description": "Apoyo integral para ayudar en la recuperación y rehabilitación después de un accidente cerebrovascular.",
+      "link": "expertise/stroke-recovery.html"
+    },
+    {
+      "title": "Esclerosis Múltiple (EM)",
+      "description": "Planes de cuidado personalizados para manejar síntomas y mejorar la calidad de vida para individuos con EM.",
+      "link": "expertise/ms.html"
+    },
+    {
+      "title": "Manejo de Diabetes",
+      "description": "Orientación y apoyo experto para manejar la diabetes en el hogar.",
+      "link": "expertise/diabetes-management.html"
+    },
+    {
+      "title": "Lesión Cerebral Traumática (LCT)",
+      "description": "Cuidado de enfermería especializado para individuos recuperándose de lesiones cerebrales traumáticas.",
+      "link": "expertise/tbi.html"
+    }
+  ]
+}

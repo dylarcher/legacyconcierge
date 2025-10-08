@@ -1,0 +1,20 @@
+{
+  "title": "Contact Us",
+  "subtitle": "We would love to hear from you. Our team is available 24/7.",
+  "contactInfo": {
+    "title": "Contact Information",
+    "text": "Contact us to learn more about how we can help you and your family.",
+    "phone": "+1 (310) 974-4517",
+    "address": "720 Wilshire Blvd Suite 300, Santa Monica, CA 90401",
+    "email": "info@legacyconcierge.com"
+  },
+  "form": {
+    "title": "Send us a Message",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Your Email",
+    "phone": "Your Phone",
+    "message": "Your Message",
+    "submit": "Submit"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Concierge Treatments",
+  "subtitle": "Our meticulously curated services transform your home into a haven of healing and dignity, tailored to every facet of care.",
+  "services": [
+    {
+      "title": "Post-Op Recovery - Hospital to Home",
+      "description": "Seamless, supportive, and expert care from hospital to home.",
+      "link": "treatments/post-op-recovery.html"
+    },
+    {
+      "title": "Mental Health Services",
+      "description": "Compassionate and confidential support for mental well-being.",
+      "link": "treatments/mental-health.html"
+    },
+    {
+      "title": "Rehab and Addiction",
+      "description": "Private, dignified support for recovery and rehabilitation.",
+      "link": "treatments/rehab-addiction.html"
+    },
+    {
+      "title": "Eating Disorders and Monitoring",
+      "description": "Specialized, sensitive care for eating disorder recovery.",
+      "link": "treatments/eating-disorders.html"
+    },
+    {
+      "title": "Cardiac and Pulmonary Oversight",
+      "description": "Expert monitoring and management for heart and lung health.",
+      "link": "treatments/cardiac-pulmonary.html"
+    },
+    {
+      "title": "IV and Infusion Therapy",
+      "description": "Professional, in-home IV and infusion treatments.",
+      "link": "treatments/iv-therapy.html"
+    },
+    {
+      "title": "Pain Management",
+      "description": "Personalized strategies to manage and alleviate chronic pain.",
+      "link": "treatments/pain-management.html"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "title": "Specialized Expertise",
+  "subtitle": "Our nurses are not just caregivers; they are specialists in a wide range of complex conditions, ensuring the highest level of expert care at home.",
+  "services": [
+    {
+      "title": "Dementia",
+      "description": "Compassionate, expert care for individuals with dementia, focusing on safety and quality of life.",
+      "link": "expertise/dementia.html"
+    },
+    {
+      "title": "ALS",
+      "description": "Specialized support for individuals with ALS, providing comprehensive and compassionate in-home care.",
+      "link": "expertise/als.html"
+    },
+    {
+      "title": "Parkinson's",
+      "description": "Expert management of Parkinson's symptoms to enhance mobility and independence.",
+      "link": "expertise/parkinsons.html"
+    },
+    {
+      "title": "Alzheimer's",
+      "description": "Dedicated and patient-centered care for all stages of Alzheimer's disease.",
+      "link": "expertise/alzheimers.html"
+    },
+    {
+      "title": "Heart Disease",
+      "description": "In-home cardiac care and monitoring to manage heart conditions effectively.",
+      "link": "expertise/heart-disease.html"
+    },
+    {
+      "title": "Oncology Care",
+      "description": "Supportive care for cancer patients, from treatment support to symptom management.",
+      "link": "expertise/oncology.html"
+    },
+    {
+      "title": "Ostomy Management",
+      "description": "Professional and discreet ostomy care to ensure comfort and confidence.",
+      "link": "expertise/ostomy-management.html"
+    },
+    {
+      "title": "Stroke Recovery",
+      "description": "Comprehensive support to aid in recovery and rehabilitation after a stroke.",
+      "link": "expertise/stroke-recovery.html"
+    },
+    {
+      "title": "MS (Multiple Sclerosis)",
+      "description": "Personalized care plans to manage symptoms and improve the quality of life for individuals with MS.",
+      "link": "expertise/ms.html"
+    },
+    {
+      "title": "Diabetes Management",
+      "description": "Expert guidance and support for managing diabetes at home.",
+      "link": "expertise/diabetes-management.html"
+    },
+    {
+      "title": "Traumatic Brain Injury (TBI)",
+      "description": "Specialized nursing care for individuals recovering from traumatic brain injuries.",
+      "link": "expertise/tbi.html"
+    }
+  ]
+}
