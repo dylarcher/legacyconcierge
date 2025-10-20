@@ -248,15 +248,14 @@ See `docs/ROADMAP_TIMELINE.md` for full project timeline.
 
 - **GitHub:** https://github.com/dylarcher/legacy-concierge
 - **Project Board:** https://github.com/users/dylarcher/projects/18
-- **Documentation:** `docs/`
+- **Documentation:** [`docs/`](./docs)
 
 ## Documentation
 
-- **CLAUDE.md** - AI assistant instructions and project guidelines
-- **ROADMAP_TIMELINE.md** - Complete project timeline and progress
-- **WEB_COMPONENTS_SUMMARY.md** - Web Components implementation notes
-- **I18N_INTEGRATION_SUMMARY.md** - i18n system documentation
-- **QUICK_START.md** - Quick reference guide
+- **[ROADMAP_TIMELINE.md](./docs/ROADMAP_TIMELINE.md)** - Complete project timeline and progress
+- **[WEB_COMPONENTS_SUMMARY.md](./docs/WEB_COMPONENTS_SUMMARY.md)** - Web Components implementation notes
+- **[I18N_INTEGRATION_SUMMARY.md](./docs/I18N_INTEGRATION_SUMMARY.md)** - i18n system documentation
+- **[QUICK_START.md](./docs/QUICK_START.md)** - Quick reference guide
 
 ## Contributing
 
