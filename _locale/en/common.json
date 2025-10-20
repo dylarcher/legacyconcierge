@@ -1,0 +1,53 @@
+{
+  "accessibility": {
+    "skipToMain": "Skip to main content",
+    "toggleNavigation": "Toggle navigation menu",
+    "servicesSubmenu": "Services submenu",
+    "conciergeTreatmentsSubmenu": "Concierge Treatments submenu",
+    "specializedExpertiseSubmenu": "Specialized Expertise submenu",
+    "switchLanguage": "Switch language",
+    "toggleTheme": "Toggle dark/light mode"
+  },
+  "language": {
+    "current": "EN",
+    "switch": "ES"
+  },
+  "theme": {
+    "light": "☀️",
+    "dark": "🌙"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "contact": "Contact",
+    "conciergeTreatments": "Concierge Treatments",
+    "specializedExpertise": "Specialized Expertise",
+    "treatments": {
+      "postOp": "Post-Op Recovery",
+      "mentalHealth": "Mental Health",
+      "rehabAddiction": "Rehab & Addiction",
+      "eatingDisorders": "Eating Disorders",
+      "cardiacPulmonary": "Cardiac & Pulmonary",
+      "ivTherapy": "IV & Infusion Therapy",
+      "painManagement": "Pain Management"
+    },
+    "expertise": {
+      "dementia": "Dementia",
+      "als": "ALS",
+      "parkinsons": "Parkinson's",
+      "alzheimers": "Alzheimer's",
+      "heartDisease": "Heart Disease",
+      "oncology": "Oncology Care",
+      "ostomy": "Ostomy Management",
+      "strokeRecovery": "Stroke Recovery",
+      "ms": "MS",
+      "diabetes": "Diabetes Management",
+      "tbi": "Traumatic Brain Injury"
+    }
+  },
+  "footer": {
+    "copyright": "&copy; 2025 Legacy Concierge. All Rights Reserved."
+  }
+}

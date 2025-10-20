@@ -1,0 +1,42 @@
+{
+  "title": "Nuestro Equipo",
+  "subtitle": "ENTREGANDO CUIDADO EXCEPCIONAL Y PERSONALIZADO A CADA RINCÓN DE LA REGIÓN.",
+  "members": [
+    {
+      "name": "Jason Kidushim",
+      "title": "FUNDADOR Y CEO",
+      "bio": "Jason es un líder experimentado en atención médica con más de una década de experiencia. Tiene un historial comprobado de construir negocios impulsados por la misión que priorizan la excelencia.",
+      "image": "assets/images/IMG_5385-1-e1753971154576.jpg"
+    },
+    {
+      "name": "Zehra Dhanani",
+      "title": "VICEPRESIDENTA DE OPERACIONES",
+      "bio": "Zehra es una profesional de la salud experimentada con una maestría en enfermería y amplia experiencia en enfermería médico-quirúrgica, ortopédica y pediátrica.",
+      "image": "assets/images/Zehra.jpg"
+    },
+    {
+      "name": "David Kidushim",
+      "title": "VICEPRESIDENTE DE FINANZAS",
+      "bio": "David aporta una gran experiencia de un amplio trasfondo en finanzas, donde ha manejado exitosamente carteras a gran escala.",
+      "image": "assets/images/Dave.jpg"
+    },
+    {
+      "name": "Sarah Brodbeck",
+      "title": "DIRECTORA DE COORDINACIÓN DE CUIDADO",
+      "bio": "Sarah aporta más de cuatro años de experiencia en coordinación de cuidado y tres años en gestión de riesgos dentro de la industria de cuidado domiciliario.",
+      "image": "assets/images/Sarah.jpg"
+    },
+    {
+      "name": "Elie Castillo",
+      "title": "GERENTE DE COORDINACIÓN DE CUIDADO",
+      "bio": "Con una base sólida en psicología y amplia experiencia en operaciones de cuidado domiciliario, Elie aporta un enfoque estratégico y empático a la coordinación de cuidado.",
+      "image": "assets/images/Elie.jpg"
+    },
+    {
+      "name": "Cassie Leger",
+      "title": "GERENTE DE COORDINACIÓN DE CUIDADO",
+      "bio": "Cassie tiene una maestría en Gestión y Liderazgo y una licenciatura en Nutrición y Hospitalidad, aportando cinco años de experiencia en la industria de cuidado domiciliario.",
+      "image": "assets/images/Cassie.jpg"
+    }
+  ]
+}

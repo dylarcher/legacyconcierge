@@ -1,0 +1,80 @@
+<!-- Legacy Concierge UI Elements Templates -->
+
+<!-- Badge Template -->
+<template id="lc-badge-template">
+  <span class="badge">
+    <slot></slot>
+  </span>
+</template>
+
+<!-- Tag Template -->
+<template id="lc-tag-template">
+  <span class="tag">
+    <slot></slot>
+    <button class="tag-remove" aria-label="Remove" type="button">×</button>
+  </span>
+</template>
+
+<!-- Button Template -->
+<template id="lc-button-template">
+  <button class="lc-button" type="button">
+    <slot name="icon-left"></slot>
+    <span class="button-text">
+      <slot></slot>
+    </span>
+    <slot name="icon-right"></slot>
+  </button>
+</template>
+
+<!-- Tooltip Template -->
+<template id="lc-tooltip-template">
+  <div class="tooltip" role="tooltip">
+    <slot></slot>
+  </div>
+</template>
+
+<!-- Popover Template -->
+<template id="lc-popover-template">
+  <div class="popover" role="dialog">
+    <button class="popover-close" aria-label="Close">×</button>
+    <div class="popover-content">
+      <slot></slot>
+    </div>
+  </div>
+</template>
+
+<!-- Alert/Banner Template -->
+<template id="lc-alert-template">
+  <div class="alert" role="alert">
+    <div class="alert-icon">
+      <slot name="icon"></slot>
+    </div>
+    <div class="alert-content">
+      <slot></slot>
+    </div>
+    <button class="alert-close" aria-label="Close">×</button>
+  </div>
+</template>
+
+<!-- Pagination Template -->
+<template id="lc-pagination-template">
+  <nav class="pagination" aria-label="Pagination">
+    <button class="pagination-btn pagination-prev" aria-label="Previous page">
+      ←
+    </button>
+    <ul class="pagination-list">
+      <!-- Page numbers will be inserted here -->
+    </ul>
+    <button class="pagination-btn pagination-next" aria-label="Next page">
+      →
+    </button>
+  </nav>
+</template>
+
+<!-- Loading Spinner Template -->
+<template id="lc-spinner-template">
+  <div class="spinner" role="status" aria-live="polite">
+    <span class="sr-only">Loading...</span>
+    <div class="spinner-circle"></div>
+  </div>
+</template>

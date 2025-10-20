@@ -1,0 +1,35 @@
+{
+  "title": "Careers",
+  "subtitle": "BE PART OF THE UNRIVALED LEGACY. Join our compassionate team and make a difference in personalized home healthcare.",
+  "whyUs": {
+    "title": "Why Legacy Concierge?",
+    "text": "Legacy Concierge delivers unmatched care for elite clients. We hire top nurses and caregivers to drive excellence. Our 97% retention rate reflects a supportive culture and a dedicated team, ensuring nurses and caregivers thrive.",
+    "points": [
+      "EXCEPTIONAL RETENTION: Our 97% retention rate reflects a supportive culture where caregivers thrive.",
+      "SELECTIVE HIRING: We recruit only the best, connecting elite nurses with premier opportunities.",
+      "EXPERIENCED PROFESSIONALS: Join our seasoned team to deliver unparalleled care."
+    ]
+  },
+  "benefits": {
+    "title": "Benefits",
+    "text": "Legacy Concierge fuels your success with top rewards and support.",
+    "points": [
+      "HIGH PAY: Earn what your skills deserve.",
+      "FLEXIBLE SHIFTS: Pick schedules that work for you.",
+      "CAREER SUPPORT: Gain training, mentorship, and benefits to excel."
+    ]
+  },
+  "apply": {
+    "title": "Ready to Join?",
+    "text": "Apply now—be part of Legacy Concierge's elite nursing and prestige care team.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Your Email",
+      "phone": "Your Phone",
+      "message": "Your Message",
+      "resume": "Attach Resume",
+      "submit": "Submit Application"
+    }
+  }
+}

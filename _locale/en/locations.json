@@ -1,0 +1,58 @@
+{
+  "title": "Our Locations",
+  "subtitle": "Legacy Concierge is Southern California's premier concierge nursing service, delivering exceptional, personalized care to every corner of the region.",
+  "locations": [
+    {
+      "name": "Los Angeles County",
+      "cities": [
+        "Los Angeles",
+        "Beverly Hills",
+        "Santa Monica",
+        "Pasadena",
+        "Long Beach",
+        "Bel Air",
+        "Malibu",
+        "Pacific Palisades",
+        "Manhattan Beach"
+      ]
+    },
+    {
+      "name": "Orange County",
+      "cities": [
+        "Newport Beach",
+        "Irvine",
+        "Laguna Beach",
+        "Anaheim",
+        "Coto de Caza",
+        "Dana Point",
+        "San Clemente",
+        "Huntington Beach"
+      ]
+    },
+    {
+      "name": "San Diego County",
+      "cities": [
+        "San Diego",
+        "La Jolla",
+        "Coronado",
+        "Del Mar",
+        "Rancho Santa Fe",
+        "Solana Beach",
+        "Encinitas"
+      ]
+    },
+    {
+      "name": "Ventura & Santa Barbara",
+      "cities": [
+        "Thousand Oaks",
+        "Ventura",
+        "Oxnard",
+        "Palm Springs",
+        "Riverside",
+        "Temecula",
+        "Santa Barbara",
+        "Montecito"
+      ]
+    }
+  ]
+}

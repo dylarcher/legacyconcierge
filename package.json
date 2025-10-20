@@ -1,0 +1,44 @@
+{
+  "name": "legacy-concierge",
+  "version": "1.0.0",
+  "description": "Our concierge nurses provide comprehensive, bespoke care, from post-surgical recovery and chronic condition management to wellness optimization and palliative support. With 24/7 coordination and clinical oversight, we ensure your health is managed with precision and compassion, wherever you are.",
+  "keywords": [
+    "healthcare",
+    "nursing",
+    "in-home-care",
+    "end-of-life-care",
+    "static-site",
+    "i18n",
+    "accessibility",
+    "wcag"
+  ],
+  "homepage": "https://github.com/dylarcher/legacyconcierge#readme",
+  "bugs": {
+    "url": "https://github.com/dylarcher/legacyconcierge/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylarcher/legacyconcierge.git"
+  },
+  "license": "ISC",
+  "author": "@dylarcher",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "format": "npx @biomejs/biome format --write .",
+    "format:check": "npx @biomejs/biome format .",
+    "lint": "npx @biomejs/biome lint .",
+    "lint:fix": "npx @biomejs/biome lint --write .",
+    "check": "npx @biomejs/biome check .",
+    "check:fix": "npx @biomejs/biome check --write .",
+    "test": "echo 'tests coming soon'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.5"
+  }
+}

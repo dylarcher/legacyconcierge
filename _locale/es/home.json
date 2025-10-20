@@ -1,0 +1,107 @@
+{
+  "title": "EL MEJOR PROVEEDOR DE CUIDADO<br>CONCIERGE EN CALIFORNIA",
+  "subtitle": "Nuestras enfermeras concierge brindan cuidado integral y personalizado, desde recuperación post-quirúrgica y manejo de condiciones crónicas hasta optimización del bienestar y apoyo paliativo. Con coordinación 24/7 y supervisión clínica, aseguramos que su salud sea manejada con precisión y compasión, dondequiera que esté.",
+  "ctaButton": "Consulta Personalizada",
+  "hero": {
+    "title": "EL MEJOR PROVEEDOR DE CUIDADO<br>CONCIERGE EN CALIFORNIA",
+    "subtitle": "Nuestras enfermeras concierge brindan cuidado integral y personalizado, desde recuperación post-quirúrgica y manejo de condiciones crónicas hasta optimización del bienestar y apoyo paliativo. Con coordinación 24/7 y supervisión clínica, aseguramos que su salud sea manejada con precisión y compasión, dondequiera que esté.",
+    "ctaButton": "Consulta Personalizada"
+  },
+  "infoCards": [
+    {
+      "title": "LEALTAD",
+      "text": "98% de Retención de Empleados - Impulsado por nuestra cultura de bondad y crecimiento."
+    },
+    {
+      "title": "CUIDADO PERSONALIZADO",
+      "text": "Planes personalizados diseñados para sus necesidades específicas de salud."
+    },
+    {
+      "title": "ENFERMERAS DE ÉLITE",
+      "text": "Solo el 3% superior de enfermeras expertas, altamente capacitadas y verificadas."
+    },
+    {
+      "title": "RED DE CONFIANZA",
+      "text": "Acceso incomparable a los mejores socios médicos en todo Estados Unidos."
+    }
+  ],
+  "pinnacle": {
+    "superTitle": "Experimente el Pináculo de la",
+    "title": "Enfermería Privada",
+    "text": "Seleccionamos solo el 3% superior de candidatos de enfermería—profesionales exquisitamente capacitados cuya experiencia y empatía redefinen el cuidado. Con una tasa de retención del 98%, nuestras enfermeras encarnan la excelencia duradera, brindando soluciones de salud personalizadas con gracia y precisión incomparables.",
+    "comparisonItems": [
+      {
+        "label": "Instalación de Vida Asistida",
+        "ratio": "70 - 100 pacientes : 1 Enfermera"
+      },
+      {
+        "label": "Instalación de Enfermería Especializada",
+        "ratio": "30 pacientes : 1 Enfermera"
+      },
+      {
+        "label": "Hospital",
+        "ratio": "5 pacientes : 1 Enfermera"
+      },
+      {
+        "label": "Legacy Concierge",
+        "ratio": "1 paciente : 1 Enfermera",
+        "isLegacy": true
+      }
+    ]
+  },
+  "ourStory": {
+    "title": "Honramos Su Legado Como Propio",
+    "columns": [
+      {
+        "title": "Misión Enraizada en la Familia",
+        "text": "El nombre Legacy Concierge lleva una promesa: atesorar la historia de su familia tan fieramente como lo hacemos con la nuestra. Fundada en 2022, nuestra misión surgió de una verdad que conocemos demasiado bien: demasiadas familias ven a sus seres queridos sufrir sin el cuidado que merecen. Hemos caminado por ese sendero, sentido esa angustia, y prometimos cambiarlo. Legacy Concierge entrega cuidado de élite y compasivo, tejido con dignidad y confianza, para asegurar que el viaje de su familia sea recibido con la reverencia que demanda—<strong>porque su legado importa.</strong>"
+      },
+      {
+        "title": "Confianza a Través del Origen",
+        "text": "Jason Kidushim, nuestro CEO, fundó Legacy Concierge impulsado por una misión profunda, inspirado por su abuelo—un héroe de guerra cuya dignidad fue socavada por un sistema defectuoso durante su batalla contra el Alzheimer. Esta injusticia alimentó el compromiso de Jason de revolucionar la atención médica domiciliaria. Regresando a California, aprovechó décadas de experiencia para crear un servicio donde cada cliente es tratado como familia. Con dedicación inquebrantable, Legacy Concierge entrega cuidado personalizado y compasivo con precisión excepcional, asegurando que la dignidad y legado de sus seres queridos sean preservados con honor atemporal."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios: Historias Reales, Confianza Real",
+    "cards": [
+      {
+        "quote": "\"El cuidado excepcional de Jeanelle fue un privilegio. Sus habilidades impecables y enfoque proactivo detectaron detalles médicos críticos que los médicos pasaron por alto. Rápida, compasiva y muy inteligente, alivió significativamente nuestra carga.\"",
+        "author": "- Michelle M.",
+        "title": "Cliente Legacy"
+      },
+      {
+        "quote": "\"He trabajado con muchas agencias de cuidado domiciliario, pero aún no he visto a todo un equipo trabajar con tanto cuidado y compasión como este. Su enfoque está en el cuidado de calidad, y es evidente por la cultura de su organización...\"",
+        "author": "- Nadine Roisman",
+        "title": "Propietaria, Olive Tree Senior Advisors"
+      },
+      {
+        "quote": "\"El tiempo es lo más preciado que cualquiera de nosotros tiene en la vida. Solía desear a la gente salud y felicidad, pero ahora solo les deseo tiempo. Legacy ha cambiado mi vida. Han dado a mi familia mucho más tiempo de calidad con mi madre.\"",
+        "author": "- Sandy S.",
+        "title": "Cliente Legacy"
+      }
+    ]
+  },
+  "careModel": {
+    "title": "Nuestro Modelo de Cuidado",
+    "subtitle": "Diseñado para la Tranquilidad",
+    "steps": [
+      {
+        "title": "Evaluación Detallada del Cuidado",
+        "text": "Comenzamos con una evaluación exhaustiva dirigida por una enfermera registrada, evaluando sus necesidades médicas, preferencias personales y oportunidades para mejorar el cuidado. Esto asegura un plan alineado con sus objetivos, valores y estilo de vida."
+      },
+      {
+        "title": "Revisar Propuesta de Cuidado",
+        "text": "En un entorno abierto y receptivo, nos reunimos con usted y su familia para discutir nuestras recomendaciones, recopilar comentarios y refinar un plan de cuidado personalizado."
+      },
+      {
+        "title": "Construir Equipo de Cuidado Personalizado",
+        "text": "Se le asigna un equipo de cuidado dedicado, meticulosamente seleccionado para satisfacer sus necesidades médicas y personales con experiencia y compasión."
+      },
+      {
+        "title": "Comenzar Supervisión Clínica",
+        "text": "A través de chequeos regulares, coordinación con médicos y monitoreo experto, aseguramos que su cuidado evolucione con sus objetivos, entregando confianza y dignidad."
+      }
+    ]
+  }
+}

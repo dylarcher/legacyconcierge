@@ -1,0 +1,81 @@
+{
+  "title": "Contact Us",
+  "subtitle": "We're here to answer your questions and provide the support you need. Reach out to us anytime.",
+  "form": {
+    "title": "Send Us a Message",
+    "name": {
+      "label": "Your Name",
+      "placeholder": "John Doe"
+    },
+    "email": {
+      "label": "Email Address",
+      "placeholder": "john@example.com"
+    },
+    "phone": {
+      "label": "Phone Number",
+      "placeholder": "(555) 123-4567",
+      "help": "Optional - We'll only call if you prefer phone contact"
+    },
+    "subject": {
+      "label": "Subject",
+      "options": {
+        "default": "Select a subject",
+        "general": "General Inquiry",
+        "services": "Services Information",
+        "appointment": "Schedule Appointment",
+        "billing": "Billing Question",
+        "feedback": "Feedback"
+      }
+    },
+    "message": {
+      "label": "Message",
+      "placeholder": "Tell us how we can help you..."
+    },
+    "submit": "Send Message",
+    "reset": "Clear Form"
+  },
+  "map": {
+    "placeholder": "Map integration placeholder"
+  },
+  "emergency": {
+    "title": "24/7 Emergency Support",
+    "description": "For urgent medical needs, contact us immediately",
+    "phone": "Call Now: (555) 123-4567"
+  },
+  "info": {
+    "title": "Contact Information",
+    "address": {
+      "label": "Address",
+      "street": "720 Wilshire Blvd Suite 300",
+      "city": "Santa Monica",
+      "state": "CA",
+      "zip": "90401"
+    },
+    "phone": {
+      "label": "Phone",
+      "number": "(310) 974-4517"
+    },
+    "email": {
+      "label": "Email",
+      "address": "info@legacyconcierge.com"
+    },
+    "fax": {
+      "label": "Fax",
+      "number": "(310) 974-4518"
+    }
+  },
+  "hours": {
+    "title": "Business Hours",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "weekday": "9:00 AM - 6:00 PM",
+    "weekend": "10:00 AM - 4:00 PM",
+    "closed": "Closed",
+    "note": "Emergency services available 24/7"
+  }
+}
