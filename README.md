@@ -112,7 +112,7 @@ legacy-concierge/
     - `<lc-section>` &middot; Page section wrapper
     - `<lc-container>` &middot; Responsive container
 
-## Page Layouts (Using <template>)
+## Page Layouts (Using `<template>`)
 
 ### Template Structure Example:
 
@@ -213,15 +213,6 @@ async function loadTemplate(name) {
 
 ## Migration Strategy
 
-<<<<<<< Updated upstream
-1. Start with NEW pages (blog, splash)
-2. Migrate homepage to video background layout
-3. Convert 2-3 subpages to sidebar template
-4. Convert treatments/expertise to bentobox grid
-5. Gradually migrate remaining pages
-6. Keep old code until all pages migrated
-7. Final cleanup and removal of legacy code
-=======
 - `<lc-header>` - Site header with navigation
 - `<lc-footer>` - Site footer
 - `<lc-card>` - Versatile card component (info, service, team, blog variants)
@@ -348,4 +339,3 @@ Progressive enhancement ensures core functionality works in older browsers.
 ---
 
 > Built with care for those who need compassionate support
->>>>>>> Stashed changes
