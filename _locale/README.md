@@ -2,14 +2,15 @@
 
 This directory contains all translation files for the Legacy Concierge website's custom i18n (internationalization) system.
 
-## < Supported Languages
+## <
+ Supported Languages
 
 - **English (EN)** - `_locale/en/` - Primary language
 - **Spanish (ES)** - `_locale/es/` - Secondary language
 
 Each language directory contains 14 JSON translation files covering all pages and UI elements.
 
-## =Á Translation Files
+## =Ã Translation Files
 
 ### Common Files
 
@@ -95,7 +96,7 @@ Each page loads:
 // Loads: common.json + treatments-detail.json
 ```
 
-## =Ý Translation Key Structure
+## =Ã Translation Key Structure
 
 ### Simple Keys
 
@@ -202,10 +203,10 @@ For ARIA labels, alt text, title attributes, etc.:
 Usage:
 ```html
 <a href="#main" data-i18n-attr="aria-label:accessibility.skipToMain">Skip</a>
-<button data-i18n-attr="aria-label:accessibility.closeMenu">×</button>
+<button data-i18n-attr="aria-label:accessibility.closeMenu">Ã—</button>
 ```
 
-## <¯ Usage in HTML
+## <Â¯ Usage in HTML
 
 ### Basic Translation
 
@@ -249,7 +250,7 @@ Some translations contain HTML (sanitized for safety):
 <p data-i18n="richText">This is <strong>bold</strong> and this is <em>italic</em>.</p>
 ```
 
-## =à Adding a New Language
+## =Ã  Adding a New Language
 
 To add a new language (e.g., French):
 
@@ -367,8 +368,9 @@ Use proper JSON escaping:
   "path": "C:\\Users\\Documents"
 }
 ```
-
-## = Testing Translations
+## Testing Translations
+## =
+ Testing Translations
 
 ### Manual Testing
 
@@ -443,7 +445,7 @@ find _locale -name "*.json" -exec node -e "require('{}')" \;
 
 **Solution:** System defaults to English if browser language not supported. Check `navigator.language` in console.
 
-## =Ê Translation File Statistics
+## =ÃŠ Translation File Statistics
 
 | Language | Files | Total Keys | Words (approx.) |
 |----------|-------|------------|-----------------|
@@ -456,7 +458,7 @@ find _locale -name "*.json" -exec node -e "require('{}')" \;
 - **scripts/language-switcher.js** - Language selection component (optional)
 - **.claude/CLAUDE.md** - Project documentation with i18n notes
 
-## =Ú Further Reading
+## =Ãš Further Reading
 
 - [i18n Best Practices](https://www.w3.org/International/questions/qa-i18n)
 - [JSON Format Specification](https://www.json.org/)
