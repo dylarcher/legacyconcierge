@@ -213,6 +213,7 @@ async function loadTemplate(name) {
 
 ## Migration Strategy
 
+<<<<<<< Updated upstream
 1. Start with NEW pages (blog, splash)
 2. Migrate homepage to video background layout
 3. Convert 2-3 subpages to sidebar template
@@ -220,3 +221,131 @@ async function loadTemplate(name) {
 5. Gradually migrate remaining pages
 6. Keep old code until all pages migrated
 7. Final cleanup and removal of legacy code
+=======
+- `<lc-header>` - Site header with navigation
+- `<lc-footer>` - Site footer
+- `<lc-card>` - Versatile card component (info, service, team, blog variants)
+- `<lc-card-grid>` - Responsive card grid
+- `<lc-bento-grid>` - Masonry-style grid layout
+
+See [`components/README.md`](components/README.md) for full documentation.
+
+## Scripts
+
+Core JavaScript modules:
+
+- [`app.js`](scripts/app.js) - Navigation, mobile menu, scroll effects
+- [`i18n.js`](scripts/i18n.js) - Internationalization engine
+- [`theme.js`](scripts/theme.js) - Dark/light mode management
+- [`language-switcher.js`](scripts/language-switcher.js) - Language selection component
+
+See [`scripts/README.md`](scripts/README.md) for detailed documentation.
+
+## Layouts
+
+Pre-built page layout templates in [`layouts/`](layouts/):
+
+- [`homepage-video.html`](layouts/homepage-video.html) - Homepage with background video
+- [`subpage-sidebar.html`](layouts/subpage-sidebar.html) - Subpage with right sidebar
+- [`bentobox-grid.html`](layouts/bentobox-grid.html) - Masonry-style card grid
+- [`contact.html`](layouts/contact.html) - Contact page layout
+- [`splash.html`](layouts/splash.html) - Landing page layout
+- [`blog-gallery.html`](layouts/blog-gallery.html) - Blog listing layout
+- [`blog-post.html`](layouts/blog-post.html) - Individual blog post layout
+
+## Development Status
+
+**Current Phase:** Phase 3 - Component Development & Page Templates
+
+### Completed
+
+- i18n framework (EN/ES support for 30+ pages)
+- Code quality tools (Biome configuration)
+- Directory structure modernization
+- Contact page with form
+- Splash/landing page
+- Blog infrastructure (gallery + post template)
+- Web Components foundation (header, footer, cards)
+- Theme system (dark/light mode)
+- Navigation system with dropdowns
+
+### In Progress
+
+- Unit test coverage (95%+ target)
+- Accessibility audit (WCAG 2.2 AA validation)
+- Performance optimization (Lighthouse 95+ target)
+- Homepage development
+- Subpage templates
+- Form components
+
+See [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) for full project timeline.
+
+## Links
+
+- **GitHub:** <https://github.com/dylarcher/legacy-concierge>
+- **Project Board:** <https://github.com/users/dylarcher/projects/18>
+- **Documentation:** [`docs/`](docs/)
+
+## Documentation
+
+- [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) - Complete project timeline and progress
+- [`docs/WEB_COMPONENTS_SUMMARY.md`](docs/WEB_COMPONENTS_SUMMARY.md) - Web Components implementation notes
+- [`docs/QUICK_START.md`](docs/QUICK_START.md) - Quick reference guide
+
+## Contributing
+
+When adding new features:
+
+1. **Maintain accessibility** - Test with keyboard and screen readers
+2. **Add i18n support** - All text must be translatable
+3. **Format code** - Run Biome before committing
+4. **Use modern patterns** - ESM modules, Web Components, IndexedDB
+5. **Test themes** - Verify both dark and light modes
+6. **Document changes** - Update relevant README files
+
+## Common Tasks
+
+### Adding a New Page
+
+1. Create HTML file in appropriate [`pages/`](pages/) subdirectory
+2. Add translation files in [`_locale/en/`](_locale/en/) and [`_locale/es/`](_locale/es/)
+3. Add `data-i18n` attributes for all translatable content
+4. Ensure correct relative paths for CSS/JS based on directory depth
+5. Add Schema.org microdata
+6. Test accessibility and theme support
+
+### Modifying Translations
+
+1. Edit JSON files in [`_locale/{lang}/`](_locale/)
+2. Maintain consistent key structure across all languages
+3. Test language switching
+4. Verify special characters and HTML entities
+
+### Updating Components
+
+1. Modify template in [`components/templates/`](components/templates/)
+2. Update script in [`components/scripts/`](components/scripts/) if needed
+3. Test across all pages using the component
+4. Update [`components/README.md`](components/README.md) documentation
+
+## Browser Support
+
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+
+Progressive enhancement ensures core functionality works in older browsers.
+
+## License
+
+[License information to be added]
+
+## Contact
+
+[Contact information to be added]
+
+---
+
+> Built with care for those who need compassionate support
+>>>>>>> Stashed changes

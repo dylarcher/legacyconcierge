@@ -1,8 +1,8 @@
-# 🌊 Fullscreen Video Background Demo
+# Fullscreen Video Background Demo
 
 An enterprise-grade, accessibility-compliant fullscreen video background implementation with comprehensive responsive media delivery.
 
-## ✨ Features
+## Features
 
 - **23 video variants** intelligently served based on device & network
 - **11 image fallbacks** for no-video scenarios
@@ -15,7 +15,7 @@ An enterprise-grade, accessibility-compliant fullscreen video background impleme
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 fullscreen-bg-video/
@@ -36,7 +36,7 @@ fullscreen-bg-video/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Open in browser**: Simply open `index.html` in any modern browser
 2. **View on different devices**: Responsive design adapts automatically
@@ -44,7 +44,7 @@ fullscreen-bg-video/
 
 ---
 
-## 🎯 Video Delivery Matrix
+## Video Delivery Matrix
 
 | Screen Size | Orientation | Quality Served |
 |-------------|-------------|----------------|
@@ -64,7 +64,7 @@ fullscreen-bg-video/
 
 ---
 
-## ♿ Accessibility Features
+## Accessibility Features
 
 ### WCAG 2.2 AA Compliance
 
@@ -100,7 +100,7 @@ fullscreen-bg-video/
 
 ---
 
-## 🎨 SVG Overlays
+## SVG Overlays
 
 Three overlay styles are available in `media/img/svg/`:
 
@@ -130,7 +130,7 @@ Three overlay styles are available in `media/img/svg/`:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Browser DevTools
 
@@ -158,7 +158,7 @@ Three overlay styles are available in `media/img/svg/`:
 
 ---
 
-## 📊 Performance
+## Performance
 
 ### Metrics (Average)
 
@@ -180,7 +180,7 @@ Three overlay styles are available in `media/img/svg/`:
 
 ---
 
-## 🔧 Customization
+## Customization
 
 ### Change Video Content
 
@@ -229,7 +229,7 @@ Modify CSS custom properties:
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 For detailed technical documentation, see:
 
@@ -240,7 +240,7 @@ For detailed technical documentation, see:
 
 ---
 
-## 🌐 Browser Support
+## Browser Support
 
 | Browser | Version | Status |
 |---------|---------|--------|
@@ -258,7 +258,7 @@ For detailed technical documentation, see:
 
 ---
 
-## 🎓 Learning Resources
+## Learning Resources
 
 ### Video Formats
 - [WebM vs MP4](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs)
@@ -274,7 +274,7 @@ For detailed technical documentation, see:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Improvements welcome! Consider:
 
@@ -285,13 +285,13 @@ Improvements welcome! Consider:
 
 ---
 
-## 📄 License
+## License
 
 This demonstration code is provided as-is for educational and commercial use.
 
 ---
 
-## 📞 Support
+## Support
 
 For questions or issues, please refer to the documentation files or create an issue in the project repository.
 

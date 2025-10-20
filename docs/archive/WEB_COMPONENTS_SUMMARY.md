@@ -6,7 +6,7 @@
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 Create a modern, maintainable web component system using:
 - Vanilla JavaScript Custom Elements
@@ -16,9 +16,9 @@ Create a modern, maintainable web component system using:
 - WCAG 2.2 AA accessibility
 - Full i18n support
 
-## ✅ What's Been Built (Phase 1)
+## What's Been Built (Phase 1)
 
-### 📁 Directory Structure
+### Directory Structure
 
 ```
 legacy-concierge/
@@ -49,7 +49,7 @@ legacy-concierge/
 
 **Legend:** ✅ Complete | 📝 Created, ready to use
 
-### 🧩 Implemented Components
+### Implemented Components
 
 #### 1. **`<lc-header>`** - Navigation Component
 **Features:**
@@ -143,7 +143,7 @@ legacy-concierge/
 </lc-bento-grid>
 ```
 
-### 🛠️ Core Utilities
+### Core Utilities
 
 #### component-loader.js
 **Functions:**
@@ -172,7 +172,7 @@ legacy-concierge/
 - `getCurrentTheme()` - Theme detection
 - And more...
 
-## 📚 Documentation
+## Documentation
 
 ### Complete Documentation Files:
 1. **`components/README.md`** - Comprehensive component guide
@@ -195,7 +195,7 @@ legacy-concierge/
    - Reduced motion support
    - Complete working example
 
-## 🎨 Key Features
+## Key Features
 
 ### 1. **Light DOM Architecture**
 - Uses global CSS (no Shadow DOM isolation)
@@ -233,7 +233,7 @@ legacy-concierge/
 - Graceful degradation
 - Performance optimized
 
-## 📊 Impact & Benefits
+## Impact & Benefits
 
 ### Before (Old Approach)
 ```html
@@ -263,7 +263,7 @@ legacy-concierge/
 - **Consistency:** Guaranteed identical across all pages
 - **Development speed:** 10x faster for new pages
 
-## 🚀 How to Use
+## How to Use
 
 ### 1. Simple Page Conversion
 
@@ -332,7 +332,7 @@ legacy-concierge/
 
 See `components/README.md` for detailed instructions.
 
-## 📋 What's Next (Phase 2+)
+## What's Next (Phase 2+)
 
 ### Pending Components:
 
@@ -377,7 +377,7 @@ Templates created, scripts needed:
 3. **Week 4:** Blog components + UI elements
 4. **Week 5:** Migration of existing pages
 
-## 🔄 Migration Strategy
+## Migration Strategy
 
 ### Gradual Approach (Recommended):
 1. ✅ **Phase 1 Complete** - Core system + header/footer/cards
@@ -393,7 +393,7 @@ Templates created, scripts needed:
 2. Update all 27 pages in one go
 3. More risky but faster total completion
 
-## 🐛 Known Issues / Notes
+## Known Issues / Notes
 
 1. **ESM Modules:** Components use ES6 modules (`type="module"`)
    - Requires http server (not file://)
@@ -410,7 +410,7 @@ Templates created, scripts needed:
    - Custom Elements V1 required
    - Polyfills available if needed for older browsers
 
-## 📖 Quick Reference
+## Quick Reference
 
 ### Load Components:
 ```javascript
@@ -439,14 +439,14 @@ import { debounce, sanitizeHTML, formatDate } from '/script/core/helpers.js';
 </lc-card-grid>
 ```
 
-## 🎓 Learning Resources
+## Learning Resources
 
 - **`components/README.md`** - Component documentation
 - **`components/EXAMPLE.html`** - Working example
 - **`layouts/homepage-video.html`** - Full page template
 - **Web Components MDN:** https://developer.mozilla.org/en-US/docs/Web/Web_Components
 
-## 🏆 Success Criteria Met
+## Success Criteria Met
 
 - ✅ Modular, reusable components
 - ✅ Light DOM (global CSS integration)
@@ -458,7 +458,7 @@ import { debounce, sanitizeHTML, formatDate } from '/script/core/helpers.js';
 - ✅ Well documented
 - ✅ Working examples
 
-## 💡 Tips
+## Tips
 
 1. **Start with existing examples** - Copy `EXAMPLE.html` or `homepage-video.html`
 2. **Use the README** - All components documented with examples

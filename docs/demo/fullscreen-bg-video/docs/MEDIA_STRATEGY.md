@@ -1,10 +1,10 @@
-# 📹 Media Strategy Documentation
+# Media Strategy Documentation
 
 ## Overview
 
 This document explains the comprehensive media delivery strategy for the fullscreen video background demo. All 23 video files and 11 image files are now actively utilized for optimal performance across all devices and network conditions.
 
-## 🎯 Strategy Goals
+## Strategy Goals
 
 1. **Optimal Quality**: Deliver the highest quality video appropriate for each screen
 2. **Performance**: Minimize bandwidth usage and load times
@@ -13,7 +13,7 @@ This document explains the comprehensive media delivery strategy for the fullscr
 
 ---
 
-## 📊 Media Inventory
+## Media Inventory
 
 ### Images (11 files)
 
@@ -73,7 +73,7 @@ This document explains the comprehensive media delivery strategy for the fullscr
 
 ---
 
-## 🎨 SVG Overlays (3 files)
+## SVG Overlays (3 files)
 
 | File | Style | Status |
 |------|-------|--------|
@@ -83,7 +83,7 @@ This document explains the comprehensive media delivery strategy for the fullscr
 
 ---
 
-## 📐 Delivery Logic
+## Delivery Logic
 
 ### Desktop Landscape
 
@@ -134,7 +134,7 @@ Automatically serves Bandwidth Saver variants:
 
 ---
 
-## 🔄 Format Priority
+## Format Priority
 
 For each breakpoint, sources are listed in this order:
 
@@ -149,7 +149,7 @@ Example:
 
 ---
 
-## 💡 Browser Selection Logic
+## Browser Selection Logic
 
 The browser evaluates `<source>` elements **in order** and picks the **first match**:
 
@@ -159,7 +159,7 @@ The browser evaluates `<source>` elements **in order** and picks the **first mat
 
 ---
 
-## 📦 File Size Reference
+## File Size Reference
 
 ### Video Files (Approximate)
 
@@ -179,7 +179,7 @@ The browser evaluates `<source>` elements **in order** and picks the **first mat
 
 ---
 
-## 🧪 Testing Checklist
+## Testing Checklist
 
 ### Device Testing
 - [ ] Desktop 4K display (3840×2160+)
@@ -217,7 +217,7 @@ The browser evaluates `<source>` elements **in order** and picks the **first mat
 
 ---
 
-## 🎚️ Optimization Recommendations
+## Optimization Recommendations
 
 ### Current Implementation: ✅ Complete
 All 23 videos and 11 images are now in active use with intelligent delivery logic.
@@ -232,7 +232,7 @@ All 23 videos and 11 images are now in active use with intelligent delivery logi
 
 ---
 
-## 🔍 Debugging
+## Debugging
 
 ### Check Which Video is Playing
 
@@ -257,7 +257,7 @@ Open DevTools → Network tab → Filter by "media" → Check file sizes being d
 
 ---
 
-## 📝 CSS Variables
+## CSS Variables
 
 All media paths are documented as CSS variables in `styles.css`:
 
@@ -277,7 +277,7 @@ While not currently used in CSS rules, these provide a reference map and can be 
 
 ---
 
-## 🎉 Summary
+## Summary
 
 **Total Media Files**: 34  
 **Total in Use**: 34 (100%)  

@@ -2,7 +2,7 @@
 
 Get up and running with Legacy Concierge Web Components in 5 minutes.
 
-## 🚀 Immediate Next Steps
+## Immediate Next Steps
 
 ### 1. Test the Example Page
 
@@ -136,7 +136,7 @@ http://localhost:8000/
 
 Your homepage now uses components! The header, footer, and cards are all reusable.
 
-## 🎯 What You've Accomplished
+## What You've Accomplished
 
 - ✅ Reduced homepage from ~250 lines to ~150 lines
 - ✅ Header is now reusable across all pages
@@ -144,7 +144,7 @@ Your homepage now uses components! The header, footer, and cards are all reusabl
 - ✅ Cards use consistent markup
 - ✅ One update to header template = all pages update
 
-## 📝 Create a New Page
+## Create a New Page
 
 Let's create a simple "About" page:
 
@@ -195,7 +195,7 @@ Let's create a simple "About" page:
 
 Save as `pages/about/index-new.html` and test!
 
-## 🧪 Quick Tests
+## Quick Tests
 
 ### Test 1: Component Loading
 
@@ -238,7 +238,7 @@ LCHelpers.getCurrentTheme();
 // Should output: "light" or "dark"
 ```
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Components Not Showing
 
@@ -293,7 +293,7 @@ LCHelpers.getCurrentTheme();
 2. Components use Light DOM, so check global CSS
 3. Verify class names match between templates and CSS
 
-## 📚 Next Steps
+## Next Steps
 
 1. **Read** `components/README.md` - Full component documentation
 2. **Review** `WEB_COMPONENTS_SUMMARY.md` - Complete overview
@@ -301,7 +301,7 @@ LCHelpers.getCurrentTheme();
 4. **Try** `layouts/homepage-video.html` - Full layout example
 5. **Start** converting existing pages one by one
 
-## 💡 Pro Tips
+## Pro Tips
 
 1. **Copy Examples**: Start with `EXAMPLE.html` as a template
 2. **Test Incrementally**: Convert one section at a time
@@ -309,7 +309,7 @@ LCHelpers.getCurrentTheme();
 4. **Check Console**: Component loader logs helpful messages
 5. **Keep Backups**: Copy files before major changes
 
-## 🎓 Learn More
+## Learn More
 
 ### Component Documentation
 
@@ -323,7 +323,7 @@ LCHelpers.getCurrentTheme();
 - [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
 - [ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
-## 🚀 You're Ready
+## You're Ready
 
 You now have:
 
