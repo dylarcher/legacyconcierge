@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="Fullscreen responsive video background showcasing ocean waves with accessibility features and fallback support"
+        itemprop="description">
+    <title itemprop="name">Fullscreen Video Background</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Skip navigation links for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Status announcements for screen readers -->
+    <div id="status-announcements" role="status" aria-live="polite" aria-atomic="true" class="visually-hidden"></div>
+
+    <div itemscope itemtype="https://schema.org/VideoObject" class="video-background" id="videoBackground"
+        role="presentation" aria-hidden="true">
+        <!-- Fallback image using picture element with srcset -->
+        <picture class="fallback-image" style="display: none;" itemprop="thumbnail">
+            <!-- High-quality PNG fallbacks for modern browsers -->
+            <source media="(min-width: 215em)" srcset="media/img/png/res-144-waves-3452x2004.png" type="image/png">
+            <source media="(min-width: 160em)" srcset="media/img/png/res-144-waves-3440x1440.png" type="image/png">
+            <source media="(min-width: 120em)" srcset="media/img/png/res-144-waves-2560x1440.png" type="image/png">
+            <source media="(min-width: 67.5em) and (orientation: landscape)"
+                srcset="media/img/png/res-144-waves-1920x1080.png" type="image/png">
+            <source media="(orientation: portrait)" srcset="media/img/png/res-144-waves-1080x1920.png" type="image/png">
+
+            <!-- JPEG fallbacks for better compatibility -->
+            <source media="(min-width: 215em)" srcset="media/img/jpeg/img-shorebreak-3840x2160.jpg" type="image/jpeg">
+            <source media="(min-width: 160em)" srcset="media/img/jpeg/img-shorebreak-3440x1440.jpg" type="image/jpeg">
+            <source media="(min-width: 120em)" srcset="media/img/jpeg/img-shorebreak-2560x1440.jpg" type="image/jpeg">
+            <source media="(min-width: 67.5em) and (orientation: landscape)"
+                srcset="media/img/jpeg/img-shorebreak-1920x1080.jpg" type="image/jpeg">
+            <source media="(orientation: portrait)" srcset="media/img/jpeg/img-shorebreak-1080x1920.jpg"
+                type="image/jpeg">
+
+            <!-- Default fallback -->
+            <img src="media/img/jpeg/img-shorebreak-1280x720.jpg" alt="Ocean waves at the shore" loading="eager"
+                decoding="async" itemprop="thumbnailUrl">
+        </picture>
+        <video id="bgVideo" autoplay muted loop playsinline poster="media/img/jpeg/img-shorebreak-1920x1080.jpg"
+            aria-hidden="true" itemprop="contentUrl" itemscope itemtype="https://schema.org/VideoObject">
+            <meta itemprop="name" content="Ocean Waves Shore Break Background Video">
+            <meta itemprop="description" content="Looping background video of ocean waves breaking on the shore">
+            <meta itemprop="thumbnailUrl" content="media/img/jpeg/img-shorebreak-1920x1080.jpg">
+            <meta itemprop="uploadDate" content="2024-01-01">
+
+            <!-- ULTRA-WIDE & 4K DISPLAYS (3440px+): High Quality 2160p for premium viewing experience -->
+            <source src="media/vid/webm/bg-high-quality-2160p.webm" type="video/webm" media="(min-width: 215em)">
+            <source src="media/vid/mp4/bg-high-quality-2160p.mp4" type="video/mp4" media="(min-width: 215em)">
+
+            <!-- QHD/2K DISPLAYS (2560px - 3439px): High Quality 1440p for large screens -->
+            <source src="media/vid/webm/bg-high-quality-1440p.webm" type="video/webm"
+                media="(min-width: 160em) and (max-width: 214.9375em)">
+            <source src="media/vid/mp4/bg-high-quality-1440p.mp4" type="video/mp4"
+                media="(min-width: 160em) and (max-width: 214.9375em)">
+
+            <!-- FULL HD LANDSCAPE (1920px - 2559px): High Quality 1080p for standard desktop -->
+            <source src="media/vid/webm/bg-high-quality-1080p.webm" type="video/webm"
+                media="(min-width: 120em) and (max-width: 159.9375em) and (orientation: landscape)">
+            <source src="media/vid/mp4/bg-high-quality-1080p.mp4" type="video/mp4"
+                media="(min-width: 120em) and (max-width: 159.9375em) and (orientation: landscape)">
+
+            <!-- HD LANDSCAPE (1280px - 1919px): Compatibility 1080p for medium screens -->
+            <source src="media/vid/webm/bg-mobile-first-1080p.webm" type="video/webm"
+                media="(min-width: 80em) and (max-width: 119.9375em) and (orientation: landscape)">
+            <source src="media/vid/mp4/bg-compatibility-1080p.mp4" type="video/mp4"
+                media="(min-width: 80em) and (max-width: 119.9375em) and (orientation: landscape)">
+
+            <!-- STANDARD LANDSCAPE (768px - 1279px): Mobile First & Compatibility 720p -->
+            <source src="media/vid/webm/bg-mobile-first-720p.webm" type="video/webm"
+                media="(min-width: 48em) and (max-width: 79.9375em) and (orientation: landscape)">
+            <source src="media/vid/mp4/bg-compatibility-720p.mp4" type="video/mp4"
+                media="(min-width: 48em) and (max-width: 79.9375em) and (orientation: landscape)">
+
+            <!-- SMALL LANDSCAPE (481px - 767px): Bandwidth Saver 480p for older devices -->
+            <source src="media/vid/webm/bg-bandwidth-saver-480p.webm" type="video/webm"
+                media="(min-width: 30.0625em) and (max-width: 47.9375em) and (orientation: landscape)">
+            <source src="media/vid/mp4/bg-compatibility-480p.mp4" type="video/mp4"
+                media="(min-width: 30.0625em) and (max-width: 47.9375em) and (orientation: landscape)">
+
+            <!-- TINY LANDSCAPE (< 480px): Bandwidth Saver 360p for minimal data usage -->
+            <source src="media/vid/webm/bg-bandwidth-saver-360p.webm" type="video/webm"
+                media="(max-width: 30.0625em) and (orientation: landscape)">
+            <source src="media/vid/mp4/bg-bandwidth-saver-360p.mp4" type="video/mp4"
+                media="(max-width: 30.0625em) and (orientation: landscape)">
+
+            <!-- PORTRAIT MODE - MOBILE DEVICES: Optimized for vertical viewing -->
+
+            <!-- Large Portrait (1080px+) - High-end phones/tablets -->
+            <source src="media/vid/webm/bg-mobile-first-1080p.webm" type="video/webm"
+                media="(min-width: 67.5em) and (orientation: portrait)">
+            <source src="media/vid/mp4/bg-mobile-first-1080p.mp4" type="video/mp4"
+                media="(min-width: 67.5em) and (orientation: portrait)">
+
+            <!-- Medium Portrait (720px - 1079px) - Standard phones -->
+            <source src="media/vid/webm/bg-mobile-first-720p.webm" type="video/webm"
+                media="(min-width: 45em) and (max-width: 67.5em) and (orientation: portrait)">
+            <source src="media/vid/mp4/bg-mobile-first-720p.mp4" type="video/mp4"
+                media="(min-width: 45em) and (max-width: 67.5em) and (orientation: portrait)">
+
+            <!-- Small Portrait (480px - 719px) - Budget phones -->
+            <source src="media/vid/webm/bg-mobile-first-480p.webm" type="video/webm"
+                media="(min-width: 30em) and (max-width: 44.9375em) and (orientation: portrait)">
+            <source src="media/vid/mp4/bg-mobile-first-480p.mp4" type="video/mp4"
+                media="(min-width: 30em) and (max-width: 44.9375em) and (orientation: portrait)">
+
+            <!-- Tiny Portrait (< 480px) - Very small/old devices -->
+            <source src="media/vid/webm/bg-mobile-first-360p.webm" type="video/webm"
+                media="(max-width: 29.9375em) and (orientation: portrait)">
+            <source src="media/vid/mp4/bg-mobile-first-360p.mp4" type="video/mp4"
+                media="(max-width: 29.9375em) and (orientation: portrait)">
+
+            <!-- SLOW CONNECTION FALLBACKS: Bandwidth Saver variants for 2G/3G -->
+            <source src="media/vid/webm/bg-bandwidth-saver-720p.webm" type="video/webm"
+                media="(prefers-reduced-data: reduce) and (min-width: 80em)">
+            <source src="media/vid/mp4/bg-bandwidth-saver-720p.mp4" type="video/mp4"
+                media="(prefers-reduced-data: reduce) and (min-width: 80em)">
+
+            <source src="media/vid/webm/bg-bandwidth-saver-480p.webm" type="video/webm"
+                media="(prefers-reduced-data: reduce) and (min-width: 48em)">
+            <source src="media/vid/mp4/bg-bandwidth-saver-480p.mp4" type="video/mp4"
+                media="(prefers-reduced-data: reduce) and (min-width: 48em)">
+
+            <source src="media/vid/webm/bg-bandwidth-saver-360p.webm" type="video/webm"
+                media="(prefers-reduced-data: reduce)">
+            <source src="media/vid/mp4/bg-bandwidth-saver-360p.mp4" type="video/mp4"
+                media="(prefers-reduced-data: reduce)">
+
+            <!-- UNIVERSAL FALLBACK: Compatibility 480p for maximum browser support -->
+            <source src="media/vid/mp4/bg-compatibility-480p.mp4" type="video/mp4">
+
+            <!-- Browser doesn't support video element -->
+            <p>Your browser does not support the video tag. A fallback image is displayed instead.</p>
+        </video>
+    </div>
+
+    <!-- Main content area -->
+    <main id="main-content" itemprop="mainContentOfPage" class="content-overlay">
+        <!-- Add your main content here -->
+        <header class="hero-section">
+            <h1>Ocean Waves</h1>
+            <p class="subtitle">Experience the beauty of nature</p>
+            <button class="cta-button">Explore More</button>
+        </header>
+
+        <section class="info-section">
+            <div class="card">
+                <h2>Peaceful Sounds</h2>
+                <p>Listen to the calming rhythm of waves breaking on the shore.</p>
+            </div>
+            <div class="card">
+                <h2>Natural Beauty</h2>
+                <p>Witness the endless dance between ocean and land.</p>
+            </div>
+            <div class="card">
+                <h2>Meditation</h2>
+                <p>Find your inner peace with the soothing ocean backdrop.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
