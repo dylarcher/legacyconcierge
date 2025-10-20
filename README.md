@@ -1,222 +1,316 @@
-# Web Components & Directory Structure Modernization Plan
+# Legacy Concierge
 
-## New Directory Structure
+An elegant and minimal website for end-of-life in-home nursing support, built with vanilla HTML/CSS/JavaScript featuring a sophisticated internationalization system.
 
-```plaintext
-legacy-concierge/
-├── components/              # NEW: Web Components
-│   ├── templates/           # HTML <template> definitions
-│   │   ├── navigation.html
-│   │   ├── footer.html
-│   │   ├── cards.html
-│   │   ├── dialogs.html
-│   │   ├── forms.html
-│   │   └── ui-elements.html
-│   ├── scripts/             # Component JavaScript
-│   │   ├── lc-header.js
-│   │   ├── lc-nav.js
-│   │   ├── lc-footer.js
-│   │   ├── lc-card.js
-│   │   ├── lc-dialog.js
-│   │   ├── lc-tooltip.js
-│   │   └── lc-form.js
-│   └── styles/              # Component-specific styles
-│       ├── header.css
-│       ├── navigation.css
-│       ├── cards.css
-│       └── forms.css
-├── layouts/                 # NEW: Page layout templates
-│   ├── homepage-video.html
-│   ├── subpage-sidebar.html
-│   ├── bentobox-grid.html
-│   ├── contact.html
-│   ├── splash.html
-│   ├── blog-post.html
-│   └── blog-gallery.html
-├── pages/
-│   ├── blog/                # NEW: Blog section
-│   │   ├── index.html       # Blog gallery
-│   │   ├── posts/
-│   │   └── categories/
-│   └── [existing pages...]
-├── css/
-│   ├── style.css            # Global styles (existing)
-│   ├── layouts/             # NEW: Layout-specific styles
-│   │   ├── homepage.css
-│   │   ├── sidebar.css
-│   │   ├── bentobox.css
-│   │   └── blog.css
-│   └── utilities/           # NEW: Utility classes
-│       ├── spacing.css
-│       ├── typography.css
-│       └── animations.css
-├── js/
-│   ├── core/                # NEW: Core utilities
-│   │   ├── component-loader.js
-│   │   ├── router.js
-│   │   └── helpers.js
-│   └── [existing files...]
-└── assets/
-    └── videos/              # NEW: For homepage background video
+## 🎯 Project Overview
+
+Legacy Concierge provides compassionate, professional in-home nursing care for elderly individuals and those at end-of-life. This website serves as the primary digital presence for the service, targeting individuals aged 45-85 and their families seeking premium care services.
+
+### Design Philosophy
+
+- **Elegant & Minimal** - Clean, sophisticated design prioritizing clarity
+- **Accessible First** - WCAG 2.2 AA compliant with comprehensive WAI-ARIA support
+- **Large Touch Targets** - Minimum 44x44px for interactive elements
+- **High Contrast** - Clear visual hierarchy with strong contrast ratios
+- **Intuitive Navigation** - Simple, clear paths through content
+
+## 🚀 Quick Start
+
+### Local Development
+
+This is a static site with no build process required:
+
+```bash
+# Clone the repository
+git clone https://github.com/dylarcher/legacy-concierge.git
+cd legacy-concierge
+
+# Option 1: Use Python's built-in server
+python3 -m http.server 8000
+
+# Option 2: Use Node.js http-server
+npx http-server -p 8000
+
+# Visit http://localhost:8000
 ```
 
-## Web Components to Create
+### Code Quality
 
-1. Navigation Components
+The project uses [Biome](https://biomejs.dev/) for linting and formatting:
 
-    - `<lc-header>` &middot; Main header with logo
-    - `<lc-nav>` &middot; Navigation with dropdown support
-    - `<lc-breadcrumb>` &middot; Breadcrumb navigation
-    - `<lc-mobile-menu>` &middot; Mobile hamburger menu
+```bash
+# Format code
+npx @biomejs/biome format --write .
 
-2. Card Components
+# Lint code
+npx @biomejs/biome lint .
 
-    - `<lc-card>` &middot; Base card (info, service, team, testimonial variants)
-    - `<lc-card-grid>` &middot; Grid container for cards
-    - `<lc-bento-card>` &middot; Variable-sized card for bentobox layout
+# Check without changes
+npx @biomejs/biome check .
+```
 
-3. Dialog/Modal Components
+Configuration: `biome.json` (2-space indentation, 80-char line width)
 
-    - `<lc-dialog>` &middot; Modal dialog
-    - `<lc-tooltip>` &middot; Tooltip/hint
-    - `<lc-popover>` &middot; Popover menu
-    - `<lc-alert>` &middot; Alert/notification banner
+## 🏗️ Technology Stack
 
-4. Form Components
+### Core Technologies
 
-    - `<lc-form>` &middot; Form wrapper with validation
-    - `<lc-input>` &middot; Enhanced input field
-    - `<lc-textarea>` &middot; Text area
-    - `<lc-select>` &middot; Dropdown select
-    - `<lc-checkbox>` &middot; Checkbox with label
-    - `<lc-radio>` &middot; Radio button group
+- **HTML5** - Semantic markup with Schema.org microdata
+- **CSS3** - Modern CSS with custom properties, Grid, Flexbox
+- **Vanilla JavaScript** - ES6+ with no framework dependencies
 
-5. UI Elements
+### Key Features
 
-    - `<lc-badge>` &middot; Status/category badge
-    - `<lc-tag>` &middot; Tag/chip element
-    - `<lc-button>` &middot; Enhanced button
-    - `<lc-pagination>` &middot; Page navigation
-    - `<lc-filter>` &middot; Filter/search bar
+- **i18n System** - Custom internationalization supporting EN/ES
+- **Theme Support** - Dark/light mode with system preference detection
+- **Web Components** - Reusable UI components using Custom Elements
+- **Progressive Enhancement** - Works without JavaScript for critical features
+- **IndexedDB** - Client-side storage for preferences and state
 
-6. Blog Components
+## 📁 Directory Structure
 
-    - `<lc-blog-card>` &middot; Blog post preview card
-    - `<lc-blog-meta>` &middot; Post metadata (date, author, category)
-    - `<lc-blog-filter>` &middot; Category/search filter
-    - `<lc-blog-grid>` &middot; Responsive blog grid
+```
+legacy-concierge/
+├── _locale/              # Translation files (EN, ES)
+├── assets/               # Images, media, static files
+│   ├── images/           # Site images
+│   └── media/            # Videos, audio
+├── components/           # Web Components
+│   ├── templates/        # HTML <template> definitions
+│   ├── scripts/          # Component JavaScript
+│   └── styles/           # Component-specific CSS
+├── docs/                 # Project documentation
+├── layouts/              # Page layout templates
+├── pages/                # Site pages
+│   ├── about/            # About page
+│   ├── blog/             # Blog section
+│   ├── contact/          # Contact page
+│   ├── expertise/        # Expertise detail pages
+│   ├── splash/           # Landing/splash page
+│   ├── team/             # Team page
+│   └── treatments/       # Treatment detail pages
+├── scripts/              # Core JavaScript modules
+│   ├── core/             # Core utilities
+│   ├── app.js            # Navigation, mobile menu
+│   ├── i18n.js           # Internationalization engine
+│   ├── theme.js          # Theme management
+│   └── ...
+├── styles/               # CSS stylesheets
+│   ├── layouts/          # Layout-specific styles
+│   ├── utilities/        # Utility classes
+│   └── style.css         # Global styles
+├── index.html            # Homepage
+├── biome.json            # Biome configuration
+├── jsconfig.json         # JavaScript IDE support
+└── package.json          # Dependencies
+```
 
-7. Layout Components
+## 🌐 Internationalization (i18n)
 
-    - `<lc-sidebar>` &middot; Right sidebar with resources
-    - `<lc-section>` &middot; Page section wrapper
-    - `<lc-container>` &middot; Responsive container
+The site features a custom vanilla JavaScript i18n system:
 
-## Page Layouts (Using <template>)
+- **Languages:** English (EN), Spanish (ES)
+- **Translation Files:** `_locale/{lang}/*.json` (14 files per language)
+- **Dynamic Loading:** Automatic path calculation based on directory depth
+- **Features:** Nested keys, arrays, variable interpolation, pluralization
 
-### Template Structure Example:
+### Usage
 
 ```html
-<!-- layouts/homepage-video.html -->
-<template id="layout-homepage">
-    <div class="homepage-layout">
-        <lc-header></lc-header>
-        <section class="hero-video">
-            <video autoplay muted loop playsinline>
-                <source src="/assets/videos/hero.mp4" type="video/mp4">
-            </video>
-            <div class="hero-content">
-                <slot name="hero"></slot>
-            </div>
-        </section>
-        <main>
-            <slot></slot>
-        </main>
-        <lc-footer></lc-footer>
-    </div>
-</template>
+<!-- Simple translation -->
+<h1 data-i18n="page.title">Title</h1>
+
+<!-- Nested key -->
+<p data-i18n="section.content.text">Content</p>
+
+<!-- Array notation -->
+<span data-i18n="items[0].label">Label</span>
+
+<!-- Attribute translation -->
+<button data-i18n-attr="aria-label:buttons.submit">Submit</button>
 ```
 
-## Implementation Steps
+See `_locale/README.md` for detailed documentation.
 
-### Phase 1: Foundation
+## 🎨 Theming
 
-1. Create new directory structure
-2. Build core component loader utility
-3. Create base `<template>` system
-4. Implement `<lc-header>` and `<lc-footer>`
+Dual theme support with automatic detection:
 
-### Phase 2: Core Components
+- **Dark Mode** - Low-light optimized with high contrast
+- **Light Mode** - Bright, clean interface
+- **System Detection** - Respects `prefers-color-scheme`
+- **Manual Toggle** - User preference stored in localStorage
+- **Smooth Transitions** - Animated theme switching
 
-1. Build card components with variants
-2. Create form components
-3. Implement dialog/modal system
-4. Add UI elements (badges, tags, buttons)
+Themes use CSS custom properties defined in `styles/style.css`.
 
-### Phase 3: Layouts
+## ♿ Accessibility
 
-1. Homepage with video background
-2. Sidebar subpage template
-3. Bentobox grid layout
-4. Contact page template
+Committed to WCAG 2.2 AA compliance:
 
-### Phase 4: Blog & Advanced
+- ✅ Semantic HTML5 structure
+- ✅ ARIA landmarks and roles
+- ✅ Keyboard navigation (Arrow keys, Escape, Enter)
+- ✅ Skip links on all pages
+- ✅ Screen reader support
+- ✅ Focus management
+- ✅ High contrast ratios (4.5:1 for text, 3:1 for large text)
+- ✅ Responsive up to 200% zoom
 
-1. Blog post layout
-2. Blog gallery with filters
-3. Splash page template
-4. Migration of 2-3 existing pages as proof-of-concept
+### Keyboard Navigation
 
-## Component Architecture
+- **Dropdowns:** Arrow keys to navigate, Enter to select, Escape to close
+- **Cards:** Enter/Space to activate links
+- **Forms:** Tab to navigate, standard form controls
 
-### Light DOM with Custom Elements
+## 📄 Pages
 
-```javascript
-// components/scripts/lc-card.js
-class LCCard extends HTMLElement {
-    connectedCallback() {
-        const template = document.getElementById('lc-card-template');
-        const content = template.content.cloneNode(true);
-        
-        // No Shadow DOM - uses global CSS
-        this.appendChild(content);
-        
-        // Add variant classes
-        const variant = this.getAttribute('variant');
-        if (variant) this.classList.add(`card-${variant}`);
-    }
-}
-customElements.define('lc-card', LCCard);
-```
+### Current Pages
 
-### Hybrid Template Loading
+- **Homepage** (`index.html`) - Main landing page
+- **About** (`pages/about/`) - Company information
+- **Team** (`pages/team/`) - Staff profiles
+- **Contact** (`pages/contact/`) - Contact form and information
+- **Splash** (`pages/splash/`) - Promotional landing page
+- **Blog** (`pages/blog/`) - Blog gallery and posts
+- **Careers** (`pages/careers/`) - Job opportunities
+- **Locations** (`pages/locations/`) - Service areas
+- **Partners** (`pages/partners/`) - Partner information
 
-```javascript
-// Critical templates in HTML (header, footer)
-// Optional templates loaded via JS
-async function loadTemplate(name) {
-    const response = await fetch(`/components/templates/${name}.html`);
-    const html = await response.text();
-    document.body.insertAdjacentHTML('beforeend', html);
-}
-```
+### Detail Pages
 
-## Benefits
+- **Treatments** (`pages/treatments/views/`) - 7 treatment detail pages
+- **Expertise** (`pages/expertise/views/`) - 11 expertise detail pages
 
-- **DRY Code** &middot; Single source for navigation, footer, cards
-- **Maintainability** &middot; Update one template, affects all pages
-- **Performance** &middot; Templates cached, minimal overhead
-- **Accessibility** &middot; WCAG 2.2 AA built into components
-- **i18n Ready** &middot; Works with existing data-i18n system
-- **Gradual Migration** &middot; Existing pages continue working
-- **Progressive Enhancement** &middot; Works without JS (critical templates)
+## 🧩 Web Components
 
-## Migration Strategy
+Custom elements for reusable UI:
 
-1. Start with NEW pages (blog, splash)
-2. Migrate homepage to video background layout
-3. Convert 2-3 subpages to sidebar template
-4. Convert treatments/expertise to bentobox grid
-5. Gradually migrate remaining pages
-6. Keep old code until all pages migrated
-7. Final cleanup and removal of legacy code
+- `<lc-header>` - Site header with navigation
+- `<lc-footer>` - Site footer
+- `<lc-card>` - Versatile card component (info, service, team, blog variants)
+- `<lc-card-grid>` - Responsive card grid
+- `<lc-bento-grid>` - Masonry-style grid layout
+
+See `components/README.md` for full documentation.
+
+## 📜 Scripts
+
+Core JavaScript modules:
+
+- **app.js** - Navigation, mobile menu, scroll effects
+- **i18n.js** - Internationalization engine
+- **theme.js** - Dark/light mode management
+- **language-switcher.js** - Language selection component
+
+See `scripts/README.md` for detailed documentation.
+
+## 🎭 Layouts
+
+Pre-built page layout templates in `layouts/`:
+
+- **homepage-video.html** - Homepage with background video
+- **subpage-sidebar.html** - Subpage with right sidebar
+- **bentobox-grid.html** - Masonry-style card grid
+- **contact.html** - Contact page layout
+- **splash.html** - Landing page layout
+- **blog-gallery.html** - Blog listing layout
+- **blog-post.html** - Individual blog post layout
+
+## 🚧 Development Status
+
+**Current Phase:** Phase 3 - Component Development & Page Templates
+
+### Completed ✅
+
+- ✅ i18n framework (EN/ES support for 30+ pages)
+- ✅ Code quality tools (Biome configuration)
+- ✅ Directory structure modernization (script/ → scripts/, style/ → styles/)
+- ✅ Contact page with form
+- ✅ Splash/landing page
+- ✅ Blog infrastructure (gallery + post template)
+- ✅ Web Components foundation (header, footer, cards)
+- ✅ Theme system (dark/light mode)
+- ✅ Navigation system with dropdowns
+
+### In Progress 🚧
+
+- 🚧 Unit test coverage (95%+ target)
+- 🚧 Accessibility audit (WCAG 2.2 AA validation)
+- 🚧 Performance optimization (Lighthouse 95+ target)
+- 🚧 Homepage development
+- 🚧 Subpage templates
+- 🚧 Form components
+
+See `docs/ROADMAP_TIMELINE.md` for full project timeline.
+
+## 🔗 Links
+
+- **GitHub:** https://github.com/dylarcher/legacy-concierge
+- **Project Board:** https://github.com/users/dylarcher/projects/18
+- **Documentation:** `docs/`
+
+## 📚 Documentation
+
+- **CLAUDE.md** - AI assistant instructions and project guidelines
+- **ROADMAP_TIMELINE.md** - Complete project timeline and progress
+- **WEB_COMPONENTS_SUMMARY.md** - Web Components implementation notes
+- **I18N_INTEGRATION_SUMMARY.md** - i18n system documentation
+- **QUICK_START.md** - Quick reference guide
+
+## 🤝 Contributing
+
+When adding new features:
+
+1. **Maintain accessibility** - Test with keyboard and screen readers
+2. **Add i18n support** - All text must be translatable
+3. **Format code** - Run Biome before committing
+4. **Use modern patterns** - ESM modules, Web Components, IndexedDB
+5. **Test themes** - Verify both dark and light modes
+6. **Document changes** - Update relevant README files
+
+## 📋 Common Tasks
+
+### Adding a New Page
+
+1. Create HTML file in appropriate `pages/` subdirectory
+2. Add translation files in `_locale/en/` and `_locale/es/`
+3. Add `data-i18n` attributes for all translatable content
+4. Ensure correct relative paths for CSS/JS based on directory depth
+5. Add Schema.org microdata
+6. Test accessibility and theme support
+
+### Modifying Translations
+
+1. Edit JSON files in `_locale/{lang}/`
+2. Maintain consistent key structure across all languages
+3. Test language switching
+4. Verify special characters and HTML entities
+
+### Updating Components
+
+1. Modify template in `components/templates/`
+2. Update script in `components/scripts/` if needed
+3. Test across all pages using the component
+4. Update `components/README.md` documentation
+
+## 📊 Browser Support
+
+- Chrome (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Edge (latest 2 versions)
+
+Progressive enhancement ensures core functionality works in older browsers.
+
+## 📝 License
+
+[License information to be added]
+
+## 👥 Contact
+
+[Contact information to be added]
+
+---
+
+**Built with ❤️ for those who need compassionate care**
