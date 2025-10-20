@@ -1182,8 +1182,7 @@ header nav ul a:hover::after {
     display: none !important;
 }
 
-.dropdown-menu a:hover,
-.dropdown-menu a:focus {
+.dropdown-menu a:is(:hover, :focus) {
     background-color: var(--color-warm-tan);
     color: var(--color-white) !important;
     padding-left: 2rem;
@@ -1235,8 +1234,7 @@ header nav ul a:hover::after {
     transform: translateX(10px);
 }
 
-.dropdown-menu > li:hover > .dropdown-submenu.opens-left,
-.dropdown-menu > li:focus-within > .dropdown-submenu.opens-left {
+.dropdown-menu > li:is(:hover, :focus-within) > .dropdown-submenu.opens-left {
     transform: translateX(0);
 }
 
@@ -1547,9 +1545,7 @@ header nav ul a:hover::after {
     }
 
     /* Testimonials */
-    #testimonials h2,
-    .story-header h2,
-    #care-model h2 {
+    :where(#testimonials, .story-header, #care-model) h2 {
         font-size: clamp(1.75rem, 6vw, 2rem);
     }
 

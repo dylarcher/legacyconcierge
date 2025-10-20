@@ -7,6 +7,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ## Quick Navigation
 
 **New to the project?** Start here:
+
 1. **[GETTING_STARTED.md](./GETTING_STARTED.md)** - 5-minute quick start guide
 2. **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Technical architecture overview
 3. **[ROADMAP.md](./ROADMAP.md)** - Project status and next steps
@@ -18,6 +19,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### Core Documentation
 
 **[GETTING_STARTED.md](./GETTING_STARTED.md)**
+
 - Quick start in 5 minutes
 - Component usage examples
 - Testing and troubleshooting
@@ -25,6 +27,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Best practices
 
 **[ARCHITECTURE.md](./ARCHITECTURE.md)**
+
 - Technical architecture decisions
 - Component architecture
 - i18n system design
@@ -34,6 +37,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Security considerations
 
 **[ROADMAP.md](./ROADMAP.md)**
+
 - Honest project status (~15-20% complete)
 - What's actually done vs. what needs work
 - 30-day action plan
@@ -43,6 +47,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### Supporting Documentation
 
 **[IMAGE_RENAME_OUTLINE.md](./IMAGE_RENAME_OUTLINE.md)**
+
 - Image naming conventions
 - File count by category
 - Usage guidelines
@@ -50,6 +55,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### Demo Documentation
 
 **[demo/](./demo/)**
+
 - Example implementations
 - Fullscreen video background demo
 - Progress demos
@@ -57,6 +63,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### Archived Documentation
 
 **[archive/](./archive/)**
+
 - **ROADMAP_TIMELINE_DETAILED.md** - Original 1953-line detailed roadmap
 - **QUICK_START.md** - Merged into GETTING_STARTED.md
 - **WEB_COMPONENTS_SUMMARY.md** - Merged into GETTING_STARTED.md
@@ -68,11 +75,13 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### For Developers
 
 **Getting started:**
+
 1. [GETTING_STARTED.md](./GETTING_STARTED.md) - Start here
 2. [ARCHITECTURE.md](./ARCHITECTURE.md) - Understand the patterns
 3. [Components README](../components/README.md) - Component API reference
 
 **Working on features:**
+
 1. [ROADMAP.md](./ROADMAP.md) - See what's priority
 2. [ARCHITECTURE.md](./ARCHITECTURE.md) - Follow established patterns
 3. [archive/ROADMAP_TIMELINE_DETAILED.md](./archive/ROADMAP_TIMELINE_DETAILED.md) - Detailed task breakdowns
@@ -80,16 +89,19 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### For Project Managers
 
 **Project status:**
+
 1. [ROADMAP.md](./ROADMAP.md) - Current status and next 30 days
 2. [archive/ROADMAP_TIMELINE_DETAILED.md](./archive/ROADMAP_TIMELINE_DETAILED.md) - Full timeline
 
 **Understanding the project:**
+
 1. [GETTING_STARTED.md](./GETTING_STARTED.md) - What's been built
 2. [ARCHITECTURE.md](./ARCHITECTURE.md) - Technical decisions
 
 ### For Designers
 
 **Design system:**
+
 1. [ARCHITECTURE.md](./ARCHITECTURE.md) - Design tokens, color system
 2. [../components/README.md](../components/README.md) - Component variants
 3. [../styles/README.md](../styles/README.md) - Styling guide (if exists)
@@ -99,11 +111,14 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ## Documentation Standards
 
 ### File Naming
+
+
 - Use `UPPERCASE_WITH_UNDERSCORES.md` for major docs
 - Use `lowercase-with-dashes.md` for supporting docs
 - Use descriptive names (`GETTING_STARTED.md` not `START.md`)
 
 ### Content Structure
+
 - Start with brief overview
 - Use clear headings (##, ###)
 - Include code examples where helpful
@@ -111,6 +126,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Link to related docs
 
 ### Maintenance
+
 - Update Last Updated dates when modifying
 - Archive old versions instead of deleting
 - Keep docs in sync with code changes
@@ -123,20 +139,25 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### In Other Directories
 
 **Project Root:**
+
 - [../README.md](../README.md) - Main project README
 - [../.claude/CLAUDE.md](../.claude/CLAUDE.md) - Claude Code instructions
 
 **Components:**
+
 - [../components/README.md](../components/README.md) - Component library docs
 - [../components/EXAMPLE.html](../components/EXAMPLE.html) - Working examples
 
 **Scripts:**
+
 - [../scripts/README.md](../scripts/README.md) - JavaScript modules docs
 
 **Layouts:**
+
 - [../layouts/README.md](../layouts/README.md) - Page layout templates
 
 **Locale:**
+
 - [../_locale/README.md](../_locale/README.md) - i18n documentation
 
 ---
@@ -146,12 +167,14 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 ### When to Update Docs
 
 **Always update when:**
+
 - Adding new components or features
 - Changing architecture or patterns
 - Completing major milestones
 - Making breaking changes
 
 **Good to update when:**
+
 - Fixing bugs that exposed unclear docs
 - Learning something not obvious from docs
 - Seeing common questions from team
