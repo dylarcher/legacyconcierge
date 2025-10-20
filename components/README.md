@@ -2,7 +2,7 @@
 
 This directory contains reusable Web Components built using Vanilla JavaScript Custom Elements with Light DOM for better global CSS integration.
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 components/
@@ -11,7 +11,7 @@ components/
 └── styles/          # Component-specific CSS (optional)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Load Core Utilities
 
@@ -70,7 +70,7 @@ await initializeComponents(['navigation', 'cards']);
 <lc-footer></lc-footer>
 ```
 
-## 🧩 Available Components
+## Available Components
 
 ### Navigation
 
@@ -187,7 +187,7 @@ Masonry-style grid with variable card sizes.
 
 Components for badges, tags, tooltips, alerts, etc. (Templates ready, scripts in progress)
 
-## 🎨 Styling
+## Styling
 
 ### Global CSS Integration
 
@@ -219,7 +219,7 @@ Add variant classes:
 <!-- Renders with class "card card-service" -->
 ```
 
-## 🌐 i18n Support
+## i18n Support
 
 Components work with the existing i18n system using `data-i18n` attributes:
 
@@ -230,7 +230,7 @@ Components work with the existing i18n system using `data-i18n` attributes:
 </lc-card>
 ```
 
-## ♿ Accessibility
+## Accessibility
 
 All components are built with WCAG 2.2 AA compliance:
 
@@ -253,7 +253,7 @@ All components are built with WCAG 2.2 AA compliance:
 - **Clickable Cards:**
   - `Enter` or `Space` - Navigate to link
 
-## 📦 Progressive Enhancement
+## Progressive Enhancement
 
 Components work without JavaScript:
 
@@ -289,7 +289,7 @@ For header/footer, include templates directly in HTML:
 
 Use `<template>` tags directly in HTML for critical components, load others via JavaScript.
 
-## 🔧 Extending Components
+## Extending Components
 
 ### Create New Component
 
@@ -321,7 +321,7 @@ customElements.define('lc-my-component', LCMyComponent);
 <lc-my-component>Content</lc-my-component>
 ```
 
-## 🐛 Debugging
+## Debugging
 
 ### Template Not Found
 
@@ -347,14 +347,14 @@ Components use Light DOM, so check:
 2. Component classes are correct
 3. CSS specificity isn't too high
 
-## 📚 Further Reading
+## Further Reading
 
 - [Web Components MDN](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 - [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements)
 - [HTML Templates](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
 - [Shadow DOM vs Light DOM](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM)
 
-## 🎯 Next Steps
+## Next Steps
 
 Phase 2 components coming soon:
 - Form components (`<lc-form>`, `<lc-input>`, etc.)

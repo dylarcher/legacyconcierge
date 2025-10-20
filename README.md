@@ -69,7 +69,7 @@ Configuration: [`biome.json`](biome.json) (2-space indentation, 80-char line wid
 
 ## Directory Structure
 
-```
+```plaintext
 legacy-concierge/
 ├── _locale/              # Translation files (EN, ES)
 ├── assets/               # Images, media, static files
@@ -105,10 +105,7 @@ legacy-concierge/
 
 The site features a custom vanilla JavaScript i18n system:
 
-- **Languages:** English (EN), Spanish (ES)
-- **Translation Files:** [`_locale/{lang}/*.json`](_locale/) (14 files per language)
-- **Dynamic Loading:** Automatic path calculation based on directory depth
-- **Features:** Nested keys, arrays, variable interpolation, pluralization
+## Page Layouts (Using `<template>`)
 
 ### Usage
 
@@ -248,7 +245,6 @@ See [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) for full project time
 
 ## Documentation
 
-- [`.claude/CLAUDE.md`](.claude/CLAUDE.md) - AI assistant instructions and project guidelines
 - [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) - Complete project timeline and progress
 - [`docs/WEB_COMPONENTS_SUMMARY.md`](docs/WEB_COMPONENTS_SUMMARY.md) - Web Components implementation notes
 - [`docs/QUICK_START.md`](docs/QUICK_START.md) - Quick reference guide
