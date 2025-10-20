@@ -49,7 +49,7 @@ npx @biomejs/biome lint .
 npx @biomejs/biome check .
 ```
 
-Configuration: `biome.json` (2-space indentation, 80-char line width)
+Configuration: [`biome.json`](biome.json) (2-space indentation, 80-char line width)
 
 ## Technology Stack
 
@@ -74,11 +74,10 @@ legacy-concierge/
 ├── _locale/              # Translation files (EN, ES)
 ├── assets/               # Images, media, static files
 │   ├── images/           # Site images
-│   └── media/            # Videos, audio
+│   └── media/            # Videos, audio, icons, logos
 ├── components/           # Web Components
 │   ├── templates/        # HTML <template> definitions
-│   ├── scripts/          # Component JavaScript
-│   └── styles/           # Component-specific CSS
+│   └── scripts/          # Component JavaScript
 ├── docs/                 # Project documentation
 ├── layouts/              # Page layout templates
 ├── pages/                # Site pages
@@ -93,11 +92,8 @@ legacy-concierge/
 │   ├── core/             # Core utilities
 │   ├── app.js            # Navigation, mobile menu
 │   ├── i18n.js           # Internationalization engine
-│   ├── theme.js          # Theme management
-│   └── ...
+│   └── theme.js          # Theme management
 ├── styles/               # CSS stylesheets
-│   ├── layouts/          # Layout-specific styles
-│   ├── utilities/        # Utility classes
 │   └── style.css         # Global styles
 ├── index.html            # Homepage
 ├── biome.json            # Biome configuration
@@ -110,7 +106,7 @@ legacy-concierge/
 The site features a custom vanilla JavaScript i18n system:
 
 - **Languages:** English (EN), Spanish (ES)
-- **Translation Files:** `_locale/{lang}/*.json` (14 files per language)
+- **Translation Files:** [`_locale/{lang}/*.json`](_locale/) (14 files per language)
 - **Dynamic Loading:** Automatic path calculation based on directory depth
 - **Features:** Nested keys, arrays, variable interpolation, pluralization
 
@@ -130,7 +126,7 @@ The site features a custom vanilla JavaScript i18n system:
 <button data-i18n-attr="aria-label:buttons.submit">Submit</button>
 ```
 
-See `_locale/README.md` for detailed documentation.
+See [`_locale/README.md`](_locale/README.md) for detailed documentation.
 
 ## Theming
 
@@ -142,20 +138,20 @@ Dual theme support with automatic detection:
 - **Manual Toggle** - User preference stored in localStorage
 - **Smooth Transitions** - Animated theme switching
 
-Themes use CSS custom properties defined in `styles/style.css`.
+Themes use CSS custom properties defined in [`styles/style.css`](styles/style.css).
 
 ## Accessibility
 
 Committed to WCAG 2.2 AA compliance:
 
-- ✅ Semantic HTML5 structure
-- ✅ ARIA landmarks and roles
-- ✅ Keyboard navigation (Arrow keys, Escape, Enter)
-- ✅ Skip links on all pages
-- ✅ Screen reader support
-- ✅ Focus management
-- ✅ High contrast ratios (4.5:1 for text, 3:1 for large text)
-- ✅ Responsive up to 200% zoom
+- Semantic HTML5 structure
+- ARIA landmarks and roles
+- Keyboard navigation (Arrow keys, Escape, Enter)
+- Skip links on all pages
+- Screen reader support
+- Focus management
+- High contrast ratios (4.5:1 for text, 3:1 for large text)
+- Responsive up to 200% zoom
 
 ### Keyboard Navigation
 
@@ -167,20 +163,20 @@ Committed to WCAG 2.2 AA compliance:
 
 ### Current Pages
 
-- **Homepage** (`index.html`) - Main landing page
-- **About** (`pages/about/`) - Company information
-- **Team** (`pages/team/`) - Staff profiles
-- **Contact** (`pages/contact/`) - Contact form and information
-- **Splash** (`pages/splash/`) - Promotional landing page
-- **Blog** (`pages/blog/`) - Blog gallery and posts
-- **Careers** (`pages/careers/`) - Job opportunities
-- **Locations** (`pages/locations/`) - Service areas
-- **Partners** (`pages/partners/`) - Partner information
+- **Homepage** ([`index.html`](index.html)) - Main landing page
+- **About** ([`pages/about/`](pages/about/)) - Company information
+- **Team** ([`pages/team/`](pages/team/)) - Staff profiles
+- **Contact** ([`pages/contact/`](pages/contact/)) - Contact form and information
+- **Splash** ([`pages/splash/`](pages/splash/)) - Promotional landing page
+- **Blog** ([`pages/blog/`](pages/blog/)) - Blog gallery and posts
+- **Careers** ([`pages/careers/`](pages/careers/)) - Job opportunities
+- **Locations** ([`pages/locations/`](pages/locations/)) - Service areas
+- **Partners** ([`pages/partners/`](pages/partners/)) - Partner information
 
 ### Detail Pages
 
-- **Treatments** (`pages/treatments/views/`) - 7 treatment detail pages
-- **Expertise** (`pages/expertise/views/`) - 11 expertise detail pages
+- **Treatments** ([`pages/treatments/views/`](pages/treatments/views/)) - 7 treatment detail pages
+- **Expertise** ([`pages/expertise/views/`](pages/expertise/views/)) - 11 expertise detail pages
 
 ## Web Components
 
@@ -192,70 +188,70 @@ Custom elements for reusable UI:
 - `<lc-card-grid>` - Responsive card grid
 - `<lc-bento-grid>` - Masonry-style grid layout
 
-See `components/README.md` for full documentation.
+See [`components/README.md`](components/README.md) for full documentation.
 
 ## Scripts
 
 Core JavaScript modules:
 
-- **app.js** - Navigation, mobile menu, scroll effects
-- **i18n.js** - Internationalization engine
-- **theme.js** - Dark/light mode management
-- **language-switcher.js** - Language selection component
+- [`app.js`](scripts/app.js) - Navigation, mobile menu, scroll effects
+- [`i18n.js`](scripts/i18n.js) - Internationalization engine
+- [`theme.js`](scripts/theme.js) - Dark/light mode management
+- [`language-switcher.js`](scripts/language-switcher.js) - Language selection component
 
-See `scripts/README.md` for detailed documentation.
+See [`scripts/README.md`](scripts/README.md) for detailed documentation.
 
 ## Layouts
 
-Pre-built page layout templates in `layouts/`:
+Pre-built page layout templates in [`layouts/`](layouts/):
 
-- **homepage-video.html** - Homepage with background video
-- **subpage-sidebar.html** - Subpage with right sidebar
-- **bentobox-grid.html** - Masonry-style card grid
-- **contact.html** - Contact page layout
-- **splash.html** - Landing page layout
-- **blog-gallery.html** - Blog listing layout
-- **blog-post.html** - Individual blog post layout
+- [`homepage-video.html`](layouts/homepage-video.html) - Homepage with background video
+- [`subpage-sidebar.html`](layouts/subpage-sidebar.html) - Subpage with right sidebar
+- [`bentobox-grid.html`](layouts/bentobox-grid.html) - Masonry-style card grid
+- [`contact.html`](layouts/contact.html) - Contact page layout
+- [`splash.html`](layouts/splash.html) - Landing page layout
+- [`blog-gallery.html`](layouts/blog-gallery.html) - Blog listing layout
+- [`blog-post.html`](layouts/blog-post.html) - Individual blog post layout
 
 ## Development Status
 
 **Current Phase:** Phase 3 - Component Development & Page Templates
 
-### Completed ✅
+### Completed
 
-- ✅ i18n framework (EN/ES support for 30+ pages)
-- ✅ Code quality tools (Biome configuration)
-- ✅ Directory structure modernization (script/ → scripts/, style/ → styles/)
-- ✅ Contact page with form
-- ✅ Splash/landing page
-- ✅ Blog infrastructure (gallery + post template)
-- ✅ Web Components foundation (header, footer, cards)
-- ✅ Theme system (dark/light mode)
-- ✅ Navigation system with dropdowns
+- i18n framework (EN/ES support for 30+ pages)
+- Code quality tools (Biome configuration)
+- Directory structure modernization
+- Contact page with form
+- Splash/landing page
+- Blog infrastructure (gallery + post template)
+- Web Components foundation (header, footer, cards)
+- Theme system (dark/light mode)
+- Navigation system with dropdowns
 
 ### In Progress
 
-- 🚧 Unit test coverage (95%+ target)
-- 🚧 Accessibility audit (WCAG 2.2 AA validation)
-- 🚧 Performance optimization (Lighthouse 95+ target)
-- 🚧 Homepage development
-- 🚧 Subpage templates
-- 🚧 Form components
+- Unit test coverage (95%+ target)
+- Accessibility audit (WCAG 2.2 AA validation)
+- Performance optimization (Lighthouse 95+ target)
+- Homepage development
+- Subpage templates
+- Form components
 
-See `docs/ROADMAP_TIMELINE.md` for full project timeline.
+See [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) for full project timeline.
 
 ## Links
 
-- **GitHub:** https://github.com/dylarcher/legacy-concierge
-- **Project Board:** https://github.com/users/dylarcher/projects/18
-- **Documentation:** [`docs/`](./docs)
+- **GitHub:** <https://github.com/dylarcher/legacy-concierge>
+- **Project Board:** <https://github.com/users/dylarcher/projects/18>
+- **Documentation:** [`docs/`](docs/)
 
 ## Documentation
 
-- **[ROADMAP_TIMELINE.md](./docs/ROADMAP_TIMELINE.md)** - Complete project timeline and progress
-- **[WEB_COMPONENTS_SUMMARY.md](./docs/WEB_COMPONENTS_SUMMARY.md)** - Web Components implementation notes
-- **[I18N_INTEGRATION_SUMMARY.md](./docs/I18N_INTEGRATION_SUMMARY.md)** - i18n system documentation
-- **[QUICK_START.md](./docs/QUICK_START.md)** - Quick reference guide
+- [`.claude/CLAUDE.md`](.claude/CLAUDE.md) - AI assistant instructions and project guidelines
+- [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) - Complete project timeline and progress
+- [`docs/WEB_COMPONENTS_SUMMARY.md`](docs/WEB_COMPONENTS_SUMMARY.md) - Web Components implementation notes
+- [`docs/QUICK_START.md`](docs/QUICK_START.md) - Quick reference guide
 
 ## Contributing
 
@@ -272,8 +268,8 @@ When adding new features:
 
 ### Adding a New Page
 
-1. Create HTML file in appropriate `pages/` subdirectory
-2. Add translation files in `_locale/en/` and `_locale/es/`
+1. Create HTML file in appropriate [`pages/`](pages/) subdirectory
+2. Add translation files in [`_locale/en/`](_locale/en/) and [`_locale/es/`](_locale/es/)
 3. Add `data-i18n` attributes for all translatable content
 4. Ensure correct relative paths for CSS/JS based on directory depth
 5. Add Schema.org microdata
@@ -281,17 +277,17 @@ When adding new features:
 
 ### Modifying Translations
 
-1. Edit JSON files in `_locale/{lang}/`
+1. Edit JSON files in [`_locale/{lang}/`](_locale/)
 2. Maintain consistent key structure across all languages
 3. Test language switching
 4. Verify special characters and HTML entities
 
 ### Updating Components
 
-1. Modify template in `components/templates/`
-2. Update script in `components/scripts/` if needed
+1. Modify template in [`components/templates/`](components/templates/)
+2. Update script in [`components/scripts/`](components/scripts/) if needed
 3. Test across all pages using the component
-4. Update `components/README.md` documentation
+4. Update [`components/README.md`](components/README.md) documentation
 
 ## Browser Support
 
@@ -312,4 +308,4 @@ Progressive enhancement ensures core functionality works in older browsers.
 
 ---
 
-**Built with ❤️ for those who need compassionate care**
+> Built with care for those who need compassionate support

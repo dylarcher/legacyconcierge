@@ -21,7 +21,7 @@
     "url": "git+https://github.com/dylarcher/legacyconcierge.git"
   },
   "license": "ISC",
-  "author": "@dylarcher",
+  "author": "Dylan Archer <dylarcher@gmail.com> (@dylarcher)",
   "type": "module",
   "main": "index.html",
   "scripts": {
@@ -36,7 +36,8 @@
     "test": "echo 'tests coming soon'"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.14.0",
+    "npm": ">=10.9.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5"
