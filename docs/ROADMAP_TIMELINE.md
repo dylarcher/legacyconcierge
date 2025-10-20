@@ -1,9 +1,11 @@
 # Static Website Development Project Roadmap
 
-**Last Updated:** October 20, 2025
-**Project Start:** October 2025
-**GitHub Issues:** https://github.com/dylarcher/legacyconcierge/issues
-**Project Board:** https://github.com/users/dylarcher/projects/18
+| Name | Description |
+| ---- | ----------- |
+| **Last Updated** | October 20, 2025 |
+| **Project Start** | October 2025 |
+| **GitHub Issues** | <https://github.com/dylarcher/legacyconcierge/issues> |
+| **Project Board** | <https://github.com/users/dylarcher/projects/18> |
 
 ---
 
@@ -15,11 +17,13 @@
 ### Completed Milestones ✅
 
 #### Phase 1 (Partial)
+
 - ✅ GitHub repository initialized with project structure
 - ✅ Code quality tools configured (Biome)
 - ✅ Labels and issue templates created
 
 #### Phase 2 (Partial)
+
 - ✅ **i18n Framework Setup (Task 2.1.4)** - COMPLETED October 2025
   - Vanilla JavaScript i18n system implemented
   - English & Spanish translations for all 30 pages
@@ -33,6 +37,7 @@
   - All files formatted and linted
 
 #### Phase 3 (Partial)
+
 - ✅ **Landing/Splash Page (Task 3.3.2)** - COMPLETED October 2025
   - Minimal header design for focused experience
   - Hero section with features grid
@@ -60,7 +65,7 @@
   - `script/` → `scripts/` (132 refs updated)
   - `style/` → `styles/` (45 refs updated)
 
-### In Progress 🚧
+### In Progress
 
 - 🚧 CI/CD Pipeline Setup (Task 2.2.1)
 - 🚧 Component Library Development (Tasks 3.1.x)
@@ -69,6 +74,7 @@
 ### Key Files Created
 
 **HTML Pages:** 30 total
+
 - Root: `index.html`
 - Pages: about, careers, contact, team, partners, locations
 - Treatments: 7 detail pages
@@ -77,16 +83,19 @@
 - Splash: landing page
 
 **Translation Files:** 28 total
+
 - `_locale/en/*.json` (14 files)
 - `_locale/es/*.json` (14 files)
 
 **JavaScript:** 9 core files
+
 - `scripts/i18n.js` - i18n engine
 - `scripts/app.js` - navigation & interactions
 - `scripts/theme.js` - dark/light mode
 - Component scripts in `components/scripts/`
 
 **Configuration:**
+
 - `biome.json` - Code quality configuration
 
 ---
@@ -96,6 +105,7 @@
 This roadmap outlines a comprehensive 20-24 week development plan for building a modern, performant static website with advanced features including internationalization, web components architecture, full accessibility compliance, comprehensive testing, and automated CI/CD workflows. The project is structured in five phases with detailed tasks, subtasks, effort estimates, and dependencies optimized for GitHub project board management.
 
 **Target Performance Metrics:**
+
 - Lighthouse scores: 95+ for all categories (mobile & desktop)
 - Test coverage: 95%+ across all branches
 - WCAG 2.2 AA compliance
@@ -122,9 +132,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 1.1: Project Charter & Stakeholder Alignment (Week 1)
 
-**Epic: Project Definition**
+> Epic: Project Definition
 
 #### Task 1.1.1: Define Project Scope and Success Metrics
+
 - **GitHub Issue:** #1
 - **Effort:** 8 hours
 - **Assignee:** Project Manager + Tech Lead
@@ -138,6 +149,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Initial risk assessment
 
 **Subtasks:**
+
 - [ ] Document functional requirements (pages, features)
 - [ ] Define non-functional requirements (performance, accessibility, SEO)
 - [ ] Identify target languages for i18n (minimum 3) - EN/ES complete ✅
@@ -146,6 +158,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create stakeholder communication plan
 
 #### Task 1.1.2: Technical Feasibility Assessment
+
 - **GitHub Issue:** #2
 - **Effort:** 16 hours
 - **Assignee:** Tech Lead + Senior Developer
@@ -158,6 +171,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Risk mitigation strategies
 
 **Subtasks:**
+
 - [x] Validate vanilla JS web components approach for scale ✅
 - [ ] Research IndexedDB browser support and limitations
 - [ ] Evaluate web worker overhead for target use cases
@@ -167,6 +181,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Document technical risks and mitigation plans
 
 #### Task 1.1.3: Team Formation and Resource Allocation
+
 - **Effort:** 4 hours
 - **Assignee:** Project Manager
 - **Dependencies:** Task 1.1.1
@@ -177,6 +192,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Skills gap analysis
 
 **Subtasks:**
+
 - [ ] Identify required roles (Frontend Dev, Accessibility Specialist, QA)
 - [ ] Assign team members to roles
 - [ ] Identify training needs (web components, WCAG 2.2)
@@ -185,9 +201,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 1.2: Initial Planning & Setup (Week 2)
 
-**Epic: Environment Setup**
+> Epic: Environment Setup
 
 #### Task 1.2.1: GitHub Repository and Project Board Setup
+
 - **GitHub Issue:** #3
 - **Effort:** 8 hours
 - **Assignee:** Tech Lead
@@ -200,6 +217,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Branch protection rules established
 
 **Subtasks:**
+
 - [x] Create GitHub repository with appropriate license ✅
 - [ ] Set up branch structure (main, develop, feature/*, release/*)
 - [ ] Configure GitHub project board with custom fields
@@ -210,11 +228,13 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [x] Set up labels system ✅ - 11 labels created (priority, phase, component)
 
 **Completion Notes:**
-- Repository created: https://github.com/dylarcher/legacyconcierge
+
+- Repository created: <https://github.com/dylarcher/legacyconcierge>
 - 26 GitHub issues created from roadmap
 - Labels: critical, high, medium, low, phase-1 through phase-5, i18n, accessibility, performance, testing, component, ci-cd
 
 #### Task 1.2.2: Development Environment Standards
+
 - **GitHub Issue:** #4
 - **Effort:** 12 hours
 - **Assignee:** Tech Lead + Senior Developer
@@ -227,6 +247,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Git workflow documentation
 
 **Subtasks:**
+
 - [x] Define code style standards (Biome configuration) ✅
 - [ ] Create .editorconfig file
 - [ ] Document local development setup process
@@ -237,11 +258,13 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Set up development browser extensions (axe DevTools)
 
 **Completion Notes:**
+
 - Biome configured with 2-space indentation, 80-character line width
 - Linting and formatting rules established
 - All files formatted successfully
 
 #### Task 1.2.3: Content Inventory and IA Planning
+
 - **Effort:** 16 hours
 - **Assignee:** Content Strategist + UX Lead
 - **Dependencies:** Task 1.1.1
@@ -253,6 +276,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Page template requirements
 
 **Subtasks:**
+
 - [ ] Audit existing content (if migration)
 - [ ] Define page types (homepage, landing, blog post, etc.)
 - [ ] Create sitemap with page relationships
@@ -270,9 +294,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 2.1: Technical Architecture & Design System (Weeks 3-4)
 
-**Epic: Architecture & Design Foundation**
+> Epic: Architecture & Design Foundation
 
 #### Task 2.1.1: Technical Architecture Documentation
+
 - **GitHub Issue:** #5
 - **Effort:** 24 hours
 - **Assignee:** Tech Lead + Senior Developer
@@ -285,6 +310,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Data flow documentation
 
 **Subtasks:**
+
 - [ ] Document web components architecture pattern (Shadow DOM strategy)
 - [ ] Define component hierarchy (layouts, modules, atoms)
 - [ ] Design state management strategy with IndexedDB
@@ -296,6 +322,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Document security considerations (CSP, CORS)
 
 #### Task 2.1.2: Design Token System Implementation
+
 - **Effort:** 32 hours
 - **Assignee:** Frontend Developer + Designer
 - **Dependencies:** None (can parallel with 2.1.1)
@@ -308,6 +335,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Token documentation
 
 **Subtasks:**
+
 - [ ] Collaborate with design team on Figma token export
 - [ ] Install and configure Figma design tokens plugin
 - [ ] Export tokens from Figma (colors, typography, spacing, etc.)
@@ -320,6 +348,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Test token application in sample components
 
 #### Task 2.1.3: Component Design System Foundation
+
 - **Effort:** 40 hours
 - **Assignee:** Frontend Developer + UX Designer
 - **Dependencies:** Task 2.1.2
@@ -331,6 +360,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Component documentation system
 
 **Subtasks:**
+
 - [ ] Create project directory structure (src/components, src/layouts)
 - [ ] Define component naming conventions
 - [ ] Create base component template with lifecycle hooks
@@ -342,6 +372,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create component testing strategy document
 
 #### Task 2.1.4: Internationalization (i18n) Framework Setup
+
 - **GitHub Issue:** #6 (CLOSED)
 - **Effort:** 48 hours
 - **Assignee:** Senior Frontend Developer
@@ -355,6 +386,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ i18n documentation
 
 **Subtasks:**
+
 - [x] Evaluate and select i18n library (Custom vanilla JS solution) ✅
 - [x] Install and configure i18n framework ✅
 - [x] Create translation file structure (_locale/{lang}.json) ✅
@@ -369,6 +401,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [x] Test RTL language support (if needed)
 
 **Completion Details:**
+
 - **Completion Date:** October 2025
 - **Implementation:** Vanilla JavaScript i18n engine
 - **Files Created:**
@@ -388,9 +421,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 2.2: Development Infrastructure (Week 5)
 
-**Epic: CI/CD & Testing Infrastructure**
+> Epic: CI/CD & Testing Infrastructure
 
 #### Task 2.2.1: GitHub Actions CI/CD Pipeline Setup
+
 - **GitHub Issue:** #7
 - **Effort:** 40 hours
 - **Assignee:** DevOps Engineer + Tech Lead
@@ -404,6 +438,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - CI/CD documentation
 
 **Subtasks:**
+
 - [ ] Create main CI workflow (.github/workflows/ci.yml)
 - [ ] Set up Node.js environment in workflow
 - [ ] Configure dependency caching
@@ -420,10 +455,12 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Set up status badges for README
 
 **Completion Notes:**
+
 - Biome available for linting via `npx @biomejs/biome lint .`
 - Biome available for formatting via `npx @biomejs/biome format --write .`
 
 #### Task 2.2.2: Lighthouse CI Integration
+
 - **GitHub Issue:** #8
 - **Effort:** 24 hours
 - **Assignee:** DevOps Engineer
@@ -437,6 +474,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - lighthouserc.js configuration
 
 **Subtasks:**
+
 - [ ] Install Lighthouse CI dependencies
 - [ ] Create lighthouserc.js configuration file
 - [ ] Configure performance assertions (95+ scores)
@@ -452,6 +490,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Document Lighthouse optimization workflow
 
 #### Task 2.2.3: Testing Framework Setup
+
 - **Effort:** 40 hours
 - **Assignee:** QA Engineer + Frontend Developer
 - **Dependencies:** Task 2.1.3
@@ -464,6 +503,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Testing documentation
 
 **Subtasks:**
+
 - [ ] Evaluate and select test framework (Vitest/Jest for unit)
 - [ ] Install and configure unit testing framework
 - [ ] Set up code coverage reporting (Istanbul/c8)
@@ -480,6 +520,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Set up watch mode for local development
 
 #### Task 2.2.4: Accessibility Testing Infrastructure
+
 - **Effort:** 24 hours
 - **Assignee:** Accessibility Specialist + QA Engineer
 - **Dependencies:** Task 2.2.3
@@ -491,6 +532,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Accessibility testing documentation
 
 **Subtasks:**
+
 - [ ] Install axe-core for automated testing
 - [ ] Integrate axe into unit test suite
 - [ ] Configure WCAG 2.2 AA compliance rules
@@ -505,6 +547,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Set up accessibility audit schedule
 
 #### Task 2.2.5: Code Quality Tools Configuration
+
 - **GitHub Issue:** #9 (CLOSED)
 - **Effort:** 16 hours
 - **Assignee:** Tech Lead
@@ -517,6 +560,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ Code quality automation
 
 **Subtasks:**
+
 - [x] Install and configure Biome ✅
 - [x] Define linting rules (accessibility, performance, best practices) ✅
 - [x] Set up formatting rules ✅
@@ -530,6 +574,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create code quality violation resolution guide
 
 **Completion Details:**
+
 - **Completion Date:** October 2025
 - **Configuration File:** `biome.json`
 - **Settings:**
@@ -550,9 +595,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 3.1: Core Component Library (Weeks 6-8)
 
-**Epic: Foundation Components**
+> Epic: Foundation Components
 
 #### Task 3.1.1: Layout Components Development
+
 - **GitHub Issue:** #10
 - **Effort:** 80 hours
 - **Assignee:** 2x Frontend Developers
@@ -566,6 +612,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Header/Footer components
 
 **Subtasks:**
+
 - [ ] Design responsive grid system with design tokens
 - [ ] Implement grid component with Shadow DOM
 - [ ] Create bentobox layout with flexible areas
@@ -582,6 +629,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Test with screen readers (NVDA, JAWS, VoiceOver)
 
 #### Task 3.1.2: Navigation Components Development
+
 - **Effort:** 64 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 3.1.1
@@ -594,6 +642,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Language switcher component
 
 **Subtasks:**
+
 - [ ] Build accessible navigation menu with ARIA
 - [ ] Implement mobile hamburger menu
 - [ ] Add smooth animations and transitions
@@ -610,6 +659,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Test with assistive technologies
 
 #### Task 3.1.3: Content Components Development
+
 - **GitHub Issue:** #11
 - **Effort:** 96 hours
 - **Assignee:** 2x Frontend Developers
@@ -625,6 +675,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Form input components
 
 **Subtasks:**
+
 - [ ] Create card component with variants (image, text, CTA)
 - [ ] Build hero component with background options
 - [ ] Implement content block with rich text support
@@ -641,6 +692,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Validate with accessibility tools
 
 #### Task 3.1.4: Blog Infrastructure Components
+
 - **Effort:** 64 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 3.1.3
@@ -654,6 +706,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Tag cloud component
 
 **Subtasks:**
+
 - [ ] Build blog post card with metadata (date, author, tags)
 - [ ] Create blog list with grid/list view toggle
 - [ ] Implement pagination component
@@ -671,9 +724,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 3.2: Advanced Features & Integrations (Weeks 9-11)
 
-**Epic: Advanced Functionality**
+> Epic: Advanced Functionality
 
 #### Task 3.2.1: IndexedDB State Management Implementation
+
 - **Effort:** 56 hours
 - **Assignee:** Senior Frontend Developer
 - **Dependencies:** Task 3.1.4
@@ -686,6 +740,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Persistence layer documentation
 
 **Subtasks:**
+
 - [ ] Design state management architecture
 - [ ] Create IndexedDB initialization and versioning
 - [ ] Implement promise-based wrapper for IndexedDB operations
@@ -702,6 +757,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create usage examples
 
 #### Task 3.2.2: Web Workers Implementation
+
 - **Effort:** 48 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 3.2.1
@@ -714,6 +770,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Performance benchmarks
 
 **Subtasks:**
+
 - [ ] Identify heavy computational tasks for workers
 - [ ] Create worker pool manager
 - [ ] Implement data processing worker
@@ -730,6 +787,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create worker debugging guide
 
 #### Task 3.2.3: Progressive Enhancement & Polyfills
+
 - **Effort:** 40 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 2.1.1
@@ -742,6 +800,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Browser support documentation
 
 **Subtasks:**
+
 - [ ] Set up dual build system (modern + legacy)
 - [ ] Configure Babel for legacy browsers
 - [ ] Implement module/nomodule pattern
@@ -757,6 +816,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Validate baseline HTML/CSS functionality
 
 #### Task 3.2.4: Schema.org & SEO Implementation
+
 - **Effort:** 48 hours
 - **Assignee:** Frontend Developer + SEO Specialist
 - **Dependencies:** Task 3.1.3
@@ -769,6 +829,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - SEO documentation
 
 **Subtasks:**
+
 - [x] Create JSON-LD templates for each page type (Partial) ✅
 - [x] Implement Article schema for blog posts ✅
 - [x] Add Organization schema for site (Partial) ✅
@@ -788,6 +849,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Document SEO best practices
 
 **Completion Notes:**
+
 - Schema.org microdata present on blog, contact, splash pages
 - Open Graph and Twitter Card meta tags on all pages
 - Semantic HTML5 with proper landmark roles
@@ -795,9 +857,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 3.3: Page Templates & Content Integration (Weeks 12-15)
 
-**Epic: Page Development**
+> Epic: Page Development
 
 #### Task 3.3.1: Homepage Development
+
 - **GitHub Issue:** #12
 - **Effort:** 56 hours
 - **Assignee:** Frontend Developer + Designer
@@ -811,6 +874,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - CTA sections
 
 **Subtasks:**
+
 - [x] Create homepage layout structure (Partial) ✅
 - [ ] Implement hero section with animation
 - [ ] Build feature cards section
@@ -828,11 +892,13 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Optimize performance (target 95+)
 
 **Completion Notes:**
+
 - Basic homepage structure exists at `index.html`
 - i18n integration complete
 - Needs: Hero animation, feature cards, testimonials, optimization
 
 #### Task 3.3.2: Landing/Splash Page Development
+
 - **GitHub Issue:** #13 (CLOSED)
 - **Effort:** 40 hours
 - **Assignee:** Frontend Developer
@@ -845,6 +911,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ Form integration (links to contact)
 
 **Subtasks:**
+
 - [x] Design landing page layout ✅
 - [x] Implement focused hero section ✅
 - [x] Add benefit/feature sections ✅
@@ -861,6 +928,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Run Lighthouse audits
 
 **Completion Details:**
+
 - **Completion Date:** October 2025
 - **Location:** `pages/splash/index.html`
 - **Features:**
@@ -875,6 +943,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - **Translation Files:** `_locale/en/splash.json`, `_locale/es/splash.json`
 
 #### Task 3.3.3: Blog Infrastructure Development
+
 - **GitHub Issue:** #14 (CLOSED)
 - **Effort:** 80 hours
 - **Assignee:** 2x Frontend Developers
@@ -888,6 +957,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ Pagination system (UI)
 
 **Subtasks:**
+
 - [x] Create blog listing page with grid layout ✅
 - [x] Implement search functionality (UI placeholder) ✅
 - [x] Add filter controls (category, tag, author) ✅
@@ -908,6 +978,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Optimize performance
 
 **Completion Details:**
+
 - **Completion Date:** October 2025
 - **Locations:**
   - Blog gallery: `pages/blog/index.html`
@@ -942,6 +1013,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Performance optimization
 
 #### Task 3.3.4: Subpage Templates Development
+
 - **GitHub Issue:** #15
 - **Effort:** 64 hours
 - **Assignee:** Frontend Developer
@@ -956,6 +1028,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ Contact page
 
 **Subtasks:**
+
 - [ ] Create flexible content page template
 - [ ] Build grid-based subpage layout
 - [ ] Implement sidebar navigation template
@@ -972,6 +1045,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Optimize performance
 
 **Completion Notes:**
+
 - **Contact Page Complete:**
   - Location: `pages/contact/index.html`
   - Features: Comprehensive form (name, email, phone, subject, message)
@@ -984,6 +1058,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - **Remaining:** FAQ, services, portfolio templates
 
 #### Task 3.3.5: Multi-language Content Integration
+
 - **GitHub Issue:** #16 (CLOSED)
 - **Effort:** 80 hours
 - **Assignee:** Frontend Developer + Content Team
@@ -996,6 +1071,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ Translation management workflow
 
 **Subtasks:**
+
 - [x] Extract all translatable strings to i18n files ✅
 - [x] Create English base translations ✅
 - [x] Implement second language (Spanish) ✅
@@ -1012,6 +1088,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Test with native speakers
 
 **Completion Details:**
+
 - **Completion Date:** October 2025
 - **Languages:** English (EN), Spanish (ES)
 - **Translation Files:** 14 JSON files per language (28 total)
@@ -1035,6 +1112,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Native speaker review
 
 #### Task 3.X: Directory Structure Modernization
+
 - **GitHub Issue:** #17 (CLOSED)
 - **Effort:** 4 hours
 - **Assignee:** Frontend Developer
@@ -1045,6 +1123,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - ✅ Updated all references
 
 **Details:**
+
 - **Completion Date:** October 2025
 - **Changes:**
   - `script/` → `scripts/` (132 references updated)
@@ -1062,9 +1141,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 4.1: Comprehensive Testing (Weeks 16-17)
 
-**Epic: Testing & Quality Assurance**
+> Epic: Testing & Quality Assurance
 
 #### Task 4.1.1: Unit Test Coverage Achievement
+
 - **GitHub Issue:** #18
 - **Effort:** 64 hours
 - **Assignee:** 2x Frontend Developers
@@ -1077,6 +1157,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Test documentation
 
 **Subtasks:**
+
 - [ ] Audit current test coverage
 - [ ] Identify gaps in coverage
 - [ ] Write tests for uncovered components
@@ -1092,6 +1173,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create test maintenance guide
 
 #### Task 4.1.2: Integration Testing
+
 - **Effort:** 56 hours
 - **Assignee:** QA Engineer + Frontend Developer
 - **Dependencies:** Task 4.1.1
@@ -1103,6 +1185,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - API integration tests
 
 **Subtasks:**
+
 - [ ] Create integration test plan
 - [ ] Test component interactions
 - [ ] Test form submission flows
@@ -1118,6 +1201,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Document integration test patterns
 
 #### Task 4.1.3: End-to-End Testing
+
 - **Effort:** 80 hours
 - **Assignee:** QA Engineer + Automation Engineer
 - **Dependencies:** Task 4.1.2
@@ -1129,6 +1213,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Cross-browser test results
 
 **Subtasks:**
+
 - [ ] Define critical user journeys
 - [ ] Create e2e test scenarios
 - [ ] Implement homepage journey tests
@@ -1146,6 +1231,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Generate e2e test reports
 
 #### Task 4.1.4: Accessibility Compliance Validation
+
 - **GitHub Issue:** #19
 - **Effort:** 72 hours
 - **Assignee:** Accessibility Specialist + QA Engineer
@@ -1158,6 +1244,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Remediation plan
 
 **Subtasks:**
+
 - [ ] Run automated axe audits on all pages
 - [ ] Conduct manual keyboard navigation testing
 - [ ] Test with NVDA screen reader (Windows)
@@ -1180,9 +1267,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 4.2: Performance Optimization (Week 18)
 
-**Epic: Performance & Optimization**
+> Epic: Performance & Optimization
 
 #### Task 4.2.1: Lighthouse Performance Optimization
+
 - **GitHub Issue:** #20
 - **Effort:** 64 hours
 - **Assignee:** Performance Engineer + Frontend Developer
@@ -1195,6 +1283,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Optimization documentation
 
 **Subtasks:**
+
 - [ ] Run baseline Lighthouse audits (mobile & desktop)
 - [ ] Analyze performance bottlenecks
 - [ ] Optimize First Contentful Paint (FCP)
@@ -1217,6 +1306,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Document optimizations applied
 
 #### Task 4.2.2: Caching Strategy Implementation
+
 - **Effort:** 40 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 4.2.1
@@ -1228,6 +1318,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Offline functionality
 
 **Subtasks:**
+
 - [ ] Implement service worker registration
 - [ ] Create cache-first strategy for static assets
 - [ ] Implement network-first for dynamic content
@@ -1242,6 +1333,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Test cache across browsers
 
 #### Task 4.2.3: Bundle Size Optimization
+
 - **Effort:** 32 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 4.2.1
@@ -1253,6 +1345,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Bundle analysis report
 
 **Subtasks:**
+
 - [ ] Analyze current bundle sizes
 - [ ] Implement code splitting by route
 - [ ] Split vendor dependencies
@@ -1267,9 +1360,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 4.3: Cross-Browser & Device Testing (Week 19)
 
-**Epic: Compatibility Testing**
+> Epic: Compatibility Testing
 
 #### Task 4.3.1: Cross-Browser Compatibility Testing
+
 - **GitHub Issue:** #21
 - **Effort:** 56 hours
 - **Assignee:** QA Engineer + Frontend Developer
@@ -1282,6 +1376,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Polyfill validation
 
 **Subtasks:**
+
 - [ ] Test on Chrome (latest 2 versions)
 - [ ] Test on Firefox (latest 2 versions)
 - [ ] Test on Safari (latest 2 versions)
@@ -1299,6 +1394,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create browser support documentation
 
 #### Task 4.3.2: Mobile Device Testing
+
 - **Effort:** 48 hours
 - **Assignee:** QA Engineer
 - **Dependencies:** Task 4.3.1
@@ -1310,6 +1406,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Touch interaction testing
 
 **Subtasks:**
+
 - [ ] Test on iOS devices (iPhone, iPad)
 - [ ] Test on Android devices (various manufacturers)
 - [ ] Validate responsive breakpoints
@@ -1326,6 +1423,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Fix critical mobile issues
 
 #### Task 4.3.3: Legacy Browser Support Validation
+
 - **Effort:** 32 hours
 - **Assignee:** Frontend Developer
 - **Dependencies:** Task 4.3.1
@@ -1337,6 +1435,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Fallback functionality documentation
 
 **Subtasks:**
+
 - [ ] Test basic functionality on IE11 (if required)
 - [ ] Validate ES5 bundle delivery
 - [ ] Test polyfill coverage
@@ -1356,9 +1455,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 5.1: Pre-Launch Preparation (Week 20)
 
-**Epic: Launch Preparation**
+> Epic: Launch Preparation
 
 #### Task 5.1.1: Final Content Review and Translation Verification
+
 - **Effort:** 32 hours
 - **Assignee:** Content Team + QA
 - **Dependencies:** All Phase 4 tasks
@@ -1370,6 +1470,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Content corrections applied
 
 **Subtasks:**
+
 - [ ] Review all English content for accuracy
 - [ ] Verify translations with native speakers
 - [ ] Check for translation string errors
@@ -1386,6 +1487,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Final stakeholder content approval
 
 #### Task 5.1.2: Security Audit and Hardening
+
 - **Effort:** 40 hours
 - **Assignee:** Security Engineer + Tech Lead
 - **Dependencies:** All Phase 4 tasks
@@ -1397,6 +1499,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Security documentation
 
 **Subtasks:**
+
 - [ ] Conduct security vulnerability scan
 - [ ] Review Content Security Policy (CSP)
 - [ ] Validate HTTPS enforcement
@@ -1413,6 +1516,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Apply security hardening measures
 
 #### Task 5.1.3: Production Environment Setup
+
 - **GitHub Issue:** #22
 - **Effort:** 32 hours
 - **Assignee:** DevOps Engineer
@@ -1426,6 +1530,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Deployment documentation
 
 **Subtasks:**
+
 - [ ] Set up production hosting (Netlify/Vercel/Cloudflare Pages)
 - [ ] Configure custom domain
 - [ ] Install SSL/TLS certificates
@@ -1442,6 +1547,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Create rollback plan
 
 #### Task 5.1.4: Monitoring and Analytics Setup
+
 - **GitHub Issue:** #23
 - **Effort:** 24 hours
 - **Assignee:** DevOps Engineer + Analytics Specialist
@@ -1455,6 +1561,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Alerting configuration
 
 **Subtasks:**
+
 - [ ] Set up application monitoring (Sentry/LogRocket)
 - [ ] Configure error tracking
 - [ ] Set up performance monitoring (web vitals)
@@ -1470,9 +1577,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 5.2: Production Launch (Week 21)
 
-**Epic: Production Deployment**
+> Epic: Production Deployment
 
 #### Task 5.2.1: Staging Deployment and Final Testing
+
 - **GitHub Issue:** #24
 - **Effort:** 40 hours
 - **Assignee:** DevOps + QA Team
@@ -1485,6 +1593,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Go/no-go decision
 
 **Subtasks:**
+
 - [ ] Deploy to staging environment
 - [ ] Run full smoke test suite
 - [ ] Conduct final accessibility audit
@@ -1503,6 +1612,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Obtain stakeholder sign-off
 
 #### Task 5.2.2: Production Deployment
+
 - **GitHub Issue:** #25
 - **Effort:** 16 hours
 - **Assignee:** DevOps Engineer + Tech Lead
@@ -1515,6 +1625,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Deployment report
 
 **Subtasks:**
+
 - [ ] Create deployment checklist
 - [ ] Schedule deployment window
 - [ ] Notify stakeholders of deployment
@@ -1532,6 +1643,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Announce successful launch
 
 #### Task 5.2.3: Post-Launch Monitoring and Support
+
 - **Effort:** 40 hours (over 1 week)
 - **Assignee:** Full Team
 - **Dependencies:** Task 5.2.2
@@ -1543,6 +1655,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Performance baseline established
 
 **Subtasks:**
+
 - [ ] Monitor application health 24/7 for first week
 - [ ] Track error rates and types
 - [ ] Monitor performance metrics
@@ -1561,9 +1674,10 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 
 ### Milestone 5.3: Project Closure (Week 21)
 
-**Epic: Project Closure**
+> Epic: Project Closure
 
 #### Task 5.3.1: Documentation Finalization
+
 - **GitHub Issue:** #26
 - **Effort:** 24 hours
 - **Assignee:** Tech Lead + Technical Writer
@@ -1576,6 +1690,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Troubleshooting guide
 
 **Subtasks:**
+
 - [ ] Finalize technical architecture documentation
 - [ ] Complete component library documentation
 - [ ] Update API documentation
@@ -1591,6 +1706,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Organize documentation in wiki/docs site
 
 #### Task 5.3.2: Team Retrospective and Knowledge Transfer
+
 - **Effort:** 16 hours
 - **Assignee:** Project Manager + Full Team
 - **Dependencies:** Task 5.2.3
@@ -1602,6 +1718,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Knowledge transfer complete
 
 **Subtasks:**
+
 - [ ] Schedule retrospective meeting
 - [ ] Facilitate retrospective (what went well, what didn't, improvements)
 - [ ] Document lessons learned
@@ -1616,6 +1733,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
 - [ ] Recognize individual contributions
 
 #### Task 5.3.3: Post-Mortem Report and Presentation
+
 - **Effort:** 16 hours
 - **Assignee:** Project Manager + Tech Lead
 - **Dependencies:** Task 5.3.2
@@ -1627,6 +1745,7 @@ This roadmap outlines a comprehensive 20-24 week development plan for building a
   - Success metrics report
 
 **Subtasks:**
+
 - [ ] Compile project metrics (timeline, budget, quality)
 - [ ] Analyze performance vs targets
 - [ ] Document Lighthouse scores achieved
@@ -1696,6 +1815,7 @@ These tasks directly impact the project timeline. Delays here delay the entire p
 **Current Progress:** ~16% of total effort hours completed
 
 **Note:** With 4-person team, overhead, meetings, and buffer, the **21-week timeline** accounts for:
+
 - 15% project management overhead
 - 10% meetings and communication
 - 20% contingency buffer
@@ -1707,13 +1827,14 @@ These tasks directly impact the project timeline. Delays here delay the entire p
 
 ### Board Link
 
-**Project Board:** https://github.com/users/dylarcher/projects/18
+**Project Board:** <https://github.com/users/dylarcher/projects/18>
 
 ### Recommended Board Structure
 
 **Board Type:** Release Management Board
 
 **Columns:**
+
 1. **Backlog** - All planned work
 2. **Ready** - Tasks ready to start
 3. **In Progress** - Active development
@@ -1743,12 +1864,14 @@ These tasks directly impact the project timeline. Delays here delay the entire p
 ### Labels System
 
 **By Priority:**
+
 - `critical` (red) ✅ Created
 - `high` (orange) ✅ Created
 - `medium` (yellow) ✅ Created
 - `low` (green) ✅ Created
 
 **By Type:**
+
 - `feature`
 - `bug`
 - `accessibility` ✅ Created
@@ -1758,6 +1881,7 @@ These tasks directly impact the project timeline. Delays here delay the entire p
 - `testing` ✅ Created
 
 **By Component:**
+
 - `component:layout`
 - `component:navigation`
 - `component:blog`
@@ -1768,9 +1892,11 @@ These tasks directly impact the project timeline. Delays here delay the entire p
 - `indexeddb`
 
 **By Phase:**
+
 - `phase-1` through `phase-5` ✅ Created
 
 **By Status:**
+
 - `blocked`
 - `needs-review`
 - `ready-for-test`
@@ -1782,6 +1908,7 @@ These tasks directly impact the project timeline. Delays here delay the entire p
 **Closed:** 6 issues (completed work)
 
 All issues include:
+
 - Detailed descriptions
 - Effort estimates
 - Priority labels
@@ -1885,6 +2012,7 @@ All issues include:
 ### Future Enhancement Backlog
 
 Consider for post-launch iterations:
+
 - Additional language support (French, German, etc.)
 - Dark mode implementation 🚧 Theme system partially exists
 - Advanced search (full-text, filters with IndexedDB)
@@ -1901,6 +2029,7 @@ Consider for post-launch iterations:
 ## Appendix: Tool & Technology Stack
 
 ### Core Technologies
+
 - **Web Components:** Vanilla JavaScript (Custom Elements API)
 - **i18n:** Custom vanilla JavaScript solution ✅
 - **State Management:** IndexedDB with custom wrapper (planned)
@@ -1908,17 +2037,20 @@ Consider for post-launch iterations:
 - **CSS:** Custom Properties from Design Tokens (planned)
 
 ### Development Tools
+
 - **Linting:** Biome ✅ Configured
 - **Testing:** Vitest (unit), Web Test Runner (component), Playwright (e2e) - Planned
 - **Accessibility:** axe-core, pa11y - Planned
 - **Performance:** Lighthouse CI - Planned
 
 ### CI/CD
+
 - **Platform:** GitHub Actions (partial)
 - **Hosting:** Netlify/Vercel/Cloudflare Pages (to be configured)
 - **Monitoring:** Sentry, LogRocket, Google Analytics 4 (to be configured)
 
 ### Design & Tokens
+
 - **Design Tool:** Figma (planned)
 - **Token Export:** Figma Tokens plugin (planned)
 - **Token Transform:** Style Dictionary (planned)
@@ -1932,6 +2064,7 @@ This roadmap provides a comprehensive, actionable plan for building a modern, ac
 The project structure is optimized for GitHub project board management with detailed milestones, clear phases, and comprehensive task breakdowns. By following this roadmap, stakeholders will have visibility into progress, and the development team will have clear direction for successful execution.
 
 **Key Success Factors:**
+
 1. ✅ Start with i18n and accessibility from day 1 - **i18n Complete**
 2. 🚧 Implement CI/CD and testing infrastructure early - **In Progress**
 3. Monitor performance continuously, not just at the end
@@ -1939,6 +2072,7 @@ The project structure is optimized for GitHub project board management with deta
 5. Conduct regular retrospectives and adapt the plan as needed
 
 **Current Status:**
+
 - **Progress:** ~25% of roadmap complete
 - **Phase:** 2-3 (Foundation & Core Development)
 - **Velocity:** Good - major i18n infrastructure and blog/splash pages delivered
