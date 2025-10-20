@@ -2,7 +2,7 @@
 
 An elegant and minimal website for end-of-life in-home nursing support, built with vanilla HTML/CSS/JavaScript featuring a sophisticated internationalization system.
 
-## 🎯 Project Overview
+## Project Overview
 
 Legacy Concierge provides compassionate, professional in-home nursing care for elderly individuals and those at end-of-life. This website serves as the primary digital presence for the service, targeting individuals aged 45-85 and their families seeking premium care services.
 
@@ -14,7 +14,7 @@ Legacy Concierge provides compassionate, professional in-home nursing care for e
 - **High Contrast** - Clear visual hierarchy with strong contrast ratios
 - **Intuitive Navigation** - Simple, clear paths through content
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Local Development
 
@@ -51,7 +51,7 @@ npx @biomejs/biome check .
 
 Configuration: `biome.json` (2-space indentation, 80-char line width)
 
-## 🏗️ Technology Stack
+## Technology Stack
 
 ### Core Technologies
 
@@ -67,7 +67,7 @@ Configuration: `biome.json` (2-space indentation, 80-char line width)
 - **Progressive Enhancement** - Works without JavaScript for critical features
 - **IndexedDB** - Client-side storage for preferences and state
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 legacy-concierge/
@@ -105,7 +105,7 @@ legacy-concierge/
 └── package.json          # Dependencies
 ```
 
-## 🌐 Internationalization (i18n)
+## Internationalization (i18n)
 
 The site features a custom vanilla JavaScript i18n system:
 
@@ -132,7 +132,7 @@ The site features a custom vanilla JavaScript i18n system:
 
 See `_locale/README.md` for detailed documentation.
 
-## 🎨 Theming
+## Theming
 
 Dual theme support with automatic detection:
 
@@ -144,7 +144,7 @@ Dual theme support with automatic detection:
 
 Themes use CSS custom properties defined in `styles/style.css`.
 
-## ♿ Accessibility
+## Accessibility
 
 Committed to WCAG 2.2 AA compliance:
 
@@ -163,7 +163,7 @@ Committed to WCAG 2.2 AA compliance:
 - **Cards:** Enter/Space to activate links
 - **Forms:** Tab to navigate, standard form controls
 
-## 📄 Pages
+## Pages
 
 ### Current Pages
 
@@ -182,7 +182,7 @@ Committed to WCAG 2.2 AA compliance:
 - **Treatments** (`pages/treatments/views/`) - 7 treatment detail pages
 - **Expertise** (`pages/expertise/views/`) - 11 expertise detail pages
 
-## 🧩 Web Components
+## Web Components
 
 Custom elements for reusable UI:
 
@@ -194,7 +194,7 @@ Custom elements for reusable UI:
 
 See `components/README.md` for full documentation.
 
-## 📜 Scripts
+## Scripts
 
 Core JavaScript modules:
 
@@ -205,7 +205,7 @@ Core JavaScript modules:
 
 See `scripts/README.md` for detailed documentation.
 
-## 🎭 Layouts
+## Layouts
 
 Pre-built page layout templates in `layouts/`:
 
@@ -217,7 +217,7 @@ Pre-built page layout templates in `layouts/`:
 - **blog-gallery.html** - Blog listing layout
 - **blog-post.html** - Individual blog post layout
 
-## 🚧 Development Status
+## Development Status
 
 **Current Phase:** Phase 3 - Component Development & Page Templates
 
@@ -233,7 +233,7 @@ Pre-built page layout templates in `layouts/`:
 - ✅ Theme system (dark/light mode)
 - ✅ Navigation system with dropdowns
 
-### In Progress 🚧
+### In Progress
 
 - 🚧 Unit test coverage (95%+ target)
 - 🚧 Accessibility audit (WCAG 2.2 AA validation)
@@ -244,13 +244,13 @@ Pre-built page layout templates in `layouts/`:
 
 See `docs/ROADMAP_TIMELINE.md` for full project timeline.
 
-## 🔗 Links
+## Links
 
 - **GitHub:** https://github.com/dylarcher/legacy-concierge
 - **Project Board:** https://github.com/users/dylarcher/projects/18
 - **Documentation:** `docs/`
 
-## 📚 Documentation
+## Documentation
 
 - **CLAUDE.md** - AI assistant instructions and project guidelines
 - **ROADMAP_TIMELINE.md** - Complete project timeline and progress
@@ -258,7 +258,7 @@ See `docs/ROADMAP_TIMELINE.md` for full project timeline.
 - **I18N_INTEGRATION_SUMMARY.md** - i18n system documentation
 - **QUICK_START.md** - Quick reference guide
 
-## 🤝 Contributing
+## Contributing
 
 When adding new features:
 
@@ -269,7 +269,7 @@ When adding new features:
 5. **Test themes** - Verify both dark and light modes
 6. **Document changes** - Update relevant README files
 
-## 📋 Common Tasks
+## Common Tasks
 
 ### Adding a New Page
 
@@ -294,7 +294,7 @@ When adding new features:
 3. Test across all pages using the component
 4. Update `components/README.md` documentation
 
-## 📊 Browser Support
+## Browser Support
 
 - Chrome (latest 2 versions)
 - Firefox (latest 2 versions)
@@ -303,11 +303,11 @@ When adding new features:
 
 Progressive enhancement ensures core functionality works in older browsers.
 
-## 📝 License
+## License
 
 [License information to be added]
 
-## 👥 Contact
+## Contact
 
 [Contact information to be added]
 
