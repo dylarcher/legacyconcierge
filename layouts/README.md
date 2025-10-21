@@ -38,7 +38,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =� Subpage with Sidebar
+### Subpage with Sidebar
 
 **File:** `subpage-sidebar.html`
 
@@ -123,7 +123,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =� Contact Page
+### Contact Page
 
 **File:** `contact.html`
 
@@ -167,7 +167,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =� Splash/Landing Page
+### Splash/Landing Page
 
 **File:** `splash.html`
 
@@ -209,7 +209,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =� Blog Gallery
+### Blog Gallery
 
 **File:** `blog-gallery.html`
 
@@ -250,7 +250,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =� Blog Post
+### Blog Post
 
 **File:** `blog-post.html`
 
@@ -427,7 +427,7 @@ All layouts include:
 -  Semantic HTML5 elements (`<header>`, `<main>`, `<article>`, `<aside>`)
 -  ARIA landmarks and roles
 -  Skip links for keyboard navigation
--  Proper heading hierarchy (h1 � h2 � h3)
+-  Proper heading hierarchy (h1 → h2 → h3)
 -  Focus indicators for interactive elements
 -  Alt text for images
 -  Form labels and ARIA attributes
@@ -449,7 +449,7 @@ npx @axe-core/cli pages/new-page/index.html
 
 ---
 
-## =� Responsive Design
+## Responsive Design
 
 All layouts are mobile-first and responsive:
 
@@ -461,7 +461,7 @@ All layouts are mobile-first and responsive:
 **Testing:**
 ```bash
 # Test in browser DevTools
-# Chrome: CMD + Option + I � Toggle device toolbar
+# Chrome: CMD + Option + I → Toggle device toolbar
 
 # Test on actual devices
 # iOS Simulator (macOS)
@@ -479,7 +479,7 @@ All layouts are mobile-first and responsive:
 
 ---
 
-## =� Further Reading
+## Further Reading
 
 - [HTML5 Semantic Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)

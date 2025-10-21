@@ -197,6 +197,188 @@ a:hover {
   max-width: 1400px;
 }
 
+/* Header, Nav, and Footer Styles */
+/* Placed here before content sections to maintain proper CSS specificity order */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* Solid header for subpages (no hero section) */
+header.solid-header {
+  position: relative;
+  background-color: var(--bg-tertiary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+header.solid-header nav ul a {
+  color: var(--text-primary);
+}
+
+header.solid-header nav ul a:hover {
+  color: var(--accent-primary);
+}
+
+header.solid-header :is(.language-toggle, .theme-toggle) {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+header.solid-header :is(.language-toggle, .theme-toggle):hover {
+  background: var(--accent-primary);
+  color: var(--color-white);
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-nav);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 12;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+header nav ul a {
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+header nav ul a:hover {
+  color: var(--color-warm-tan);
+}
+
+header nav ul li {
+  /* Base styles for nav list items - defined here to maintain proper CSS specificity order */
+  list-style: none;
+}
+
+/* Language Toggle */
+.language-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: var(--font-nav);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.language-toggle:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.language-toggle:focus {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+header.scrolled .language-toggle {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+header.scrolled .language-toggle:hover {
+  background: var(--accent-primary);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1rem;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:focus {
+  outline: 3px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+.theme-toggle .icon {
+  display: none;
+}
+
+.theme-toggle .icon.active {
+  display: block;
+}
+
+header.scrolled .theme-toggle {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+header.scrolled .theme-toggle:hover {
+  background: var(--accent-primary);
+}
+
+footer {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 4rem 0;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--color-warm-tan);
+}
+
+footer a:hover {
+  color: var(--color-white);
+}
+
+/* Global button styles - Placed here to maintain proper CSS specificity order */
+button {
+  transition: all 0.3s ease-in-out;
+}
+
 /* Hero Section */
 #hero {
   background:
@@ -870,187 +1052,18 @@ a:hover {
   left: 0;
 }
 
-/* Header, Nav, and Footer Styles */
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1.5rem 0;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
-
-/* Solid header for subpages (no hero section) */
-header.solid-header {
-  position: relative;
-  background-color: var(--bg-tertiary);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-header.solid-header nav ul a {
-  color: var(--text-primary);
-}
-
-header.solid-header nav ul a:hover {
-  color: var(--accent-primary);
-}
-
-header.solid-header :is(.language-toggle, .theme-toggle) {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-}
-
-header.solid-header :is(.language-toggle, .theme-toggle):hover {
-  background: var(--accent-primary);
-  color: var(--color-white);
-}
-
+/* Specific Header Adjustments */
+/* Placed here after content image selectors to maintain proper CSS specificity order */
 header .logo img {
   max-height: 55px;
   transition: all 0.3s ease;
 }
 
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--font-nav);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-}
-
-header .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  z-index: 12;
-}
-
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-header nav ul a {
-  color: var(--color-white);
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-header nav ul a:hover {
-  color: var(--color-warm-tan);
-}
-
-/* Language Toggle */
-.language-toggle {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-white);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-family: var(--font-nav);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.language-toggle:hover {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
-  color: var(--color-white);
-  transform: translateY(-2px);
-}
-
-.language-toggle:focus {
-  outline: 3px solid var(--accent-primary);
-  outline-offset: 2px;
-}
-
-header.scrolled .language-toggle {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-header.scrolled .language-toggle:hover {
-  background: var(--accent-primary);
-}
-
-/* Theme Toggle */
-.theme-toggle {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-white);
-  padding: 0.5rem 0.75rem;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-size: 1rem;
-}
-
-.theme-toggle:hover {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
-  transform: translateY(-2px);
-}
-
-.theme-toggle:focus {
-  outline: 3px solid var(--accent-primary);
-  outline-offset: 2px;
-}
-
-.theme-toggle .icon {
-  display: none;
-}
-
-.theme-toggle .icon.active {
-  display: block;
-}
-
-header.scrolled .theme-toggle {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-header.scrolled .theme-toggle:hover {
-  background: var(--accent-primary);
-}
-
-footer {
-  background-color: var(--color-dark-blue);
-  color: var(--color-white);
-  padding: 4rem 0;
-  margin-top: 4rem;
-  text-align: center;
-}
-
-footer a {
-  color: var(--color-warm-tan);
-}
-
-footer a:hover {
-  color: var(--color-white);
-}
-
 /* Flair Additions: Transitions, Shadows, Animations */
 
 /* 1. Global Smoothness - Removed universal selector for better performance and accessibility */
+/* Note: button transitions defined earlier to maintain proper CSS specificity order */
 a,
-button,
 .card,
 .service-card,
 .team-member-card,
@@ -1072,14 +1085,18 @@ button,
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
+  /* Button styles first to maintain proper specificity order */
+  button {
+    text-decoration: underline;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
   :root {
     --border-color: currentColor;
     --shadow-color: rgba(0, 0, 0, 0.5);
-  }
-
-  a,
-  button {
-    text-decoration: underline;
   }
 
   .card,
