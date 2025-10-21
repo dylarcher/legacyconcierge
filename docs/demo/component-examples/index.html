@@ -6,11 +6,11 @@
     <title>Component Example - Legacy Concierge</title>
 
     <!-- Existing Styles -->
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="../../../styles/style.css">
 
     <!-- Load Core Utilities -->
     <script type="module">
-        import { initializeComponents } from '/scripts/core/component-loader.js';
+        import { initializeComponents } from '../../../scripts/core/component-loader.js';
 
         // Initialize components when DOM is ready
         document.addEventListener('DOMContentLoaded', async () => {
@@ -25,8 +25,8 @@
     </script>
 
     <!-- Existing Scripts -->
-    <script src="/scripts/theme.js"></script>
-    <script src="/scripts/i18n.js"></script>
+    <script src="../../../scripts/theme.js"></script>
+    <script src="../../../scripts/i18n.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -84,21 +84,21 @@
 
             <lc-card-grid columns="3" gap="2rem">
                 <lc-card variant="service" href="/pages/treatments/views/post-op-recovery" animated>
-                    <img slot="image" src="/assets/images/service-post-op.jpg" alt="Post-Op Recovery">
+                    <img slot="image" src="../../../assets/images/service-post-op.jpg" alt="Post-Op Recovery">
                     <h3 slot="title">Post-Op Recovery</h3>
                     <p slot="description">Expert nursing care during your recovery period.</p>
                     <a slot="actions" href="/pages/treatments/views/post-op-recovery" class="cta-button">Learn More</a>
                 </lc-card>
 
                 <lc-card variant="service" href="/pages/treatments/views/mental-health" animated>
-                    <img slot="image" src="/assets/images/service-mental-health.jpg" alt="Mental Health">
+                    <img slot="image" src="../../../assets/images/service-mental-health.jpg" alt="Mental Health">
                     <h3 slot="title">Mental Health Support</h3>
                     <p slot="description">Compassionate care for mental wellness.</p>
                     <a slot="actions" href="/pages/treatments/views/mental-health" class="cta-button">Learn More</a>
                 </lc-card>
 
                 <lc-card variant="service" href="/pages/treatments/views/iv-therapy" animated>
-                    <img slot="image" src="/assets/images/service-iv.jpg" alt="IV Therapy">
+                    <img slot="image" src="../../../assets/images/service-iv.jpg" alt="IV Therapy">
                     <h3 slot="title">IV Therapy</h3>
                     <p slot="description">In-home infusion therapy services.</p>
                     <a slot="actions" href="/pages/treatments/views/iv-therapy" class="cta-button">Learn More</a>

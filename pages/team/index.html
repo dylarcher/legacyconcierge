@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="../../styles/style.css">
 </head>
 <body itemscope itemtype="http://schema.org/AboutPage">
     <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
@@ -38,37 +38,37 @@
         <p class="page-subtitle" itemprop="description" data-i18n="team.subtitle"></p>
         <div class="team-grid">
             <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
-                <img src="/assets/images/IMG_5385-1-e1753971154576.jpg" alt="Jason Kidushim" itemprop="image">
+                <img src="../../assets/images/IMG_5385-1-e1753971154576.jpg" alt="Jason Kidushim" itemprop="image">
                 <h4 itemprop="name" data-i18n="team.members[0].name"></h4>
                 <h5 itemprop="jobTitle" data-i18n="team.members[0].title"></h5>
                 <p itemprop="description" data-i18n="team.members[0].bio"></p>
             </div>
             <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
-                <img src="/assets/images/Zehra.jpg" alt="Zehra Dhanani" itemprop="image">
+                <img src="../../assets/images/Zehra.jpg" alt="Zehra Dhanani" itemprop="image">
                 <h4 itemprop="name" data-i18n="team.members[1].name"></h4>
                 <h5 itemprop="jobTitle" data-i18n="team.members[1].title"></h5>
                 <p itemprop="description" data-i18n="team.members[1].bio"></p>
             </div>
             <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
-                <img src="/assets/images/Dave.jpg" alt="David Kidushim" itemprop="image">
+                <img src="../../assets/images/Dave.jpg" alt="David Kidushim" itemprop="image">
                 <h4 itemprop="name" data-i18n="team.members[2].name"></h4>
                 <h5 itemprop="jobTitle" data-i18n="team.members[2].title"></h5>
                 <p itemprop="description" data-i18n="team.members[2].bio"></p>
             </div>
             <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
-                <img src="/assets/images/Sarah.jpg" alt="Sarah Brodbeck" itemprop="image">
+                <img src="../../assets/images/Sarah.jpg" alt="Sarah Brodbeck" itemprop="image">
                 <h4 itemprop="name" data-i18n="team.members[3].name"></h4>
                 <h5 itemprop="jobTitle" data-i18n="team.members[3].title"></h5>
                 <p itemprop="description" data-i18n="team.members[3].bio"></p>
             </div>
             <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
-                <img src="/assets/images/Elie.jpg" alt="Elie Castillo" itemprop="image">
+                <img src="../../assets/images/Elie.jpg" alt="Elie Castillo" itemprop="image">
                 <h4 itemprop="name" data-i18n="team.members[4].name"></h4>
                 <h5 itemprop="jobTitle" data-i18n="team.members[4].title"></h5>
                 <p itemprop="description" data-i18n="team.members[4].bio"></p>
             </div>
             <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
-                <img src="/assets/images/Cassie.jpg" alt="Cassie Leger" itemprop="image">
+                <img src="../../assets/images/Cassie.jpg" alt="Cassie Leger" itemprop="image">
                 <h4 itemprop="name" data-i18n="team.members[5].name"></h4>
                 <h5 itemprop="jobTitle" data-i18n="team.members[5].title"></h5>
                 <p itemprop="description" data-i18n="team.members[5].bio"></p>
@@ -80,13 +80,13 @@
     <!-- Footer Component -->
         <lc-footer></lc-footer>
 
-    <script src="/scripts/theme.js"></script>
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/i18n.js"></script>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/i18n.js"></script>
 
         <!-- Component System -->
         <script type="module">
-            import { loadTemplates } from '/scripts/core/component-loader.js';
+            import { loadTemplates } from '../../scripts/core/component-loader.js';
 
             // Load templates and initialize components
             (async () => {
@@ -97,9 +97,9 @@
 
                     // Import component scripts
                     await Promise.all([
-                        import('/components/scripts/lc-header.js'),
-                        import('/components/scripts/lc-footer.js'),
-                        import('/components/scripts/lc-card.js')
+                        import('../../components/scripts/lc-header.js'),
+                        import('../../components/scripts/lc-footer.js'),
+                        import('../../components/scripts/lc-card.js')
                     ]);
                     console.log('✓ Component scripts loaded successfully');
 
