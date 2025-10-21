@@ -2,15 +2,16 @@
 
 This directory contains pre-built HTML page layout templates that can be used as starting points for creating new pages or as reference implementations for common page patterns.
 
-## =Á Available Layouts
+## Available Layouts
 
-### <à Homepage with Video Background
+### Homepage with Video Background
 
 **File:** `homepage-video.html`
 
 **Description:** Hero section with autoplay background video, ideal for engaging landing experiences.
 
 **Features:**
+
 - Full-screen video background
 - Overlay content area
 - Accessible video controls (muted, autoplay, loop)
@@ -18,6 +19,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 - Responsive design with mobile optimization
 
 **Use Cases:**
+
 - Homepage/landing page
 - Campaign pages
 - Product showcases
@@ -36,7 +38,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =Ä Subpage with Sidebar
+### Subpage with Sidebar
 
 **File:** `subpage-sidebar.html`
 
@@ -76,7 +78,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### <¨ Bentobox Grid
+### Bentobox Grid
 
 **File:** `bentobox-grid.html`
 
@@ -121,7 +123,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =ç Contact Page
+### Contact Page
 
 **File:** `contact.html`
 
@@ -165,7 +167,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =€ Splash/Landing Page
+### Splash/Landing Page
 
 **File:** `splash.html`
 
@@ -207,7 +209,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =ð Blog Gallery
+### Blog Gallery
 
 **File:** `blog-gallery.html`
 
@@ -248,7 +250,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-### =Ý Blog Post
+### Blog Post
 
 **File:** `blog-post.html`
 
@@ -299,7 +301,7 @@ This directory contains pre-built HTML page layout templates that can be used as
 
 ---
 
-## <¯ Using Layout Templates
+## Using Layout Templates
 
 ### 1. Copy Template
 
@@ -370,7 +372,7 @@ Include appropriate structured data for the page type:
 
 ---
 
-## <¨ Layout Customization
+## Layout Customization
 
 ### Modifying Layouts
 
@@ -425,7 +427,7 @@ All layouts include:
 -  Semantic HTML5 elements (`<header>`, `<main>`, `<article>`, `<aside>`)
 -  ARIA landmarks and roles
 -  Skip links for keyboard navigation
--  Proper heading hierarchy (h1 ’ h2 ’ h3)
+-  Proper heading hierarchy (h1 â†’ h2 â†’ h3)
 -  Focus indicators for interactive elements
 -  Alt text for images
 -  Form labels and ARIA attributes
@@ -447,7 +449,7 @@ npx @axe-core/cli pages/new-page/index.html
 
 ---
 
-## =ñ Responsive Design
+## Responsive Design
 
 All layouts are mobile-first and responsive:
 
@@ -459,7 +461,7 @@ All layouts are mobile-first and responsive:
 **Testing:**
 ```bash
 # Test in browser DevTools
-# Chrome: CMD + Option + I ’ Toggle device toolbar
+# Chrome: CMD + Option + I â†’ Toggle device toolbar
 
 # Test on actual devices
 # iOS Simulator (macOS)
@@ -477,7 +479,7 @@ All layouts are mobile-first and responsive:
 
 ---
 
-## =Ú Further Reading
+## Further Reading
 
 - [HTML5 Semantic Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)

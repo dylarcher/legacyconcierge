@@ -2,8 +2,7 @@
 
 This directory contains all translation files for the Legacy Concierge website's custom i18n (internationalization) system.
 
-## <
- Supported Languages
+## Supported Languages
 
 - **English (EN)** - `_locale/en/` - Primary language
 - **Spanish (ES)** - `_locale/es/` - Secondary language
@@ -15,6 +14,7 @@ Each language directory contains 14 JSON translation files covering all pages an
 ### Common Files
 
 **common.json** - Shared UI elements across all pages:
+
 - Navigation menu items
 - Footer content
 - Accessibility labels (skip links, ARIA labels)
@@ -96,7 +96,7 @@ Each page loads:
 // Loads: common.json + treatments-detail.json
 ```
 
-## =Ý Translation Key Structure
+## Translation Key Structure
 
 ### Simple Keys
 
@@ -458,7 +458,7 @@ find _locale -name "*.json" -exec node -e "require('{}')" \;
 - **scripts/language-switcher.js** - Language selection component (optional)
 - **.claude/CLAUDE.md** - Project documentation with i18n notes
 
-## =Ú Further Reading
+## Further Reading
 
 - [i18n Best Practices](https://www.w3.org/International/questions/qa-i18n)
 - [JSON Format Specification](https://www.json.org/)
