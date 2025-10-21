@@ -86,29 +86,39 @@ async function fetchTranslations(lang, page) {
   }
   try {
     // Determine the base path for locale files based on directory depth
-    let pathname = window.location.pathname;
+    const pathname = window.location.pathname;
 
-    // Strip GitHub Pages base path if present (e.g., /legacy-concierge/ or /repository-name/)
-    const basePathMatch = pathname.match(/^\/([^\/]+)\/?$/);
-    if (
-      basePathMatch &&
-      !pathname.includes("/pages/") &&
-      !pathname.includes(".html") &&
-      pathname !== "/"
-    ) {
-      // This looks like a base path (e.g., /legacy-concierge/)
-      // Strip it and treat as root
-      pathname = "/";
-    }
-
-    // Remove trailing slashes and split by /
+    // Detect GitHub Pages base path (e.g., /legacy-concierge/)
+    // by checking if the first path segment doesn't look like a page
     const pathParts = pathname
       .replace(/\/$/, "")
       .split("/")
       .filter((p) => p);
 
+    let githubPagesBase = "";
+    let adjustedPathParts = pathParts;
+
+    // If first segment is not 'pages' and not 'index.html', it might be a GitHub Pages base
+    if (
+      pathParts.length > 0 &&
+      pathParts[0] !== "pages" &&
+      pathParts[0] !== "index.html" &&
+      !pathParts[0].includes(".html")
+    ) {
+      // Check if this looks like a repository name (single segment or segment + index.html)
+      if (
+        pathParts.length === 1 ||
+        (pathParts.length === 2 && pathParts[1] === "index.html")
+      ) {
+        githubPagesBase = `/${pathParts[0]}`;
+        adjustedPathParts = pathParts.slice(1);
+      }
+    }
+
     // Remove 'index.html' if present to get the actual directory depth
-    const cleanParts = pathParts.filter((part) => part !== "index.html");
+    const cleanParts = adjustedPathParts.filter(
+      (part) => part !== "index.html",
+    );
 
     // Calculate depth based on directory structure
     // Root: [] → 0, pages/about: ['pages', 'about'] → 2, pages/treatments/views/post-op: ['pages', 'treatments', 'views', 'post-op'] → 4
@@ -117,10 +127,13 @@ async function fetchTranslations(lang, page) {
     // Build the correct relative path to _locale based on depth
     let localeBasePath;
     if (depth === 0) {
-      localeBasePath = "./_locale";
+      // At root - use GitHub Pages base if present
+      localeBasePath = githubPagesBase
+        ? `${githubPagesBase}/_locale`
+        : "./_locale";
     } else {
-      // Go up 'depth' directories, then into _locale
-      localeBasePath = `${"../".repeat(depth)}_locale`;
+      // In subdirectory - go up to root, then into _locale
+      localeBasePath = `${"../".repeat(depth)}${githubPagesBase ? githubPagesBase.slice(1) + "/" : ""}_locale`;
     }
 
     console.log(
@@ -280,18 +293,26 @@ async function applyTranslations() {
   const lang = document.documentElement.lang || "en";
   let path = window.location.pathname;
 
-  // Strip GitHub Pages base path if present (e.g., /legacy-concierge/ or /repository-name/)
-  // This ensures the app works both locally and on GitHub Pages
-  const basePathMatch = path.match(/^\/([^\/]+)\/?$/);
+  // Detect and strip GitHub Pages base path if present
+  const pathSegments = path
+    .replace(/\/$/, "")
+    .split("/")
+    .filter((p) => p);
+
+  // Check if first segment is a GitHub Pages base (not 'pages' or an HTML file)
   if (
-    basePathMatch &&
-    !path.includes("/pages/") &&
-    !path.includes(".html") &&
-    path !== "/"
+    pathSegments.length > 0 &&
+    pathSegments[0] !== "pages" &&
+    !pathSegments[0].includes(".html")
   ) {
-    // This looks like a base path (e.g., /legacy-concierge/)
-    // Strip it and treat as root
-    path = "/";
+    // If it's just the base path (e.g., /legacy-concierge/ or /legacy-concierge/index.html)
+    if (
+      pathSegments.length === 1 ||
+      (pathSegments.length === 2 && pathSegments[1] === "index.html")
+    ) {
+      // Strip the base path for page detection
+      path = "/" + pathSegments.slice(1).join("/");
+    }
   }
 
   const pathParts = path
