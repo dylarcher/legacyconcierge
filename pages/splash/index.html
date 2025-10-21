@@ -24,40 +24,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body class="splash-page" itemscope itemtype="http://schema.org/WebPage">
   <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
 
   <!-- Minimal Header for Splash Page -->
-  <header role="banner" class="splash-header">
-    <div class="container">
-      <nav role="navigation" aria-label="Main Navigation" class="splash-nav">
-        <div class="logo" itemscope itemtype="http://schema.org/Organization">
-          <a href="/" itemprop="url">
-            <span itemprop="name" data-i18n="splash.header.logo"></span>
-          </a>
-        </div>
-        <ul class="splash-nav-links">
-          <li><a href="/pages/about" data-i18n="splash.header.about"></a></li>
-          <li><a href="/pages/contact" data-i18n="splash.header.contact"></a></li>
-          <li>
-            <button class="theme-toggle" data-i18n-attr="aria-label:accessibility.toggleTheme">
-              <span class="icon icon-light" data-i18n="theme.light"></span>
-              <span class="icon icon-dark" data-i18n="theme.dark"></span>
-            </button>
-          </li>
-          <li>
-            <button class="language-toggle" data-i18n-attr="aria-label:accessibility.switchLanguage">
-              <span data-i18n="language.current"></span>
-              <span>→</span>
-              <span data-i18n="language.switch"></span>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- Header Component -->
+        <lc-header></lc-header>
 
   <main role="main" id="main">
     <!-- Hero Section -->
@@ -139,14 +113,60 @@
     </section>
   </main>
 
-  <footer role="contentinfo" class="splash-footer">
-    <div class="container">
-      <p data-i18n="splash.footer.copyright"></p>
-    </div>
-  </footer>
+  <!-- Footer Component -->
+        <lc-footer></lc-footer>
 
-  <script src="../../scripts/theme.js"></script>
-  <script src="../../scripts/app.js"></script>
-  <script src="../../scripts/i18n.js"></script>
-</body>
+  <script src="/scripts/theme.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup theme toggle (now that component has rendered)
+                    if (window.setupThemeToggle) {
+                        window.setupThemeToggle();
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
 </html>

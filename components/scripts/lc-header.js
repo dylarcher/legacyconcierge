@@ -43,12 +43,12 @@ class LCHeader extends HTMLElement {
         // Apply variant if specified
         const variant = getAttributeOr(this, 'variant', 'default');
         if (variant !== 'default') {
-            this.header.classList.add(`header-${variant}`);
+            this.header?.classList.add(`header-${variant}`);
         }
 
         // Check if solid header (no hero section)
         if (this.hasAttribute('solid')) {
-            this.header.classList.add('solid-header');
+            this.header?.classList.add('solid-header');
         }
     }
 
@@ -62,25 +62,25 @@ class LCHeader extends HTMLElement {
 
         // Mobile menu toggle
         this.navToggle.addEventListener('click', () => {
-            const isOpen = this.mainNav.classList.toggle('open');
-            this.navToggle.classList.toggle('open');
+            const isOpen = this.mainNav?.classList.toggle('open');
+            this.navToggle?.classList.toggle('open');
             this.navToggle.setAttribute('aria-expanded', isOpen);
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (event) => {
-            if (!nav.contains(event.target) && this.mainNav.classList.contains('open')) {
-                this.mainNav.classList.remove('open');
-                this.navToggle.classList.remove('open');
+            if (!nav.contains(event.target) && this.mainNav?.classList.contains('open')) {
+                this.mainNav?.classList.remove('open');
+                this.navToggle?.classList.remove('open');
                 this.navToggle.setAttribute('aria-expanded', 'false');
             }
         });
 
         // Close menu on Escape key
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && this.mainNav.classList.contains('open')) {
-                this.mainNav.classList.remove('open');
-                this.navToggle.classList.remove('open');
+            if (event.key === 'Escape' && this.mainNav?.classList.contains('open')) {
+                this.mainNav?.classList.remove('open');
+                this.navToggle?.classList.remove('open');
                 this.navToggle.setAttribute('aria-expanded', 'false');
                 this.navToggle.focus();
             }
@@ -214,7 +214,7 @@ class LCHeader extends HTMLElement {
                     const viewportWidth = window.innerWidth;
 
                     if (submenuRect.right > viewportWidth) {
-                        submenu.classList.add('opens-left');
+                        submenu?.classList.add('opens-left');
                     }
                 }
             });
@@ -222,7 +222,7 @@ class LCHeader extends HTMLElement {
             li.addEventListener('mouseleave', function() {
                 const submenu = this.querySelector('.dropdown-submenu');
                 if (submenu) {
-                    submenu.classList.remove('opens-left');
+                    submenu?.classList.remove('opens-left');
                 }
             });
         }
@@ -236,9 +236,9 @@ class LCHeader extends HTMLElement {
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                this.header.classList.add('scrolled');
+                this.header?.classList.add('scrolled');
             } else {
-                this.header.classList.remove('scrolled');
+                this.header?.classList.remove('scrolled');
             }
         });
     }

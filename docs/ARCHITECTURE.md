@@ -139,7 +139,7 @@ class LCCard extends HTMLElement {
 
         // Add variant classes
         const variant = this.getAttribute('variant');
-        if (variant) this.classList.add(`card-${variant}`);
+        if (variant) this?.classList.add(`card-${variant}`);
 
         // Apply data attributes, event listeners, etc.
     }

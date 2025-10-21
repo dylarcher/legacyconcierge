@@ -447,7 +447,7 @@
                 a.textContent = heading.textContent;
 
                 if (heading.tagName === 'H3') {
-                    a.classList.add('toc-h3');
+                    a?.classList.add('toc-h3');
                 }
 
                 li.appendChild(a);
@@ -468,9 +468,9 @@
                 for (const entry of entries) {
                     if (entry.isIntersecting) {
                         const id = entry.target.id;
-                        tocLinks.forEach(link => link.classList.remove('active'));
+                        tocLinks.forEach(link => link?.classList.remove('active'));
                         const activeLink = document.querySelector(`.toc-list a[href="#${id}"]`);
-                        activeLink?.classList.add('active');
+                        activeLink??.classList.add('active');
                     }
                 }
             }, {

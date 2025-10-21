@@ -457,7 +457,7 @@ a:hover {
 
 .testimonial-card .title {
     font-size: 0.9rem;
-    color: #a0c5c7; /* Lighter blue-grey for better contrast on dark background */
+    color: var(--accent-secondary); /* Blue-grey that adapts to light/dark mode */
     margin-top: 0.25rem;
 }
 

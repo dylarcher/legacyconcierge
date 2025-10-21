@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="expertise-detail.alzheimers.title">Alzheimer's Care - Legacy Concierge</title>
+    <meta name="description" data-i18n="expertise-detail.alzheimers.subtitle" content="Personalized care, personalized solutions.">
+    <link rel="canonical" href="https://www.legacyconcierge.com/expertise/alzheimers.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.legacyconcierge.com/expertise/alzheimers.html">
+    <meta property="og:title" content="Alzheimer's Care - Legacy Concierge">
+    <meta property="og:description" content="Personalized care, personalized solutions.">
+    <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/alzheimers.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.legacyconcierge.com/expertise/alzheimers.html">
+    <meta property="twitter:title" content="Alzheimer's Care - Legacy Concierge">
+    <meta property="twitter:description" content="Personalized care, personalized solutions.">
+    <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/alzheimers.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+        <lc-header></lc-header>
+
+    <main role="main" id="main">
+        <section class="container page-content">
+            <h1 itemprop="name" data-i18n="expertise-detail.alzheimers.title">Alzheimer's Care</h1>
+            <p class="page-subtitle" itemprop="description" data-i18n="expertise-detail.alzheimers.subtitle">Personalized care, personalized solutions.</p>
+
+            <div class="service-details" itemprop="mainContentOfPage">
+                <div class="service-image">
+                    <img src="/assets/images/alzheimers.jpg" alt="Compassionate Alzheimer's care at home.">
+                </div>
+                <div class="service-description">
+                    <h2 itemprop="headline" data-i18n="expertise-detail.alzheimers.h2">Expert Care for Alzheimer's Challenges</h2>
+                    <p data-i18n="expertise-detail.alzheimers.text">Our elite caregivers, chosen for their unwavering dedication, provide personalized care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for Alzheimer's challenges. We ensure every need is met with warmth and precision, creating a supportive environment that brings comfort and peace of mind.</p>
+                    <ul data-i18n="expertise-detail.alzheimers.features">
+                        <li><strong>Memory-Centered Activities:</strong> Our caregivers create tailored activities to spark memory, reduce confusion, and encourage connection.</li>
+                        <li><strong>Emotional and Social Support:</strong> We offer gentle companionship, customized to your loved one's preferences, to help them feel valued and included.</li>
+                        <li><strong>Safety and Supervision:</strong> Our trusted caregivers ensure safe home environments, protecting against risks like falls or wandering.</li>
+                        <li><strong>Assistance with Daily Living:</strong> As Alzheimer's progresses, our team provides gentle, tailored help with tasks like bathing, dressing, and mobility.</li>
+                        <li><strong>Medication Management:</strong> Our reliable team handles medications with meticulous care, ensuring they're given correctly and monitored for safety.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+        <lc-footer></lc-footer>
+
+    <script src="../../../../scripts/theme.js"></script>
+    <script src="../../../../scripts/app.js"></script>
+    <script src="../../../../scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="treatments-detail.cardiac-pulmonary.title">Cardiac & Pulmonary Oversight - Legacy Concierge</title>
+    <meta name="description" data-i18n="treatments-detail.cardiac-pulmonary.subtitle" content="Crafted for your vitality, with exceptional heart and lung care.">
+    <link rel="canonical" href="https://www.legacyconcierge.com/treatments/cardiac-pulmonary.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.legacyconcierge.com/treatments/cardiac-pulmonary.html">
+    <meta property="og:title" content="Cardiac & Pulmonary Oversight - Legacy Concierge">
+    <meta property="og:description" content="Crafted for your vitality, with exceptional heart and lung care.">
+    <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/cardiac-pulmonary.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.legacyconcierge.com/treatments/cardiac-pulmonary.html">
+    <meta property="twitter:title" content="Cardiac & Pulmonary Oversight - Legacy Concierge">
+    <meta property="twitter:description" content="Crafted for your vitality, with exceptional heart and lung care.">
+    <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/cardiac-pulmonary.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+        <lc-header></lc-header>
+
+    <main role="main" id="main">
+        <section class="container page-content">
+            <h1 itemprop="name" data-i18n="treatments-detail.cardiac-pulmonary.title">Cardiac & Pulmonary Oversight</h1>
+            <p class="page-subtitle" itemprop="description" data-i18n="treatments-detail.cardiac-pulmonary.subtitle">Crafted for your vitality, with exceptional heart and lung care.</p>
+
+            <div class="service-details" itemprop="mainContentOfPage">
+                <div class="service-image">
+                    <img src="/assets/images/cardiac-pulmonary.jpg" alt="Professional cardiac and pulmonary oversight at home.">
+                </div>
+                <div class="service-description">
+                    <h2 itemprop="headline" data-i18n="treatments-detail.cardiac-pulmonary.h2">Exceptional Heart & Lung Care at Home</h2>
+                    <p data-i18n="treatments-detail.cardiac-pulmonary.text">Managing cardiopulmonary conditions requires more than medical oversight—it demands compassionate, world-class support tailored to your life. Our elite concierge nurses deliver nuanced cardiopulmonary care that strengthens your well-being and nurtures your longevity with precision.</p>
+                    <ul data-i18n="treatments-detail.cardiac-pulmonary.features">
+                        <li><strong>Vital Signs & Health Monitoring:</strong> Our nurses regularly assess vital signs to monitor cardiopulmonary function and detect early signs of deterioration.</li>
+                        <li><strong>Medication Management:</strong> We ensure adherence to prescribed medications, monitor for side effects, and coordinate with physicians for adjustments.</li>
+                        <li><strong>Symptom Management:</strong> Our team helps manage symptoms like chest pain, shortness of breath, and fatigue, implementing tailored care plans.</li>
+                        <li><strong>Post-Procedure Care:</strong> We provide in-home care after cardiopulmonary procedures to prevent readmissions.</li>
+                        <li><strong>Lifestyle & Wellness Coaching:</strong> Our nurses guide you on heart- and lung-healthy habits, including diet, exercise, and stress reduction.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+        <lc-footer></lc-footer>
+
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>

@@ -31,7 +31,7 @@ class LCCard extends HTMLElement {
         // Add variant class
         const card = this.querySelector('.card');
         if (card && variant !== 'base') {
-            card.classList.add(`card-${variant}`);
+            card?.classList.add(`card-${variant}`);
         }
 
         // Handle clickable cards
@@ -42,7 +42,7 @@ class LCCard extends HTMLElement {
         // Handle elevation
         const elevation = getAttributeOr(this, 'elevation', null);
         if (elevation && card) {
-            card.classList.add(`elevation-${elevation}`);
+            card?.classList.add(`elevation-${elevation}`);
         }
 
         // Handle animations
@@ -87,12 +87,12 @@ class LCCard extends HTMLElement {
         const card = this.querySelector('.card');
         if (!card) return;
 
-        card.classList.add('fade-in');
+        card?.classList.add('fade-in');
 
         const observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target?.classList.add('visible');
                     observer.unobserve(entry.target);
                 }
             }

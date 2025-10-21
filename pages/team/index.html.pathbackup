@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Legacy Concierge Leadership</title>
+    <meta name="description" content="Meet the experienced and compassionate leadership team at Legacy Concierge, dedicated to delivering exceptional, personalized in-home care.">
+    <link rel="canonical" href="https://www.legacyconcierge.com/team.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.legacyconcierge.com/team.html">
+    <meta property="og:title" content="Our Team - Legacy Concierge Leadership">
+    <meta property="og:description" content="Meet the experienced and compassionate leadership team at Legacy Concierge, dedicated to delivering exceptional, personalized in-home care.">
+    <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/hero-nurse.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.legacyconcierge.com/team.html">
+    <meta property="twitter:title" content="Our Team - Legacy Concierge Leadership">
+    <meta property="twitter:description" content="Meet the experienced and compassionate leadership team at Legacy Concierge, dedicated to delivering exceptional, personalized in-home care.">
+    <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/hero-nurse.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/AboutPage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+        <lc-header></lc-header>
+
+    <section class="container page-content fade-in" itemprop="mainContentOfPage">
+        <h1 itemprop="name" data-i18n="team.title"></h1>
+        <p class="page-subtitle" itemprop="description" data-i18n="team.subtitle"></p>
+        <div class="team-grid">
+            <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/images/IMG_5385-1-e1753971154576.jpg" alt="Jason Kidushim" itemprop="image">
+                <h4 itemprop="name" data-i18n="team.members[0].name"></h4>
+                <h5 itemprop="jobTitle" data-i18n="team.members[0].title"></h5>
+                <p itemprop="description" data-i18n="team.members[0].bio"></p>
+            </div>
+            <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/images/Zehra.jpg" alt="Zehra Dhanani" itemprop="image">
+                <h4 itemprop="name" data-i18n="team.members[1].name"></h4>
+                <h5 itemprop="jobTitle" data-i18n="team.members[1].title"></h5>
+                <p itemprop="description" data-i18n="team.members[1].bio"></p>
+            </div>
+            <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/images/Dave.jpg" alt="David Kidushim" itemprop="image">
+                <h4 itemprop="name" data-i18n="team.members[2].name"></h4>
+                <h5 itemprop="jobTitle" data-i18n="team.members[2].title"></h5>
+                <p itemprop="description" data-i18n="team.members[2].bio"></p>
+            </div>
+            <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/images/Sarah.jpg" alt="Sarah Brodbeck" itemprop="image">
+                <h4 itemprop="name" data-i18n="team.members[3].name"></h4>
+                <h5 itemprop="jobTitle" data-i18n="team.members[3].title"></h5>
+                <p itemprop="description" data-i18n="team.members[3].bio"></p>
+            </div>
+            <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/images/Elie.jpg" alt="Elie Castillo" itemprop="image">
+                <h4 itemprop="name" data-i18n="team.members[4].name"></h4>
+                <h5 itemprop="jobTitle" data-i18n="team.members[4].title"></h5>
+                <p itemprop="description" data-i18n="team.members[4].bio"></p>
+            </div>
+            <div class="team-member-card" itemprop="employee" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/images/Cassie.jpg" alt="Cassie Leger" itemprop="image">
+                <h4 itemprop="name" data-i18n="team.members[5].name"></h4>
+                <h5 itemprop="jobTitle" data-i18n="team.members[5].title"></h5>
+                <p itemprop="description" data-i18n="team.members[5].bio"></p>
+            </div>
+        </div>
+    </section>
+
+    <main role="main" id="main">
+    </main>
+
+    <!-- Footer Component -->
+        <lc-footer></lc-footer>
+
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/app.js"></script>
+    <script src="../../scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>

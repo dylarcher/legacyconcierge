@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Check if this is a subpage (no hero section) and apply solid header
 	const heroSection = document.querySelector("#hero");
 	if (!heroSection && header) {
-		header.classList.add("solid-header");
+		header?.classList.add("solid-header");
 	}
 
 	// Mobile navigation toggle
@@ -20,25 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	if (navToggle && navMenu) {
 		navToggle.addEventListener("click", () => {
-			const isOpen = navMenu.classList.toggle("open");
-			navToggle.classList.toggle("open");
+			const isOpen = navMenu?.classList.toggle("open");
+			navToggle?.classList.toggle("open");
 			navToggle.setAttribute("aria-expanded", isOpen);
 		});
 
 		// Close menu when clicking outside
 		document.addEventListener("click", (event) => {
-			if (!nav.contains(event.target) && navMenu.classList.contains("open")) {
-				navMenu.classList.remove("open");
-				navToggle.classList.remove("open");
+			if (!nav.contains(event.target) && navMenu?.classList.contains("open")) {
+				navMenu?.classList.remove("open");
+				navToggle?.classList.remove("open");
 				navToggle.setAttribute("aria-expanded", "false");
 			}
 		});
 
 		// Close menu on Escape key
 		document.addEventListener("keydown", (event) => {
-			if (event.key === "Escape" && navMenu.classList.contains("open")) {
-				navMenu.classList.remove("open");
-				navToggle.classList.remove("open");
+			if (event.key === "Escape" && navMenu?.classList.contains("open")) {
+				navMenu?.classList.remove("open");
+				navToggle?.classList.remove("open");
 				navToggle.setAttribute("aria-expanded", "false");
 				navToggle.focus();
 			}
@@ -48,9 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Header scroll effect
 	window.addEventListener("scroll", () => {
 		if (window.scrollY > 50) {
-			header.classList.add("scrolled");
+			header?.classList.add("scrolled");
 		} else {
-			header.classList.remove("scrolled");
+			header?.classList.remove("scrolled");
 		}
 	});
 
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(entries => {
         for (const entry of entries) {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target?.classList.add('visible');
                 observer.unobserve(entry.target);
             }
         }
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const viewportWidth = window.innerWidth;
 
                 if (submenuRect.right > viewportWidth) {
-                    submenu.classList.add('opens-left');
+                    submenu?.classList.add('opens-left');
                 }
             }
         });
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         li.addEventListener('mouseleave', function() {
             const submenu = this.querySelector('.dropdown-submenu');
             if (submenu) {
-                submenu.classList.remove('opens-left');
+                submenu?.classList.remove('opens-left');
             }
         });
     }

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essential Tips for Post-Operative Home Care - Legacy Concierge</title>
+  <meta name="description" content="Recovering from surgery at home requires careful attention and proper care. Learn the essential tips to ensure a smooth and safe recovery process.">
+  <link rel="canonical" href="https://www.legacyconcierge.com/pages/blog/posts/post-op-care">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.legacyconcierge.com/pages/blog/posts/post-op-care">
+  <meta property="og:title" content="Essential Tips for Post-Operative Home Care">
+  <meta property="og:description" content="Recovering from surgery at home requires careful attention and proper care. Learn the essential tips to ensure a smooth and safe recovery process.">
+  <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/blog/post-op-care.jpg">
+  <meta property="article:published_time" content="2025-10-19">
+  <meta property="article:author" content="Dr. Sarah Johnson">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.legacyconcierge.com/pages/blog/posts/post-op-care">
+  <meta property="twitter:title" content="Essential Tips for Post-Operative Home Care">
+  <meta property="twitter:description" content="Recovering from surgery at home requires careful attention and proper care. Learn the essential tips to ensure a smooth and safe recovery process.">
+  <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/blog/post-op-care.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/BlogPosting">
+  <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+  <!-- Header Component -->
+        <lc-header></lc-header>
+
+  <main role="main" id="main">
+    <article class="blog-post">
+      <div class="container">
+        <div class="post-layout">
+          <!-- Main Content -->
+          <div class="post-content">
+            <!-- Post Header -->
+            <!-- Header Component -->
+        <lc-header></lc-header>
+
+            <!-- Featured Image -->
+            <figure class="post-image">
+              <img src="/assets/images/post-op-recovery.jpg" alt="Post-operative care" itemprop="image">
+              <figcaption data-i18n="blog.post.imageCaption"></figcaption>
+            </figure>
+
+            <!-- Post Body -->
+            <div class="post-body" itemprop="articleBody">
+              <p class="lead" data-i18n="blog.post.content.intro"></p>
+
+              <h2 id="understanding" data-i18n="blog.post.content.section1.title"></h2>
+              <p data-i18n="blog.post.content.section1.p1"></p>
+
+              <h3 data-i18n="blog.post.content.section1.subsection1.title"></h3>
+              <ul>
+                <li data-i18n="blog.post.content.section1.subsection1.list[0]"></li>
+                <li data-i18n="blog.post.content.section1.subsection1.list[1]"></li>
+                <li data-i18n="blog.post.content.section1.subsection1.list[2]"></li>
+                <li data-i18n="blog.post.content.section1.subsection1.list[3]"></li>
+                <li data-i18n="blog.post.content.section1.subsection1.list[4]"></li>
+              </ul>
+
+              <h2 id="pain-management" data-i18n="blog.post.content.section2.title"></h2>
+              <p data-i18n="blog.post.content.section2.p1"></p>
+
+              <blockquote class="post-quote">
+                <p data-i18n="blog.post.content.section2.quote"></p>
+              </blockquote>
+
+              <h2 id="when-to-contact" data-i18n="blog.post.content.section3.title"></h2>
+              <p data-i18n="blog.post.content.section3.p1"></p>
+
+              <ul class="warning-list">
+                <li data-i18n="blog.post.content.section3.list[0]"></li>
+                <li data-i18n="blog.post.content.section3.list[1]"></li>
+                <li data-i18n="blog.post.content.section3.list[2]"></li>
+                <li data-i18n="blog.post.content.section3.list[3]"></li>
+                <li data-i18n="blog.post.content.section3.list[4]"></li>
+              </ul>
+            </div>
+
+            <!-- Post Footer -->
+            <!-- Footer Component -->
+        <lc-footer></lc-footer>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="post-sidebar">
+            <!-- Table of Contents -->
+            <div class="sidebar-widget sticky">
+              <h3 data-i18n="blog.sidebar.toc.title"></h3>
+              <nav class="toc" aria-label="Table of contents">
+                <ul>
+                  <li><a href="#understanding" data-i18n="blog.post.content.section1.title"></a></li>
+                  <li><a href="#pain-management" data-i18n="blog.post.content.section2.title"></a></li>
+                  <li><a href="#when-to-contact" data-i18n="blog.post.content.section3.title"></a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="sidebar-widget">
+              <h3 data-i18n="blog.sidebar.related.title"></h3>
+              <div class="related-posts">
+                <article class="related-post">
+                  <h4 data-i18n="blog.sidebar.related.posts[0].title"></h4>
+                  <p data-i18n="blog.sidebar.related.posts[0].excerpt"></p>
+                </article>
+                <article class="related-post">
+                  <h4 data-i18n="blog.sidebar.related.posts[1].title"></h4>
+                  <p data-i18n="blog.sidebar.related.posts[1].excerpt"></p>
+                </article>
+                <article class="related-post">
+                  <h4 data-i18n="blog.sidebar.related.posts[2].title"></h4>
+                  <p data-i18n="blog.sidebar.related.posts[2].excerpt"></p>
+                </article>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="sidebar-widget cta-widget">
+              <h3 data-i18n="blog.sidebar.cta.title"></h3>
+              <p data-i18n="blog.sidebar.cta.description"></p>
+              <a href="/pages/contact" class="btn btn-primary btn-block" data-i18n="blog.sidebar.cta.button"></a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer Component -->
+        <lc-footer></lc-footer>
+  <script src="/scripts/theme.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>

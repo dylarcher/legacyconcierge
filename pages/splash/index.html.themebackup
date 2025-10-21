@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legacy Concierge - Compassionate Care at Home</title>
+  <meta name="description" content="Experience the highest level of personalized medical care in the comfort and dignity of your own home. 24/7 expert nursing services.">
+  <link rel="canonical" href="https://www.legacyconcierge.com/pages/splash">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.legacyconcierge.com/pages/splash">
+  <meta property="og:title" content="Legacy Concierge - Compassionate Care at Home">
+  <meta property="og:description" content="Experience the highest level of personalized medical care in the comfort and dignity of your own home. 24/7 expert nursing services.">
+  <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/hero-nurse.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.legacyconcierge.com/pages/splash">
+  <meta property="twitter:title" content="Legacy Concierge - Compassionate Care at Home">
+  <meta property="twitter:description" content="Experience the highest level of personalized medical care in the comfort and dignity of your own home. 24/7 expert nursing services.">
+  <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/hero-nurse.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="splash-page" itemscope itemtype="http://schema.org/WebPage">
+  <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+  <!-- Minimal Header for Splash Page -->
+  <!-- Header Component -->
+        <lc-header></lc-header>
+
+  <main role="main" id="main">
+    <!-- Hero Section -->
+    <section class="splash-hero" itemprop="mainContentOfPage">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-logo" itemscope itemtype="http://schema.org/Organization">
+            <h1 itemprop="name" data-i18n="splash.hero.logo"></h1>
+          </div>
+          <h2 class="hero-title" itemprop="headline" data-i18n="splash.hero.title"></h2>
+          <p class="hero-tagline" data-i18n="splash.hero.tagline"></p>
+          <p class="hero-description" itemprop="description" data-i18n="splash.hero.description"></p>
+
+          <div class="hero-actions">
+            <a href="/pages/contact" class="btn btn-primary btn-large" data-i18n="splash.hero.cta.primary"></a>
+            <a href="/" class="btn btn-secondary btn-large" data-i18n="splash.hero.cta.secondary"></a>
+          </div>
+
+          <div class="hero-scroll">
+            <a href="#features" data-i18n="splash.hero.scroll" aria-label="Scroll to features"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="splash-features">
+      <div class="container">
+        <h2 data-i18n="splash.features.title"></h2>
+        <p class="section-subtitle" data-i18n="splash.features.subtitle"></p>
+
+        <div class="features-grid">
+          <div class="feature-card" itemscope itemtype="http://schema.org/Service">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <h3 itemprop="name" data-i18n="splash.features.items[0].title"></h3>
+            <p itemprop="description" data-i18n="splash.features.items[0].description"></p>
+          </div>
+
+          <div class="feature-card" itemscope itemtype="http://schema.org/Service">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 itemprop="name" data-i18n="splash.features.items[1].title"></h3>
+            <p itemprop="description" data-i18n="splash.features.items[1].description"></p>
+          </div>
+
+          <div class="feature-card" itemscope itemtype="http://schema.org/Service">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 itemprop="name" data-i18n="splash.features.items[2].title"></h3>
+            <p itemprop="description" data-i18n="splash.features.items[2].description"></p>
+          </div>
+
+          <div class="feature-card" itemscope itemtype="http://schema.org/Service">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3 itemprop="name" data-i18n="splash.features.items[3].title"></h3>
+            <p itemprop="description" data-i18n="splash.features.items[3].description"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+        <lc-footer></lc-footer>
+
+  <script src="/scripts/theme.js"></script>
+  <script src="/scripts/app.js"></script>
+  <script src="/scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>

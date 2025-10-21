@@ -217,8 +217,8 @@
                     const filter = btn.getAttribute('data-filter');
 
                     // Update active state
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+                    filterBtns.forEach(b => b?.classList.remove('active'));
+                    btn?.classList.add('active');
 
                     // Filter cards
                     cards.forEach(card => {

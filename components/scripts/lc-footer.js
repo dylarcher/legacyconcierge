@@ -32,7 +32,7 @@ class LCFooter extends HTMLElement {
         const footer = this.querySelector('footer');
 
         if (footer && variant !== 'default') {
-            footer.classList.add(`footer-${variant}`);
+            footer?.classList.add(`footer-${variant}`);
         }
 
         // Update copyright year dynamically
