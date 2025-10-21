@@ -2,66 +2,66 @@
   "blog": {
     "gallery": {
       "title": "Consejos de Salud y Cuidado",
-      "subtitle": "Consejos y asesoramiento experto de nuestros profesionales de enfermer°a",
+      "subtitle": "Consejos y asesoramiento experto de nuestros profesionales de enfermería",
       "sidebar": {
         "search": {
           "title": "Buscar",
-          "placeholder": "Buscar art°culos..."
+          "placeholder": "Buscar artículos..."
         },
         "categories": {
-          "title": "Categor°as",
-          "all": "Todos los Art°culos",
+          "title": "Categorías",
+          "all": "Todos los Artículos",
           "health": "Consejos de Salud",
           "postOp": "Cuidado Postoperatorio",
-          "chronic": "Condiciones Cr°nicas",
+          "chronic": "Condiciones Crónicas",
           "family": "Cuidado Familiar"
         },
         "tags": {
           "title": "Etiquetas Populares",
           "items": [
-            "Recuperaci°n",
-            "Enfermer°a",
+            "Recuperación",
+            "Enfermería",
             "Cuidado en el Hogar",
             "Manejo del Dolor",
-            "Nutrici°n",
+            "Nutrición",
             "Cuidado de Ancianos",
-            "Medicaci°n",
+            "Medicación",
             "Bienestar"
           ]
         }
       },
       "sort": {
-        "recent": "M°s Recientes",
-        "popular": "M°s Populares",
-        "oldest": "M°s Antiguos Primero"
+        "recent": "Más Recientes",
+        "popular": "Más Populares",
+        "oldest": "Más Antiguos Primero"
       },
       "featured": {
-        "badge": "Art°culo Destacado",
+        "badge": "Artículo Destacado",
         "title": "Consejos Esenciales para el Cuidado Postoperatorio en Casa",
         "date": "19 de octubre de 2025",
         "readingTime": "5 min de lectura",
-        "excerpt": "Recuperarse de una cirug°a en casa requiere atenci°n cuidadosa y cuidado adecuado. Aprenda los consejos esenciales para garantizar un proceso de recuperaci°n suave y seguro.",
-        "cta": "Leer Art°culo"
+        "excerpt": "Recuperarse de una cirugía en casa requiere atención cuidadosa y cuidado adecuado. Aprenda los consejos esenciales para garantizar un proceso de recuperación suave y seguro.",
+        "cta": "Leer Artículo"
       },
       "posts": [
         {
           "category": "Consejos de Salud",
-          "title": "Manejo del Dolor Cr°nico en Casa",
+          "title": "Manejo del Dolor Crónico en Casa",
           "excerpt": "Estrategias efectivas para el manejo del dolor a largo plazo y la mejora de la calidad de vida.",
           "date": "15 de oct",
           "readingTime": "4 min"
         },
         {
           "category": "Cuidado Postoperatorio",
-          "title": "Nutrici°n para una Recuperaci°n M°s R°pida",
-          "excerpt": "Alimentos que promueven la curaci°n y ayudan a recuperarse m°s r°pido de la cirug°a.",
+          "title": "Nutrición para una Recuperación Más Rápida",
+          "excerpt": "Alimentos que promueven la curación y ayudan a recuperarse más rápido de la cirugía.",
           "date": "12 de oct",
           "readingTime": "6 min"
         },
         {
           "category": "Cuidado Familiar",
-          "title": "Gu°a para Cuidadores Familiares",
-          "excerpt": "Apoyando a los seres queridos durante la recuperaci°n: consejos para miembros de la familia que brindan cuidado.",
+          "title": "Guía para Cuidadores Familiares",
+          "excerpt": "Apoyando a los seres queridos durante la recuperación: consejos para miembros de la familia que brindan cuidado.",
           "date": "8 de oct",
           "readingTime": "7 min"
         }
@@ -72,23 +72,23 @@
       "date": "19 de octubre de 2025",
       "author": "Dra. Sarah Johnson",
       "title": "Consejos Esenciales para el Cuidado Postoperatorio en Casa",
-      "excerpt": "Recuperarse de una cirug°a en casa requiere atenci°n cuidadosa y cuidado adecuado. Aprenda los consejos esenciales para garantizar un proceso de recuperaci°n suave y seguro.",
+      "excerpt": "Recuperarse de una cirugía en casa requiere atención cuidadosa y cuidado adecuado. Aprenda los consejos esenciales para garantizar un proceso de recuperación suave y seguro.",
       "imageCaption": "Enfermera profesional brindando cuidado postoperatorio en casa",
       "authorBio": {
         "name": "Dra. Sarah Johnson",
-        "title": "Directora de Enfermer°a | M°s de 15 a°os de experiencia"
+        "title": "Directora de Enfermería | Más de 15 años de experiencia"
       },
       "content": {
-        "intro": "Recuperarse de una cirug°a es un per°odo cr°tico que requiere cuidado y atenci°n adecuados. Ya sea que haya tenido un procedimiento menor o una cirug°a mayor, la calidad de su cuidado postoperatorio puede afectar significativamente su cronograma de recuperaci°n y el resultado general.",
+        "intro": "Recuperarse de una cirugía es un período crítico que requiere cuidado y atención adecuados. Ya sea que haya tenido un procedimiento menor o una cirugía mayor, la calidad de su cuidado postoperatorio puede afectar significativamente su cronograma de recuperación y el resultado general.",
         "section1": {
           "title": "Comprender el Cuidado Postoperatorio",
-          "p1": "El cuidado postoperatorio comienza en el momento en que sale del hospital o centro quir°rgico. Esta fase es crucial para prevenir complicaciones y garantizar una curaci°n adecuada.",
+          "p1": "El cuidado postoperatorio comienza en el momento en que sale del hospital o centro quirúrgico. Esta fase es crucial para prevenir complicaciones y garantizar una curación adecuada.",
           "subsection1": {
-            "title": "Factores Clave de Recuperaci°n",
+            "title": "Factores Clave de Recuperación",
             "list": [
-              "Seguir los horarios de medicaci°n",
+              "Seguir los horarios de medicación",
               "Cuidado adecuado de heridas e higiene",
-              "Descanso y nutrici°n adecuados",
+              "Descanso y nutrición adecuados",
               "Aumento gradual de actividad",
               "Monitoreo regular de signos vitales"
             ]
@@ -96,16 +96,16 @@
         },
         "section2": {
           "title": "Manejo del Dolor en Casa",
-          "p1": "Manejar el dolor de manera efectiva es esencial para una recuperaci°n c°moda. Trabaje en estrecha colaboraci°n con su proveedor de atenci°n m°dica para desarrollar un plan de manejo del dolor que funcione para usted.",
+          "p1": "Manejar el dolor de manera efectiva es esencial para una recuperación cómoda. Trabaje en estrecha colaboración con su proveedor de atención médica para desarrollar un plan de manejo del dolor que funcione para usted.",
           "quote": "El manejo adecuado del dolor no se trata solo de comodidad, permite a los pacientes participar en actividades necesarias como caminar y respirar profundamente, que son cruciales para prevenir complicaciones. - Dra. Sarah Johnson"
         },
         "section3": {
-          "title": "Cu°ndo Contactar a Su Proveedor de Atenci°n M°dica",
-          "p1": "Saber cu°ndo buscar atenci°n m°dica es crucial. Comun°quese con su proveedor de atenci°n m°dica de inmediato si experimenta alguno de estos s°ntomas:",
+          "title": "Cuándo Contactar a Su Proveedor de Atención Médica",
+          "p1": "Saber cuándo buscar atención médica es crucial. Comuníquese con su proveedor de atención médica de inmediato si experimenta alguno de estos síntomas:",
           "list": [
             "Fiebre superior a 100.4°F (38°C)",
-            "Aumento del dolor que no se alivia con medicaci°n",
-            "Enrojecimiento, hinchaz°n o drenaje de la incisi°n",
+            "Aumento del dolor que no se alivia con medicación",
+            "Enrojecimiento, hinchazón o drenaje de la incisión",
             "Dificultad para respirar o dolor en el pecho",
             "Sangrado inusual"
           ]
@@ -113,12 +113,12 @@
       },
       "tags": [
         "Cuidado Postoperatorio",
-        "Recuperaci°n",
+        "Recuperación",
         "Cuidado en el Hogar",
-        "Enfermer°a"
+        "Enfermería"
       ],
       "share": {
-        "title": "Compartir este art°culo"
+        "title": "Compartir este artículo"
       }
     },
     "sidebar": {
@@ -126,26 +126,26 @@
         "title": "Tabla de Contenidos"
       },
       "related": {
-        "title": "Art°culos Relacionados",
+        "title": "Artículos Relacionados",
         "posts": [
           {
-            "title": "Manejo del Dolor Cr°nico en Casa",
+            "title": "Manejo del Dolor Crónico en Casa",
             "excerpt": "Estrategias efectivas para el manejo del dolor a largo plazo"
           },
           {
-            "title": "Nutrici°n para la Recuperaci°n",
-            "excerpt": "Alimentos que promueven la curaci°n y la fuerza"
+            "title": "Nutrición para la Recuperación",
+            "excerpt": "Alimentos que promueven la curación y la fuerza"
           },
           {
-            "title": "Gu°a para Cuidadores Familiares",
-            "excerpt": "Apoyando a los seres queridos durante la recuperaci°n"
+            "title": "Guía para Cuidadores Familiares",
+            "excerpt": "Apoyando a los seres queridos durante la recuperación"
           }
         ]
       },
       "cta": {
-        "title": "°Necesita Atenci°n Profesional?",
-        "description": "Nuestras enfermeras expertas est°n disponibles las 24 horas del d°a, los 7 d°as de la semana para brindar atenci°n postoperatoria en el hogar.",
-        "button": "Cont°ctenos"
+        "title": "¿Necesita Atención Profesional?",
+        "description": "Nuestras enfermeras expertas están disponibles las 24 horas del día, los 7 días de la semana para brindar atención postoperatoria en el hogar.",
+        "button": "Contáctenos"
       }
     }
   }
