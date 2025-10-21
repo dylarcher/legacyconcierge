@@ -9,7 +9,7 @@ exclude:
   - "**/*.backup"
   - "**/*.pathbackup"
   - "**/*.themebackup"
-  - scripts/
+  - "scripts/*.py"
   - "*.py"
   - node_modules/
   - vendor/
@@ -30,6 +30,7 @@ include:
   - docs/
   - assets/
   - styles/
+  - scripts/
   - components/
 
 # Markdown settings
