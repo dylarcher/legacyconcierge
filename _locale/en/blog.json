@@ -97,13 +97,13 @@
         "section2": {
           "title": "Pain Management at Home",
           "p1": "Managing pain effectively is essential for a comfortable recovery. Work closely with your healthcare provider to develop a pain management plan that works for you.",
-          "quote": "Proper pain management isn't just about comfortit allows patients to participate in necessary activities like walking and deep breathing, which are crucial for preventing complications. - Dr. Sarah Johnson"
+          "quote": "Proper pain management isn't just about comfortâ€”it allows patients to participate in necessary activities like walking and deep breathing, which are crucial for preventing complications. - Dr. Sarah Johnson"
         },
         "section3": {
           "title": "When to Contact Your Healthcare Provider",
           "p1": "Knowing when to seek medical attention is crucial. Contact your healthcare provider immediately if you experience any of these symptoms:",
           "list": [
-            "Fever above 100.4°F (38°C)",
+            "Fever above 100.4Â°F (38Â°C)",
             "Increasing pain not relieved by medication",
             "Redness, swelling, or drainage from incision",
             "Shortness of breath or chest pain",
@@ -111,12 +111,7 @@
           ]
         }
       },
-      "tags": [
-        "Post-Op Care",
-        "Recovery",
-        "Home Care",
-        "Nursing"
-      ],
+      "tags": ["Post-Op Care", "Recovery", "Home Care", "Nursing"],
       "share": {
         "title": "Share this article"
       }

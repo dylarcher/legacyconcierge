@@ -4,75 +4,81 @@
  */
 
 class I18nUpdater {
-    constructor() {
-        this.commonElements = {
-            navigation: {
-                'a[href="../index.html"]:contains("Home")': 'navigation.home',
-                'a[href="../about.html"]:contains("About")': 'navigation.about', 
-                'a[href="../treatments.html"]:contains("Services")': 'navigation.services',
-                'a[href="../team.html"]:contains("Team")': 'navigation.team',
-                'a[href="../contact.html"]:contains("Contact")': 'navigation.contact'
-            },
-            footer: {
-                'p:contains("Legacy Concierge. All Rights Reserved")': 'footer.copyright'
-            }
-        };
-    }
+  constructor() {
+    this.commonElements = {
+      navigation: {
+        'a[href="../index.html"]:contains("Home")': "navigation.home",
+        'a[href="../about.html"]:contains("About")': "navigation.about",
+        'a[href="../treatments.html"]:contains("Services")':
+          "navigation.services",
+        'a[href="../team.html"]:contains("Team")': "navigation.team",
+        'a[href="../contact.html"]:contains("Contact")': "navigation.contact",
+      },
+      footer: {
+        'p:contains("Legacy Concierge. All Rights Reserved")':
+          "footer.copyright",
+      },
+    };
+  }
 
-    /**
-     * Generate i18n attributes for treatment detail pages
-     */
-    generateTreatmentPageAttributes(treatmentKey) {
-        return {
-            title: `${treatmentKey}.title`,
-            subtitle: `${treatmentKey}.subtitle`,
-            h2: `${treatmentKey}.h2`,
-            text: `${treatmentKey}.text`,
-            features: `${treatmentKey}.features`,
-            alt: `${treatmentKey}.alt`
-        };
-    }
+  /**
+   * Generate i18n attributes for treatment detail pages
+   */
+  generateTreatmentPageAttributes(treatmentKey) {
+    return {
+      title: `${treatmentKey}.title`,
+      subtitle: `${treatmentKey}.subtitle`,
+      h2: `${treatmentKey}.h2`,
+      text: `${treatmentKey}.text`,
+      features: `${treatmentKey}.features`,
+      alt: `${treatmentKey}.alt`,
+    };
+  }
 
-    /**
-     * Generate i18n attributes for expertise detail pages
-     */
-    generateExpertisePageAttributes(expertiseKey) {
-        return {
-            title: `${expertiseKey}.title`,
-            subtitle: `${expertiseKey}.subtitle`,
-            h2: `${expertiseKey}.h2`,
-            text: `${expertiseKey}.text`,
-            features: `${expertiseKey}.features`,
-            alt: `${expertiseKey}.alt`
-        };
-    }
+  /**
+   * Generate i18n attributes for expertise detail pages
+   */
+  generateExpertisePageAttributes(expertiseKey) {
+    return {
+      title: `${expertiseKey}.title`,
+      subtitle: `${expertiseKey}.subtitle`,
+      h2: `${expertiseKey}.h2`,
+      text: `${expertiseKey}.text`,
+      features: `${expertiseKey}.features`,
+      alt: `${expertiseKey}.alt`,
+    };
+  }
 
-    /**
-     * Get the treatment/expertise keys from the JSON files
-     */
-    async loadAvailableKeys() {
-        try {
-            const treatmentResponse = await fetch('../_locale/en/treatments-detail.json');
-            const expertiseResponse = await fetch('../_locale/en/expertise-detail.json');
-            
-            const treatments = await treatmentResponse.json();
-            const expertise = await expertiseResponse.json();
-            
-            return {
-                treatments: Object.keys(treatments),
-                expertise: Object.keys(expertise)
-            };
-        } catch (error) {
-            console.error('Error loading translation keys:', error);
-            return { treatments: [], expertise: [] };
-        }
-    }
+  /**
+   * Get the treatment/expertise keys from the JSON files
+   */
+  async loadAvailableKeys() {
+    try {
+      const treatmentResponse = await fetch(
+        "../_locale/en/treatments-detail.json",
+      );
+      const expertiseResponse = await fetch(
+        "../_locale/en/expertise-detail.json",
+      );
 
-    /**
-     * Instructions for manual HTML updates
-     */
-    getUpdateInstructions() {
-        return `
+      const treatments = await treatmentResponse.json();
+      const expertise = await expertiseResponse.json();
+
+      return {
+        treatments: Object.keys(treatments),
+        expertise: Object.keys(expertise),
+      };
+    } catch (error) {
+      console.error("Error loading translation keys:", error);
+      return { treatments: [], expertise: [] };
+    }
+  }
+
+  /**
+   * Instructions for manual HTML updates
+   */
+  getUpdateInstructions() {
+    return `
 ## I18n Integration Instructions
 
 ### For Treatment Pages (treatments/*.html):
@@ -108,15 +114,15 @@ Use the page-specific JSON file keys (e.g., "home", "about", "contact", etc.)
 ### Available Translation Keys:
 Check the _locale/en/ directory for available JSON files and their structure.
         `;
-    }
+  }
 }
 
 // Export for use in browser console or other scripts
-if (typeof window !== 'undefined') {
-    window.I18nUpdater = I18nUpdater;
+if (typeof window !== "undefined") {
+  window.I18nUpdater = I18nUpdater;
 }
 
 // For Node.js environments
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = I18nUpdater;
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = I18nUpdater;
 }
