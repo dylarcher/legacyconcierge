@@ -32,7 +32,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
         rel="stylesheet"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
     <body itemscope itemtype="http://schema.org/WebPage">
@@ -102,7 +102,7 @@
                     </ul>
                 </div>
                 <div class="pinnacle-image">
-                    <img src="/assets/images/hero-nurse.jpg" alt="A compassionate Legacy Concierge nurse.">
+                    <img src="assets/images/hero-nurse.jpg" alt="A compassionate Legacy Concierge nurse.">
                 </div>
             </section>
 
@@ -179,13 +179,13 @@
         <lc-footer></lc-footer>
 
         <!-- Existing Scripts -->
-        <script src="/scripts/theme.js"></script>
-        <script src="/scripts/app.js"></script>
-        <script src="/scripts/i18n.js"></script>
+        <script src="scripts/theme.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/i18n.js"></script>
 
         <!-- Component System -->
         <script type="module">
-            import { loadTemplates } from '/scripts/core/component-loader.js';
+            import { loadTemplates } from './scripts/core/component-loader.js';
 
             // Load templates and initialize components
             (async () => {
@@ -196,9 +196,9 @@
 
                     // Import component scripts
                     await Promise.all([
-                        import('/components/scripts/lc-header.js'),
-                        import('/components/scripts/lc-footer.js'),
-                        import('/components/scripts/lc-card.js')
+                        import('./components/scripts/lc-header.js'),
+                        import('./components/scripts/lc-footer.js'),
+                        import('./components/scripts/lc-card.js')
                     ]);
                     console.log('✓ Component scripts loaded successfully');
 

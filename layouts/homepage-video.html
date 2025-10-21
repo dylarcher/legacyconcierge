@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage with Video Background - Legacy Concierge</title>
 
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/layouts/homepage.css">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/layouts/homepage.css">
 
     <style>
         /* Homepage Video Layout Styles */
@@ -101,7 +101,7 @@
     </style>
 
     <script type="module">
-        import { initializeComponents } from '/scripts/core/component-loader.js';
+        import { initializeComponents } from '../../scripts/core/component-loader.js';
 
         document.addEventListener('DOMContentLoaded', async () => {
             await initializeComponents(['navigation']);
@@ -130,8 +130,8 @@
         });
     </script>
 
-    <script src="/scripts/theme.js"></script>
-    <script src="/scripts/i18n.js"></script>
+    <script src="../../scripts/theme.js"></script>
+    <script src="../../scripts/i18n.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -144,10 +144,10 @@
     <!-- Hero Section with Background Video -->
     <section class="hero-video">
         <video autoplay muted loop playsinline preload="auto">
-            <source src="/assets/videos/hero-nursing-care.mp4" type="video/mp4">
-            <source src="/assets/videos/hero-nursing-care.webm" type="video/webm">
+            <source src="../../assets/videos/hero-nursing-care.mp4" type="video/mp4">
+            <source src="../../assets/videos/hero-nursing-care.webm" type="video/webm">
             <!-- Fallback image -->
-            <img src="/assets/images/hero-fallback.jpg" alt="Compassionate nursing care">
+            <img src="../../assets/images/hero-fallback.jpg" alt="Compassionate nursing care">
         </video>
 
         <div class="hero-content">

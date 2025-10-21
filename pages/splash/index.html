@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="../../styles/style.css">
 </head>
 <body class="splash-page" itemscope itemtype="http://schema.org/WebPage">
   <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
@@ -116,13 +116,13 @@
   <!-- Footer Component -->
         <lc-footer></lc-footer>
 
-  <script src="/scripts/theme.js"></script>
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/i18n.js"></script>
+  <script src="../../scripts/theme.js"></script>
+  <script src="../../scripts/app.js"></script>
+  <script src="../../scripts/i18n.js"></script>
 
         <!-- Component System -->
         <script type="module">
-            import { loadTemplates } from '/scripts/core/component-loader.js';
+            import { loadTemplates } from '../../scripts/core/component-loader.js';
 
             // Load templates and initialize components
             (async () => {
@@ -133,9 +133,9 @@
 
                     // Import component scripts
                     await Promise.all([
-                        import('/components/scripts/lc-header.js'),
-                        import('/components/scripts/lc-footer.js'),
-                        import('/components/scripts/lc-card.js')
+                        import('../../components/scripts/lc-header.js'),
+                        import('../../components/scripts/lc-footer.js'),
+                        import('../../components/scripts/lc-card.js')
                     ]);
                     console.log('✓ Component scripts loaded successfully');
 
