@@ -10,6 +10,16 @@
 const templateCache = new Map();
 
 /**
+ * Validates that a component name is safe to use in paths.
+ * Only allows letters, numbers, underscores, and dashes.
+ * @param {string} name - Component name to validate
+ * @returns {boolean}
+ */
+function isValidComponentName(name) {
+    return /^[a-zA-Z0-9_-]+$/.test(name);
+}
+
+/**
  * Load a template from the templates directory
  * @param {string} name - Template name (without .html extension)
  * @returns {Promise<boolean>} True if template loaded successfully
@@ -82,17 +92,24 @@ function cloneTemplate(templateId) {
  * @returns {Promise<void>}
  */
 async function initializeComponent(componentName) {
+  // Validate component name before using
+  if (!isValidComponentName(componentName)) {
+    // Sanitize: remove control characters and limit length
+    const safeName = String(componentName).replace(/[\x00-\x1F\x7F]/g, '?').slice(0, 50);
+    console.warn(`Invalid component name: ${safeName}`);
+    return;
+  }
   // Load template first
   await loadTemplate(componentName);
 
   // Check if script exists and load it
   try {
     const scriptPath = `/components/scripts/lc-${componentName}.js`;
-    const script = document.createElement("script");
-    script.type = "module";
+    const script = document.createElement('script');
+    script.type = 'module';
     script.src = scriptPath;
 
-    return new Promise((resolve, _reject) => {
+    return new Promise((resolve, reject) => {
       script.onload = () => {
         console.log(`✓ Component initialized: ${componentName}`);
         resolve();
