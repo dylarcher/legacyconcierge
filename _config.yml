@@ -1,0 +1,53 @@
+# Jekyll Configuration for Legacy Concierge
+# This configuration is for GitHub Pages deployment
+
+# Exclude files and directories from being processed by Jekyll
+exclude:
+  - "*.backup"
+  - "*.pathbackup"
+  - "*.themebackup"
+  - "**/*.backup"
+  - "**/*.pathbackup"
+  - "**/*.themebackup"
+  - scripts/
+  - "*.py"
+  - node_modules/
+  - vendor/
+  - .git/
+  - .github/
+  - README.md
+  - biome.json
+  - package.json
+  - package-lock.json
+  - .gitignore
+  - .gitattributes
+  - audit-report.json
+
+# Include specific directories that should be processed
+include:
+  - _locale/
+  - pages/
+  - docs/
+  - assets/
+  - styles/
+  - components/
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# GitHub Pages specific settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-relative-links
+
+# Relative links configuration
+relative_links:
+  enabled: true
+  collections: false
+
+# Encoding to ensure UTF-8
+encoding: utf-8
