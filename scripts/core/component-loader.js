@@ -4,6 +4,28 @@
  */
 
 /**
+ * Calculate the base path relative to the root based on current page location
+ * @returns {string} Base path (e.g., '', '../../', '../../../../')
+ */
+function getBasePath() {
+  const path = window.location.pathname;
+  // Remove trailing index.html or trailing slash
+  const cleanPath = path.replace(/\/index\.html$/, "").replace(/\/$/, "");
+  // Count directory depth (excluding empty segments)
+  const segments = cleanPath.split("/").filter((s) => s.length > 0);
+
+  // If we're at root or index.html, no base path needed
+  if (segments.length === 0 || segments.length === 1) {
+    return "";
+  }
+
+  // Calculate relative path back to root
+  // Subtract 1 because we don't need to go up from the filename itself
+  const depth = segments.length - 1;
+  return "../".repeat(depth);
+}
+
+/**
  * Template cache to avoid re-fetching
  * @type {Map<string, string>}
  */
@@ -16,7 +38,7 @@ const templateCache = new Map();
  * @returns {boolean}
  */
 function isValidComponentName(name) {
-    return /^[a-zA-Z0-9_-]+$/.test(name);
+  return /^[a-zA-Z0-9_-]+$/.test(name);
 }
 
 /**
@@ -31,7 +53,8 @@ async function loadTemplate(name) {
   }
 
   try {
-    const response = await fetch(`/components/templates/${name}.html`);
+    const basePath = getBasePath();
+    const response = await fetch(`${basePath}components/templates/${name}.html`);
     if (!response.ok) {
       throw new Error(`Template ${name} not found: ${response.status}`);
     }
@@ -95,7 +118,9 @@ async function initializeComponent(componentName) {
   // Validate component name before using
   if (!isValidComponentName(componentName)) {
     // Sanitize: remove control characters and limit length
-    const safeName = String(componentName).replace(/[\x00-\x1F\x7F]/g, '?').slice(0, 50);
+    const safeName = String(componentName)
+      .replace(/[\x00-\x1F\x7F]/g, "?")
+      .slice(0, 50);
     console.warn(`Invalid component name: ${safeName}`);
     return;
   }
@@ -104,9 +129,10 @@ async function initializeComponent(componentName) {
 
   // Check if script exists and load it
   try {
-    const scriptPath = `/components/scripts/lc-${componentName}.js`;
-    const script = document.createElement('script');
-    script.type = 'module';
+    const basePath = getBasePath();
+    const scriptPath = `${basePath}components/scripts/lc-${componentName}.js`;
+    const script = document.createElement("script");
+    script.type = "module";
     script.src = scriptPath;
 
     return new Promise((resolve, reject) => {
