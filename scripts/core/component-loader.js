@@ -94,7 +94,9 @@ function cloneTemplate(templateId) {
 async function initializeComponent(componentName) {
     // Validate component name before using
     if (!isValidComponentName(componentName)) {
-        console.warn(`Invalid component name: ${componentName}`);
+        // Sanitize: remove control characters and limit length
+        const safeName = String(componentName).replace(/[\x00-\x1F\x7F]/g, '?').slice(0, 50);
+        console.warn(`Invalid component name: ${safeName}`);
         return;
     }
     // Load template first
