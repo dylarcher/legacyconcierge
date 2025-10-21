@@ -10,15 +10,15 @@
  * @returns {Function} Debounced function
  */
 function debounce(func, wait = 300) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
     };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
 }
 
 /**
@@ -28,14 +28,16 @@ function debounce(func, wait = 300) {
  * @returns {Function} Throttled function
  */
 function throttle(func, limit = 300) {
-    let inThrottle;
-    return function executedFunction(...args) {
-        if (!inThrottle) {
-            func(...args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    };
+  let inThrottle;
+  return function executedFunction(...args) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => {
+        inThrottle = false;
+      }, limit);
+    }
+  };
 }
 
 /**
@@ -44,17 +46,22 @@ function throttle(func, limit = 300) {
  * @returns {string} Relative path
  */
 function getRelativePath(targetPath) {
-    const pathname = window.location.pathname;
-    const pathParts = pathname.replace(/\/$/, '').split('/').filter(p => p && p !== 'index.html');
-    const depth = pathParts.length;
+  const pathname = window.location.pathname;
+  const pathParts = pathname
+    .replace(/\/$/, "")
+    .split("/")
+    .filter((p) => p && p !== "index.html");
+  const depth = pathParts.length;
 
-    if (depth === 0) {
-        return targetPath.startsWith('/') ? targetPath.substring(1) : targetPath;
-    }
+  if (depth === 0) {
+    return targetPath.startsWith("/") ? targetPath.substring(1) : targetPath;
+  }
 
-    const prefix = '../'.repeat(depth);
-    const cleanTarget = targetPath.startsWith('/') ? targetPath.substring(1) : targetPath;
-    return prefix + cleanTarget;
+  const prefix = "../".repeat(depth);
+  const cleanTarget = targetPath.startsWith("/")
+    ? targetPath.substring(1)
+    : targetPath;
+  return prefix + cleanTarget;
 }
 
 /**
@@ -65,7 +72,7 @@ function getRelativePath(targetPath) {
  * @returns {*} Attribute value or default
  */
 function getAttributeOr(element, attr, defaultValue = null) {
-    return element.hasAttribute(attr) ? element.getAttribute(attr) : defaultValue;
+  return element.hasAttribute(attr) ? element.getAttribute(attr) : defaultValue;
 }
 
 /**
@@ -75,9 +82,9 @@ function getAttributeOr(element, attr, defaultValue = null) {
  * @returns {boolean} True if attribute exists and is not "false"
  */
 function getBooleanAttribute(element, attr) {
-    if (!element.hasAttribute(attr)) return false;
-    const value = element.getAttribute(attr);
-    return value !== 'false' && value !== '0';
+  if (!element.hasAttribute(attr)) return false;
+  const value = element.getAttribute(attr);
+  return value !== "false" && value !== "0";
 }
 
 /**
@@ -87,12 +94,12 @@ function getBooleanAttribute(element, attr) {
  * @returns {*} Parsed object or default value
  */
 function safeJSONParse(jsonString, defaultValue = null) {
-    try {
-        return JSON.parse(jsonString);
-    } catch (e) {
-        console.warn('Failed to parse JSON:', e);
-        return defaultValue;
-    }
+  try {
+    return JSON.parse(jsonString);
+  } catch (e) {
+    console.warn("Failed to parse JSON:", e);
+    return defaultValue;
+  }
 }
 
 /**
@@ -103,13 +110,19 @@ function safeJSONParse(jsonString, defaultValue = null) {
  * @param {boolean} bubbles - Whether event bubbles
  * @param {boolean} cancelable - Whether event is cancelable
  */
-function dispatchEvent(element, eventName, detail = {}, bubbles = true, cancelable = true) {
-    const event = new CustomEvent(eventName, {
-        detail,
-        bubbles,
-        cancelable
-    });
-    element.dispatchEvent(event);
+function dispatchEvent(
+  element,
+  eventName,
+  detail = {},
+  bubbles = true,
+  cancelable = true,
+) {
+  const event = new CustomEvent(eventName, {
+    detail,
+    bubbles,
+    cancelable,
+  });
+  element.dispatchEvent(event);
 }
 
 /**
@@ -119,13 +132,15 @@ function dispatchEvent(element, eventName, detail = {}, bubbles = true, cancelab
  * @returns {boolean} True if element is in viewport
  */
 function isInViewport(element, offset = 0) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= -offset &&
-        rect.left >= -offset &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + offset &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) + offset
-    );
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= -offset &&
+    rect.left >= -offset &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) + offset &&
+    rect.right <=
+      (window.innerWidth || document.documentElement.clientWidth) + offset
+  );
 }
 
 /**
@@ -134,9 +149,9 @@ function isInViewport(element, offset = 0) {
  * @returns {string} Sanitized HTML
  */
 function sanitizeHTML(html) {
-    const div = document.createElement('div');
-    div.textContent = html;
-    return div.innerHTML;
+  const div = document.createElement("div");
+  div.textContent = html;
+  return div.innerHTML;
 }
 
 /**
@@ -146,14 +161,14 @@ function sanitizeHTML(html) {
  * @returns {string} Formatted date string
  */
 function formatDate(date, locale = null) {
-    const dateObj = date instanceof Date ? date : new Date(date);
-    const lang = locale || document.documentElement.lang || 'en';
+  const dateObj = date instanceof Date ? date : new Date(date);
+  const lang = locale || document.documentElement.lang || "en";
 
-    return new Intl.DateTimeFormat(lang, {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    }).format(dateObj);
+  return new Intl.DateTimeFormat(lang, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }).format(dateObj);
 }
 
 /**
@@ -161,8 +176,8 @@ function formatDate(date, locale = null) {
  * @param {string} prefix - Prefix for ID
  * @returns {string} Unique ID
  */
-function generateId(prefix = 'lc') {
-    return `${prefix}-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+function generateId(prefix = "lc") {
+  return `${prefix}-${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
 }
 
 /**
@@ -170,7 +185,7 @@ function generateId(prefix = 'lc') {
  * @returns {boolean} True if prefers reduced motion
  */
 function prefersReducedMotion() {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 /**
@@ -178,7 +193,7 @@ function prefersReducedMotion() {
  * @returns {string} Current theme ('light' or 'dark')
  */
 function getCurrentTheme() {
-    return document.documentElement.getAttribute('data-theme') || 'light';
+  return document.documentElement.getAttribute("data-theme") || "light";
 }
 
 /**
@@ -187,11 +202,30 @@ function getCurrentTheme() {
  * @returns {Object} Cloned object
  */
 function deepClone(obj) {
-    return JSON.parse(JSON.stringify(obj));
+  return JSON.parse(JSON.stringify(obj));
 }
 
 // Export functions
 export {
+  debounce,
+  throttle,
+  getRelativePath,
+  getAttributeOr,
+  getBooleanAttribute,
+  safeJSONParse,
+  dispatchEvent,
+  isInViewport,
+  sanitizeHTML,
+  formatDate,
+  generateId,
+  prefersReducedMotion,
+  getCurrentTheme,
+  deepClone,
+};
+
+// Also expose globally
+if (typeof window !== "undefined") {
+  window.LCHelpers = {
     debounce,
     throttle,
     getRelativePath,
@@ -205,25 +239,6 @@ export {
     generateId,
     prefersReducedMotion,
     getCurrentTheme,
-    deepClone
-};
-
-// Also expose globally
-if (typeof window !== 'undefined') {
-    window.LCHelpers = {
-        debounce,
-        throttle,
-        getRelativePath,
-        getAttributeOr,
-        getBooleanAttribute,
-        safeJSONParse,
-        dispatchEvent,
-        isInViewport,
-        sanitizeHTML,
-        formatDate,
-        generateId,
-        prefersReducedMotion,
-        getCurrentTheme,
-        deepClone
-    };
+    deepClone,
+  };
 }

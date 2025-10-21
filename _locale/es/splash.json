@@ -8,33 +8,33 @@
     "hero": {
       "logo": "Legacy Concierge",
       "title": "Cuidado Compasivo,<br>Donde Usted Llama Hogar",
-      "tagline": "Servicios de enfermería en el hogar de primera clase para quienes más importan",
-      "description": "Experimente el más alto nivel de atención médica personalizada en la comodidad y dignidad de su propio hogar. Nuestro equipo de enfermeras expertas brinda apoyo las 24 horas del día, los 7 días de la semana, adaptado a sus necesidades únicas.",
+      "tagline": "Servicios de enfermerÂ°a en el hogar de primera clase para quienes mÂ°s importan",
+      "description": "Experimente el mÂ°s alto nivel de atenciÂ°n mÂ°dica personalizada en la comodidad y dignidad de su propio hogar. Nuestro equipo de enfermeras expertas brinda apoyo las 24 horas del dÂ°a, los 7 dÂ°as de la semana, adaptado a sus necesidades Â°nicas.",
       "cta": {
         "primary": "Comience Hoy",
-        "secondary": "Aprende Más"
+        "secondary": "Aprende MÂ°s"
       },
       "scroll": "Explorar"
     },
     "features": {
-      "title": "¿Por Qué Elegir Legacy Concierge?",
-      "subtitle": "Brindamos atención incomparable con compasión, experiencia y dedicación",
+      "title": "Â°Por QuÂ° Elegir Legacy Concierge?",
+      "subtitle": "Brindamos atenciÂ°n incomparable con compasiÂ°n, experiencia y dedicaciÂ°n",
       "items": [
         {
-          "title": "Atención Experta",
-          "description": "Enfermeras con licencia y experiencia que brindan atención de calidad hospitalaria en el hogar"
+          "title": "AtenciÂ°n Experta",
+          "description": "Enfermeras con licencia y experiencia que brindan atenciÂ°n de calidad hospitalaria en el hogar"
         },
         {
           "title": "Disponibilidad 24/7",
-          "description": "Apoyo las 24 horas cuando lo necesite, día o noche"
+          "description": "Apoyo las 24 horas cuando lo necesite, dÂ°a o noche"
         },
         {
           "title": "Cuidado Personalizado",
-          "description": "Planes de atención personalizados diseñados específicamente para sus necesidades únicas"
+          "description": "Planes de atenciÂ°n personalizados diseÂ°ados especÂ°ficamente para sus necesidades Â°nicas"
         },
         {
           "title": "Comodidad del Hogar",
-          "description": "Reciba atención en la comodidad, privacidad y dignidad de su propio hogar"
+          "description": "Reciba atenciÂ°n en la comodidad, privacidad y dignidad de su propio hogar"
         }
       ]
     },

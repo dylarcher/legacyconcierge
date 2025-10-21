@@ -27,7 +27,9 @@
   function handleVideoError(error) {
     console.log("Video error:", error);
     videoBackground?.classList.add("no-video");
-    announceToScreenReader("Background video unavailable. Displaying static image fallback.");
+    announceToScreenReader(
+      "Background video unavailable. Displaying static image fallback.",
+    );
   }
 
   /**
@@ -35,12 +37,16 @@
    */
   function initializeVideo() {
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     if (prefersReducedMotion) {
       video.pause();
       videoBackground?.classList.add("no-video");
-      announceToScreenReader("Video playback disabled due to motion sensitivity preferences.");
+      announceToScreenReader(
+        "Video playback disabled due to motion sensitivity preferences.",
+      );
       return;
     }
 
@@ -60,7 +66,9 @@
   video.addEventListener("suspend", () => {
     if (video.currentTime === 0) {
       videoBackground?.classList.add("no-video");
-      announceToScreenReader("Background video suspended. Displaying fallback image.");
+      announceToScreenReader(
+        "Background video suspended. Displaying fallback image.",
+      );
     }
   });
 
@@ -73,12 +81,16 @@
   });
 
   // Listen for changes to motion preferences
-  const motionMediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const motionMediaQuery = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
   motionMediaQuery.addEventListener("change", (e) => {
     if (e.matches) {
       video.pause();
       videoBackground?.classList.add("no-video");
-      announceToScreenReader("Video playback paused due to motion sensitivity preferences.");
+      announceToScreenReader(
+        "Video playback paused due to motion sensitivity preferences.",
+      );
     } else {
       video.play().catch(handleVideoError);
       announceToScreenReader("Video playback resumed.");
@@ -116,6 +128,8 @@
 
   // Announce page ready to screen readers
   window.addEventListener("load", () => {
-    announceToScreenReader("Page loaded. Background video is decorative and can be paused with the Space or P key.");
+    announceToScreenReader(
+      "Page loaded. Background video is decorative and can be paused with the Space or P key.",
+    );
   });
 })();

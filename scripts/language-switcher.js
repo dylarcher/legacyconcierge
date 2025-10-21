@@ -4,57 +4,64 @@
  */
 
 class LanguageSwitcher {
-    constructor(container) {
-        this.container = typeof container === 'string' ? document.querySelector(container) : container;
-        this.supportedLanguages = [
-            { code: 'en', name: 'English', flag: '🇺🇸' },
-            { code: 'es', name: 'Español', flag: '🇪🇸' }
-        ];
-        this.currentLanguage = document.documentElement.lang || 'en';
-        this.init();
-    }
+  constructor(container) {
+    this.container =
+      typeof container === "string"
+        ? document.querySelector(container)
+        : container;
+    this.supportedLanguages = [
+      { code: "en", name: "English", flag: "🇺🇸" },
+      { code: "es", name: "Español", flag: "🇪🇸" },
+    ];
+    this.currentLanguage = document.documentElement.lang || "en";
+    this.init();
+  }
 
-    init() {
-        if (!this.container) {
-            console.error('Language switcher container not found');
-            return;
-        }
-        this.render();
-        this.bindEvents();
+  init() {
+    if (!this.container) {
+      console.error("Language switcher container not found");
+      return;
     }
+    this.render();
+    this.bindEvents();
+  }
 
-    render() {
-        const dropdown = document.createElement('div');
-        dropdown.className = 'language-switcher';
-        dropdown.innerHTML = `
+  render() {
+    const dropdown = document.createElement("div");
+    dropdown.className = "language-switcher";
+    dropdown.innerHTML = `
             <div class="language-current" role="button" tabindex="0" aria-label="Language selector">
                 <span class="flag">${this.getCurrentLanguage().flag}</span>
                 <span class="name">${this.getCurrentLanguage().name}</span>
                 <span class="arrow">▼</span>
             </div>
             <ul class="language-options" role="menu">
-                ${this.supportedLanguages.map(lang => `
+                ${this.supportedLanguages
+                  .map(
+                    (lang) => `
                     <li role="menuitem" 
                         data-lang="${lang.code}" 
-                        class="${lang.code === this.currentLanguage ? 'active' : ''}"
+                        class="${lang.code === this.currentLanguage ? "active" : ""}"
                         tabindex="0">
                         <span class="flag">${lang.flag}</span>
                         <span class="name">${lang.name}</span>
                     </li>
-                `).join('')}
+                `,
+                  )
+                  .join("")}
             </ul>
         `;
 
-        this.container.appendChild(dropdown);
-        this.addStyles();
-    }
+    this.container.appendChild(dropdown);
+    this.addStyles();
+  }
 
-    addStyles() {
-        if (document.getElementById('language-switcher-styles')) return;
+  addStyles() {
+    if (document.getElementById("language-switcher-styles")) return;
 
-        const styles = document.createElement('style');
-        styles.id = 'language-switcher-styles';
-        styles.textContent = `
+    const styles = document.createElement("style");
+    styles.id = "language-switcher-styles";
+    styles.textContent = `
             .language-switcher {
                 position: relative;
                 display: inline-block;
@@ -155,103 +162,109 @@ class LanguageSwitcher {
             }
         `;
 
-        document.head.appendChild(styles);
-    }
+    document.head.appendChild(styles);
+  }
 
-    bindEvents() {
-        const current = this.container.querySelector('.language-current');
-        const options = this.container.querySelector('.language-options');
-        const switcher = this.container.querySelector('.language-switcher');
+  bindEvents() {
+    const current = this.container.querySelector(".language-current");
+    const options = this.container.querySelector(".language-options");
+    const switcher = this.container.querySelector(".language-switcher");
 
-        // Toggle dropdown
-        current.addEventListener('click', () => {
-            switcher?.classList.toggle('open');
-        });
+    // Toggle dropdown
+    current.addEventListener("click", () => {
+      switcher?.classList.toggle("open");
+    });
 
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!switcher.contains(e.target)) {
-                switcher?.classList.remove('open');
-            }
-        });
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!switcher.contains(e.target)) {
+        switcher?.classList.remove("open");
+      }
+    });
 
-        // Handle language selection
-        options.addEventListener('click', (e) => {
-            const li = e.target.closest('li[data-lang]');
-            if (li) {
-                const newLang = li.dataset.lang;
-                this.switchLanguage(newLang);
-                switcher?.classList.remove('open');
-            }
-        });
+    // Handle language selection
+    options.addEventListener("click", (e) => {
+      const li = e.target.closest("li[data-lang]");
+      if (li) {
+        const newLang = li.dataset.lang;
+        this.switchLanguage(newLang);
+        switcher?.classList.remove("open");
+      }
+    });
 
-        // Keyboard navigation
-        current.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                switcher?.classList.toggle('open');
-            }
-        });
+    // Keyboard navigation
+    current.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        switcher?.classList.toggle("open");
+      }
+    });
 
-        options.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                const li = e.target.closest('li[data-lang]');
-                if (li) {
-                    e.preventDefault();
-                    const newLang = li.dataset.lang;
-                    this.switchLanguage(newLang);
-                    switcher?.classList.remove('open');
-                }
-            }
-        });
-    }
-
-    getCurrentLanguage() {
-        return this.supportedLanguages.find(lang => lang.code === this.currentLanguage) || this.supportedLanguages[0];
-    }
-
-    switchLanguage(langCode) {
-        if (langCode === this.currentLanguage) return;
-
-        this.currentLanguage = langCode;
-        document.documentElement.lang = langCode;
-
-        // Store language preference
-        try {
-            localStorage.setItem('preferred-language', langCode);
-        } catch (e) {
-            console.warn('Could not save language preference:', e);
+    options.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        const li = e.target.closest("li[data-lang]");
+        if (li) {
+          e.preventDefault();
+          const newLang = li.dataset.lang;
+          this.switchLanguage(newLang);
+          switcher?.classList.remove("open");
         }
+      }
+    });
+  }
 
-        // Update current language display
-        const current = this.container.querySelector('.language-current');
-        const newLang = this.getCurrentLanguage();
-        current.querySelector('.flag').textContent = newLang.flag;
-        current.querySelector('.name').textContent = newLang.name;
+  getCurrentLanguage() {
+    return (
+      this.supportedLanguages.find(
+        (lang) => lang.code === this.currentLanguage,
+      ) || this.supportedLanguages[0]
+    );
+  }
 
-        // Update active state
-        for (const li of this.container.querySelectorAll('.language-options li')) {
-            li?.classList.toggle('active', li.dataset.lang === langCode);
-        }
+  switchLanguage(langCode) {
+    if (langCode === this.currentLanguage) return;
 
-        // Trigger translation reload if i18n system is available
-        if (window.applyTranslations) {
-            window.applyTranslations();
-        }
+    this.currentLanguage = langCode;
+    document.documentElement.lang = langCode;
 
-        // Fire custom event for other components to listen to
-        window.dispatchEvent(new CustomEvent('languageChanged', {
-            detail: { language: langCode }
-        }));
+    // Store language preference
+    try {
+      localStorage.setItem("preferred-language", langCode);
+    } catch (e) {
+      console.warn("Could not save language preference:", e);
     }
+
+    // Update current language display
+    const current = this.container.querySelector(".language-current");
+    const newLang = this.getCurrentLanguage();
+    current.querySelector(".flag").textContent = newLang.flag;
+    current.querySelector(".name").textContent = newLang.name;
+
+    // Update active state
+    for (const li of this.container.querySelectorAll(".language-options li")) {
+      li?.classList.toggle("active", li.dataset.lang === langCode);
+    }
+
+    // Trigger translation reload if i18n system is available
+    if (window.applyTranslations) {
+      window.applyTranslations();
+    }
+
+    // Fire custom event for other components to listen to
+    window.dispatchEvent(
+      new CustomEvent("languageChanged", {
+        detail: { language: langCode },
+      }),
+    );
+  }
 }
 
 // Auto-initialize if container exists
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('.language-switcher-container');
-    if (container) {
-        new LanguageSwitcher(container);
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".language-switcher-container");
+  if (container) {
+    new LanguageSwitcher(container);
+  }
 });
 
 // Export for manual initialization
