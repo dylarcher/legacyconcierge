@@ -26,7 +26,7 @@
    */
   function handleVideoError(error) {
     console.log("Video error:", error);
-    videoBackground.classList.add("no-video");
+    videoBackground?.classList.add("no-video");
     announceToScreenReader("Background video unavailable. Displaying static image fallback.");
   }
 
@@ -39,7 +39,7 @@
 
     if (prefersReducedMotion) {
       video.pause();
-      videoBackground.classList.add("no-video");
+      videoBackground?.classList.add("no-video");
       announceToScreenReader("Video playback disabled due to motion sensitivity preferences.");
       return;
     }
@@ -59,13 +59,13 @@
 
   video.addEventListener("suspend", () => {
     if (video.currentTime === 0) {
-      videoBackground.classList.add("no-video");
+      videoBackground?.classList.add("no-video");
       announceToScreenReader("Background video suspended. Displaying fallback image.");
     }
   });
 
   video.addEventListener("canplay", () => {
-    videoBackground.classList.remove("no-video");
+    videoBackground?.classList.remove("no-video");
   });
 
   video.addEventListener("loadeddata", () => {
@@ -77,7 +77,7 @@
   motionMediaQuery.addEventListener("change", (e) => {
     if (e.matches) {
       video.pause();
-      videoBackground.classList.add("no-video");
+      videoBackground?.classList.add("no-video");
       announceToScreenReader("Video playback paused due to motion sensitivity preferences.");
     } else {
       video.play().catch(handleVideoError);

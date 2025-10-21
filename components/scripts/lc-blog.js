@@ -194,8 +194,8 @@ class LCBlogFilter extends HTMLElement {
                 const category = button.getAttribute('data-category');
 
                 // Update active state
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                buttons.forEach(btn => btn?.classList.remove('active'));
+                button?.classList.add('active');
 
                 // Filter posts
                 this.filterByCategory(category, target);
@@ -287,8 +287,8 @@ class LCBlogFilter extends HTMLElement {
         const buttons = this.querySelectorAll('[data-category]');
         const allButton = this.querySelector('[data-category="all"]');
 
-        buttons.forEach(btn => btn.classList.remove('active'));
-        allButton?.classList.add('active');
+        buttons.forEach(btn => btn?.classList.remove('active'));
+        allButton??.classList.add('active');
     }
 }
 

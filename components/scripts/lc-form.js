@@ -45,7 +45,7 @@ class LCFormElement extends HTMLElement {
 
         if (errorElement && wrapper) {
             errorElement.textContent = message;
-            wrapper.classList.add('has-error');
+            wrapper?.classList.add('has-error');
             this.setAttribute('aria-invalid', 'true');
         }
     }
@@ -59,7 +59,7 @@ class LCFormElement extends HTMLElement {
 
         if (errorElement && wrapper) {
             errorElement.textContent = '';
-            wrapper.classList.remove('has-error');
+            wrapper?.classList.remove('has-error');
             this.removeAttribute('aria-invalid');
         }
     }
@@ -285,7 +285,7 @@ class LCInput extends LCFormElement {
         // Check for icon slot
         const icon = this.querySelector('[slot="icon"]');
         if (icon) {
-            wrapper.classList.add('has-icon');
+            wrapper?.classList.add('has-icon');
         }
 
         // Setup validation on blur
@@ -738,10 +738,10 @@ class LCSubmitButton extends HTMLElement {
         const button = this.querySelector('.lc-submit-button');
         if (button) {
             if (loading) {
-                button.classList.add('loading');
+                button?.classList.add('loading');
                 button.disabled = true;
             } else {
-                button.classList.remove('loading');
+                button?.classList.remove('loading');
                 button.disabled = getBooleanAttribute(this, 'disabled');
             }
         }

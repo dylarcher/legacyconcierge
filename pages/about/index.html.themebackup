@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Legacy Concierge Story</title>
+    <meta name="description" content="Learn the story behind Legacy Concierge, founded on a mission to provide elite, compassionate care rooted in family values and trust.">
+    <link rel="canonical" href="https://www.legacyconcierge.com/about.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.legacyconcierge.com/about.html">
+    <meta property="og:title" content="About Us - The Legacy Concierge Story">
+    <meta property="og:description" content="Learn the story behind Legacy Concierge, founded on a mission to provide elite, compassionate care rooted in family values and trust.">
+    <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/hero-nurse.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.legacyconcierge.com/about.html">
+    <meta property="twitter:title" content="About Us - The Legacy Concierge Story">
+    <meta property="twitter:description" content="Learn the story behind Legacy Concierge, founded on a mission to provide elite, compassionate care rooted in family values and trust.">
+    <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/hero-nurse.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/AboutPage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+        <lc-header></lc-header>
+
+    <main role="main" id="main">
+        <section id="our-story" class="page-content fade-in" itemprop="mainContentOfPage">
+            <div class="container">
+                <div class="story-header">
+                    <h1 itemprop="name" data-i18n="about.title"></h1>
+                </div>
+                <div class="story-content">
+                    <div class="story-column">
+                        <h4 itemprop="headline" data-i18n="about.columns[0].title"></h4>
+                        <p itemprop="text" data-i18n="about.columns[0].text"></p>
+                    </div>
+                    <div class="story-column">
+                        <h4 itemprop="headline" data-i18n="about.columns[1].title"></h4>
+                        <p itemprop="text" data-i18n="about.columns[1].text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+        <lc-footer></lc-footer>
+    <script src="/scripts/theme.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>

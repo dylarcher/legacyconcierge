@@ -427,3 +427,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Expose applyTranslations globally for component integration
+if (typeof window !== 'undefined') {
+  window.applyTranslations = applyTranslations;
+  window.switchLanguage = switchLanguage;
+}

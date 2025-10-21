@@ -60,30 +60,53 @@ function updateThemeToggleIcon(theme) {
 
     if (theme === 'dark') {
         for (const icon of lightIcons) {
-            icon.classList.add('active');
+            icon?.classList.add('active');
         }
         for (const icon of darkIcons) {
-            icon.classList.remove('active');
+            icon?.classList.remove('active');
         }
     } else {
         for (const icon of lightIcons) {
-            icon.classList.remove('active');
+            icon?.classList.remove('active');
         }
         for (const icon of darkIcons) {
-            icon.classList.add('active');
+            icon?.classList.add('active');
         }
     }
+}
+
+/**
+ * Setup theme toggle button event listener
+ * Call this after components are rendered
+ * @returns {void}
+ */
+function setupThemeToggle() {
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    for (const toggle of themeToggles) {
+        // Remove any existing listeners to avoid duplicates
+        toggle.replaceWith(toggle.cloneNode(true));
+    }
+
+    // Re-query after cloning
+    const newToggles = document.querySelectorAll('.theme-toggle');
+    for (const toggle of newToggles) {
+        toggle.addEventListener('click', toggleTheme);
+    }
+
+    // Update icon to match current theme
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    updateThemeToggleIcon(currentTheme);
+
+    console.log('✓ Theme toggle initialized');
 }
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', () => {
     initializeTheme();
 
-    // Add click event to all theme toggles
-    const themeToggles = document.querySelectorAll('.theme-toggle');
-    for (const toggle of themeToggles) {
-        toggle.addEventListener('click', toggleTheme);
-    }
+    // Try to setup theme toggle (for static pages)
+    // This will be called again after components load
+    setupThemeToggle();
 
     // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
@@ -102,3 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Expose functions globally for component integration
+if (typeof window !== 'undefined') {
+    window.toggleTheme = toggleTheme;
+    window.setupThemeToggle = setupThemeToggle;
+    window.updateThemeToggleIcon = updateThemeToggleIcon;
+}

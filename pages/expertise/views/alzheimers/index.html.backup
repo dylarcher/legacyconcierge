@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="expertise-detail.alzheimers.title">Alzheimer's Care - Legacy Concierge</title>
+    <meta name="description" data-i18n="expertise-detail.alzheimers.subtitle" content="Personalized care, personalized solutions.">
+    <link rel="canonical" href="https://www.legacyconcierge.com/expertise/alzheimers.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.legacyconcierge.com/expertise/alzheimers.html">
+    <meta property="og:title" content="Alzheimer's Care - Legacy Concierge">
+    <meta property="og:description" content="Personalized care, personalized solutions.">
+    <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/alzheimers.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.legacyconcierge.com/expertise/alzheimers.html">
+    <meta property="twitter:title" content="Alzheimer's Care - Legacy Concierge">
+    <meta property="twitter:description" content="Personalized care, personalized solutions.">
+    <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/alzheimers.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <header role="banner">
+        <div class="container">
+            <nav role="navigation" aria-label="Main Navigation">
+                <div class="logo" itemscope itemtype="http://schema.org/Organization">
+                    <a href="/" itemprop="url" aria-label="Reload or visit homepage">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 481 481" itemprop="logo" aria-label="Logo" role="img" focusable="false">
+                                <title>Legacy Concierge Brand Logo</title>
+                                <g transform-origin="center" transform="scale(.8)" filter="brightness(1.2)">
+                                    <path fill="#a07e66" d="m128.68 8.9-.5-.05a80 80 0 0 0-8.88-.53c-2.43.03-4.32.29-5.79.8a6 6 0 0 0-3.2 2.34 9 9 0 0 0-1.36 4.32v296.83c28.1 1.93 60.23 8.24 95.09 19.77 56.6 18.72 118.13 16.1 149.35 3.5 15.62-6.3 26.9-14.02 34.27-20.18a91 91 0 0 0 8.17-7.67 56 56 0 0 0 2.49-2.84l.12-.15.02-.04h.01l.8.37c-15.34 33.14-49.64 51.1-87.36 58.1s-78.16 1.2-108.2-7.58C154.7 341.55 80.91 313.79.5 344.68c17.57-19.56 52.21-31.34 80.4-32.51-2.54.1 2.46-.19 0 0V15.8a9 9 0 0 0-1.52-3.94 7 7 0 0 0-3.4-2.3c-3.15-1.08-8.11-1.24-15.97-.7l-.48.03V0h69.15z" />
+                                    <path fill="#9fbdbf" d="M422.08 187.9h1.77v72.32c-4.8-72.12-82.1-72.32-82.1-72.32-124.72 3.9-132.36 147.6-132.36 147.6 0 85.73 69.03 127.55 125.86 124.3 56.83-3.23 87.94-51.45 108.65-60.42 15.67-6.79 28.57 9.02 33.93 17.12a34 34 0 0 1 2.67 4.42s-.94-1.81-2.67-4.42c-4.44-6.33-14.23-16.32-28.02-7.9-19.22 11.76-70.67 101.8-182.47 60.75 0 0-86.63-29.18-86.62-133.85s77.04-177.16 175.97-163.17c0 0 51.02 7.62 63.37 42.54 1.46-2.68 1.8-18.45 2.02-26.97" />
+                                </g>
+                            </svg>
+                    <meta itemprop="name" content="Legacy Concierge">
+                </div>
+                <button class="nav-toggle" data-i18n-attr="aria-label:accessibility.toggleNavigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-nav">
+                    <li><a href="/" data-i18n="navigation.home"></a></li>
+                    <li><a href="/pages/about" data-i18n="navigation.about"></a></li>
+                    <li class="dropdown">
+                        <a href="/pages/treatments" data-i18n="navigation.services" aria-haspopup="true" aria-expanded="false"></a>
+                        <ul class="dropdown-menu" data-i18n-attr="aria-label:accessibility.servicesSubmenu">
+                            <li>
+                                <a href="/pages/treatments" data-i18n="navigation.conciergeTreatments" aria-haspopup="true" aria-expanded="false"></a>
+                                <ul class="dropdown-submenu" data-i18n-attr="aria-label:accessibility.conciergeTreatmentsSubmenu">
+                                    <li><a href="pages/treatments/views/post-op-recovery" data-i18n="navigation.treatments.postOp"></a></li>
+                                    <li><a href="pages/treatments/views/mental-health" data-i18n="navigation.treatments.mentalHealth"></a></li>
+                                    <li><a href="pages/treatments/views/rehab-addiction" data-i18n="navigation.treatments.rehabAddiction"></a></li>
+                                    <li><a href="pages/treatments/views/eating-disorders" data-i18n="navigation.treatments.eatingDisorders"></a></li>
+                                    <li><a href="pages/treatments/views/cardiac-pulmonary" data-i18n="navigation.treatments.cardiacPulmonary"></a></li>
+                                    <li><a href="pages/treatments/views/iv-therapy" data-i18n="navigation.treatments.ivTherapy"></a></li>
+                                    <li><a href="pages/treatments/views/pain-management" data-i18n="navigation.treatments.painManagement"></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/pages/expertise" data-i18n="navigation.specializedExpertise" aria-haspopup="true" aria-expanded="false"></a>
+                                <ul class="dropdown-submenu" data-i18n-attr="aria-label:accessibility.specializedExpertiseSubmenu">
+                                    <li><a href="pages/expertise/views/dementia" data-i18n="navigation.expertise.dementia"></a></li>
+                                    <li><a href="pages/expertise/views/als" data-i18n="navigation.expertise.als"></a></li>
+                                    <li><a href="pages/expertise/views/parkinsons" data-i18n="navigation.expertise.parkinsons"></a></li>
+                                    <li><a href="pages/expertise/views/alzheimers" data-i18n="navigation.expertise.alzheimers"></a></li>
+                                    <li><a href="pages/expertise/views/heart-disease" data-i18n="navigation.expertise.heartDisease"></a></li>
+                                    <li><a href="pages/expertise/views/oncology" data-i18n="navigation.expertise.oncology"></a></li>
+                                    <li><a href="pages/expertise/views/ostomy-management" data-i18n="navigation.expertise.ostomy"></a></li>
+                                    <li><a href="pages/expertise/views/stroke-recovery" data-i18n="navigation.expertise.strokeRecovery"></a></li>
+                                    <li><a href="pages/expertise/views/ms" data-i18n="navigation.expertise.ms"></a></li>
+                                    <li><a href="pages/expertise/views/diabetes-management" data-i18n="navigation.expertise.diabetes"></a></li>
+                                    <li><a href="pages/expertise/views/tbi" data-i18n="navigation.expertise.tbi"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="/pages/team" data-i18n="navigation.team"></a></li>
+                    <li><a href="/pages/contact" data-i18n="navigation.contact"></a></li>
+                    <li>
+                        <button class="theme-toggle" data-i18n-attr="aria-label:accessibility.toggleTheme">
+                            <span class="icon icon-light" data-i18n="theme.light"></span>
+                            <span class="icon icon-dark" data-i18n="theme.dark"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="language-toggle" data-i18n-attr="aria-label:accessibility.switchLanguage">
+                            <span data-i18n="language.current"></span>
+                            <span>→</span>
+                            <span data-i18n="language.switch"></span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" id="main">
+        <section class="container page-content">
+            <h1 itemprop="name" data-i18n="expertise-detail.alzheimers.title">Alzheimer's Care</h1>
+            <p class="page-subtitle" itemprop="description" data-i18n="expertise-detail.alzheimers.subtitle">Personalized care, personalized solutions.</p>
+
+            <div class="service-details" itemprop="mainContentOfPage">
+                <div class="service-image">
+                    <img src="/assets/images/alzheimers.jpg" alt="Compassionate Alzheimer's care at home.">
+                </div>
+                <div class="service-description">
+                    <h2 itemprop="headline" data-i18n="expertise-detail.alzheimers.h2">Expert Care for Alzheimer's Challenges</h2>
+                    <p data-i18n="expertise-detail.alzheimers.text">Our elite caregivers, chosen for their unwavering dedication, provide personalized care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for Alzheimer's challenges. We ensure every need is met with warmth and precision, creating a supportive environment that brings comfort and peace of mind.</p>
+                    <ul data-i18n="expertise-detail.alzheimers.features">
+                        <li><strong>Memory-Centered Activities:</strong> Our caregivers create tailored activities to spark memory, reduce confusion, and encourage connection.</li>
+                        <li><strong>Emotional and Social Support:</strong> We offer gentle companionship, customized to your loved one's preferences, to help them feel valued and included.</li>
+                        <li><strong>Safety and Supervision:</strong> Our trusted caregivers ensure safe home environments, protecting against risks like falls or wandering.</li>
+                        <li><strong>Assistance with Daily Living:</strong> As Alzheimer's progresses, our team provides gentle, tailored help with tasks like bathing, dressing, and mobility.</li>
+                        <li><strong>Medication Management:</strong> Our reliable team handles medications with meticulous care, ensuring they're given correctly and monitored for safety.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p data-i18n="footer.copyright">&copy; 2025 Legacy Concierge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../../../scripts/theme.js"></script>
+    <script src="../../../../scripts/app.js"></script>
+    <script src="../../../../scripts/i18n.js"></script>
+</body>
+</html>

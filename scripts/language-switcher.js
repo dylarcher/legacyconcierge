@@ -165,13 +165,13 @@ class LanguageSwitcher {
 
         // Toggle dropdown
         current.addEventListener('click', () => {
-            switcher.classList.toggle('open');
+            switcher?.classList.toggle('open');
         });
 
         // Close dropdown when clicking outside
         document.addEventListener('click', (e) => {
             if (!switcher.contains(e.target)) {
-                switcher.classList.remove('open');
+                switcher?.classList.remove('open');
             }
         });
 
@@ -181,7 +181,7 @@ class LanguageSwitcher {
             if (li) {
                 const newLang = li.dataset.lang;
                 this.switchLanguage(newLang);
-                switcher.classList.remove('open');
+                switcher?.classList.remove('open');
             }
         });
 
@@ -189,7 +189,7 @@ class LanguageSwitcher {
         current.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                switcher.classList.toggle('open');
+                switcher?.classList.toggle('open');
             }
         });
 
@@ -200,7 +200,7 @@ class LanguageSwitcher {
                     e.preventDefault();
                     const newLang = li.dataset.lang;
                     this.switchLanguage(newLang);
-                    switcher.classList.remove('open');
+                    switcher?.classList.remove('open');
                 }
             }
         });
@@ -231,7 +231,7 @@ class LanguageSwitcher {
 
         // Update active state
         for (const li of this.container.querySelectorAll('.language-options li')) {
-            li.classList.toggle('active', li.dataset.lang === langCode);
+            li?.classList.toggle('active', li.dataset.lang === langCode);
         }
 
         // Trigger translation reload if i18n system is available

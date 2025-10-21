@@ -28,8 +28,8 @@ class LCBadge extends HTMLElement {
 
         this.className = `lc-badge lc-badge-${variant} lc-badge-${size}`;
 
-        if (dot) this.classList.add('lc-badge-dot');
-        if (pill) this.classList.add('lc-badge-pill');
+        if (dot) this?.classList.add('lc-badge-dot');
+        if (pill) this?.classList.add('lc-badge-pill');
     }
 }
 
@@ -104,8 +104,8 @@ class LCButton extends HTMLElement {
         button.type = getAttributeOr(this, 'type', 'button');
         button.className = `lc-button lc-button-${variant} lc-button-${size}`;
 
-        if (fullWidth) button.classList.add('lc-button-full-width');
-        if (loading) button.classList.add('lc-button-loading');
+        if (fullWidth) button?.classList.add('lc-button-full-width');
+        if (loading) button?.classList.add('lc-button-loading');
         if (disabled) button.disabled = true;
 
         // Add content
@@ -161,7 +161,7 @@ class LCButton extends HTMLElement {
         if (!button) return;
 
         if (loading) {
-            button.classList.add('lc-button-loading');
+            button?.classList.add('lc-button-loading');
             button.disabled = true;
 
             if (!button.querySelector('.lc-button-spinner')) {
@@ -175,7 +175,7 @@ class LCButton extends HTMLElement {
                 button.appendChild(spinner);
             }
         } else {
-            button.classList.remove('lc-button-loading');
+            button?.classList.remove('lc-button-loading');
             button.disabled = getBooleanAttribute(this, 'disabled');
             button.querySelector('.lc-button-spinner')?.remove();
         }
@@ -300,7 +300,7 @@ class LCPagination extends HTMLElement {
         a.setAttribute('aria-label', `Page ${page}`);
 
         if (page === current) {
-            a.classList.add('lc-pagination-active');
+            a?.classList.add('lc-pagination-active');
             a.setAttribute('aria-current', 'page');
         }
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="treatments-detail.pain-management.title">Pain Management - Legacy Concierge</title>
+    <meta name="description" data-i18n="treatments-detail.pain-management.subtitle" content="Thoughtfully crafted for your comfort, delivering exceptional relief.">
+    <link rel="canonical" href="https://www.legacyconcierge.com/treatments/pain-management.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.legacyconcierge.com/treatments/pain-management.html">
+    <meta property="og:title" content="Pain Management - Legacy Concierge">
+    <meta property="og:description" content="Thoughtfully crafted for your comfort, delivering exceptional relief.">
+    <meta property="og:image" content="https://www.legacyconcierge.com/assets/images/pain-management.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.legacyconcierge.com/treatments/pain-management.html">
+    <meta property="twitter:title" content="Pain Management - Legacy Concierge">
+    <meta property="twitter:description" content="Thoughtfully crafted for your comfort, delivering exceptional relief.">
+    <meta property="twitter:image" content="https://www.legacyconcierge.com/assets/images/pain-management.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../styles/style.css">
+</head>
+<body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+        <lc-header></lc-header>
+
+    <main role="main" id="main">
+        <section class="container page-content">
+            <h1 itemprop="name" data-i18n="treatments-detail.pain-management.title">Pain Management</h1>
+            <p class="page-subtitle" itemprop="description" data-i18n="treatments-detail.pain-management.subtitle">Thoughtfully crafted for your comfort, delivering exceptional relief.</p>
+
+            <div class="service-details" itemprop="mainContentOfPage">
+                <div class="service-image">
+                    <img src="/assets/images/pain-management.jpg" alt="Compassionate pain management support.">
+                </div>
+                <div class="service-description">
+                    <h2 itemprop="headline" data-i18n="treatments-detail.pain-management.h2">Bespoke Pain Management Solutions</h2>
+                    <p data-i18n="treatments-detail.pain-management.text">Living with pain can feel overwhelming, but Legacy Concierge is here to transform your experience with world-class care. Our elite concierge nurses deliver bespoke pain management solutions that restore your well-being and uplift your longevity with compassion and expert precision.</p>
+                    <ul data-i18n="treatments-detail.pain-management.features">
+                        <li><strong>Medication Management:</strong> Our reliable nurses administer pain medications with meticulous care, ensuring precise dosing and monitoring for side effects.</li>
+                        <li><strong>Holistic Pain Therapies:</strong> Beyond medications, our team provides tailored therapies like guided relaxation, heat/cold therapy, or gentle massage.</li>
+                        <li><strong>Mobility Support:</strong> Our caring nurses offer bespoke assistance with positioning, transfers, and gentle exercises to ease discomfort.</li>
+                        <li><strong>Emotional Support:</strong> We understand the emotional toll of chronic pain and provide gentle companionship to lift your spirits.</li>
+                        <li><strong>Care Coordination:</strong> Our trusted team collaborates with pain specialists and physical therapists to ensure a holistic treatment plan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+        <lc-footer></lc-footer>
+
+    <script src="../../../../scripts/theme.js"></script>
+    <script src="../../../../scripts/app.js"></script>
+    <script src="../../../../scripts/i18n.js"></script>
+
+        <!-- Component System -->
+        <script type="module">
+            import { loadTemplates } from '/scripts/core/component-loader.js';
+
+            // Load templates and initialize components
+            (async () => {
+                try {
+                    // Load all required templates first
+                    await loadTemplates(['navigation', 'cards']);
+                    console.log('✓ Component templates loaded successfully');
+
+                    // Import component scripts
+                    await Promise.all([
+                        import('/components/scripts/lc-header.js'),
+                        import('/components/scripts/lc-footer.js'),
+                        import('/components/scripts/lc-card.js')
+                    ]);
+                    console.log('✓ Component scripts loaded successfully');
+
+                    // Wait a tick for components to render
+                    await new Promise(resolve => setTimeout(resolve, 100));
+
+                    // Re-apply i18n translations to components
+                    if (window.applyTranslations) {
+                        await window.applyTranslations();
+                        console.log('✓ i18n translations applied to components');
+                    }
+
+                    // Setup language toggle (now that component has rendered)
+                    const languageToggle = document.querySelector('.language-toggle');
+                    if (languageToggle && window.switchLanguage) {
+                        languageToggle.addEventListener('click', () => {
+                            const currentLang = document.documentElement.lang;
+                            const newLang = currentLang === 'en' ? 'es' : 'en';
+                            window.switchLanguage(newLang);
+                        });
+                        console.log('✓ Language toggle initialized');
+                    }
+                } catch (error) {
+                    console.error('Failed to initialize components:', error);
+                }
+            })();
+        </script>
+    </body>
+</html>
