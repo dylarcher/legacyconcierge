@@ -124,16 +124,17 @@ async function fetchTranslations(lang, page) {
     // Root: [] → 0, pages/about: ['pages', 'about'] → 2, pages/treatments/views/post-op: ['pages', 'treatments', 'views', 'post-op'] → 4
     const depth = cleanParts.length;
 
-    // Build the correct relative path to _locale based on depth
+    // Build the correct path to _locale based on depth
     let localeBasePath;
-    if (depth === 0) {
-      // At root - use GitHub Pages base if present
-      localeBasePath = githubPagesBase
-        ? `${githubPagesBase}/_locale`
-        : "./_locale";
+    if (githubPagesBase) {
+      // GitHub Pages deployment - always use absolute path
+      localeBasePath = `${githubPagesBase}/_locale`;
+    } else if (depth === 0) {
+      // Local development at root
+      localeBasePath = "./_locale";
     } else {
-      // In subdirectory - go up to root, then into _locale
-      localeBasePath = `${"../".repeat(depth)}${githubPagesBase ? githubPagesBase.slice(1) + "/" : ""}_locale`;
+      // Local development in subdirectory - go up to root, then into _locale
+      localeBasePath = `${"../".repeat(depth)}_locale`;
     }
 
     console.log(
