@@ -86,7 +86,21 @@ async function fetchTranslations(lang, page) {
   }
   try {
     // Determine the base path for locale files based on directory depth
-    const pathname = window.location.pathname;
+    let pathname = window.location.pathname;
+
+    // Strip GitHub Pages base path if present (e.g., /legacy-concierge/ or /repository-name/)
+    const basePathMatch = pathname.match(/^\/([^\/]+)\/?$/);
+    if (
+      basePathMatch &&
+      !pathname.includes("/pages/") &&
+      !pathname.includes(".html") &&
+      pathname !== "/"
+    ) {
+      // This looks like a base path (e.g., /legacy-concierge/)
+      // Strip it and treat as root
+      pathname = "/";
+    }
+
     // Remove trailing slashes and split by /
     const pathParts = pathname
       .replace(/\/$/, "")
@@ -103,7 +117,7 @@ async function fetchTranslations(lang, page) {
     // Build the correct relative path to _locale based on depth
     let localeBasePath;
     if (depth === 0) {
-      localeBasePath = "_locale";
+      localeBasePath = "./_locale";
     } else {
       // Go up 'depth' directories, then into _locale
       localeBasePath = `${"../".repeat(depth)}_locale`;
@@ -264,7 +278,22 @@ function updateMetaTags(translations, pageKey) {
  */
 async function applyTranslations() {
   const lang = document.documentElement.lang || "en";
-  const path = window.location.pathname;
+  let path = window.location.pathname;
+
+  // Strip GitHub Pages base path if present (e.g., /legacy-concierge/ or /repository-name/)
+  // This ensures the app works both locally and on GitHub Pages
+  const basePathMatch = path.match(/^\/([^\/]+)\/?$/);
+  if (
+    basePathMatch &&
+    !path.includes("/pages/") &&
+    !path.includes(".html") &&
+    path !== "/"
+  ) {
+    // This looks like a base path (e.g., /legacy-concierge/)
+    // Strip it and treat as root
+    path = "/";
+  }
+
   const pathParts = path
     .replace(/\/$/, "")
     .split("/")

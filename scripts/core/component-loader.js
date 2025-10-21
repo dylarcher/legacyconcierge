@@ -10,19 +10,19 @@
 function getBasePath() {
   const path = window.location.pathname;
   // Remove trailing index.html or trailing slash
-  const cleanPath = path.replace(/\/index\.html$/, '').replace(/\/$/, '');
+  const cleanPath = path.replace(/\/index\.html$/, "").replace(/\/$/, "");
   // Count directory depth (excluding empty segments)
-  const segments = cleanPath.split('/').filter(s => s.length > 0);
+  const segments = cleanPath.split("/").filter((s) => s.length > 0);
 
   // If we're at root or index.html, no base path needed
   if (segments.length === 0 || segments.length === 1) {
-      return '';
+    return "";
   }
 
   // Calculate relative path back to root
   // Subtract 1 because we don't need to go up from the filename itself
   const depth = segments.length - 1;
-  return '../'.repeat(depth);
+  return "../".repeat(depth);
 }
 
 /**
@@ -54,31 +54,26 @@ async function loadTemplate(name) {
 
   try {
     const basePath = getBasePath();
-    const response = await fetch(`${basePath}components/templates/${name}.html`);
+    const response = await fetch(
+      `${basePath}components/templates/${name}.html`,
+    );
     if (!response.ok) {
       throw new Error(`Template ${name} not found: ${response.status}`);
     }
 
-  try {
-      const basePath = getBasePath();
-      const response = await fetch(`${basePath}components/templates/${name}.html`);
-      if (!response.ok) {
-          throw new Error(`Template ${name} not found: ${response.status}`);
-      }
+    const html = await response.text();
+    templateCache.set(name, html);
 
-      const html = await response.text();
-      templateCache.set(name, html);
+    // Insert template into document if not already present
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    document.body.appendChild(tempDiv);
 
-      // Insert template into document if not already present
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = html;
-      document.body.appendChild(tempDiv);
-
-      console.log(`✓ Template loaded: ${name}`);
-      return true;
+    console.log(`✓ Template loaded: ${name}`);
+    return true;
   } catch (error) {
-      console.error(`Failed to load template ${name}:`, error);
-      return false;
+    console.error(`Failed to load template ${name}:`, error);
+    return false;
   }
 }
 
@@ -127,25 +122,25 @@ async function initializeComponent(componentName) {
 
   // Check if script exists and load it
   try {
-      const basePath = getBasePath();
-      const scriptPath = `${basePath}components/scripts/lc-${componentName}.js`;
-      const script = document.createElement('script');
-      script.type = 'module';
-      script.src = scriptPath;
+    const basePath = getBasePath();
+    const scriptPath = `${basePath}components/scripts/lc-${componentName}.js`;
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = scriptPath;
 
-      return new Promise((resolve, reject) => {
-          script.onload = () => {
-              console.log(`✓ Component initialized: ${componentName}`);
-              resolve();
-          };
-          script.onerror = () => {
-              console.warn(`Component script not found: ${componentName}`);
-              resolve(); // Don't fail if script doesn't exist
-          };
-          document.head.appendChild(script);
-      });
+    return new Promise((resolve, reject) => {
+      script.onload = () => {
+        console.log(`✓ Component initialized: ${componentName}`);
+        resolve();
+      };
+      script.onerror = () => {
+        console.warn(`Component script not found: ${componentName}`);
+        resolve(); // Don't fail if script doesn't exist
+      };
+      document.head.appendChild(script);
+    });
   } catch (error) {
-      console.error(`Failed to initialize component ${componentName}:`, error);
+    console.error(`Failed to initialize component ${componentName}:`, error);
   }
 }
 
