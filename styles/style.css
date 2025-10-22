@@ -688,7 +688,7 @@ button {
 }
 
 .care-steps li {
-  background-color: var(--color-white);
+  background-color: var(--bg-tertiary);
   padding: 2.5rem;
   border-radius: 16px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
