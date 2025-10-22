@@ -5,6 +5,7 @@
     "servicesSubmenu": "Services submenu",
     "conciergeTreatmentsSubmenu": "Concierge Treatments submenu",
     "specializedExpertiseSubmenu": "Specialized Expertise submenu",
+    "examplesSubmenu": "Layout Examples submenu",
     "switchLanguage": "Switch language",
     "toggleTheme": "Toggle dark/light mode"
   },
@@ -20,6 +21,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "examples": "Examples",
     "team": "Team",
     "contact": "Contact",
     "conciergeTreatments": "Concierge Treatments",
@@ -45,6 +47,15 @@
       "ms": "MS",
       "diabetes": "Diabetes Management",
       "tbi": "Traumatic Brain Injury"
+    },
+    "examplePages": {
+      "homepageVideo": "Homepage with Video",
+      "subpageSidebar": "Subpage with Sidebar",
+      "bentoboxGrid": "Bentobox Grid",
+      "blogGallery": "Blog Gallery",
+      "blogPost": "Blog Post",
+      "contactForm": "Contact Form",
+      "splashLanding": "Splash/Landing Page"
     }
   },
   "footer": {

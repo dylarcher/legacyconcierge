@@ -5,6 +5,7 @@
     "servicesSubmenu": "Submenú de servicios",
     "conciergeTreatmentsSubmenu": "Submenú de tratamientos concierge",
     "specializedExpertiseSubmenu": "Submenú de experiencia especializada",
+    "examplesSubmenu": "Submenú de ejemplos de diseño",
     "switchLanguage": "Cambiar idioma",
     "toggleTheme": "Alternar modo oscuro/claro"
   },
@@ -20,6 +21,7 @@
     "home": "Inicio",
     "about": "Acerca de",
     "services": "Servicios",
+    "examples": "Ejemplos",
     "team": "Equipo",
     "contact": "Contacto",
     "conciergeTreatments": "Tratamientos Concierge",
@@ -45,6 +47,15 @@
       "ms": "Esclerosis Múltiple",
       "diabetes": "Manejo de Diabetes",
       "tbi": "Lesión Cerebral Traumática"
+    },
+    "examplePages": {
+      "homepageVideo": "Inicio con Video",
+      "subpageSidebar": "Subpágina con Barra Lateral",
+      "bentoboxGrid": "Cuadrícula Bentobox",
+      "blogGallery": "Galería de Blog",
+      "blogPost": "Publicación de Blog",
+      "contactForm": "Formulario de Contacto",
+      "splashLanding": "Página de Inicio/Destino"
     }
   },
   "footer": {
