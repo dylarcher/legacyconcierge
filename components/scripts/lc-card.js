@@ -47,13 +47,16 @@ class LCCard extends HTMLElement {
     // Create shadow DOM
     const shadow = this.attachShadow({ mode: "open" });
 
-    // Create a style element to import global styles
-    // Use relative path to work with GitHub Pages deployment
+    // Create a link element to import global styles (more reliable than @import in Shadow DOM)
     const basePath = this.getBasePath();
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = `${basePath}styles/style.css`;
+    shadow.appendChild(link);
+
+    // Add host styles
     const style = document.createElement("style");
     style.textContent = `
-      @import url('${basePath}styles/style.css');
-
       :host {
         display: contents;
       }
@@ -178,38 +181,31 @@ class LCCardGrid extends HTMLElement {
     // Create shadow DOM
     const shadow = this.attachShadow({ mode: "open" });
 
-    // Create a style element to import global styles
-    // Use relative path to work with GitHub Pages deployment
-    const basePath = this.getBasePath();
-    const style = document.createElement("style");
-    style.textContent = `
-      @import url('${basePath}styles/style.css');
+    // Get column and gap settings
+    const columns = getAttributeOr(this, "columns", "auto");
+    const gap = getAttributeOr(this, "gap", "2rem");
 
+    // Create a style element with grid styles
+    const style = document.createElement("style");
+    const gridColumns =
+      columns === "auto"
+        ? "repeat(auto-fit, minmax(260px, 1fr))"
+        : `repeat(${columns}, 1fr)`;
+
+    style.textContent = `
       :host {
         display: contents;
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: ${gridColumns};
+        gap: ${gap};
+        width: 100%;
       }
     `;
     shadow.appendChild(style);
     shadow.appendChild(template);
-
-    // Apply column settings
-    const columns = getAttributeOr(this, "columns", "auto");
-    const grid = shadow.querySelector(".card-grid");
-
-    if (grid) {
-      if (columns === "auto") {
-        // Default responsive behavior
-        grid.style.setProperty("--grid-columns", "auto-fit");
-      } else {
-        grid.style.setProperty("--grid-columns", `repeat(${columns}, 1fr)`);
-      }
-
-      // Gap
-      const gap = getAttributeOr(this, "gap", null);
-      if (gap) {
-        grid.style.setProperty("--grid-gap", gap);
-      }
-    }
   }
 }
 
@@ -248,15 +244,25 @@ class LCBentoGrid extends HTMLElement {
     // Create shadow DOM
     const shadow = this.attachShadow({ mode: "open" });
 
-    // Create a style element to import global styles
-    // Use relative path to work with GitHub Pages deployment
+    // Create a link element to import global styles
     const basePath = this.getBasePath();
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = `${basePath}styles/style.css`;
+    shadow.appendChild(link);
+
+    // Add bento grid styles
     const style = document.createElement("style");
     style.textContent = `
-      @import url('${basePath}styles/style.css');
-
       :host {
         display: contents;
+      }
+
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        width: 100%;
       }
     `;
     shadow.appendChild(style);
