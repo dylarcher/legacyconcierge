@@ -1,5 +1,7 @@
 # Claude Code
 .claude/
+.archive*/
+.outdated/
 
 # OS Files
 .DS_Store
