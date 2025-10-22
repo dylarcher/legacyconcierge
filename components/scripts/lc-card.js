@@ -13,7 +13,28 @@ import {
  * Base Card Component
  */
 class LCCard extends HTMLElement {
+  /**
+   * Get base path for resource loading (handles GitHub Pages deployment)
+   */
+  getBasePath() {
+    const path = window.location.pathname;
+    const pathParts = path.split("/").filter((p) => p);
+
+    // Check if first segment looks like a GitHub Pages repo name
+    if (
+      pathParts.length > 0 &&
+      pathParts[0] !== "pages" &&
+      !pathParts[0].includes(".html")
+    ) {
+      return `/${pathParts[0]}/`;
+    }
+    return "/";
+  }
+
   connectedCallback() {
+    // Don't reinitialize if already set up
+    if (this.shadowRoot) return;
+
     const variant = getAttributeOr(this, "variant", "base");
     const templateId = `lc-card-${variant}-template`;
 
@@ -23,18 +44,27 @@ class LCCard extends HTMLElement {
       return;
     }
 
-    // Move existing content to slots
-    const existingContent = Array.from(this.childNodes);
-    this.innerHTML = "";
-    this.appendChild(template);
+    // Create shadow DOM
+    const shadow = this.attachShadow({ mode: "open" });
 
-    // Restore existing content
-    for (const node of existingContent) {
-      this.appendChild(node);
-    }
+    // Create a style element to import global styles
+    // Use relative path to work with GitHub Pages deployment
+    const basePath = this.getBasePath();
+    const style = document.createElement("style");
+    style.textContent = `
+      @import url('${basePath}styles/style.css');
+
+      :host {
+        display: contents;
+      }
+    `;
+    shadow.appendChild(style);
+
+    // Append the template to shadow DOM
+    shadow.appendChild(template);
 
     // Add variant class
-    const card = this.querySelector(".card");
+    const card = shadow.querySelector(".card");
     if (card && variant !== "base") {
       card?.classList.add(`card-${variant}`);
     }
@@ -62,7 +92,7 @@ class LCCard extends HTMLElement {
   makeClickable() {
     const href = this.getAttribute("href");
     const target = getAttributeOr(this, "target", "_self");
-    const card = this.querySelector(".card");
+    const card = this.shadowRoot?.querySelector(".card");
 
     if (!card) return;
 
@@ -92,7 +122,7 @@ class LCCard extends HTMLElement {
    * Setup scroll animations
    */
   setupAnimations() {
-    const card = this.querySelector(".card");
+    const card = this.shadowRoot?.querySelector(".card");
     if (!card) return;
 
     card?.classList.add("fade-in");
@@ -117,26 +147,54 @@ class LCCard extends HTMLElement {
  * Card Grid Component
  */
 class LCCardGrid extends HTMLElement {
+  /**
+   * Get base path for resource loading (handles GitHub Pages deployment)
+   */
+  getBasePath() {
+    const path = window.location.pathname;
+    const pathParts = path.split("/").filter((p) => p);
+
+    // Check if first segment looks like a GitHub Pages repo name
+    if (
+      pathParts.length > 0 &&
+      pathParts[0] !== "pages" &&
+      !pathParts[0].includes(".html")
+    ) {
+      return `/${pathParts[0]}/`;
+    }
+    return "/";
+  }
+
   connectedCallback() {
+    // Don't reinitialize if already set up
+    if (this.shadowRoot) return;
+
     const template = cloneTemplate("lc-card-grid-template");
     if (!template) {
       console.error("Card grid template not found");
       return;
     }
 
-    // Move existing cards to slot
-    const cards = Array.from(this.children);
-    this.innerHTML = "";
-    this.appendChild(template);
+    // Create shadow DOM
+    const shadow = this.attachShadow({ mode: "open" });
 
-    const slot = this.querySelector("slot");
-    for (const card of cards) {
-      slot.parentNode.insertBefore(card, slot);
-    }
+    // Create a style element to import global styles
+    // Use relative path to work with GitHub Pages deployment
+    const basePath = this.getBasePath();
+    const style = document.createElement("style");
+    style.textContent = `
+      @import url('${basePath}styles/style.css');
+
+      :host {
+        display: contents;
+      }
+    `;
+    shadow.appendChild(style);
+    shadow.appendChild(template);
 
     // Apply column settings
     const columns = getAttributeOr(this, "columns", "auto");
-    const grid = this.querySelector(".card-grid");
+    const grid = shadow.querySelector(".card-grid");
 
     if (grid) {
       if (columns === "auto") {
@@ -159,22 +217,50 @@ class LCCardGrid extends HTMLElement {
  * Bento Grid Component (masonry-style with variable sizes)
  */
 class LCBentoGrid extends HTMLElement {
+  /**
+   * Get base path for resource loading (handles GitHub Pages deployment)
+   */
+  getBasePath() {
+    const path = window.location.pathname;
+    const pathParts = path.split("/").filter((p) => p);
+
+    // Check if first segment looks like a GitHub Pages repo name
+    if (
+      pathParts.length > 0 &&
+      pathParts[0] !== "pages" &&
+      !pathParts[0].includes(".html")
+    ) {
+      return `/${pathParts[0]}/`;
+    }
+    return "/";
+  }
+
   connectedCallback() {
+    // Don't reinitialize if already set up
+    if (this.shadowRoot) return;
+
     const template = cloneTemplate("lc-bento-grid-template");
     if (!template) {
       console.error("Bento grid template not found");
       return;
     }
 
-    // Move existing cards to slot
-    const cards = Array.from(this.children);
-    this.innerHTML = "";
-    this.appendChild(template);
+    // Create shadow DOM
+    const shadow = this.attachShadow({ mode: "open" });
 
-    const slot = this.querySelector("slot");
-    for (const card of cards) {
-      slot.parentNode.insertBefore(card, slot);
-    }
+    // Create a style element to import global styles
+    // Use relative path to work with GitHub Pages deployment
+    const basePath = this.getBasePath();
+    const style = document.createElement("style");
+    style.textContent = `
+      @import url('${basePath}styles/style.css');
+
+      :host {
+        display: contents;
+      }
+    `;
+    shadow.appendChild(style);
+    shadow.appendChild(template);
 
     // Apply custom grid layout
     this.applyBentoLayout();
@@ -184,7 +270,7 @@ class LCBentoGrid extends HTMLElement {
    * Apply bento box grid layout with varying card sizes
    */
   applyBentoLayout() {
-    const grid = this.querySelector(".bento-grid");
+    const grid = this.shadowRoot?.querySelector(".bento-grid");
     if (!grid) return;
 
     const cards = grid.querySelectorAll(".bento-card");
