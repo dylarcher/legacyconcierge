@@ -105,14 +105,9 @@ async function fetchTranslations(lang, page) {
       pathParts[0] !== "index.html" &&
       !pathParts[0].includes(".html")
     ) {
-      // Check if this looks like a repository name (single segment or segment + index.html)
-      if (
-        pathParts.length === 1 ||
-        (pathParts.length === 2 && pathParts[1] === "index.html")
-      ) {
-        githubPagesBase = `/${pathParts[0]}`;
-        adjustedPathParts = pathParts.slice(1);
-      }
+      // This is likely a GitHub Pages repository base path
+      githubPagesBase = `/${pathParts[0]}`;
+      adjustedPathParts = pathParts.slice(1);
     }
 
     // Remove 'index.html' if present to get the actual directory depth
@@ -318,20 +313,18 @@ async function applyTranslations() {
     .split("/")
     .filter((p) => p);
 
+  let githubPagesBase = "";
+
   // Check if first segment is a GitHub Pages base (not 'pages' or an HTML file)
   if (
     pathSegments.length > 0 &&
     pathSegments[0] !== "pages" &&
     !pathSegments[0].includes(".html")
   ) {
-    // If it's just the base path (e.g., /legacy-concierge/ or /legacy-concierge/index.html)
-    if (
-      pathSegments.length === 1 ||
-      (pathSegments.length === 2 && pathSegments[1] === "index.html")
-    ) {
-      // Strip the base path for page detection
-      path = "/" + pathSegments.slice(1).join("/");
-    }
+    // This is likely a GitHub Pages repository base path
+    githubPagesBase = `/${pathSegments[0]}`;
+    // Strip the base path for page detection
+    path = "/" + pathSegments.slice(1).join("/");
   }
 
   const pathParts = path
@@ -423,10 +416,23 @@ async function applyTranslations() {
   // Handle special attributes (aria-label, title, alt, etc.)
   for (const element of document.querySelectorAll("[data-i18n-attr]")) {
     const attrData = element.getAttribute("data-i18n-attr");
-    const [attr, key] = attrData.split(":");
-    const translation = getNestedTranslation(translations, key);
-    if (translation) {
-      element.setAttribute(attr, translation);
+    const pairs = attrData.split("|");
+
+    for (const pair of pairs) {
+      const [attr, key] = pair.split(":");
+      let translation = getNestedTranslation(translations, key);
+
+      if (translation) {
+        // Fix relative paths for src, href attributes when on GitHub Pages
+        if ((attr === "src" || attr === "href") && githubPagesBase && translation.startsWith("../")) {
+          // Convert relative path to absolute path with GitHub Pages base
+          // Remove leading ../ segments and prepend the base path
+          const cleanPath = translation.replace(/^(\.\.\/)+/, "");
+          translation = `${githubPagesBase}/${cleanPath}`;
+        }
+
+        element.setAttribute(attr, translation);
+      }
     }
   }
 }
