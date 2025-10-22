@@ -18,6 +18,7 @@ class LCHeader extends HTMLElement {
    */
   connectedCallback() {
     this.render();
+    this.fixNavigationPaths();
     this.setupNavigation();
     this.markActivePage();
   }
@@ -49,6 +50,37 @@ class LCHeader extends HTMLElement {
     // Check if solid header (no hero section)
     if (this.hasAttribute("solid")) {
       this.header?.classList.add("solid-header");
+    }
+  }
+
+  /**
+   * Fix navigation paths for GitHub Pages deployment
+   */
+  fixNavigationPaths() {
+    const path = window.location.pathname;
+    const pathParts = path.split("/").filter((p) => p);
+
+    // Detect GitHub Pages base path (e.g., /legacyconcierge/)
+    let basePath = "";
+    if (
+      pathParts.length > 0 &&
+      pathParts[0] !== "pages" &&
+      !pathParts[0].includes(".html")
+    ) {
+      // First segment looks like a repository name
+      basePath = `/${pathParts[0]}`;
+    }
+
+    // If we have a base path, update all navigation links
+    if (basePath) {
+      const links = this.querySelectorAll("nav a[href]");
+      for (const link of links) {
+        const href = link.getAttribute("href");
+        // Only update absolute paths starting with /
+        if (href && href.startsWith("/") && !href.startsWith(basePath)) {
+          link.setAttribute("href", basePath + href);
+        }
+      }
     }
   }
 
