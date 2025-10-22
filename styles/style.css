@@ -382,7 +382,7 @@ button {
 /* Hero Section */
 #hero {
   background:
-    url("../assets/images/hero-nurse.jpg") no-repeat center center / cover;
+    url("../assets/media/team/team-nurse.jpg") no-repeat center center / cover;
   color: var(--color-white);
   min-height: 85vh;
   display: flex;
