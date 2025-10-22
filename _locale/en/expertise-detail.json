@@ -2,7 +2,7 @@
   "als": {
     "title": "ALS Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-als.jpg",
+    "image": "../assets/media/stock/doctor-patient-session.jpg",
     "alt": "Compassionate care for a person with ALS.",
     "h2": "Bespoke Care for ALS Challenges",
     "text": "Our elite caregivers, chosen for their unwavering dedication, provide bespoke care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for ALS challenges. We ensure every need is met with warmth and refined precision.",
@@ -17,7 +17,7 @@
   "alzheimers": {
     "title": "Alzheimer's Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-alzheimers.jpg",
+    "image": "../assets/media/stock/chair-located-in-room-corner.jpg",
     "alt": "Compassionate Alzheimer's care at home.",
     "h2": "Expert Care for Alzheimer's Challenges",
     "text": "Our elite caregivers, chosen for their unwavering dedication, provide personalized care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for Alzheimer's challenges. We ensure every need is met with warmth and precision, creating a supportive environment that brings comfort and peace of mind.",
@@ -32,7 +32,7 @@
   "dementia": {
     "title": "Dementia Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-dementia.jpg",
+    "image": "../assets/media/stock/water-filled-orb-on-beach.jpg",
     "alt": "Compassionate dementia care at home.",
     "h2": "Bespoke Care for Dementia Challenges",
     "text": "Our elite caregivers, chosen for their unwavering dedication, provide bespoke care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for dementia's challenges. We ensure every need is met with warmth and refined precision.",
@@ -47,7 +47,7 @@
   "diabetes-management": {
     "title": "Diabetes Management",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-diabetes.jpg",
+    "image": "../assets/media/stock/chair-with-books-and-vase.jpg",
     "alt": "Professional diabetes management support.",
     "h2": "Bespoke Care for Diabetes Management",
     "text": "Our elite concierge nurses, chosen for their unwavering dedication, provide bespoke care that nurtures your well-being and honors your longevity with compassion and trusted expertise—specially tailored for the challenges of diabetes management. We ensure every need is met with warmth and refined precision, offering world-world-class support to guide you through your diabetes journey with confidence.",
@@ -62,7 +62,7 @@
   "heart-disease": {
     "title": "Heart Disease Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-heart-disease.jpg",
+    "image": "../assets/media/stock/close-in-photo-of-microscope.jpg",
     "alt": "Compassionate heart disease care at home.",
     "h2": "Bespoke Care for Heart Disease",
     "text": "Our elite caregivers, chosen for their unwavering dedication, provide bespoke care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for heart disease challenges. We ensure every need is met with warmth and refined precision.",
@@ -77,7 +77,7 @@
   "ms": {
     "title": "MS Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-ms.jpg",
+    "image": "../assets/media/stock/elder-shoulder-massage.jpg",
     "alt": "Compassionate MS care at home.",
     "h2": "Bespoke Care for Multiple Sclerosis",
     "text": "Our elite concierge nurses, chosen for their unwavering dedication, provide bespoke care that nurtures your well-being and honors your longevity with compassion and trusted expertise—specially tailored for the challenges of Multiple Sclerosis. We ensure every need is met with warmth and refined precision, offering world-class support to guide you through your MS journey with confidence.",
@@ -92,7 +92,7 @@
   "oncology": {
     "title": "Oncology Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-oncology.jpg",
+    "image": "../assets/media/stock/vase-shadow-silhouette-wall.jpg",
     "alt": "Compassionate oncology care at home.",
     "h2": "Bespoke Care for the Challenges of Cancer",
     "text": "Our elite concierge nurses, chosen for their unwavering dedication, provide bespoke care that nurtures your well-being and honors your longevity with compassion and trusted expertise—specially tailored for the challenges of cancer. We ensure every need is met with warmth and refined precision, offering world-class support to guide you through your oncology journey.",
@@ -107,7 +107,7 @@
   "ostomy-management": {
     "title": "Ostomy Management",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-ostomy.jpg",
+    "image": "../assets/media/stock/pregnant-while-drinking-beverage.jpg",
     "alt": "Professional ostomy management support.",
     "h2": "Bespoke Care for Ostomy Management",
     "text": "Our elite concierge nurses, chosen for their unwavering dedication, provide bespoke care that nurtures your well-being and honors your longevity with compassion and trusted expertise—specially tailored for the challenges of ostomy management. We ensure every need is met with warmth and refined precision, offering world-class support to guide you through your ostomy journey with confidence.",
@@ -122,7 +122,7 @@
   "parkinsons": {
     "title": "Parkinson's Care",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-parkinsons.jpg",
+    "image": "../assets/media/stock/tulip-flowers-in-clear-vase.jpg",
     "alt": "Compassionate Parkinson's care at home.",
     "h2": "Bespoke Care for Parkinson's Challenges",
     "text": "Our elite caregivers, chosen for their unwavering dedication, provide bespoke care that nurtures your loved one's well-being and honors their longevity with compassion and trusted expertise—specially tailored for Parkinson's challenges. We ensure every need is met with warmth and refined precision.",
@@ -137,7 +137,7 @@
   "stroke-recovery": {
     "title": "Stroke Recovery",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-stroke.jpg",
+    "image": "../assets/media/stock/brain-mri-cat-scan-results.jpg",
     "alt": "Compassionate stroke recovery support.",
     "h2": "Bespoke Care for Stroke Recovery",
     "text": "Our elite concierge nurses, chosen for their unwavering dedication, provide bespoke care that nurtures your well-being and honors your longevity with compassion and trusted expertise—specially tailored for the challenges of stroke recovery. We ensure every need is met with warmth and refined precision, offering world-class support to guide you through your recovery journey with confidence.",
@@ -152,7 +152,7 @@
   "tbi": {
     "title": "Traumatic Brain Injury (TBI)",
     "subtitle": "Personalized care, personalized solutions.",
-    "image": "../assets/media/misc/stock-tbi.jpg",
+    "image": "../assets/media/stock/two-bones-connecting-joint.jpg",
     "alt": "Compassionate TBI care at home.",
     "h2": "Bespoke Care for TBI Recovery",
     "text": "Our elite concierge nurses, chosen for their unwavering dedication, provide bespoke care that nurtures your well-being and honors your longevity with compassion and trusted expertise—specially tailored for the challenges of trauma-related injuries recovery. We ensure every need is met with warmth and refined precision, offering world-class support to guide you through your trauma recovery journey with confidence.",
