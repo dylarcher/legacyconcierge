@@ -284,6 +284,24 @@ function updateMetaTags(translations, pageKey) {
       twitterDesc.setAttribute("content", pageData.subtitle);
     }
   }
+
+  // Update Open Graph and Twitter image tags
+  if (pageData.image) {
+    const baseUrl = "https://www.legacyconcierge.com/";
+    const fullImageUrl = pageData.image.startsWith("http")
+      ? pageData.image
+      : baseUrl + pageData.image;
+
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute("content", fullImageUrl);
+    }
+
+    const twitterImage = document.querySelector('meta[property="twitter:image"]');
+    if (twitterImage) {
+      twitterImage.setAttribute("content", fullImageUrl);
+    }
+  }
 }
 
 /**
