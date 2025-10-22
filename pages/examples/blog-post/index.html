@@ -432,13 +432,29 @@
 
             tocList.innerHTML = '';
 
+            // Track used IDs to ensure uniqueness
+            const usedIds = new Map();
+
             for (const heading of headings) {
                 // Generate ID if not present
                 if (!heading.id) {
-                    heading.id = heading.textContent
+                    const baseId = heading.textContent
                         .toLowerCase()
                         .replace(/[^\w\s-]/g, '')
                         .replace(/\s+/g, '-');
+                    let uniqueId = baseId;
+                    let count = usedIds.get(baseId) || 0;
+
+                    // If already used, append a counter
+                    if (usedIds.has(uniqueId)) {
+                        count += 1;
+                        uniqueId = `${baseId}-${count}`;
+                        usedIds.set(baseId, count);
+                    }
+                    usedIds.set(uniqueId, 0);
+                    heading.id = uniqueId;
+                } else {
+                    usedIds.set(heading.id, 0);
                 }
 
                 const li = document.createElement('li');

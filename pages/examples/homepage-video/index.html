@@ -116,13 +116,13 @@
 
                 // Pause video if not in viewport (performance)
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
+                    for (const entry of entries) {
                         if (entry.isIntersecting) {
                             video.play().catch(e => console.log('Video autoplay prevented'));
                         } else {
                             video.pause();
                         }
-                    });
+                    }
                 }, { threshold: 0.25 });
 
                 observer.observe(video);

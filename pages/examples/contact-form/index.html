@@ -103,6 +103,41 @@
             color: var(--text-muted);
         }
 
+        /* Error and Success Messages */
+        .error-message {
+            display: block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: #fee;
+            border-left: 3px solid #dc3545;
+            color: #721c24;
+            font-size: 0.875rem;
+            border-radius: 4px;
+        }
+
+        .success-message {
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.25rem;
+            background-color: #d4edda;
+            border-left: 3px solid #28a745;
+            color: #155724;
+            font-size: 0.95rem;
+            border-radius: 4px;
+        }
+
+        .form-group input.error,
+        .form-group textarea.error,
+        .form-group select.error {
+            border-color: #dc3545;
+        }
+
+        .form-group input.error:focus,
+        .form-group textarea.error:focus,
+        .form-group select.error:focus {
+            border-color: #dc3545;
+            box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+        }
+
         .form-actions {
             display: flex;
             gap: 1rem;
@@ -354,28 +389,74 @@
             const form = document.getElementById('contact-form');
             if (!form) return;
 
+            // Helper function to show error
+            function showError(fieldName, message) {
+                const field = form.querySelector(`[name="${fieldName}"]`);
+                const formGroup = field?.closest('.form-group');
+                if (!formGroup) return;
+
+                // Remove existing error if present
+                const existingError = formGroup.querySelector('.error-message');
+                if (existingError) existingError.remove();
+
+                // Add error message
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.textContent = message;
+                errorDiv.setAttribute('role', 'alert');
+                formGroup.appendChild(errorDiv);
+                field?.classList.add('error');
+                field?.focus();
+            }
+
+            // Helper function to clear errors
+            function clearErrors() {
+                const errorMessages = form.querySelectorAll('.error-message');
+                const errorFields = form.querySelectorAll('.error');
+                for (const msg of errorMessages) {
+                    msg.remove();
+                }
+                for (const field of errorFields) {
+                    field.classList.remove('error');
+                }
+            }
+
+            // Helper function to show success
+            function showSuccess() {
+                clearErrors();
+                const successDiv = document.createElement('div');
+                successDiv.className = 'success-message';
+                successDiv.textContent = 'Thank you for your message. We will get back to you soon!';
+                successDiv.setAttribute('role', 'alert');
+                form.insertBefore(successDiv, form.firstChild);
+                setTimeout(() => successDiv.remove(), 5000);
+            }
+
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
+                clearErrors();
 
                 const formData = new FormData(form);
                 const data = Object.fromEntries(formData);
 
                 // Basic validation
                 if (!data.name || !data.email || !data.message) {
-                    alert('Please fill in all required fields.');
+                    if (!data.name) showError('name', 'Please enter your name.');
+                    if (!data.email) showError('email', 'Please enter your email address.');
+                    if (!data.message) showError('message', 'Please enter a message.');
                     return;
                 }
 
                 // Email validation
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(data.email)) {
-                    alert('Please enter a valid email address.');
+                    showError('email', 'Please enter a valid email address.');
                     return;
                 }
 
                 // Submit form (replace with actual submission logic)
                 console.log('Form submitted:', data);
-                alert('Thank you for your message. We will get back to you soon!');
+                showSuccess();
                 form.reset();
             });
         }
