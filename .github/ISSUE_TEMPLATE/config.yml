@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability report
+    url: https://github.com/dylarcher/legacyconcierge/security/policy
+    about: Please report security issues responsibly via our Security Policy
+  - name: General questions / support
+    url: https://www.legacyconcierge.com/pages/contact/
+    about: For general inquiries, please reach out via our contact page

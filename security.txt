@@ -1,0 +1,34 @@
+# Security Policy for Legacy Concierge
+# Follows RFC 9116: https://www.rfc-editor.org/rfc/rfc9116.html
+
+Contact: mailto:security@legacyconcierge.com
+Contact: https://www.legacyconcierge.com/pages/contact/
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, es
+Canonical: https://www.legacyconcierge.com/.well-known/security.txt
+
+# Encryption key for secure communication
+# Encryption: https://www.legacyconcierge.com/pgp-key.txt
+
+# Policy and disclosure information
+Policy: https://www.legacyconcierge.com/pages/security-policy/
+
+# Acknowledgments page (optional - create if you want to credit researchers)
+# Acknowledgments: https://www.legacyconcierge.com/pages/security-acknowledgments/
+
+# Security researchers should report:
+# - Authentication/authorization bypasses
+# - SQL injection or XSS vulnerabilities
+# - CSRF vulnerabilities
+# - Server misconfigurations
+# - PII/PHI data exposure
+# - Any vulnerability affecting patient data
+
+# Out of scope:
+# - Social engineering attacks
+# - Physical attacks
+# - DoS/DDoS attacks
+# - Spam or brute force attacks
+# - Issues in third-party services
+
+# Thank you for helping keep Legacy Concierge secure!

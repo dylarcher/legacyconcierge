@@ -1,5 +1,11 @@
 # Legacy Concierge
 
+[![CI](https://github.com/dylarcher/legacyconcierge/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dylarcher/legacyconcierge/actions/workflows/ci.yml)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-ff69b4)](.github/CODE_OF_CONDUCT.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](.github/CONTRIBUTING.md)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-blue)](.github/SECURITY.md)
+
 An elegant and minimal website for end-of-life in-home nursing support, built with vanilla HTML/CSS/JavaScript featuring a sophisticated internationalization system.
 
 ## Project Overview
@@ -22,8 +28,8 @@ This is a static site with no build process required:
 
 ```bash
 # Clone the repository
-git clone https://github.com/dylarcher/legacy-concierge.git
-cd legacy-concierge
+git clone https://github.com/dylarcher/legacyconcierge.git
+cd legacyconcierge
 
 # Option 1: Use Python's built-in server
 python3 -m http.server 8000
@@ -49,7 +55,8 @@ npx @biomejs/biome lint .
 npx @biomejs/biome check .
 ```
 
-Configuration: [`biome.json`](biome.json) (2-space indentation, 80-char line width)
+**Formatting & Linting**  
+Configuration: [`configs/biome.json`](configs/biome.json) (2-space indentation, 80-char line width)
 
 ## Technology Stack
 
@@ -77,7 +84,7 @@ legacy-concierge/
 │   └── media/            # Videos, audio, icons, logos
 ├── components/           # Web Components
 │   ├── templates/        # HTML <template> definitions
-│   └── scripts/          # Component JavaScript
+│   └── tools/          # Component JavaScript
 ├── docs/                 # Project documentation
 ├── layouts/              # Page layout templates
 ├── pages/                # Site pages
@@ -88,16 +95,19 @@ legacy-concierge/
 │   ├── splash/           # Landing/splash page
 │   ├── team/             # Team page
 │   └── treatments/       # Treatment detail pages
-├── scripts/              # Core JavaScript modules
+├── tools/              # Core JavaScript modules
 │   ├── core/             # Core utilities
 │   ├── app.js            # Navigation, mobile menu
 │   ├── i18n.js           # Internationalization engine
 │   └── theme.js          # Theme management
-├── styles/               # CSS stylesheets
+├── theme/               # CSS stylesheets
 │   └── style.css         # Global styles
+├── configs/              # Configuration files
+│   ├── biome.json        # Biome linter/formatter
+│   ├── lighthouserc.js   # Lighthouse CI (desktop)
+│   ├── lighthouserc.mobile.js # Lighthouse CI (mobile)
+│   └── tsconfig.json     # TypeScript configuration
 ├── index.html            # Homepage
-├── biome.json            # Biome configuration
-├── jsconfig.json         # JavaScript IDE support
 └── package.json          # Dependencies
 ```
 
@@ -123,7 +133,7 @@ The site features a custom vanilla JavaScript i18n system:
 <button data-i18n-attr="aria-label:buttons.submit">Submit</button>
 ```
 
-See [`_locale/README.md`](_locale/README.md) for detailed documentation.
+See [`_locale/README.md`](./docs/reference/README.md) for detailed documentation.
 
 ## Theming
 
@@ -135,7 +145,7 @@ Dual theme support with automatic detection:
 - **Manual Toggle** - User preference stored in localStorage
 - **Smooth Transitions** - Animated theme switching
 
-Themes use CSS custom properties defined in [`styles/style.css`](styles/style.css).
+Themes use CSS custom properties defined in [`shared/theme/style.css`](shared/theme/style.css).
 
 ## Accessibility
 
@@ -185,30 +195,30 @@ Custom elements for reusable UI:
 - `<lc-card-grid>` - Responsive card grid
 - `<lc-bento-grid>` - Masonry-style grid layout
 
-See [`components/README.md`](components/README.md) for full documentation.
+See [`components/README.md`](./docs/reference/README.md) for full documentation.
 
 ## Scripts
 
 Core JavaScript modules:
 
-- [`app.js`](scripts/app.js) - Navigation, mobile menu, scroll effects
-- [`i18n.js`](scripts/i18n.js) - Internationalization engine
-- [`theme.js`](scripts/theme.js) - Dark/light mode management
-- [`language-switcher.js`](scripts/language-switcher.js) - Language selection component
+- [`app.js`](common/utils/app.js) - Navigation, mobile menu, scroll effects
+- [`i18n.js`](common/services/i18n.js) - Internationalization engine
+- [`theme.js`](common/services/theme.js) - Dark/light mode management
+- [`lang.js`](common/utils/lang.js) - Language selection component
 
-See [`scripts/README.md`](scripts/README.md) for detailed documentation.
+See [`tools/README.md`](./docs/reference/README.md) for detailed documentation.
 
 ## Layouts
 
-Pre-built page layout templates in [`layouts/`](layouts/):
+Pre-built page layout templates in [`shared/partials/layouts/`](shared/partials/layouts/):
 
-- [`homepage-video.html`](layouts/homepage-video.html) - Homepage with background video
-- [`subpage-sidebar.html`](layouts/subpage-sidebar.html) - Subpage with right sidebar
-- [`bentobox-grid.html`](layouts/bentobox-grid.html) - Masonry-style card grid
-- [`contact.html`](layouts/contact.html) - Contact page layout
-- [`splash.html`](layouts/splash.html) - Landing page layout
-- [`blog-gallery.html`](layouts/blog-gallery.html) - Blog listing layout
-- [`blog-post.html`](layouts/blog-post.html) - Individual blog post layout
+- [`video.html`](shared/partials/layouts/video.html) - Homepage with background video
+- [`sidebar.html`](shared/partials/layouts/sidebar.html) - Subpage with right sidebar
+- [`gallery.html`](shared/partials/layouts/gallery.html) - Masonry-style card grid
+- [`contact.html`](shared/partials/layouts/contact.html) - Contact page layout
+- [`landing.html`](shared/partials/layouts/landing.html) - Landing page layout
+- [`blog.html`](shared/partials/layouts/blog.html) - Blog listing layout
+- [`post.html`](shared/partials/layouts/post.html) - Individual blog post layout
 
 ## Development Status
 
@@ -235,19 +245,19 @@ Pre-built page layout templates in [`layouts/`](layouts/):
 - Subpage templates
 - Form components
 
-See [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) for full project timeline.
+See [`docs/explanation/ROADMAP.md`](docs/explanation/ROADMAP.md) for the current project roadmap.
 
 ## Links
 
-- **GitHub:** <https://github.com/dylarcher/legacy-concierge>
+- **GitHub:** <https://github.com/dylarcher/legacyconcierge>
 - **Project Board:** <https://github.com/users/dylarcher/projects/18>
 - **Documentation:** [`docs/`](docs/)
 
 ## Documentation
 
-- [`docs/ROADMAP_TIMELINE.md`](docs/ROADMAP_TIMELINE.md) - Complete project timeline and progress
-- [`docs/WEB_COMPONENTS_SUMMARY.md`](docs/WEB_COMPONENTS_SUMMARY.md) - Web Components implementation notes
-- [`docs/QUICK_START.md`](docs/QUICK_START.md) - Quick reference guide
+- [`docs/explanation/ROADMAP.md`](docs/explanation/ROADMAP.md) - Project roadmap and milestones
+- [`docs/reference/README.md`](docs/reference/README.md) - Documentation index and structure (Diátaxis)
+- [`docs/tutorials/GETTING_STARTED.md`](docs/tutorials/GETTING_STARTED.md) - Quick start guide
 
 ## Contributing
 
@@ -281,9 +291,9 @@ When adding new features:
 ### Updating Components
 
 1. Modify template in [`components/templates/`](components/templates/)
-2. Update script in [`components/scripts/`](components/scripts/) if needed
+2. Update script in [`components/tools/`](components/tools/) if needed
 3. Test across all pages using the component
-4. Update [`components/README.md`](components/README.md) documentation
+4. Update [`components/README.md`](./docs/reference/README.md) documentation
 
 ## Browser Support
 
@@ -296,11 +306,13 @@ Progressive enhancement ensures core functionality works in older browsers.
 
 ## License
 
-[License information to be added]
+This project is licensed under the ISC License — see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-[Contact information to be added]
+- General inquiries: <https://www.legacyconcierge.com/pages/contact/>
+- Security: see [.github/SECURITY.md](.github/SECURITY.md) or our public [`security.txt`](security.txt)
+- Maintainer: Dylan Archer (<mailto:dylarcher@gmail.com>)
 
 ---
 

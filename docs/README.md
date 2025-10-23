@@ -8,9 +8,9 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 
 **New to the project?** Start here:
 
-1. **[GETTING_STARTED.md](./GETTING_STARTED.md)** - 5-minute quick start guide
-2. **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Technical architecture overview
-3. **[ROADMAP.md](./ROADMAP.md)** - Project status and next steps
+1. **[GETTING_STARTED.md](./tutorials/GETTING_STARTED.md)** - 5-minute quick start guide
+2. **[ARCHITECTURE.md](./reference/ARCHITECTURE.md)** - Technical architecture overview
+3. **[ROADMAP.md](./explanation/ROADMAP.md)** - Project status and next steps
 
 ---
 
@@ -18,7 +18,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 
 ### Core Documentation
 
-**[GETTING_STARTED.md](./GETTING_STARTED.md)**
+**[GETTING_STARTED.md](./tutorials/GETTING_STARTED.md)**
 
 - Quick start in 5 minutes
 - Component usage examples
@@ -26,7 +26,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Migration guide
 - Best practices
 
-**[ARCHITECTURE.md](./ARCHITECTURE.md)**
+**[ARCHITECTURE.md](./reference/ARCHITECTURE.md)**
 
 - Technical architecture decisions
 - Component architecture
@@ -36,7 +36,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Performance targets
 - Security considerations
 
-**[ROADMAP.md](./ROADMAP.md)**
+**[ROADMAP.md](./explanation/ROADMAP.md)**
 
 - Honest project status (~15-20% complete)
 - What's actually done vs. what needs work
@@ -44,29 +44,44 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Success metrics
 - Risk assessment
 
+### Implementation Documentation
+
+**[PHASE_1_IMPLEMENTATION.md](./how-to/PHASE_1_IMPLEMENTATION.md)**
+
+- Root-relative path fixes (445 replacements across 50 files)
+- Icon system implementation (36 icons integrated)
+- Development workflow enhancements
+- Automated path-fixing utility
+- Status: ✅ Completed (October 22, 2025)
+
+**[PHASE_2_WEB_VITALS.md](./how-to/PHASE_2_WEB_VITALS.md)**
+
+- Web Vitals performance monitoring integration
+- Real-time metrics overlay (LCP, FID, INP, CLS, FCP, TTFB)
+- Development-only tool loading system
+- Console logging and keyboard shortcuts
+- Status: ✅ Completed (October 22, 2025)
+
+**[PHASE_2_LIGHTHOUSE_CI.md](./how-to/PHASE_2_LIGHTHOUSE_CI.md)**
+
+- Automated Lighthouse audits for performance and accessibility
+- Desktop and mobile configurations with custom thresholds
+- Resource budget tracking (scripts, images, fonts, CSS)
+- WCAG 2.2 AA accessibility compliance checks
+- Helper scripts and npm commands
+- Status: ✅ Completed (October 22, 2025)
+
 ### Supporting Documentation
 
-**[IMAGE_RENAME_OUTLINE.md](./IMAGE_RENAME_OUTLINE.md)**
+- See Reference docs below for media strategy and naming guidance
 
-- Image naming conventions
-- File count by category
-- Usage guidelines
+### Example Implementations
 
-### Demo Documentation
-
-**[demo/](./demo/)**
-
-- Example implementations
-- Fullscreen video background demo
-- Progress demos
+- See `pages/demos/` for example pages and component demos
 
 ### Archived Documentation
 
-**[archive/](./archive/)**
-
-- **ROADMAP_TIMELINE_DETAILED.md** - Original 1953-line detailed roadmap
-- **QUICK_START.md** - Merged into GETTING_STARTED.md
-- **WEB_COMPONENTS_SUMMARY.md** - Merged into GETTING_STARTED.md
+- Historical docs have been consolidated into the Diátaxis structure
 
 ---
 
@@ -76,42 +91,46 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 
 **Getting started:**
 
-1. [GETTING_STARTED.md](./GETTING_STARTED.md) - Start here
-2. [ARCHITECTURE.md](./ARCHITECTURE.md) - Understand the patterns
-3. [Components README](../components/README.md) - Component API reference
+1. [GETTING_STARTED.md](./tutorials/GETTING_STARTED.md) - Start here
+2. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Understand the patterns
+3. [Components README](./reference/README.md) - Component API reference
 
 **Working on features:**
 
-1. [ROADMAP.md](./ROADMAP.md) - See what's priority
-2. [ARCHITECTURE.md](./ARCHITECTURE.md) - Follow established patterns
-3. [archive/ROADMAP_TIMELINE_DETAILED.md](./archive/ROADMAP_TIMELINE_DETAILED.md) - Detailed task breakdowns
+1. [ROADMAP.md](./explanation/ROADMAP.md) - See what's priority
+2. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Follow established patterns
+
+**Recent implementations:**
+
+1. [PHASE_1_IMPLEMENTATION.md](./how-to/PHASE_1_IMPLEMENTATION.md) - Path fixes & icon system
+2. [PHASE_2_WEB_VITALS.md](./how-to/PHASE_2_WEB_VITALS.md) - Performance monitoring
+3. [PHASE_2_LIGHTHOUSE_CI.md](./how-to/PHASE_2_LIGHTHOUSE_CI.md) - Automated audits
 
 ### For Project Managers
 
 **Project status:**
 
-1. [ROADMAP.md](./ROADMAP.md) - Current status and next 30 days
-2. [archive/ROADMAP_TIMELINE_DETAILED.md](./archive/ROADMAP_TIMELINE_DETAILED.md) - Full timeline
+1. [ROADMAP.md](./explanation/ROADMAP.md) - Current status and next 30 days
+2. [Remaining Tasks](./explanation/REMAINING_TASKS.md) - Detailed task breakdowns
 
 **Understanding the project:**
 
-1. [GETTING_STARTED.md](./GETTING_STARTED.md) - What's been built
-2. [ARCHITECTURE.md](./ARCHITECTURE.md) - Technical decisions
+1. [GETTING_STARTED.md](./tutorials/GETTING_STARTED.md) - What's been built
+2. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Technical decisions
 
 ### For Designers
 
 **Design system:**
 
-1. [ARCHITECTURE.md](./ARCHITECTURE.md) - Design tokens, color system
-2. [../components/README.md](../components/README.md) - Component variants
-3. [../styles/README.md](../styles/README.md) - Styling guide (if exists)
+1. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Design tokens, color system
+2. [Components Reference](./reference/README.md) - Component variants
+3. [Styles Guide](./reference/README.md) - Styling guidance
 
 ---
 
 ## Documentation Standards
 
 ### File Naming
-
 
 - Use `UPPERCASE_WITH_UNDERSCORES.md` for major docs
 - Use `lowercase-with-dashes.md` for supporting docs
@@ -141,24 +160,23 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 **Project Root:**
 
 - [../README.md](../README.md) - Main project README
-- [../.claude/CLAUDE.md](../.claude/CLAUDE.md) - Claude Code instructions
 
 **Components:**
 
-- [../components/README.md](../components/README.md) - Component library docs
-- [../components/EXAMPLE.html](../components/EXAMPLE.html) - Working examples
+- [Reference Index](./reference/README.md) - Component library docs
+- Examples in `pages/demos/components/`
 
 **Scripts:**
 
-- [../scripts/README.md](../scripts/README.md) - JavaScript modules docs
+- See Reference Index for JS module documentation
 
 **Layouts:**
 
-- [../layouts/README.md](../layouts/README.md) - Page layout templates
+- [../shared/partials/layouts/README.md](../shared/partials/layouts/README.md) - Page layout templates
 
 **Locale:**
 
-- [../_locale/README.md](../_locale/README.md) - i18n documentation
+- [../shared/content/_locale/README.md](../shared/content/_locale/README.md) - i18n documentation
 
 ---
 
@@ -214,12 +232,12 @@ Current gaps in documentation:
 
 ## Questions?
 
-- Check [GETTING_STARTED.md](./GETTING_STARTED.md) first
-- Review [ARCHITECTURE.md](./ARCHITECTURE.md) for technical details
-- See [ROADMAP.md](./ROADMAP.md) for project direction
+- Check [GETTING_STARTED.md](./tutorials/GETTING_STARTED.md) first
+- Review [ARCHITECTURE.md](./reference/ARCHITECTURE.md) for technical details
+- See [ROADMAP.md](./explanation/ROADMAP.md) for project direction
 - Browse [archive/](./archive/) for detailed historical docs
 
 ---
 
-**Last Updated:** October 20, 2025
+**Last Updated:** October 22, 2025
 **Maintained By:** Development Team

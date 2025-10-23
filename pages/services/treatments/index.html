@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="treatments.title"></title>
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="description" data-i18n="treatments.subtitle" />
+    <link
+      rel="canonical"
+      href="https://www.legacyconcierge.com/treatments.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.legacyconcierge.com/treatments.html"
+    />
+    <meta
+      property="og:title"
+      content="Concierge Treatments - In-Home Nursing Services"
+    />
+    <meta
+      property="og:description"
+      content="Explore our comprehensive concierge treatments, from post-op recovery and mental health support to IV therapy and pain management, all in the comfort of your home."
+    />
+    <meta
+      property="og:image"
+      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.legacyconcierge.com/treatments.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Concierge Treatments - In-Home Nursing Services"
+    />
+    <meta
+      property="twitter:description"
+      content="Explore our comprehensive concierge treatments, from post-op recovery and mental health support to IV therapy and pain management, all in the comfort of your home."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/shared/theme/style.css" />
+  </head>
+  <body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+    <lc-header></lc-header>
+
+    <main role="main" id="main">
+      <section
+        class="container page-content fade-in"
+        itemprop="mainContentOfPage"
+      >
+        <h1 itemprop="name" data-i18n="treatments.title"></h1>
+        <p
+          class="page-subtitle"
+          itemprop="description"
+          data-i18n="treatments.subtitle"
+        ></p>
+
+        <div class="services-grid" id="services-grid" hidden></div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <lc-footer></lc-footer>
+    <script src="/common/services/theme.js"></script>
+    <script src="/common/utils/app.js"></script>
+    <script src="/common/services/i18n.js"></script>
+
+    <!-- Component System -->
+    <script type="module">
+      import { loadTemplates } from "/common/core/component-loader.js";
+
+      // Function to populate service cards
+      async function populateServiceCards() {
+        try {
+          const response = await fetch(
+            "/shared/content/_locale/en/treatments.json"
+          );
+          const data = await response.json();
+          const services = data.services;
+          const grid = document.getElementById("services-grid");
+
+          services.forEach((service) => {
+            const card = document.createElement("div");
+            card.className = "service-card";
+            card.setAttribute("itemscope", "");
+            card.setAttribute("itemtype", "http://schema.org/Offer");
+
+            const icon = document.createElement("lc-icon");
+            icon.setAttribute("name", service.icon);
+            icon.setAttribute("size", "medium");
+            icon.setAttribute("color", "primary");
+            icon.setAttribute("aria-label", service.title);
+
+            const title = document.createElement("h4");
+            title.setAttribute("itemprop", "name");
+            title.textContent = service.title;
+
+            const description = document.createElement("p");
+            description.setAttribute("itemprop", "description");
+            description.textContent = service.description;
+
+            const link = document.createElement("a");
+            link.href = service.link;
+            link.setAttribute("itemprop", "url");
+            link.setAttribute(
+              "aria-label",
+              `Learn more about ${service.title}`
+            );
+            link.textContent = "Learn More";
+
+            card.appendChild(icon);
+            card.appendChild(title);
+            card.appendChild(description);
+            card.appendChild(link);
+
+            grid.appendChild(card);
+          });
+
+          // Show the grid after populating
+          grid.removeAttribute("hidden");
+        } catch (error) {
+          console.error("Failed to populate service cards:", error);
+        }
+      }
+
+      // Load templates and initialize components
+      (async () => {
+        try {
+          // Load all required templates first
+          const templateResults = await loadTemplates(
+            ["header", "footer", "cards"],
+            true
+          );
+          const allLoaded = templateResults.every((result) => result === true);
+
+          if (!allLoaded) {
+            console.error("✗ Some templates failed to load:", templateResults);
+            console.error("  Check the console for fetch errors above");
+            return;
+          }
+
+          console.log("✓ All component templates loaded successfully");
+
+          // Import component scripts
+          await Promise.all([
+            import("/common/components/lc-header.js"),
+            import("/common/components/lc-footer.js"),
+            import("/common/components/lc-card.js"),
+            import("/common/components/lc-icon.js"),
+          ]);
+          console.log("✓ Component scripts loaded successfully");
+
+          // Populate service cards
+          await populateServiceCards();
+
+          // Wait a tick for components to render
+          await new Promise((resolve) => setTimeout(resolve, 100));
+
+          // Re-apply i18n translations to components
+          if (window.applyTranslations) {
+            await window.applyTranslations();
+            console.log("✓ i18n translations applied to components");
+          }
+
+          // Setup theme toggle (now that component has rendered)
+          if (window.setupThemeToggle) {
+            window.setupThemeToggle();
+          }
+
+          // Setup language toggle (now that component has rendered)
+          const languageToggle = document.querySelector(".language-toggle");
+          if (languageToggle && window.switchLanguage) {
+            languageToggle.addEventListener("click", () => {
+              const currentLang = document.documentElement.lang;
+              const newLang = currentLang === "en" ? "es" : "en";
+              window.switchLanguage(newLang);
+            });
+            console.log("✓ Language toggle initialized");
+          }
+        } catch (error) {
+          console.error("Failed to initialize components:", error);
+        }
+      })();
+    </script>
+
+    <!-- Development Tools (Web Vitals, etc.) -->
+    <script type="module" src="/common/tools/dev-tools.js"></script>
+  </body>
+</html>

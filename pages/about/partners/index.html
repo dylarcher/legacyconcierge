@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Partners - Legacy Concierge Network</title>
+    <link rel="icon" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Legacy Concierge partners with Southern California's finest healthcare providers to deliver unrivaled, integrated care. Join our premier network."
+    />
+    <link
+      rel="canonical"
+      href="https://www.legacyconcierge.com/partners.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.legacyconcierge.com/partners.html"
+    />
+    <meta
+      property="og:title"
+      content="Our Partners - Legacy Concierge Network"
+    />
+    <meta
+      property="og:description"
+      content="Legacy Concierge partners with Southern California's finest healthcare providers to deliver unrivaled, integrated care. Join our premier network."
+    />
+    <meta
+      property="og:image"
+      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.legacyconcierge.com/partners.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Our Partners - Legacy Concierge Network"
+    />
+    <meta
+      property="twitter:description"
+      content="Legacy Concierge partners with Southern California's finest healthcare providers to deliver unrivaled, integrated care. Join our premier network."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/shared/theme/style.css" />
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+    <lc-header></lc-header>
+    <main role="main" id="main">
+      <section class="container page-content fade-in">
+        <h1 data-i18n="partners.title"></h1>
+        <p class="page-subtitle" data-i18n="partners.subtitle"></p>
+        <div class="partner-grid" id="partner-grid" hidden></div>
+        <div class="cta-section">
+          <h2 data-i18n="partners.cta.title"></h2>
+          <p data-i18n="partners.cta.text"></p>
+          <a
+            href="/pages/contact/"
+            class="cta-button"
+            data-i18n="partners.cta.button"
+          ></a>
+        </div>
+      </section>
+    </main>
+    <lc-footer></lc-footer>
+    <script src="/common/services/theme.js"></script>
+    <script src="/common/utils/app.js"></script>
+    <script src="/common/services/i18n.js"></script>
+    <script type="module">
+      import { loadTemplates } from "/common/core/component-loader.js";
+      async function populatePartnerCards() {
+        try {
+          const response = await fetch(
+            "/shared/content/_locale/en/partners.json"
+          );
+          const data = await response.json();
+          const partners = Array.isArray(data.partners)
+            ? data.partners
+            : data.partners?.list || [];
+          const grid = document.getElementById("partner-grid");
+          partners.forEach((partner) => {
+            const card = document.createElement("div");
+            card.className = "partner-card";
+            const name = document.createElement("h3");
+            name.textContent = partner.name;
+            const description = document.createElement("p");
+            description.textContent = partner.description || "";
+            card.appendChild(name);
+            card.appendChild(description);
+            grid.appendChild(card);
+          });
+
+          // Show the grid after populating
+          grid.removeAttribute("hidden");
+        } catch (error) {
+          console.error("Failed to populate partner cards:", error);
+        }
+      }
+      (async () => {
+        try {
+          const templateResults = await loadTemplates(
+            ["header", "footer", "cards"],
+            true
+          );
+          if (!templateResults.every((r) => r)) {
+            return console.error(
+              "✗ Some templates failed to load. Check console for details."
+            );
+          }
+          await Promise.all([
+            import("/common/components/lc-header.js"),
+            import("/common/components/lc-footer.js"),
+            import("/common/components/lc-card.js"),
+          ]);
+          await populatePartnerCards();
+          await new Promise((resolve) => setTimeout(resolve, 100));
+          if (window.applyTranslations) await window.applyTranslations();
+          if (window.setupThemeToggle) window.setupThemeToggle();
+        } catch (error) {
+          console.error("Failed to initialize components:", error);
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -8,15 +8,14 @@ exclude:
   - "*.themebackup"
   - "**/*.backup"
   - "**/*.pathbackup"
-  - "**/*.themebackup"
-  - "scripts/*.py"
+  - "tools/*.py"
   - "*.py"
   - node_modules/
   - vendor/
   - .git/
   - .github/
   - README.md
-  - biome.json
+  - configs/
   - package.json
   - package-lock.json
   - .gitignore
@@ -29,12 +28,15 @@ include:
   - pages/
   - docs/
   - assets/
-  - styles/
-  - scripts/
+  - theme/
+  - tools/
   - components/
 
 # Markdown settings
 markdown: kramdown
+
+# Output report configuration
+destination: .tmp
 kramdown:
   input: GFM
   hard_wrap: false

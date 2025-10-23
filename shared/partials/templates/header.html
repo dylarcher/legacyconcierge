@@ -1,0 +1,414 @@
+<!-- Legacy Concierge Header Template -->
+<template id="lc-header-template">
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="/" class="logo-link" aria-label="Legacy Concierge Home">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="64"
+              fill="none"
+              viewBox="0 0 392 392"
+              itemprop="logo"
+              aria-label="Logo"
+              role="img"
+              focusable="false"
+            >
+              <title>Legacy Concierge Logo</title>
+              <g
+                fill="#2f4f4f"
+                transform-origin="center"
+                transform="scale(.64) translate(-32 -32)"
+                filter="brightness(1.2)"
+              >
+                <path
+                  d="m128.68 8.9-.5-.05a80 80 0 0 0-8.88-.53c-2.43.03-4.32.29-5.79.8a6 6 0 0 0-3.2 2.34 9 9 0 0 0-1.36 4.32v296.83c28.1 1.93 60.23 8.24 95.09 19.77 56.6 18.72 118.13 16.1 149.35 3.5 15.62-6.3 26.9-14.02 34.27-20.18a91 91 0 0 0 8.17-7.67 56 56 0 0 0 2.49-2.84l.12-.15.02-.04h.01l.8.37c-15.34 33.14-49.64 51.1-87.36 58.1s-78.16 1.2-108.2-7.58C154.7 341.55 80.91 313.79.5 344.68c17.57-19.56 52.21-31.34 80.4-32.51-2.54.1 2.46-.19 0 0V15.8a9 9 0 0 0-1.52-3.94 7 7 0 0 0-3.4-2.3c-3.15-1.08-8.11-1.24-15.97-.7l-.48.03V0h69.15z"
+                ></path>
+                <path
+                  d="M422.08 187.9h1.77v72.32c-4.8-72.12-82.1-72.32-82.1-72.32-124.72 3.9-132.36 147.6-132.36 147.6 0 85.73 69.03 127.55 125.86 124.3 56.83-3.23 87.94-51.45 108.65-60.42 15.67-6.79 28.57 9.02 33.93 17.12a34 34 0 0 1 2.67 4.42s-.94-1.81-2.67-4.42c-4.44-6.33-14.23-16.32-28.02-7.9-19.22 11.76-70.67 101.8-182.47 60.75 0 0-86.63-29.18-86.62-133.85s77.04-177.16 175.97-163.17c0 0 51.02 7.62 63.37 42.54 1.46-2.68 1.8-18.45 2.02-26.97"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul id="main-nav">
+          <!-- <li><a href="/" data-i18n="navigation.home">Home</a></li> -->
+
+          <!-- About Dropdown -->
+          <li class="dropdown">
+            <a
+              href="/pages/about"
+              data-i18n="navigation.about.about"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >About</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  href="/pages/about/contact"
+                  data-i18n="navigation.about.contact.contact"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Contact</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/about/contact/locations"
+                      data-i18n="navigation.about.contact.locations"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/pages/about/jobs"
+                  data-i18n="navigation.about.jobs"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="/pages/about/legal"
+                  data-i18n="navigation.about.legal.legal"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Legal</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/about/legal/privacy"
+                      data-i18n="navigation.about.legal.privacy"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/about/legal/terms"
+                      data-i18n="navigation.about.legal.terms"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/pages/about/partners"
+                  data-i18n="navigation.about.partners"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="/pages/about/team"
+                  data-i18n="navigation.about.team"
+                ></a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Blog Dropdown -->
+          <li class="dropdown">
+            <a
+              href="/pages/blog"
+              data-i18n="navigation.blog.blog"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Blog</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  href="/pages/blog/post"
+                  data-i18n="navigation.blog.post.post"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Posts</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/blog/post/post-op-care"
+                      data-i18n="navigation.blog.post.postOpCare"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Demos Dropdown -->
+          <li class="dropdown">
+            <a
+              href="/pages/demos"
+              data-i18n="navigation.demos.demos"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Demos</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  href="/pages/demos/blog"
+                  data-i18n="navigation.demos.blog.blog"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Blog Gallery</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/demos/blog/post"
+                      data-i18n="navigation.demos.blog.post"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/pages/demos/components"
+                  data-i18n="navigation.demos.components"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="/pages/demos/entry"
+                  data-i18n="navigation.demos.entry.entry"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Entry</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/demos/entry/landing"
+                      data-i18n="navigation.demos.entry.landing"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/pages/demos/hero"
+                  data-i18n="navigation.demos.hero"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="/pages/demos/subpage"
+                  data-i18n="navigation.demos.subpage.subpage"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Subpage</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/demos/subpage/contact"
+                      data-i18n="navigation.demos.subpage.contact"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/demos/subpage/gallery"
+                      data-i18n="navigation.demos.subpage.gallery"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/demos/subpage/sidebar"
+                      data-i18n="navigation.demos.subpage.sidebar"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="dropdown">
+            <a
+              href="/pages/services"
+              data-i18n="navigation.services.services"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Services</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  href="/pages/services/expertise"
+                  data-i18n="navigation.services.expertise.expertise"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Expertise</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/als"
+                      data-i18n="navigation.services.expertise.als"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/alzheimers"
+                      data-i18n="navigation.services.expertise.alzheimers"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/dementia"
+                      data-i18n="navigation.services.expertise.dementia"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/diabetes-management"
+                      data-i18n="navigation.services.expertise.diabetes"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/heart-disease"
+                      data-i18n="navigation.services.expertise.heart"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/ms"
+                      data-i18n="navigation.services.expertise.ms"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/oncology"
+                      data-i18n="navigation.services.expertise.oncology"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/ostomy-management"
+                      data-i18n="navigation.services.expertise.ostomy"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/parkinsons"
+                      data-i18n="navigation.services.expertise.parkinsons"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/stroke-recovery"
+                      data-i18n="navigation.services.expertise.stroke"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/expertise/views/tbi"
+                      data-i18n="navigation.services.expertise.tbi"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="/pages/services/treatments"
+                  data-i18n="navigation.services.treatments.treatments"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >Treatments</a
+                >
+                <ul class="dropdown-submenu">
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/cardiac-pulmonary"
+                      data-i18n="navigation.services.treatments.cardiac"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/eating-disorders"
+                      data-i18n="navigation.services.treatments.eating"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/iv-therapy"
+                      data-i18n="navigation.services.treatments.iv"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/mental-health"
+                      data-i18n="navigation.services.treatments.mental"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/pain-management"
+                      data-i18n="navigation.services.treatments.pain"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/post-op-recovery"
+                      data-i18n="navigation.services.treatments.postOp"
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="/pages/services/treatments/views/rehab-addiction"
+                      data-i18n="navigation.services.treatments.rehab"
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Theme Toggle -->
+          <li>
+            <button
+              class="theme-toggle"
+              data-i18n-attr="aria-label:accessibility.toggleTheme"
+            >
+              <span class="icon icon-light" data-i18n="theme.light"></span>
+              <span class="icon icon-dark" data-i18n="theme.dark"></span>
+            </button>
+          </li>
+
+          <!-- Language Toggle -->
+          <li>
+            <button
+              class="language-toggle"
+              data-i18n-attr="aria-label:accessibility.switchLanguage"
+            >
+              <span data-i18n="language.current"></span>
+              <span>→</span>
+              <span data-i18n="language.switch"></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</template>

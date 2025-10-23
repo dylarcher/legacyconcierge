@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="Fullscreen responsive video background showcasing ocean waves with accessibility features and fallback support"
+      itemprop="description"
+    />
+    <title itemprop="name">Fullscreen Video Background</title>
+    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <style>
+      body {
+        margin: 0;
+      }
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+      .video-background video {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .content-overlay {
+        color: white;
+        text-align: center;
+        padding-top: 20vh;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div
+      id="status-announcements"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      class="visually-hidden"
+    ></div>
+    <div
+      itemscope
+      itemtype="https://schema.org/VideoObject"
+      class="video-background"
+      id="videoBackground"
+      role="presentation"
+      aria-hidden="true"
+    >
+      <video
+        id="bgVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="../../../assets/media/img/jpeg/img-shorebreak-1920x1080.jpg"
+        aria-hidden="true"
+        itemprop="contentUrl"
+      >
+        <source
+          src="/shared/assets/media/videos/bg-high-quality-1080p.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="/shared/assets/media/videos/bg-high-quality-1080p.webm"
+          type="video/webm"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <main
+      id="main-content"
+      itemprop="mainContentOfPage"
+      class="content-overlay"
+    >
+      <header class="hero-section">
+        <h1>Ocean Waves</h1>
+        <p class="subtitle">Experience the beauty of nature</p>
+        <button class="cta-button">Explore More</button>
+      </header>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("bgVideo");
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          video.removeAttribute("autoplay");
+          video.pause();
+        }
+      });
+    </script>
+  </body>
+</html>

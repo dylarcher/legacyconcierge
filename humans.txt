@@ -1,0 +1,87 @@
+# humanstxt.org - The humans responsible & technology colophon
+
+/* TEAM */
+
+Developer & Architect: Dylan Archer
+Contact: dylarcher [at] gmail.com
+GitHub: @dylarcher
+Location: United States
+
+Design Partner: Solve Design Create
+Website: https://solvedesigncreate.com
+Role: Design Consultation & Branding
+
+/* THANKS */
+
+Claude (Anthropic) - Development assistance
+Biome - Code formatting and linting
+Lighthouse - Performance and accessibility auditing
+Web Vitals - Core Web Vitals monitoring
+
+/* SITE */
+
+Standards: HTML5, CSS3, ES6+ JavaScript
+Components: Vanilla Web Components, Shadow DOM
+Internationalization: Custom i18n system (EN/ES)
+Fonts: Playfair Display, Work Sans, Montserrat, Poppins (Google Fonts)
+Icons: SVG-based icon system
+Accessibility: WCAG 2.1 AA compliant (94% Lighthouse score)
+Performance: Web Vitals integrated, lazy loading images
+SEO: XML sitemap, robots.txt, semantic HTML, Schema.org microdata
+
+Software: VS Code, Biome, Lighthouse CI, npm
+Version Control: Git, GitHub
+Hosting: TBD
+CDN: TBD
+
+/* ARCHITECTURE */
+
+Build System: None (vanilla static site)
+CSS Methodology: Custom properties, container queries, responsive design
+JS Pattern: ES modules, async/await, event-driven
+File Structure: Root-relative paths, component-based templates
+State Management: localStorage for theme/language preferences
+Theme Support: Light/dark mode with system preference detection
+Browser Support: Modern evergreen browsers (last 2 versions)
+
+/* PROJECT */
+
+Project Name: Legacy Concierge
+Domain: https://www.legacyconcierge.com
+Type: Healthcare - In-Home Nursing Services
+Target Audience: Ages 45-85, premium healthcare market
+Launch Date: TBD
+Last Update: 2025-10-22
+
+/* TRIVIA */
+
+- Built entirely with vanilla JavaScript (no frameworks!)
+- Fully responsive from 320px to 4K displays
+- Bilingual support (English & Spanish)
+- Zero build process - runs directly in browser
+- 94% accessibility score on Lighthouse
+- Dark mode that respects system preferences
+- Component system using Web Components API
+
+/* LICENSE */
+
+ISC License
+Copyright (c) 2025 Dylan Archer
+
+---
+
+Human beings are behind this website, not algorithms.
+Made with care, code, and attention to detail.
+Built to serve those who serve others.
+
+                    .     .
+                    |\_/|
+                   /     \
+                  | O   O |
+                   \  ^  /
+                    |||||
+                    |||||
+
+           Built with Love ❤️
+
+Have a wonderful day! 🌟

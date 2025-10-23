@@ -1,0 +1,165 @@
+<!-- Legacy Concierge Card Templates -->
+
+<!-- Base Card Template -->
+<template id="lc-card-template">
+  <article class="card">
+    <slot name="image"></slot>
+    <div class="card-content">
+      <slot name="header"></slot>
+      <slot name="title"></slot>
+      <slot name="body"></slot>
+      <slot name="footer"></slot>
+    </div>
+  </article>
+</template>
+
+<!-- Info Card Template (for homepage info cards) -->
+<template id="lc-card-info-template">
+  <div
+    class="card card-info"
+    itemprop="itemListElement"
+    itemscope
+    itemtype="http://schema.org/ListItem"
+  >
+    <slot name="icon"></slot>
+    <h4 itemprop="name">
+      <slot name="title"></slot>
+    </h4>
+    <p itemprop="description">
+      <slot></slot>
+    </p>
+  </div>
+</template>
+
+<!-- Service Card Template -->
+<template id="lc-card-service-template">
+  <article
+    class="card service-card"
+    itemscope
+    itemtype="http://schema.org/Service"
+  >
+    <div class="card-image">
+      <slot name="image"></slot>
+    </div>
+    <div class="card-content">
+      <h3 itemprop="name">
+        <slot name="title"></slot>
+      </h3>
+      <p itemprop="description">
+        <slot name="description"></slot>
+      </p>
+      <div class="card-actions">
+        <slot name="actions"></slot>
+      </div>
+    </div>
+  </article>
+</template>
+
+<!-- Team Member Card Template -->
+<template id="lc-card-team-template">
+  <article
+    class="card team-member-card"
+    itemscope
+    itemtype="http://schema.org/Person"
+  >
+    <div class="card-image">
+      <slot name="image"></slot>
+    </div>
+    <div class="card-content">
+      <h3 itemprop="name">
+        <slot name="name"></slot>
+      </h3>
+      <p class="role" itemprop="jobTitle">
+        <slot name="role"></slot>
+      </p>
+      <p itemprop="description">
+        <slot name="bio"></slot>
+      </p>
+      <div class="card-actions">
+        <slot name="actions"></slot>
+      </div>
+    </div>
+  </article>
+</template>
+
+<!-- Testimonial Card Template -->
+<template id="lc-card-testimonial-template">
+  <article
+    class="card testimonial-card"
+    itemprop="reviewRating"
+    itemscope
+    itemtype="http://schema.org/Rating"
+  >
+    <blockquote>
+      <p class="quote" itemprop="description">
+        <slot name="quote"></slot>
+      </p>
+    </blockquote>
+    <footer class="testimonial-footer">
+      <p class="author" itemprop="author">
+        <slot name="author"></slot>
+      </p>
+      <p class="title">
+        <slot name="title"></slot>
+      </p>
+      <meta itemprop="ratingValue" content="5" />
+    </footer>
+  </article>
+</template>
+
+<!-- Bento Card Template (variable-sized for bentobox grids) -->
+<template id="lc-card-bento-template">
+  <article class="card bento-card">
+    <div class="bento-card-inner">
+      <slot name="icon"></slot>
+      <h3>
+        <slot name="title"></slot>
+      </h3>
+      <p>
+        <slot name="description"></slot>
+      </p>
+      <slot name="content"></slot>
+    </div>
+  </article>
+</template>
+
+<!-- Blog Card Template -->
+<template id="lc-card-blog-template">
+  <article
+    class="card blog-card"
+    itemscope
+    itemtype="http://schema.org/BlogPosting"
+  >
+    <div class="card-image">
+      <slot name="image"></slot>
+    </div>
+    <div class="card-content">
+      <div class="blog-meta">
+        <slot name="meta"></slot>
+      </div>
+      <h3 itemprop="headline">
+        <slot name="title"></slot>
+      </h3>
+      <p itemprop="description">
+        <slot name="excerpt"></slot>
+      </p>
+      <div class="card-actions">
+        <slot name="actions"></slot>
+      </div>
+    </div>
+  </article>
+</template>
+
+<!-- Card Grid Template -->
+<template id="lc-card-grid-template">
+  <div class="card-grid">
+    <slot></slot>
+  </div>
+</template>
+
+<!-- Bento Grid Template (masonry-style) -->
+<template id="lc-bento-grid-template">
+  <div class="bento-grid">
+    <slot></slot>
+  </div>
+</template>

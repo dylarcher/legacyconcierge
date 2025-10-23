@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team - Legacy Concierge Leadership</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="Meet the experienced and compassionate leadership team at Legacy Concierge, dedicated to delivering exceptional, personalized in-home care."
+    />
+    <link rel="canonical" href="https://www.legacyconcierge.com/team.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.legacyconcierge.com/team.html"
+    />
+    <meta
+      property="og:title"
+      content="Our Team - Legacy Concierge Leadership"
+    />
+    <meta
+      property="og:description"
+      content="Meet the experienced and compassionate leadership team at Legacy Concierge, dedicated to delivering exceptional, personalized in-home care."
+    />
+    <meta
+      property="og:image"
+      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.legacyconcierge.com/team.html"
+    />
+    <meta
+      property="twitter:title"
+      content="Our Team - Legacy Concierge Leadership"
+    />
+    <meta
+      property="twitter:description"
+      content="Meet the experienced and compassionate leadership team at Legacy Concierge, dedicated to delivering exceptional, personalized in-home care."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/shared/theme/style.css" />
+  </head>
+  <body itemscope itemtype="http://schema.org/AboutPage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <lc-header></lc-header>
+
+    <main role="main" id="main">
+      <section
+        class="container page-content fade-in"
+        itemprop="mainContentOfPage"
+      >
+        <h1 itemprop="name" data-i18n="team.title"></h1>
+        <p
+          class="page-subtitle"
+          itemprop="description"
+          data-i18n="team.subtitle"
+        ></p>
+        <div class="team-grid" id="team-grid" hidden></div>
+      </section>
+    </main>
+
+    <lc-footer></lc-footer>
+
+    <script src="/common/services/theme.js"></script>
+    <script src="/common/utils/app.js"></script>
+    <script src="/common/services/i18n.js"></script>
+
+    <!-- Component System -->
+    <script type="module">
+      import { loadTemplates } from "/common/core/component-loader.js";
+
+      // Function to populate team cards
+      async function populateTeamCards() {
+        try {
+          const response = await fetch("/shared/content/_locale/en/team.json");
+          const data = await response.json();
+          const members = data.members;
+          const grid = document.getElementById("team-grid");
+
+          members.forEach((member) => {
+            const card = document.createElement("div");
+            card.className = "team-member-card";
+            card.setAttribute("itemscope", "");
+            card.setAttribute("itemtype", "http://schema.org/Person");
+
+            const image = document.createElement("img");
+            image.src = member.image;
+            image.alt = member.name;
+            image.setAttribute("itemprop", "image");
+
+            const name = document.createElement("h4");
+            name.setAttribute("itemprop", "name");
+            name.textContent = member.name;
+
+            const title = document.createElement("h5");
+            title.setAttribute("itemprop", "jobTitle");
+            title.textContent = member.title;
+
+            const bio = document.createElement("p");
+            bio.setAttribute("itemprop", "description");
+            bio.textContent = member.bio;
+
+            card.appendChild(image);
+            card.appendChild(name);
+            card.appendChild(title);
+            card.appendChild(bio);
+
+            grid.appendChild(card);
+          });
+
+          // Show the grid after populating
+          grid.removeAttribute("hidden");
+        } catch (error) {
+          console.error("Failed to populate team cards:", error);
+        }
+      }
+
+      // Load templates and initialize components
+      (async () => {
+        try {
+          const templateResults = await loadTemplates(
+            ["header", "footer", "cards"],
+            true
+          );
+          if (!templateResults.every((r) => r)) {
+            return console.error(
+              "✗ Some templates failed to load. Check console for details."
+            );
+          }
+          await Promise.all([
+            import("/common/components/lc-header.js"),
+            import("/common/components/lc-footer.js"),
+            import("/common/components/lc-card.js"),
+          ]);
+
+          await populateTeamCards();
+
+          await new Promise((resolve) => setTimeout(resolve, 100));
+          if (window.applyTranslations) await window.applyTranslations();
+          if (window.setupThemeToggle) window.setupThemeToggle();
+        } catch (error) {
+          console.error("Failed to initialize components:", error);
+        }
+      })();
+    </script>
+  </body>
+</html>

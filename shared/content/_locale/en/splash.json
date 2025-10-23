@@ -1,0 +1,45 @@
+{
+	"splash": {
+		"features": {
+			"items": [
+				{
+					"description": "Licensed, experienced nurses providing hospital-quality care at home",
+					"title": "Expert Care"
+				},
+				{
+					"description": "Round-the-clock support whenever you need it, day or night",
+					"title": "24/7 Availability"
+				},
+				{
+					"description": "Custom care plans designed specifically for your unique needs",
+					"title": "Personalized Care"
+				},
+				{
+					"description": "Receive care in the comfort, privacy, and dignity of your own home",
+					"title": "Home Comfort"
+				}
+			],
+			"subtitle": "We provide unparalleled care with compassion, expertise, and dedication",
+			"title": "Why Choose Legacy Concierge?"
+		},
+		"footer": {
+			"copyright": "&copy; 2025 Legacy Concierge. All rights reserved."
+		},
+		"header": {
+			"about": "About",
+			"contact": "Contact",
+			"logo": "Legacy Concierge"
+		},
+		"hero": {
+			"cta": {
+				"primary": "Get Started Today",
+				"secondary": "Learn More"
+			},
+			"description": "Experience the highest level of personalized medical care in the comfort and dignity of your own home. Our team of expert nurses provides 24/7 support tailored to your unique needs.",
+			"logo": "Legacy Concierge",
+			"scroll": "Explore",
+			"tagline": "Premier in-home nursing services for those who matter most",
+			"title": "Compassionate Care,<br>Where You Call Home"
+		}
+	}
+}
