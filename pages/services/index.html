@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../common/core/path-resolver-init.js"></script>
+
+    <!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="services.title">Our Services - Legacy Concierge</title>
+    <link rel="icon" href="../../favicon.svg" />
+    <meta
+      name="description"
+      content="Discover our comprehensive in-home nursing services, from specialized treatments to expert care for chronic conditions."
+      data-i18n="services.subtitle"
+    />
+    <link
+      rel="canonical"
+      href="https://www.legacyconcierge.com/pages/services/"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.legacyconcierge.com/pages/services/"
+    />
+    <meta
+      property="og:title"
+      content="Our Services - Legacy Concierge"
+      data-i18n-attr="content:services.title"
+    />
+    <meta
+      property="og:description"
+      content="Discover our comprehensive in-home nursing services, from specialized treatments to expert care for chronic conditions."
+      data-i18n-attr="content:services.subtitle"
+    />
+    <meta
+      property="og:image"
+      content="https://www.legacyconcierge.com/shared/assets/media/team/team-nurse.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://www.legacyconcierge.com/pages/services/"
+    />
+    <meta
+      property="twitter:title"
+      content="Our Services - Legacy Concierge"
+      data-i18n-attr="content:services.title"
+    />
+    <meta
+      property="twitter:description"
+      content="Discover our comprehensive in-home nursing services, from specialized treatments to expert care for chronic conditions."
+      data-i18n-attr="content:services.subtitle"
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.legacyconcierge.com/shared/assets/media/team/team-nurse.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/theme/style.css" />
+  </head>
+  <body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <!-- Header Component -->
+    <lc-header></lc-header>
+
+    <main role="main" id="main">
+      <!-- Hero Section -->
+      <section class="container page-content fade-in" itemprop="mainContentOfPage">
+        <p class="page-eyebrow" itemprop="description" data-i18n="services.eyebrow"></p>
+        <h1 itemprop="name" data-i18n="services.title"></h1>
+        <p class="page-subtitle" data-i18n="services.subtitle"></p>
+      </section>
+
+      <!-- Treatments Section -->
+      <section id="treatments-overview" class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="services.treatments.sectionTitle"></h2>
+          <p data-i18n="services.treatments.sectionSubtitle"></p>
+        </div>
+
+        <div class="services-grid">
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[0].title"></h3>
+            <p data-i18n="services.treatments.items[0].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/post-op-recovery/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[1].title"></h3>
+            <p data-i18n="services.treatments.items[1].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/mental-health/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[2].title"></h3>
+            <p data-i18n="services.treatments.items[2].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/iv-therapy/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[3].title"></h3>
+            <p data-i18n="services.treatments.items[3].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/pain-management/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[4].title"></h3>
+            <p data-i18n="services.treatments.items[4].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/cardiac-pulmonary/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[5].title"></h3>
+            <p data-i18n="services.treatments.items[5].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/rehab-addiction/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.treatments.items[6].title"></h3>
+            <p data-i18n="services.treatments.items[6].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/treatments/views/eating-disorders/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+        </div>
+
+        <div class="section-cta">
+          <a href="/pages/services/treatments/" class="button button-secondary" data-i18n="services.treatments.viewAll"></a>
+        </div>
+      </section>
+
+      <!-- Expertise Section -->
+      <section id="expertise-overview" class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="services.expertise.sectionTitle"></h2>
+          <p data-i18n="services.expertise.sectionSubtitle"></p>
+        </div>
+
+        <div class="services-grid">
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[0].title"></h3>
+            <p data-i18n="services.expertise.items[0].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/alzheimers/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[1].title"></h3>
+            <p data-i18n="services.expertise.items[1].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/parkinsons/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[2].title"></h3>
+            <p data-i18n="services.expertise.items[2].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/oncology/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[3].title"></h3>
+            <p data-i18n="services.expertise.items[3].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/diabetes-management/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[4].title"></h3>
+            <p data-i18n="services.expertise.items[4].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/stroke-recovery/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[5].title"></h3>
+            <p data-i18n="services.expertise.items[5].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/heart-disease/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[6].title"></h3>
+            <p data-i18n="services.expertise.items[6].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/als/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="services.expertise.items[7].title"></h3>
+            <p data-i18n="services.expertise.items[7].description"></p>
+            <a
+              slot="link"
+              href="/pages/services/expertise/views/dementia/"
+              class="card-link"
+              data-i18n="services.learnMore"
+            ></a>
+          </lc-card>
+        </div>
+
+        <div class="section-cta">
+          <a href="/pages/services/expertise/" class="button button-secondary" data-i18n="services.expertise.viewAll"></a>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="services-cta" class="container fade-in">
+        <div class="cta-content">
+          <h2 data-i18n="services.cta.title"></h2>
+          <p data-i18n="services.cta.subtitle"></p>
+          <a href="#contact" class="cta-button" data-i18n="services.cta.button"></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <lc-footer></lc-footer>
+
+    <!-- Contact Dialog -->
+    <lc-contact-dialog id="contact-dialog"></lc-contact-dialog>
+
+    <!-- Scripts -->
+    <script src="../../common/services/theme.js"></script>
+    <script src="../../common/utils/app.js"></script>
+    <script src="../../common/services/i18n.js"></script>
+
+    <!-- Contact Dialog Component -->
+    <script type="module" src="../../common/components/contact-dialog.js"></script>
+
+    <!-- Component System -->
+    <script type="module" src="../../common/core/component-loader.js"></script>
+
+    <script type="module">
+      import { loadTemplates } from "@/core/component-loader.js";
+
+      // Load templates and initialize components
+      (async () => {
+        try {
+          // Load all required templates first
+          const templateResults = await loadTemplates(
+            ["header", "footer", "cards", "contact"],
+            true
+          );
+          const allLoaded = templateResults.every((result) => result === true);
+
+          if (!allLoaded) {
+            console.error("✗ Some templates failed to load:", templateResults);
+            console.error("  Check the console for fetch errors above");
+            return;
+          }
+
+          console.log("✓ All component templates loaded successfully");
+
+          // Import component scripts
+          await Promise.all([
+            import("@/components/lc-header.js"),
+            import("@/components/lc-footer.js"),
+            import("@/components/lc-card.js"),
+          ]);
+          console.log("✓ Component scripts loaded successfully");
+
+          // Wait a tick for components to render
+          await new Promise((resolve) => setTimeout(resolve, 100));
+
+          // Re-apply i18n translations to components
+          if (window.applyTranslations) {
+            await window.applyTranslations();
+            console.log("✓ i18n translations applied to components");
+          }
+
+          // Setup theme toggle (now that component has rendered)
+          if (window.setupThemeToggle) {
+            window.setupThemeToggle();
+          }
+
+          // Setup language toggle (now that component has rendered)
+          const languageToggle = document.querySelector(".language-toggle");
+          if (languageToggle && window.switchLanguage) {
+            languageToggle.addEventListener("click", () => {
+              const currentLang = document.documentElement.lang;
+              const newLang = currentLang === "en" ? "es" : "en";
+              window.switchLanguage(newLang);
+            });
+            console.log("✓ Language toggle initialized");
+          }
+
+          // Setup CTA button to open contact dialog
+          const ctaButton = document.querySelector(".cta-button");
+          const contactDialog = document.getElementById("contact-dialog");
+          if (ctaButton && contactDialog) {
+            ctaButton.addEventListener("click", (e) => {
+              e.preventDefault();
+              contactDialog.open();
+            });
+            console.log("✓ Contact dialog initialized");
+          }
+        } catch (error) {
+          console.error("Failed to initialize components:", error);
+        }
+      })();
+    </script>
+  </body>
+</html>

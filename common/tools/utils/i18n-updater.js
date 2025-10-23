@@ -92,8 +92,8 @@ class I18nUpdater {
    <li><a href="../contact.html" data-i18n="navigation.contact">Contact</a></li>
 
 2. **Main Content**: For a treatment page like "post-op-recovery.html":
-   <h1 data-i18n="post-op-recovery.title">Title will be replaced</h1>
    <p class="page-subtitle" data-i18n="post-op-recovery.subtitle">Subtitle will be replaced</p>
+   <h1 data-i18n="post-op-recovery.title">Title will be replaced</h1>
    <img data-i18n-attr="alt:post-op-recovery.alt" alt="Current alt text">
    <h2 data-i18n="post-op-recovery.h2">Heading will be replaced</h2>
    <p data-i18n="post-op-recovery.text">Text will be replaced</p>

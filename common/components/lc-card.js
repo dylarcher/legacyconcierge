@@ -200,8 +200,9 @@ class LCCardGrid extends HTMLElement {
 
       .card-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-				gap: ${gap};
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				row-gap: calc(${gap} + 1vh);
+				column-gap: calc(${gap} + 2vw);
         width: 100%;
       }
 
@@ -211,20 +212,18 @@ class LCCardGrid extends HTMLElement {
       @media (min-width: 1200px) {
         .card-grid {
           grid-template-columns: repeat(auto-fit, minmax(${columns}, 1fr));
-					row-gap: ${gap};
-					column-gap: calc(${gap} + 1.5rem);
         }
       }
 
       @media (min-width: 768px) and (max-width: 1199px) {
         .card-grid {
-          grid-template-columns: repeat(${Math.min(3, parseInt(columns, 10))}, 1fr);
+          grid-template-columns: repeat(${Math.min(4, parseInt(columns, 12))}, 1fr);
         }
       }
 
       @media (min-width: 480px) and (max-width: 767px) {
         .card-grid {
-          grid-template-columns: repeat(${Math.min(2, parseInt(columns, 10))}, 1fr);
+          grid-template-columns: repeat(${Math.min(2, parseInt(columns, 8))}, 1fr);
         }
       }
 

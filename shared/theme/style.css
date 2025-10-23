@@ -80,6 +80,11 @@ Colors:
 		--border-color: rgba(212, 165, 116, 0.2);
 		--shadow-color: rgba(0, 0, 0, 0.4);
 		--overlay-bg: rgba(15, 20, 25, 0.9);
+
+		/* Accessible text color overrides for dark mode */
+		--color-blue-grey-text: #a8c5c7;
+		--color-warm-tan-text: #d4b5a0;
+		--color-dusty-rose-text: #c9b3af;
 	}
 }
 
@@ -99,6 +104,11 @@ Colors:
 	--border-color: rgba(212, 165, 116, 0.2);
 	--shadow-color: rgba(0, 0, 0, 0.4);
 	--overlay-bg: rgba(15, 20, 25, 0.9);
+
+	/* Accessible text color overrides for dark mode */
+	--color-blue-grey-text: #a8c5c7;
+	--color-warm-tan-text: #d4b5a0;
+	--color-dusty-rose-text: #c9b3af;
 }
 
 [data-theme="light"] {
@@ -120,7 +130,7 @@ Colors:
 
 /* Basic Reset & Body Styles */
 html {
-	overflow-x: hidden;
+	/* Removed overflow-x: hidden to allow proper debugging of layout issues */
 }
 
 body {
@@ -136,7 +146,8 @@ body {
 	transition:
 		background-color 0.3s ease,
 		color 0.3s ease;
-	overflow-x: hidden;
+	/* Removed overflow-x: hidden - fix layout issues at their source instead */
+	max-width: 100vw;
 }
 
 /* Ensure footer is the last element with no trailing space */
@@ -182,7 +193,7 @@ h6 {
 
 h1 {
 	font-size: clamp(2.5rem, 5vw, 3.5rem);
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.5rem;
 }
 
 h2 {
@@ -248,8 +259,10 @@ a:hover {
 }
 
 #info-cards.container {
-	width: calc(100% - 8rem);
+	width: min(calc(100% - 8rem), 100%);
 	max-width: 100%;
+	padding-left: clamp(1rem, 4vw, 4rem);
+	padding-right: clamp(1rem, 4vw, 4rem);
 }
 
 
@@ -727,17 +740,30 @@ button {
 /* Info Cards Section */
 #info-cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+	gap: clamp(2rem, 4vw, 4rem);
 	margin-top: -100px;
 	position: relative;
 	z-index: 3;
-	padding: 0 1rem;
+	padding: 0;
+	column-gap: clamp(2.5rem, 5vw, 4rem);
+	row-gap: clamp(2rem, 3vw, 3rem);
+}
+
+/* Reduced padding for info cards specifically */
+#info-cards .card,
+#info-cards lc-card {
+	padding: 1.25rem 1.5rem;
+}
+
+/* Move icons down in info cards */
+#info-cards lc-icon {
+	transform: translateY(2rem);
 }
 
 .card {
 	background-color: var(--bg-tertiary);
-	padding: 2.5rem 2rem;
+	padding: 1.5rem 2rem;
 	border-radius: 16px;
 	box-shadow: 0 10px 40px var(--shadow-color);
 	text-align: center;
@@ -1047,13 +1073,28 @@ button {
 }
 
 .page-subtitle {
-	text-align: center;
-	font-size: clamp(1.125rem, 2vw, 1.375rem);
-	color: var(--color-dusty-rose-text);
-	max-width: 800px;
-	margin: -3rem auto 5rem auto;
-	line-height: 1.7;
+	text-align: left;
+	font-size: clamp(1.125rem, 2vw, 1.325rem);
+	color: var(--color-blue-grey-text);
+	line-height: 1.5;
 	text-wrap: balance;
+	margin-block: -1rem 3rem;
+	font-weight: 500;
+}
+
+.page-eyebrow {
+	text-align: left;
+	font-size: clamp(.8rem, 2vw, 1.08rem);
+	color: var(--color-dusty-rose-text);
+	line-height: 1.5;
+	text-wrap: balance;
+	margin-block: 0 -2rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.page-subtitle.text-center {
+	text-align: center;
 }
 
 /* Team Page */
@@ -1954,10 +1995,24 @@ header nav ul a:hover::after {
 		margin: 0;
 		padding: 0.5rem 0.75rem;
 	}
+
+	#info-cards .card-info {
+		transform: scale(1);
+	}
+
+	#info-cards {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+	}
 }
 
 /* Responsive Typography & Spacing */
 @media (max-width: 1024px) {
+	#info-cards {
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+		gap: clamp(2rem, 3vw, 3rem);
+		column-gap: clamp(2rem, 4vw, 3rem);
+		row-gap: clamp(1.5rem, 2.5vw, 2.5rem);
+	}
 	.container {
 		width: 90%;
 	}
@@ -2000,6 +2055,11 @@ header nav ul a:hover::after {
 		grid-template-columns: 1fr;
 		gap: 3rem;
 	}
+
+	#info-cards .card-info {
+		transform: scale(.8);
+	}
+
 }
 
 @media (max-width: 768px) {
@@ -2034,8 +2094,20 @@ header nav ul a:hover::after {
 	#info-cards {
 		grid-template-columns: 1fr;
 		margin-top: -60px;
-		gap: 1.5rem;
+		gap: 2.5rem;
 		padding: 0;
+		column-gap: 0;
+		row-gap: 2.5rem;
+	}
+
+	#info-cards .card,
+	#info-cards lc-card {
+		padding: 1rem 1.25rem;
+		max-width: 100%;
+	}
+
+	#info-cards .card-info {
+		transform: scale(.9);
 	}
 
 	.card {
@@ -2089,7 +2161,7 @@ header nav ul a:hover::after {
 
 	/* Page Subtitle */
 	.page-subtitle {
-		margin: -2rem auto 3rem auto;
+		margin-block: 0 -1.25rem;
 	}
 }
 

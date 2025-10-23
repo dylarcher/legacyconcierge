@@ -17,50 +17,50 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="treatments.title"></title>
+    <title data-i18n="legal.title">Legal - Legacy Concierge</title>
     <link rel="icon" href="../../../favicon.svg" />
-    <meta name="description" data-i18n="treatments.subtitle" />
+    <meta
+      name="description"
+      data-i18n="legal.description"
+      content="Legal information including Terms of Use and Privacy Policy for Legacy Concierge services."
+    />
     <link
       rel="canonical"
-      href="https://www.legacyconcierge.com/treatments.html"
+      href="https://www.legacyconcierge.com/pages/about/legal/"
     />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://www.legacyconcierge.com/treatments.html"
+      content="https://www.legacyconcierge.com/pages/about/legal/"
     />
     <meta
       property="og:title"
-      content="Concierge Treatments - In-Home Nursing Services"
+      content="Legal - Legacy Concierge"
+      data-i18n-attr="content:legal.title"
     />
     <meta
       property="og:description"
-      content="Explore our comprehensive concierge treatments, from post-op recovery and mental health support to IV therapy and pain management, all in the comfort of your home."
-    />
-    <meta
-      property="og:image"
-      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+      content="Legal information including Terms of Use and Privacy Policy for Legacy Concierge services."
+      data-i18n-attr="content:legal.description"
     />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
-      content="https://www.legacyconcierge.com/treatments.html"
+      content="https://www.legacyconcierge.com/pages/about/legal/"
     />
     <meta
       property="twitter:title"
-      content="Concierge Treatments - In-Home Nursing Services"
+      content="Legal - Legacy Concierge"
+      data-i18n-attr="content:legal.title"
     />
     <meta
       property="twitter:description"
-      content="Explore our comprehensive concierge treatments, from post-op recovery and mental health support to IV therapy and pain management, all in the comfort of your home."
-    />
-    <meta
-      property="twitter:image"
-      content="https://www.legacyconcierge.com/assets/media/team/team-nurse.jpg"
+      content="Legal information including Terms of Use and Privacy Policy for Legacy Concierge services."
+      data-i18n-attr="content:legal.description"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,30 +71,75 @@
     />
     <link rel="stylesheet" href="../../../shared/theme/style.css" />
   </head>
-  <body itemscope itemtype="http://schema.org/ServicePage">
+  <body itemscope itemtype="http://schema.org/WebPage">
     <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
 
     <!-- Header Component -->
     <lc-header></lc-header>
 
     <main role="main" id="main">
+      <!-- Hero Section -->
       <section
         class="container page-content fade-in"
         itemprop="mainContentOfPage"
       >
-        <p
-          class="page-eyebrow"
-          itemprop="description"
-          data-i18n="treatments.subtitle"
-        ></p>
-        <h1 itemprop="name" data-i18n="treatments.title"></h1>
+        <p class="page-eyebrow" data-i18n="legal.eyebrow"></p>
+        <h1 itemprop="name" data-i18n="legal.heading"></h1>
+        <p class="page-subtitle" data-i18n="legal.subtitle"></p>
+      </section>
 
-        <div class="services-grid" id="services-grid" hidden></div>
+      <!-- Legal Documents Section -->
+      <section class="container fade-in">
+        <div class="services-grid">
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="legal.documents.terms.title"></h3>
+            <p data-i18n="legal.documents.terms.description"></p>
+            <a
+              slot="link"
+              href="/pages/about/legal/terms/"
+              class="card-link"
+              data-i18n="legal.viewDocument"
+            ></a>
+          </lc-card>
+
+          <lc-card variant="service">
+            <h3 slot="title" data-i18n="legal.documents.privacy.title"></h3>
+            <p data-i18n="legal.documents.privacy.description"></p>
+            <a
+              slot="link"
+              href="/pages/about/legal/privacy/"
+              class="card-link"
+              data-i18n="legal.viewDocument"
+            ></a>
+          </lc-card>
+        </div>
+      </section>
+
+      <!-- Legal Notice Section -->
+      <section class="container fade-in">
+        <div class="legal-section">
+          <h2 data-i18n="legal.notice.title"></h2>
+          <p data-i18n="legal.notice.content"></p>
+          <p class="effective-date" data-i18n="legal.notice.lastUpdated"></p>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="container fade-in">
+        <div class="legal-section">
+          <h2 data-i18n="legal.contact.title"></h2>
+          <p data-i18n="legal.contact.intro"></p>
+          <p data-i18n="legal.contact.phone"></p>
+          <p data-i18n="legal.contact.email"></p>
+          <p data-i18n="legal.contact.address"></p>
+        </div>
       </section>
     </main>
 
     <!-- Footer Component -->
     <lc-footer></lc-footer>
+
+    <!-- Scripts -->
     <script src="../../../common/services/theme.js"></script>
     <script src="../../../common/utils/app.js"></script>
     <script src="../../../common/services/i18n.js"></script>
@@ -102,60 +147,6 @@
     <!-- Component System -->
     <script type="module">
       import { loadTemplates } from "@/core/component-loader.js";
-
-      // Function to populate service cards
-      async function populateServiceCards() {
-        try {
-          const response = await fetch(
-            "/shared/content/_locale/en/treatments.json"
-          );
-          const data = await response.json();
-          const services = data.services;
-          const grid = document.getElementById("services-grid");
-
-          services.forEach((service) => {
-            const card = document.createElement("div");
-            card.className = "service-card";
-            card.setAttribute("itemscope", "");
-            card.setAttribute("itemtype", "http://schema.org/Offer");
-
-            const icon = document.createElement("lc-icon");
-            icon.setAttribute("name", service.icon);
-            icon.setAttribute("size", "medium");
-            icon.setAttribute("color", "primary");
-            icon.setAttribute("aria-label", service.title);
-
-            const title = document.createElement("h4");
-            title.setAttribute("itemprop", "name");
-            title.textContent = service.title;
-
-            const description = document.createElement("p");
-            description.setAttribute("itemprop", "description");
-            description.textContent = service.description;
-
-            const link = document.createElement("a");
-            link.href = service.link;
-            link.setAttribute("itemprop", "url");
-            link.setAttribute(
-              "aria-label",
-              `Learn more about ${service.title}`
-            );
-            link.textContent = "Learn More";
-
-            card.appendChild(icon);
-            card.appendChild(title);
-            card.appendChild(description);
-            card.appendChild(link);
-
-            grid.appendChild(card);
-          });
-
-          // Show the grid after populating
-          grid.removeAttribute("hidden");
-        } catch (error) {
-          console.error("Failed to populate service cards:", error);
-        }
-      }
 
       // Load templates and initialize components
       (async () => {
@@ -177,15 +168,11 @@
 
           // Import component scripts
           await Promise.all([
-            import("/common/components/lc-header.js"),
-            import("/common/components/lc-footer.js"),
-            import("/common/components/lc-card.js"),
-            import("/common/components/lc-icon.js"),
+            import("@/components/lc-header.js"),
+            import("@/components/lc-footer.js"),
+            import("@/components/lc-card.js"),
           ]);
           console.log("✓ Component scripts loaded successfully");
-
-          // Populate service cards
-          await populateServiceCards();
 
           // Wait a tick for components to render
           await new Promise((resolve) => setTimeout(resolve, 100));
@@ -216,8 +203,5 @@
         }
       })();
     </script>
-
-    <!-- Development Tools (Web Vitals, etc.) -->
-    <script type="module" src="../../../common/tools/dev-tools.js"></script>
   </body>
 </html>

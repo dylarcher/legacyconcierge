@@ -4,7 +4,7 @@
     <!-- Universal Path Resolver - Loads first, cached across pages -->
     <script src="../../../common/core/path-resolver-init.js"></script>
 
-<!-- Import map for module path aliases -->
+    <!-- Import map for module path aliases -->
     <script type="importmap">
       {
         "imports": {
@@ -15,7 +15,8 @@
       }
     </script>
 
-<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Component Example - Legacy Concierge</title>
     <link rel="stylesheet" href="../../../shared/theme/style.css" />
     <script type="module">
@@ -37,8 +38,8 @@
     <main role="main" id="main">
       <section id="hero">
         <div class="container">
+          <p class="page-eyebrow" data-i18n="home.subtitle"></p>
           <h1 itemprop="name" data-i18n="home.title"></h1>
-          <p class="page-subtitle" data-i18n="home.subtitle"></p>
           <a href="#contact" class="cta-button" data-i18n="home.ctaButton"></a>
         </div>
       </section>
@@ -174,8 +175,14 @@
       </section>
     </main>
     <lc-footer></lc-footer>
-    <script type="module" src="../../../common/components/lc-header.js"></script>
-    <script type="module" src="../../../common/components/lc-footer.js"></script>
+    <script
+      type="module"
+      src="../../../common/components/lc-header.js"
+    ></script>
+    <script
+      type="module"
+      src="../../../common/components/lc-footer.js"
+    ></script>
     <script type="module" src="../../../common/components/lc-card.js"></script>
   </body>
 </html>
