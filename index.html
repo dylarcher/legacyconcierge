@@ -251,7 +251,7 @@
       // Function to populate info cards
       async function populateInfoCards() {
         try {
-          const response = await fetch("/shared/content/_locale/en/home.json");
+          const response = await fetch(resolvePath("shared/content/_locale/en/home.json"));
           const data = await response.json();
           const infoCards = data.infoCards;
           const cardGrid = document.getElementById("info-card-grid");
@@ -305,10 +305,10 @@
 
           // Import component scripts
           await Promise.all([
-            import("/common/components/lc-header.js"),
-            import("/common/components/lc-footer.js"),
-            import("/common/components/lc-card.js"),
-            import("/common/components/lc-icon.js"),
+            import("@/components/lc-header.js"),
+            import("@/components/lc-footer.js"),
+            import("@/components/lc-card.js"),
+            import("@/components/lc-icon.js"),
           ]);
           console.log("✓ Component scripts loaded successfully");
 
@@ -320,7 +320,7 @@
             "contact-form-container"
           );
           const contactFormResponse = await fetch(
-            "/shared/partials/templates/contact.html"
+            resolvePath("shared/partials/templates/contact.html")
           );
           const contactFormHtml = await contactFormResponse.text();
           contactFormContainer.innerHTML = contactFormHtml;

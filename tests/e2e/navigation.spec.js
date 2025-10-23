@@ -57,13 +57,14 @@ test.describe('Navigation', () => {
 
 	test('should support keyboard navigation in dropdowns', async ({ page }) => {
 		// Focus on Services menu
-		await page.focus('text=Services');
+		const servicesLink = page.locator('a:has-text("Services")').first();
+		await servicesLink.focus();
 
-		// Press Enter to open dropdown
-		await page.keyboard.press('Enter');
+		// Press ArrowDown to open dropdown
+		await page.keyboard.press('ArrowDown');
 
-		// Dropdown should be visible
-		const dropdown = page.locator('[aria-haspopup="true"] + *');
+		// Services dropdown should be visible
+		const dropdown = page.locator('[data-testid="services-dropdown"]');
 		await expect(dropdown).toBeVisible();
 
 		// Press Escape to close

@@ -131,9 +131,9 @@
             );
           }
           await Promise.all([
-            import("/common/components/lc-header.js"),
-            import("/common/components/lc-footer.js"),
-            import("/common/components/lc-card.js"),
+            import("@/components/lc-header.js"),
+            import("@/components/lc-footer.js"),
+            import("@/components/lc-card.js"),
           ]);
           await populatePartnerCards();
           await new Promise((resolve) => setTimeout(resolve, 100));

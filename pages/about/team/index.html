@@ -104,7 +104,7 @@
       // Function to populate team cards
       async function populateTeamCards() {
         try {
-          const response = await fetch("/shared/content/_locale/en/team.json");
+          const response = await fetch(resolvePath("shared/content/_locale/en/team.json"));
           const data = await response.json();
           const members = data.members;
           const grid = document.getElementById("team-grid");
@@ -160,9 +160,9 @@
             );
           }
           await Promise.all([
-            import("/common/components/lc-header.js"),
-            import("/common/components/lc-footer.js"),
-            import("/common/components/lc-card.js"),
+            import("@/components/lc-header.js"),
+            import("@/components/lc-footer.js"),
+            import("@/components/lc-card.js"),
           ]);
 
           await populateTeamCards();
