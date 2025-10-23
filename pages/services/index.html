@@ -87,8 +87,15 @@
 
     <main role="main" id="main">
       <!-- Hero Section -->
-      <section class="container page-content fade-in" itemprop="mainContentOfPage">
-        <p class="page-eyebrow" itemprop="description" data-i18n="services.eyebrow"></p>
+      <section
+        class="container page-content fade-in"
+        itemprop="mainContentOfPage"
+      >
+        <p
+          class="page-eyebrow"
+          itemprop="description"
+          data-i18n="services.eyebrow"
+        ></p>
         <h1 itemprop="name" data-i18n="services.title"></h1>
         <p class="page-subtitle" data-i18n="services.subtitle"></p>
       </section>
@@ -102,7 +109,10 @@
 
         <div class="services-grid">
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[0].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[0].title"
+            ></h3>
             <p data-i18n="services.treatments.items[0].description"></p>
             <a
               slot="link"
@@ -113,7 +123,10 @@
           </lc-card>
 
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[1].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[1].title"
+            ></h3>
             <p data-i18n="services.treatments.items[1].description"></p>
             <a
               slot="link"
@@ -124,7 +137,10 @@
           </lc-card>
 
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[2].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[2].title"
+            ></h3>
             <p data-i18n="services.treatments.items[2].description"></p>
             <a
               slot="link"
@@ -135,7 +151,10 @@
           </lc-card>
 
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[3].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[3].title"
+            ></h3>
             <p data-i18n="services.treatments.items[3].description"></p>
             <a
               slot="link"
@@ -146,7 +165,10 @@
           </lc-card>
 
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[4].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[4].title"
+            ></h3>
             <p data-i18n="services.treatments.items[4].description"></p>
             <a
               slot="link"
@@ -157,7 +179,10 @@
           </lc-card>
 
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[5].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[5].title"
+            ></h3>
             <p data-i18n="services.treatments.items[5].description"></p>
             <a
               slot="link"
@@ -168,7 +193,10 @@
           </lc-card>
 
           <lc-card variant="service">
-            <h3 slot="title" data-i18n="services.treatments.items[6].title"></h3>
+            <h3
+              slot="title"
+              data-i18n="services.treatments.items[6].title"
+            ></h3>
             <p data-i18n="services.treatments.items[6].description"></p>
             <a
               slot="link"
@@ -180,7 +208,11 @@
         </div>
 
         <div class="section-cta">
-          <a href="/pages/services/treatments/" class="button button-secondary" data-i18n="services.treatments.viewAll"></a>
+          <a
+            href="/pages/services/treatments/"
+            class="button button-secondary"
+            data-i18n="services.treatments.viewAll"
+          ></a>
         </div>
       </section>
 
@@ -282,7 +314,11 @@
         </div>
 
         <div class="section-cta">
-          <a href="/pages/services/expertise/" class="button button-secondary" data-i18n="services.expertise.viewAll"></a>
+          <a
+            href="/pages/services/expertise/"
+            class="button button-secondary"
+            data-i18n="services.expertise.viewAll"
+          ></a>
         </div>
       </section>
 
@@ -291,7 +327,11 @@
         <div class="cta-content">
           <h2 data-i18n="services.cta.title"></h2>
           <p data-i18n="services.cta.subtitle"></p>
-          <a href="#contact" class="cta-button" data-i18n="services.cta.button"></a>
+          <a
+            href="#contact"
+            class="cta-button"
+            data-i18n="services.cta.button"
+          ></a>
         </div>
       </section>
     </main>
@@ -303,15 +343,25 @@
     <lc-contact-dialog id="contact-dialog"></lc-contact-dialog>
 
     <!-- Scripts -->
-    <script src="../../common/services/theme.js"></script>
-    <script src="../../common/utils/app.js"></script>
-    <script src="../../common/services/i18n.js"></script>
+    <script type="module">
+      import "@/services/theme.js";
+    </script>
+    <script type="module">
+      import "@/utils/app.js";
+    </script>
+    <script type="module">
+      import "@/services/i18n.js";
+    </script>
 
     <!-- Contact Dialog Component -->
-    <script type="module" src="../../common/components/contact-dialog.js"></script>
+    <script type="module">
+      import "@/components/lc-contact-dialog.js";
+    </script>
 
     <!-- Component System -->
-    <script type="module" src="../../common/core/component-loader.js"></script>
+    <script type="module">
+      import "@common/core/component-loader.js";
+    </script>
 
     <script type="module">
       import { loadTemplates } from "@/core/component-loader.js";
