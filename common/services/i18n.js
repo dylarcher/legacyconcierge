@@ -427,15 +427,13 @@ async function applyTranslations() {
 
 			if (translation) {
 				// Fix relative paths for src, href attributes when on GitHub Pages
-				if (
-					(attr === "src" || attr === "href") &&
-					githubPagesBase &&
-					translation.startsWith("../")
-				) {
-					// Convert relative path to absolute path with GitHub Pages base
-					// Remove leading ../ segments and prepend the base path
-					const cleanPath = translation.replace(/^(\.\.\/)+/, "");
-					translation = `${githubPagesBase}/${cleanPath}`;
+				if ((attr === "src" || attr === "href") && githubPagesBase) {
+					// Only rewrite if the path is not already absolute (doesn't start with http(s):// or /)
+					if (!/^https?:\/\//.test(translation) && !translation.startsWith("/")) {
+						// Remove leading ./ or ../ segments
+						const cleanPath = translation.replace(/^(\.\.?\/)+/, "");
+						translation = `${githubPagesBase}/${cleanPath}`;
+					}
 				}
 
 				element.setAttribute(attr, translation);

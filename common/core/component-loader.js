@@ -36,7 +36,7 @@ const templateCache = new Map();
  * @param {string} name - Component name to validate
  * @returns {boolean}
  */
-function _isValidComponentName(name) {
+function isValidComponentName(name) {
 	return /^[a-zA-Z0-9_-]+$/.test(name);
 }
 
@@ -46,6 +46,12 @@ function _isValidComponentName(name) {
  * @returns {Promise<boolean>} True if template loaded successfully
  */
 async function loadTemplate(name) {
+	// Validate template name to prevent path traversal attacks
+	if (!isValidComponentName(name)) {
+		console.error(`Invalid template name: ${name}. Only alphanumeric, underscore, and dash characters are allowed.`);
+		return false;
+	}
+
 	// Check cache first
 	if (templateCache.has(name)) {
 		return true;
@@ -67,6 +73,11 @@ async function loadTemplate(name) {
 		templateCache.set(name, html);
 
 		// Insert template into document if not already present
+		// SECURITY NOTE: Using innerHTML here is safe because:
+		// 1. Templates are loaded from our own trusted static files (not user input)
+		// 2. Template names are validated against a strict regex pattern
+		// 3. Templates contain necessary HTML structures (<template> elements)
+		// 4. This is equivalent to server-side template rendering
 		const tempDiv = document.createElement("div");
 		tempDiv.hidden = true;
 		tempDiv.innerHTML = html;
