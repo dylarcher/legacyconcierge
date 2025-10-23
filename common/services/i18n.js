@@ -427,13 +427,18 @@ async function applyTranslations() {
 			let translation = getNestedTranslation(translations, key);
 
 			if (translation) {
-				// Fix relative paths for src, href attributes when on GitHub Pages
+				// Fix paths for src, href attributes when on GitHub Pages
 				if ((attr === "src" || attr === "href") && githubPagesBase) {
-					// Only rewrite if the path is not already absolute (doesn't start with http(s):// or /)
-					if (!/^https?:\/\//.test(translation) && !translation.startsWith("/")) {
-						// Remove leading ./ or ../ segments
-						const cleanPath = translation.replace(/^(\.\.?\/)+/, "");
-						translation = `${githubPagesBase}/${cleanPath}`;
+					// Only skip rewriting if the path is fully qualified (starts with http(s)://)
+					if (!/^https?:\/\//.test(translation)) {
+						if (translation.startsWith("/")) {
+							// Absolute path - prepend githubPagesBase
+							translation = `${githubPagesBase}${translation}`;
+						} else {
+							// Relative path - remove leading ./ or ../ and prepend githubPagesBase
+							const cleanPath = translation.replace(/^(\.\.?\/)+/, "");
+							translation = `${githubPagesBase}/${cleanPath}`;
+						}
 					}
 				}
 
