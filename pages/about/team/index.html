@@ -2,30 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- GitHub Pages Base Path Detection - Must run before any resource loads -->
-    <script>
-      (function() {
-        // Detect if we're on GitHub Pages (not custom domain)
-        const hostname = window.location.hostname;
-        const isGitHubPages = hostname.includes('github.io');
-
-        if (isGitHubPages) {
-          // Extract repo name from path (e.g., /legacyconcierge/)
-          const pathParts = window.location.pathname.split('/').filter(p => p);
-          if (pathParts.length > 0 && pathParts[0] !== 'index.html') {
-            const repoName = pathParts[0];
-            // Set base tag dynamically
-            const base = document.createElement('base');
-            base.href = `/${repoName}/`;
-            document.head.appendChild(base);
-          }
-        }
-      })();
-    </script>
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GitHub Pages Base Path - Must be set before any resource loads -->
+    <base href="/legacyconcierge/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Team - Legacy Concierge Leadership</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta
