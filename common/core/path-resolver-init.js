@@ -5,7 +5,6 @@
  */
 
 (() => {
-	
 
 	// Detect environment and set base path
 	const hostname = window.location.hostname;
