@@ -74,4 +74,3 @@ Pages with relative navigation links (should use absolute paths):
 ### pages/demos/index.html:306
 - **Found:** `splash-landing/`
 - **Expected:** `Absolute path starting with /`
-
