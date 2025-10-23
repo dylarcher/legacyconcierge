@@ -13,7 +13,7 @@
 	let basePath = '';
 
 	// GitHub Pages detection
-	if (hostname.includes('github.io')) {
+	if (hostname === 'github.io' || hostname.endsWith('.github.io')) {
 		const parts = pathname.split('/').filter(p => p && p !== 'index.html');
 		if (parts.length > 0 && parts[0] !== 'pages') {
 			basePath = '/' + parts[0];
