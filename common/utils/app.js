@@ -6,6 +6,24 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+	// Skip link functionality
+	const skipLink = document.querySelector('.skip-link');
+	if (skipLink) {
+		skipLink.addEventListener('click', (event) => {
+			event.preventDefault();
+			const mainContent = document.querySelector('#main, main');
+			if (mainContent) {
+				// Set tabindex to make it focusable
+				mainContent.setAttribute('tabindex', '-1');
+				mainContent.focus();
+				// Remove tabindex after focus to restore natural tab order
+				mainContent.addEventListener('blur', () => {
+					mainContent.removeAttribute('tabindex');
+				}, { once: true });
+			}
+		});
+	}
+
 	const header = document.querySelector("header");
 	const hasCustomHeader = document.querySelector("lc-header");
 
