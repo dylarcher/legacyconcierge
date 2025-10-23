@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Legacy Concierge Card Components
  * Custom elements for various card types

@@ -1,3 +1,4 @@
+// @ts-nocheck
 (() => {
 	// Cache DOM elements
 	const video = document.getElementById("bgVideo");

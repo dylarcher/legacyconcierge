@@ -164,10 +164,10 @@ git push -u origin hotfix/path-fix
 
 ## Documentation
 
-- **Comprehensive Review:** [IMPROVEMENTS.md](IMPROVEMENTS.md)
-- **Path System Guide:** [PATH-SYSTEM-README.md](PATH-SYSTEM-README.md)
-- **Testing Strategy:** [CHECK-IN-STRATEGY.md](CHECK-IN-STRATEGY.md)
-- **Quick Fixes:** [QUICK_FIX_GUIDE.md](QUICK_FIX_GUIDE.md)
+- **Comprehensive Review:** [IMPROVEMENTS.md](../explanation/IMPROVEMENTS.md)
+- **Path System Guide:** [PATH-SYSTEM-README.md](../reference/PATH-SYSTEM-README.md)
+- **Testing Strategy:** [CHECK-IN-STRATEGY.md](../reference/CHECK-IN-STRATEGY.md)
+- **Quick Fixes:** [QUICK_FIX_GUIDE.md](../reference/QUICK_FIX_GUIDE.md)
 
 ---
 

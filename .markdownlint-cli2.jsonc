@@ -1,0 +1,14 @@
+{
+  "config": {
+    "default": true,
+    "MD013": {
+      "line_length": 200
+    },
+    "MD041": false,
+    "MD033": false
+  },
+  "globs": [
+    "**/*.md",
+    "!node_modules"
+  ]
+}

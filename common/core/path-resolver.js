@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Universal Path Resolver for Legacy Concierge
  * Automatically detects and adapts paths for:

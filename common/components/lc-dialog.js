@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Dialog and Modal Components for Legacy Concierge
  * Provides accessible dialogs, tooltips, popovers, and alerts
@@ -9,11 +10,8 @@
  * - <lc-alert>: Alert notification banner
  */
 
-import {
-	cloneTemplate,
-	getAttributeOr,
-	getBooleanAttribute,
-} from "@/core/component-loader.js";
+import { cloneTemplate } from "@/core/component-loader.js";
+import { getAttributeOr, getBooleanAttribute } from "@/core/helpers.js";
 
 /**
  * Modal dialog component

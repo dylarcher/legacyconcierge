@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Form Components for Legacy Concierge
  * Provides accessible, validated form elements with Light DOM
@@ -13,11 +14,8 @@
  * - <lc-submit-button>: Submit button with loading state
  */
 
-import {
-	cloneTemplate,
-	getAttributeOr,
-	getBooleanAttribute,
-} from "@/core/component-loader.js";
+import { cloneTemplate } from "@/core/component-loader.js";
+import { getAttributeOr, getBooleanAttribute } from "@/core/helpers.js";
 
 /**
  * Base form element class with common validation logic

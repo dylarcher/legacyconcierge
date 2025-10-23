@@ -135,7 +135,7 @@ href="/pages/about/contact"
 **Total Files to Fix:** 3
 **Total Lines to Change:** 14 (across 9 unique broken links)
 
-### File Edit Summary:
+### File Edit Summary
 1. `/pages/demos/index.html` - 7 lines
 2. `/pages/demos/entry/landing/index.html` - 2 lines
 3. `/pages/demos/subpage/sidebar/index.html` - 3 lines

@@ -1,35 +1,53 @@
-!.*.demo
-!.*.example
-!.*.sample
-*.bak
-*.cache
-*.db
-*.log*
-*.new
-*.old
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+types/
+
+# Testing
+coverage/
+.playwright/
+playwright-report/
+test-results/
+lighthouse-reports/
+.lighthouse/
+
+# IDE & Editor
+.vscode/
+.idea/
 *.sublime-*
 *.sw[op]
-*.tmp
-*_reports
-*temp
-*tmp
-*~
-.*cache
-.*output
-.DS_Store
-.archive*
-.classpath
+
+# Environment variables
 .env
-.env.*
-.lighthouse*
-.npm
-.outdated
-.project
-.settings
-.yarn
-bower_components
-build
-coverage
-dist
-logs
-node_modules
+.env.local
+.env.*.local
+
+# Claude Code
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+*.cache
+.cache/

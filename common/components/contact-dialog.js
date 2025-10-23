@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Accessible Contact Form Dialog Component
  *

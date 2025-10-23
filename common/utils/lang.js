@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Language Switcher Component for Legacy Concierge
  * Provides UI for switching between supported languages

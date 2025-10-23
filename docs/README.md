@@ -9,7 +9,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 **New to the project?** Start here:
 
 1. **[GETTING_STARTED.md](./tutorials/GETTING_STARTED.md)** - 5-minute quick start guide
-2. **[ARCHITECTURE.md](./reference/ARCHITECTURE.md)** - Technical architecture overview
+2. **[Reference Documentation](./reference/README.md)** - Technical reference and guides
 3. **[ROADMAP.md](./explanation/ROADMAP.md)** - Project status and next steps
 
 ---
@@ -26,7 +26,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Migration guide
 - Best practices
 
-**[ARCHITECTURE.md](./reference/ARCHITECTURE.md)**
+**[Reference Documentation](./reference/README.md)**
 
 - Technical architecture decisions
 - Component architecture
@@ -92,13 +92,13 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 **Getting started:**
 
 1. [GETTING_STARTED.md](./tutorials/GETTING_STARTED.md) - Start here
-2. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Understand the patterns
+2. [Reference Documentation](./reference/README.md) - Understand the patterns
 3. [Components README](./reference/README.md) - Component API reference
 
 **Working on features:**
 
 1. [ROADMAP.md](./explanation/ROADMAP.md) - See what's priority
-2. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Follow established patterns
+2. [Reference Documentation](./reference/README.md) - Follow established patterns
 
 **Recent implementations:**
 
@@ -116,13 +116,13 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 **Understanding the project:**
 
 1. [GETTING_STARTED.md](./tutorials/GETTING_STARTED.md) - What's been built
-2. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Technical decisions
+2. [Reference Documentation](./reference/README.md) - Technical decisions
 
 ### For Designers
 
 **Design system:**
 
-1. [ARCHITECTURE.md](./reference/ARCHITECTURE.md) - Design tokens, color system
+1. [Reference Documentation](./reference/README.md) - Design tokens, color system
 2. [Components Reference](./reference/README.md) - Component variants
 3. [Styles Guide](./reference/README.md) - Styling guidance
 
@@ -172,11 +172,11 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 
 **Layouts:**
 
-- [../shared/partials/layouts/README.md](../shared/partials/layouts/README.md) - Page layout templates
+- Page layout templates available in `shared/partials/layouts/`
 
 **Locale:**
 
-- [../shared/content/_locale/README.md](../shared/content/_locale/README.md) - i18n documentation
+- i18n documentation available in `shared/content/_locale/`
 
 ---
 
@@ -233,9 +233,8 @@ Current gaps in documentation:
 ## Questions?
 
 - Check [GETTING_STARTED.md](./tutorials/GETTING_STARTED.md) first
-- Review [ARCHITECTURE.md](./reference/ARCHITECTURE.md) for technical details
+- Review [Reference Documentation](./reference/README.md) for technical details
 - See [ROADMAP.md](./explanation/ROADMAP.md) for project direction
-- Browse [archive/](./archive/) for detailed historical docs
 
 ---
 

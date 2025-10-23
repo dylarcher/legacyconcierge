@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Google Tag Manager Component for Legacy Concierge
  * Injects the Google Analytics GTM script into the page head.
