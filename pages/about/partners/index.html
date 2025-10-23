@@ -62,7 +62,7 @@
       <section class="container page-content fade-in">
         <h1 data-i18n="partners.title"></h1>
         <p class="page-subtitle" data-i18n="partners.subtitle"></p>
-        <div class="partner-grid" id="partner-grid" hidden></div>
+        <div class="partner-grid" id="partner-grid"></div>
         <div class="cta-section">
           <h2 data-i18n="partners.cta.title"></h2>
           <p data-i18n="partners.cta.text"></p>
@@ -101,9 +101,6 @@
             card.appendChild(description);
             grid.appendChild(card);
           });
-
-          // Show the grid after populating
-          grid.removeAttribute("hidden");
         } catch (error) {
           console.error("Failed to populate partner cards:", error);
         }
