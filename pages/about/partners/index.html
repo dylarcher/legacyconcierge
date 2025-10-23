@@ -2,29 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <!-- GitHub Pages Base Path Detection - Must run before any resource loads -->
-    <script>
-      (function() {
-        // Detect if we're on GitHub Pages (not custom domain)
-        const hostname = window.location.hostname;
-        const isGitHubPages = hostname.includes('github.io');
-
-        if (isGitHubPages) {
-          // Extract repo name from path (e.g., /legacyconcierge/)
-          const pathParts = window.location.pathname.split('/').filter(p => p);
-          if (pathParts.length > 0 && pathParts[0] !== 'index.html') {
-            const repoName = pathParts[0];
-            // Set base tag dynamically
-            const base = document.createElement('base');
-            base.href = `/${repoName}/`;
-            document.head.appendChild(base);
-          }
-        }
-      })();
-    </script>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Partners - Legacy Concierge Network</title>
     <link rel="icon" href="/favicon.svg" />
@@ -85,7 +62,7 @@
       <section class="container page-content fade-in">
         <h1 data-i18n="partners.title"></h1>
         <p class="page-subtitle" data-i18n="partners.subtitle"></p>
-        <div class="partner-grid" id="partner-grid" hidden></div>
+        <div class="partner-grid" id="partner-grid"></div>
         <div class="cta-section">
           <h2 data-i18n="partners.cta.title"></h2>
           <p data-i18n="partners.cta.text"></p>
@@ -124,9 +101,6 @@
             card.appendChild(description);
             grid.appendChild(card);
           });
-
-          // Show the grid after populating
-          grid.removeAttribute("hidden");
         } catch (error) {
           console.error("Failed to populate partner cards:", error);
         }
