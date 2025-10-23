@@ -7,16 +7,13 @@ Contact: dylarcher [at] gmail.com
 GitHub: @dylarcher
 Location: United States
 
-Design Partner: Solve Design Create
-Website: https://solvedesigncreate.com
-Role: Design Consultation & Branding
-
 /* THANKS */
 
 Claude (Anthropic) - Development assistance
 Biome - Code formatting and linting
 Lighthouse - Performance and accessibility auditing
 Web Vitals - Core Web Vitals monitoring
+Playwright - Comprehensive integration testing suite
 
 /* SITE */
 
@@ -25,14 +22,14 @@ Components: Vanilla Web Components, Shadow DOM
 Internationalization: Custom i18n system (EN/ES)
 Fonts: Playfair Display, Work Sans, Montserrat, Poppins (Google Fonts)
 Icons: SVG-based icon system
-Accessibility: WCAG 2.1 AA compliant (94% Lighthouse score)
+Accessibility: WCAG 2.1 AA compliant (100% Lighthouse score)
 Performance: Web Vitals integrated, lazy loading images
 SEO: XML sitemap, robots.txt, semantic HTML, Schema.org microdata
 
 Software: VS Code, Biome, Lighthouse CI, npm
 Version Control: Git, GitHub
-Hosting: TBD
-CDN: TBD
+Hosting: A2 Hosting
+CDN: N/A (Future)
 
 /* ARCHITECTURE */
 
@@ -74,14 +71,14 @@ Human beings are behind this website, not algorithms.
 Made with care, code, and attention to detail.
 Built to serve those who serve others.
 
-                    .     .
-                    |\_/|
-                   /     \
-                  | O   O |
-                   \  ^  /
-                    |||||
-                    |||||
+                  .   .
+                  |\_/|
+                 /     \
+                | O   O |
+                 \  ^  /
+                  |||||
+                  |||||
 
-           Built with Love ❤️
+            Built with Love ❤️
 
-Have a wonderful day! 🌟
+         Have a wonderful day! 🌟

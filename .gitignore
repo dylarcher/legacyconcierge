@@ -1,61 +1,35 @@
-# Claude Code
-.claude/
-.archive*/
-.outdated/
-
-# OS Files
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
-
-# Dependencies
-node_modules/
-bower_components/
-
-# Environment Variables
-.env
-.env.*
-!.env.example
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-logs/
-
-# IDE Files
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-.project
-.classpath
-.settings/
-
-# Temporary Files
-tmp/
-temp/
-*.tmp
+!.*.demo
+!.*.example
+!.*.sample
 *.bak
 *.cache
-
-# Build Output
-dist/
-build/
-.parcel-cache/
-
-# Package Manager
-.npm/
-.yarn/
-
-# Testing
-coverage/
-.nyc_output/
-
-# Lighthouse Reports
-.lighthouse/
-.lighthouseci/
-lhci_reports/
+*.db
+*.log*
+*.new
+*.old
+*.sublime-*
+*.sw[op]
+*.tmp
+*_reports
+*temp
+*tmp
+*~
+.*cache
+.*output
+.DS_Store
+.archive*
+.classpath
+.env
+.env.*
+.lighthouse*
+.npm
+.outdated
+.project
+.settings
+.yarn
+bower_components
+build
+coverage
+dist
+logs
+node_modules

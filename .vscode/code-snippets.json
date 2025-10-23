@@ -1,0 +1,140 @@
+{
+	"CSS Variable (Global)": {
+		"body": "--$1: $2;",
+		"description": "CSS custom property (global naming)",
+		"prefix": "css-var",
+		"scope": "css"
+	},
+	"CSS Variable (Local)": {
+		"body": "--${1:camelCase}: $2;",
+		"description": "CSS custom property (local camelCase naming)",
+		"prefix": "css-var-local",
+		"scope": "css"
+	},
+	"ESM Export": {
+		"body": "export { $1 };$0",
+		"description": "ES Module export statement",
+		"prefix": "export",
+		"scope": "javascript"
+	},
+	"ESM Import": {
+		"body": "import { $2 } from '$1';$0",
+		"description": "ES Module import statement",
+		"prefix": "import",
+		"scope": "javascript"
+	},
+	"HTML Page Template": {
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"en\" data-theme=\"light\">",
+			"<head>",
+			"  <meta charset=\"UTF-8\">",
+			"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"  <title data-i18n=\"meta.title\">$1</title>",
+			"  <meta name=\"description\" data-i18n=\"meta.description\" content=\"$2\">",
+			"  <link rel=\"stylesheet\" href=\"${3:../../}css/style.css\">",
+			"</head>",
+			"<body>",
+			"  <a href=\"#main\" class=\"skip-link\" data-i18n=\"accessibility.skipToMain\">Skip to main content</a>",
+			"  ",
+			"  <header>",
+			"    <!-- Navigation here -->",
+			"  </header>",
+			"  ",
+			"  <main id=\"main\">",
+			"    $0",
+			"  </main>",
+			"  ",
+			"  <footer>",
+			"    <!-- Footer here -->",
+			"  </footer>",
+			"  ",
+			"  <script src=\"${3:../../}js/theme.js\"></script>",
+			"  <script src=\"${3:../../}js/app.js\"></script>",
+			"  <script src=\"${3:../../}js/i18n.js\"></script>",
+			"</body>",
+			"</html>"
+		],
+		"description": "Legacy Concierge HTML page template",
+		"prefix": "lc-page",
+		"scope": "html"
+	},
+	"JSDoc Function": {
+		"body": [
+			"/**",
+			" * $1",
+			" * @param {$2} $3 - $4",
+			" * @returns {$5} $6",
+			" */",
+			"$0"
+		],
+		"description": "JSDoc function documentation",
+		"prefix": "jsdoc",
+		"scope": "javascript"
+	},
+	"Media Query - Color Scheme": {
+		"body": ["@media (prefers-color-scheme: ${1|dark,light|}) {", "  $0", "}"],
+		"description": "Media query for color scheme preference",
+		"prefix": "mq-color-scheme",
+		"scope": "css"
+	},
+	"Media Query - Reduced Motion": {
+		"body": ["@media (prefers-reduced-motion: reduce) {", "  $0", "}"],
+		"description": "Media query for reduced motion preference",
+		"prefix": "mq-reduced-motion",
+		"scope": "css"
+	},
+	"Schema.org Article": {
+		"body": [
+			"<article itemscope itemtype=\"https://schema.org/Article\">",
+			"  <h1 itemprop=\"headline\">$1</h1>",
+			"  <div itemprop=\"articleBody\">",
+			"    $0",
+			"  </div>",
+			"</article>"
+		],
+		"description": "Schema.org Article microdata",
+		"prefix": "schema-article",
+		"scope": "html"
+	},
+	"Web Component Template": {
+		"body": [
+			"class ${1:ComponentName} extends HTMLElement {",
+			"  constructor() {",
+			"    super();",
+			"    this.attachShadow({ mode: 'open' });",
+			"  }",
+			"  ",
+			"  connectedCallback() {",
+			"    this.render();",
+			"  }",
+			"  ",
+			"  render() {",
+			"    this.shadowRoot.innerHTML = \\`",
+			"      <style>",
+			"        $2",
+			"      </style>",
+			"      $0",
+			"    \\`;",
+			"  }",
+			"}",
+			"",
+			"customElements.define('${3:component-name}', ${1:ComponentName});"
+		],
+		"description": "Vanilla Web Component template",
+		"prefix": "web-component",
+		"scope": "javascript"
+	},
+	"i18n Attribute": {
+		"body": "data-i18n=\"$1\"",
+		"description": "Add i18n data attribute",
+		"prefix": "i18n",
+		"scope": "html"
+	},
+	"i18n Attribute with Custom Attribute": {
+		"body": "data-i18n-attr=\"$1:$2\"",
+		"description": "Add i18n attribute for custom HTML attributes",
+		"prefix": "i18n-attr",
+		"scope": "html"
+	}
+}

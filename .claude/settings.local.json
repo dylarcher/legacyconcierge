@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(github-copilot-cli:*)",
+      "Bash(brew:*)",
+      "Bash(npx @biomejs/biome format:*)",
+      "Bash(node audit-paths.js:*)",
+      "Bash(node:*)",
+      "Bash(find:*)",
+      "Bash(for file in /Users/darcher/Dev/legacy-concierge/pages/about/*.html)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(gh api:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(npx @biomejs/biome check:*)",
+      "Bash(chmod:*)",
+      "Bash(npm run lint:fix:*)",
+      "Bash(node /Users/darcher/Dev/legacy-concierge/bin/add-import-maps.cjs:*)",
+      "Bash(node /Users/darcher/Dev/legacy-concierge/bin/update-imports.cjs:*)",
+      "Bash(node /Users/darcher/Dev/legacy-concierge/bin/add-path-resolver-inline.cjs:*)",
+      "Bash(node /Users/darcher/Dev/legacy-concierge/bin/fix-html-paths.cjs:*)",
+      "Bash(jq:*)",
+      "Bash(npx playwright install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
