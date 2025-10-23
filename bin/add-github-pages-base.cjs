@@ -6,7 +6,6 @@
  */
 
 const fs = require("node:fs");
-const path = require("node:path");
 const { glob } = require("glob");
 
 const BASE_PATH_SCRIPT = `
@@ -34,7 +33,7 @@ const BASE_PATH_SCRIPT = `
 
 async function addBasePathToHTML(filePath) {
 	try {
-		let content = fs.readFileSync(filePath, "utf8");
+		const content = fs.readFileSync(filePath, "utf8");
 
 		// Skip if already has the base path detection
 		if (content.includes("GitHub Pages Base Path Detection")) {

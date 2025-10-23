@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <!-- GitHub Pages Base Path - Must be set before any resource loads -->
-    <base href="/legacyconcierge/" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome - Legacy Concierge</title>
-    <link rel="icon" href="/favicon.svg" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../../common/core/path-resolver-init.js"></script>
 
-    <link rel="stylesheet" href="/shared/theme/style.css" />
-    <link rel="stylesheet" href="/shared/theme/layouts/splash.css" />
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome - Legacy Concierge</title>
+    <link rel="icon" href="../../../../favicon.svg" />
+
+    <link rel="stylesheet" href="../../../../shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../../shared/theme/layouts/splash.css" />
 
     <style>
       /* Splash Page Layout Styles */
@@ -366,7 +377,7 @@
     </style>
 
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
 
       document.addEventListener("DOMContentLoaded", async () => {
         // Minimal initialization for splash page
@@ -468,8 +479,8 @@
           role="navigation"
           aria-label="Splash navigation"
         >
-          <a href="/pages/about" data-i18n="splash.header.about">About</a>
-          <a href="/pages/contact" data-i18n="splash.header.contact">Contact</a>
+          <a href="../../../../pages/about" data-i18n="splash.header.about">About</a>
+          <a href="../../../../pages/contact" data-i18n="splash.header.contact">Contact</a>
         </nav>
       </div>
     </header>
@@ -480,7 +491,7 @@
       <div class="splash-background">
         <!-- Option 1: Background Image -->
         <img
-          src="/shared/assets/media/splash-hero.jpg"
+          src="../../../../shared/assets/media/splash-hero.jpg"
           alt="Compassionate nursing care"
           loading="eager"
         />
@@ -488,9 +499,9 @@
         <!-- Option 2: Background Video (uncomment to use) -->
         <!--
             <video autoplay muted loop playsinline preload="auto">
-                <source src="/shared/assets/media/videos/splash-hero.mp4" type="video/mp4">
-                <source src="/shared/assets/media/videos/splash-hero.webm" type="video/webm">
-                <img src="/shared/assets/media/splash-hero.jpg" alt="Fallback image" loading="lazy" decoding="async">
+                <source src="../../../../shared/assets/media/videos/splash-hero.mp4" type="video/mp4">
+                <source src="../../../../shared/assets/media/videos/splash-hero.webm" type="video/webm">
+                <img src="../../../../shared/assets/media/splash-hero.jpg" alt="Fallback image" loading="lazy" decoding="async">
             </video>
             -->
       </div>
@@ -515,14 +526,14 @@
 
         <div class="splash-actions">
           <a
-            href="/pages/contact"
+            href="../../../../pages/contact"
             class="cta-button"
             data-i18n="splash.hero.cta.primary"
           >
             Get Started Today
           </a>
           <a
-            href="/pages/about"
+            href="../../../../pages/about"
             class="cta-button cta-button-secondary"
             data-i18n="splash.hero.cta.secondary"
           >
@@ -630,7 +641,7 @@
       </div>
     </footer>
 
-    <script src="/common/services/i18n.js"></script>
-    <script type="module" src="/common/components/lc-icon.js"></script>
+    <script src="../../../../common/services/i18n.js"></script>
+    <script type="module" src="../../../../common/components/lc-icon.js"></script>
   </body>
 </html>

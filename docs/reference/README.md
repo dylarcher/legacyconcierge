@@ -16,13 +16,13 @@ Step-by-step guides for beginners to achieve meaningful results.
 
 Goal-oriented instructions for specific tasks and problems.
 
-- [Component Integration](../how-to/COMPONENT_INTEGRATION.md)
-- [Path & Icon System Implementation](../how-to/PHASE_1_IMPLEMENTATION.md)
-- [Web Vitals Monitoring](../how-to/PHASE_2_WEB_VITALS.md)
-- [Lighthouse CI Audits](../how-to/PHASE_2_LIGHTHOUSE_CI.md)
-- [Theme System Fixes](../how-to/THEME_SYSTEM_FIXES.md)
-- [Generate Icons](../how-to/GENERATE_ICONS.md)
-- [Path Fixes Complete](../how-to/PATH_FIXES_COMPLETE.md)
+- [Component Integration](../how-to-guides/COMPONENT_INTEGRATION.md)
+- [Path & Icon System Implementation](../how-to-guides/PHASE_1_IMPLEMENTATION.md)
+- [Web Vitals Monitoring](../how-to-guides/PHASE_2_WEB_VITALS.md)
+- [Lighthouse CI Audits](../how-to-guides/PHASE_2_LIGHTHOUSE_CI.md)
+- [Theme System Fixes](../how-to-guides/THEME_SYSTEM_FIXES.md)
+- [Generate Icons](../how-to-guides/GENERATE_ICONS.md)
+- [Path Fixes Complete](../how-to-guides/PATH_FIXES_COMPLETE.md)
 
 ### 3. Reference — Technical Details
 
