@@ -19,7 +19,7 @@
 .DS_Store
 .archive*
 .classpath
-.claude/settings.local.json
+.claude
 .env
 .env.*
 .lighthouse*
