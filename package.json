@@ -71,7 +71,7 @@
     "check": "biome check .",
     "check:fix": "biome check --write .",
     "type-check": "tsc --noEmit",
-    "types:generate": "tsc --declaration --emitDeclarationOnly --allowJs --outDir types --strict false --skipLibCheck true --noImplicitAny false",
+    "types:generate": "tsc --declaration --emitDeclarationOnly --allowJs --outDir types --skipLibCheck true --noImplicitAny false --strictNullChecks false",
     "lighthouse": "lhci autorun",
     "lighthouse:quick": "lighthouse http://localhost:8000 --view --preset=desktop",
     "paths:check": "node bin/check-paths.cjs",
