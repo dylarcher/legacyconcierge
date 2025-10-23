@@ -366,7 +366,7 @@ async function applyTranslations() {
 
 	const translations = await fetchTranslations(lang, page);
 
-	// Extract fileName for detail pages (e.g., 'post-op-recovery' from "$/treatments/views/post-op-recovery/')
+	// Extract fileName for detail pages (e.g., 'post-op-recovery' from '$/treatments/views/post-op-recovery/')
 	let fileName;
 	if (
 		path.includes("/treatments/views/") ||
