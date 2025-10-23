@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const repoRoot = path.resolve(__dirname, "..");
 
@@ -62,7 +62,7 @@ function* extractLinks(filePath, content) {
 	if (ext === ".html") {
 		const attrs = ["src", "href"];
 		for (const attr of attrs) {
-			const re = new RegExp(attr + "=[\"']([^\"']+)[\"']", "gi");
+			const re = new RegExp(`${attr}=["']([^"']+)["']`, "gi");
 			let m = re.exec(content);
 			while (m) {
 				yield { file: rel, line: 0, target: m[1] };

@@ -46,7 +46,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 
 ### Implementation Documentation
 
-**[PHASE_1_IMPLEMENTATION.md](./how-to/PHASE_1_IMPLEMENTATION.md)**
+**[PHASE_1_IMPLEMENTATION.md](./how-to-guides/PHASE_1_IMPLEMENTATION.md)**
 
 - Root-relative path fixes (445 replacements across 50 files)
 - Icon system implementation (36 icons integrated)
@@ -54,7 +54,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Automated path-fixing utility
 - Status: ✅ Completed (October 22, 2025)
 
-**[PHASE_2_WEB_VITALS.md](./how-to/PHASE_2_WEB_VITALS.md)**
+**[PHASE_2_WEB_VITALS.md](./how-to-guides/PHASE_2_WEB_VITALS.md)**
 
 - Web Vitals performance monitoring integration
 - Real-time metrics overlay (LCP, FID, INP, CLS, FCP, TTFB)
@@ -62,7 +62,7 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 - Console logging and keyboard shortcuts
 - Status: ✅ Completed (October 22, 2025)
 
-**[PHASE_2_LIGHTHOUSE_CI.md](./how-to/PHASE_2_LIGHTHOUSE_CI.md)**
+**[PHASE_2_LIGHTHOUSE_CI.md](./how-to-guides/PHASE_2_LIGHTHOUSE_CI.md)**
 
 - Automated Lighthouse audits for performance and accessibility
 - Desktop and mobile configurations with custom thresholds
@@ -102,9 +102,9 @@ Welcome to the Legacy Concierge documentation. This directory contains all proje
 
 **Recent implementations:**
 
-1. [PHASE_1_IMPLEMENTATION.md](./how-to/PHASE_1_IMPLEMENTATION.md) - Path fixes & icon system
-2. [PHASE_2_WEB_VITALS.md](./how-to/PHASE_2_WEB_VITALS.md) - Performance monitoring
-3. [PHASE_2_LIGHTHOUSE_CI.md](./how-to/PHASE_2_LIGHTHOUSE_CI.md) - Automated audits
+1. [PHASE_1_IMPLEMENTATION.md](./how-to-guides/PHASE_1_IMPLEMENTATION.md) - Path fixes & icon system
+2. [PHASE_2_WEB_VITALS.md](./how-to-guides/PHASE_2_WEB_VITALS.md) - Performance monitoring
+3. [PHASE_2_LIGHTHOUSE_CI.md](./how-to-guides/PHASE_2_LIGHTHOUSE_CI.md) - Automated audits
 
 ### For Project Managers
 
