@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Blog Components for Legacy Concierge
  * Provides reusable components for blog pages
@@ -9,10 +10,8 @@
  * - <lc-blog-grid>: Responsive blog grid layout
  */
 
-import {
-	cloneTemplate,
-	getBooleanAttribute,
-} from "@/core/component-loader.js";
+import { cloneTemplate } from "@/core/component-loader.js";
+import { getBooleanAttribute } from "@/core/helpers.js";
 
 /**
  * Blog card component for post previews

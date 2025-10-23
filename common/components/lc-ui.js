@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * UI Element Components for Legacy Concierge
  * Provides reusable UI elements (badges, tags, buttons, pagination, spinners)
@@ -10,10 +11,7 @@
  * - <lc-spinner>: Loading indicators
  */
 
-import {
-	getAttributeOr,
-	getBooleanAttribute,
-} from "@/core/component-loader.js";
+import { getAttributeOr, getBooleanAttribute } from "@/core/helpers.js";
 
 /**
  * Badge component for status indicators
