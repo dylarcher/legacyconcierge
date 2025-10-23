@@ -13,7 +13,7 @@
         if (isGitHubPages) {
           // Extract repo name from path (e.g., /legacyconcierge/)
           const pathParts = window.location.pathname.split('/').filter(p => p);
-          if (pathParts.length > 0 && pathParts[0] !== 'index.html') {
+          if (pathParts.length > 0) {
             const repoName = pathParts[0];
             // Set base tag dynamically
             const base = document.createElement('base');
