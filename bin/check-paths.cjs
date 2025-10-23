@@ -94,7 +94,7 @@ function* extractLinks(filePath, content) {
 	// JS import/export and dynamic import
 	if (ext === ".js" || ext === ".mjs" || ext === ".cjs") {
 		// Remove comments (both single-line and multi-line) to avoid parsing them
-		let cleaned = content
+		const cleaned = content
 			.replace(/\/\*[\s\S]*?\*\//g, "") // Remove /* */ comments
 			.replace(/\/\/.*$/gm, ""); // Remove // comments
 
