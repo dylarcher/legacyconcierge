@@ -55,8 +55,8 @@ npx @biomejs/biome lint .
 npx @biomejs/biome check .
 ```
 
-**Formatting & Linting**  
-Configuration: [`configs/biome.json`](configs/biome.json) (2-space indentation, 80-char line width)
+**Formatting & Linting**
+Configuration: [`biome.json`](biome.json) (2-space indentation, 80-char line width)
 
 ## Technology Stack
 

@@ -311,9 +311,8 @@ Questions? Check PATH-SYSTEM-README.md or ping me.
 
 For reference during check-in:
 
-- **Full Review:** [IMPROVEMENTS.md](IMPROVEMENTS.md)
-- **Path System Guide:** [PATH-SYSTEM-README.md](PATH-SYSTEM-README.md)
-- **Project Instructions:** [.claude/CLAUDE.md](.claude/CLAUDE.md)
+- **Full Review:** [IMPROVEMENTS.md](../explanation/IMPROVEMENTS.md)
+- **Path System Guide:** [PATH-SYSTEM-README.md](./PATH-SYSTEM-README.md)
 
 ---
 

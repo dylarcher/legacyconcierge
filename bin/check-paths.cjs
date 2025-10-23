@@ -44,16 +44,26 @@ function* extractLinks(filePath, content) {
 		const lines = content.split(/\r?\n/);
 		for (let i = 0; i < lines.length; i++) {
 			const line = lines[i];
+			// Check for code fence markers
 			if (/^```/.test(line)) {
 				inFence = !inFence;
 				continue;
 			}
+			// Skip lines inside code blocks
 			if (inFence) continue;
+			// Skip inline code blocks that might contain path-like strings
+			// Extract markdown links [text](target)
 			const re = /\]\(([^)]+)\)/g;
 			let m = re.exec(line);
 			while (m) {
 				const target = m[1].trim();
-				yield { file: rel, line: i + 1, target };
+				// Only process if it's not inside inline code backticks
+				const beforeLink = line.substring(0, m.index);
+				const backticksBefore = (beforeLink.match(/`/g) || []).length;
+				// If odd number of backticks before, we're inside inline code
+				if (backticksBefore % 2 === 0) {
+					yield { file: rel, line: i + 1, target };
+				}
 				m = re.exec(line);
 			}
 		}
@@ -83,13 +93,32 @@ function* extractLinks(filePath, content) {
 	}
 	// JS import/export and dynamic import
 	if (ext === ".js" || ext === ".mjs" || ext === ".cjs") {
+		// Remove comments (both single-line and multi-line) to avoid parsing them
+		let cleaned = content
+			.replace(/\/\*[\s\S]*?\*\//g, "") // Remove /* */ comments
+			.replace(/\/\/.*$/gm, ""); // Remove // comments
+
 		const re =
 			/(import\s+[^'";]+['"]([^'"]+)['"])|(from\s+['"]([^'"]+)['"])|(import\(['"]([^'"]+)['"]\))/g;
-		let m = re.exec(content);
+		let m = re.exec(cleaned);
 		while (m) {
 			const target = m[2] || m[4] || m[6];
-			if (target) yield { file: rel, line: 0, target };
-			m = re.exec(content);
+			// Skip import map aliases (@/, #/, $/) - these are resolved at runtime
+			// Also skip if target contains common non-path characters that indicate it's code
+			if (
+				target &&
+				!target.startsWith("@/") &&
+				!target.startsWith("#/") &&
+				!target.startsWith("$/") &&
+				!target.includes("(") &&
+				!target.includes(")") &&
+				!target.includes("{") &&
+				!target.includes("}") &&
+				!target.includes("===")
+			) {
+				yield { file: rel, line: 0, target };
+			}
+			m = re.exec(cleaned);
 		}
 	}
 	// JSON: scan for values that look like relative or root paths

@@ -236,11 +236,10 @@ Modify CSS custom properties:
 
 For detailed technical documentation, see:
 
-- **[MEDIA_STRATEGY.md](../../../docs/reference/MEDIA_STRATEGY.md)** -
+- **[MEDIA_STRATEGY.md](./MEDIA_STRATEGY.md)** -
   Complete media delivery guide
-- **[index.html](./index.html)** - Annotated HTML with inline comments
-- **[style.css](./style.css)** - Comprehensive CSS with explanations
-- **[main.js](./main.js)** - JavaScript functionality documentation
+- **[Demo Page](../../pages/demos/hero/index.html)** - Fullscreen video hero demo implementation
+- **[Demo Script](../../pages/demos/hero/main.js)** - Demo page JavaScript
 
 ---
 
