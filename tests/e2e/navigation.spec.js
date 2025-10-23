@@ -64,7 +64,7 @@ test.describe('Navigation', () => {
 		await page.keyboard.press('ArrowDown');
 
 		// Services dropdown should be visible
-		const dropdown = page.locator('#nav-submenu-10, ul.dropdown-menu').first();
+		const dropdown = page.locator('[data-testid="services-dropdown"]');
 		await expect(dropdown).toBeVisible();
 
 		// Press Escape to close
