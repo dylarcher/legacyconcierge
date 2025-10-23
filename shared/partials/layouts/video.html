@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "./common/",
+          "#/": "./shared/",
+          "$/": "./pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homepage with Video Background - Legacy Concierge</title>
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="../../../favicon.svg" />
 
-    <link rel="stylesheet" href="/shared/theme/style.css" />
-    <link rel="stylesheet" href="/shared/theme/layouts/homepage.css" />
+    <link rel="stylesheet" href="../../../shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../shared/theme/layouts/homepage.css" />
 
     <style>
       /* Homepage Video Layout Styles */
@@ -102,7 +116,7 @@
     </style>
 
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
 
       document.addEventListener("DOMContentLoaded", async () => {
         await initializeComponents(["header", "footer"]);
@@ -136,10 +150,10 @@
       });
     </script>
 
-    <script src="/common/services/theme.js"></script>
-    <script src="/common/services/i18n.js"></script>
+    <script src="../../../common/services/theme.js"></script>
+    <script src="../../../common/services/i18n.js"></script>
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
       loadTemplates(["header", "footer"], true);
     </script>
   </head>
@@ -154,16 +168,16 @@
     <section class="hero-video">
       <video autoplay muted loop playsinline preload="auto">
         <source
-          src="/shared/assets/media/videos/hero-nursing-care.mp4"
+          src="../../../shared/assets/media/videos/hero-nursing-care.mp4"
           type="video/mp4"
         />
         <source
-          src="/shared/assets/media/videos/hero-nursing-care.webm"
+          src="../../../shared/assets/media/videos/hero-nursing-care.webm"
           type="video/webm"
         />
         <!-- Fallback image -->
         <img
-          src="/shared/assets/media/hero-fallback.jpg"
+          src="../../../shared/assets/media/hero-fallback.jpg"
           alt="Compassionate nursing care"
         />
       </video>
@@ -175,13 +189,13 @@
         </p>
         <div class="hero-actions">
           <a
-            href="/pages/contact"
+            href="../../../pages/contact"
             class="cta-button"
             data-i18n="ctaButton.getStarted"
           >
             Get Started
           </a>
-          <a href="/pages/about" class="cta-button cta-button-secondary">
+          <a href="../../../pages/about" class="cta-button cta-button-secondary">
             Learn More
           </a>
         </div>
@@ -225,7 +239,7 @@
 
     <!-- Component System -->
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
 
       // Load templates and initialize components
       (async () => {

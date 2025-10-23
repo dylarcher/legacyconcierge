@@ -4,8 +4,8 @@
  * - Skips replacements inside fenced code blocks (```)
  * - Updates any markdown link target that ends with a known moved basename
  */
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const repoRoot = path.resolve(__dirname, '..');
 const mappingPath = path.join(repoRoot, 'docs', '.moved-mapping.json');
@@ -55,10 +55,10 @@ function rewriteFile(filePath) {
       // compute relative path from current file directory
       const fromDir = path.dirname(filePath);
       let rel = path.relative(fromDir, newAbs).replace(/\\/g, '/');
-      if (!rel || !rel.startsWith('.')) rel = './' + rel; // keep it relative
+      if (!rel || !rel.startsWith('.')) rel = `./${rel}`; // keep it relative
       changed = true;
-      const anchor = target.includes('#') ? '#' + target.split('#').slice(1).join('#') : '';
-      const suffix = target.includes('?') && !target.includes('#') ? '?' + target.split('?')[1] : '';
+      const anchor = target.includes('#') ? `#${target.split('#').slice(1).join('#')}` : '';
+      const suffix = target.includes('?') && !target.includes('#') ? `?${target.split('?')[1]}` : '';
       return `](${rel}${anchor || ''}${suffix || ''})`;
     });
   }

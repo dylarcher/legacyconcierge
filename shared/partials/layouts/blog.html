@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "./common/",
+          "#/": "./shared/",
+          "$/": "./pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Legacy Concierge</title>
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="../../../favicon.svg" />
 
-    <link rel="stylesheet" href="/shared/theme/style.css" />
-    <link rel="stylesheet" href="/shared/theme/layouts/blog.css" />
+    <link rel="stylesheet" href="../../../shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../shared/theme/layouts/blog.css" />
 
     <style>
       /* Blog Gallery Layout Styles */
@@ -497,7 +511,7 @@
     </style>
 
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
 
       document.addEventListener("DOMContentLoaded", async () => {
         await initializeComponents(["header", "footer", "cards"]);
@@ -605,10 +619,10 @@
       }
     </script>
 
-    <script src="/common/services/theme.js"></script>
-    <script src="/common/services/i18n.js"></script>
+    <script src="../../../common/services/theme.js"></script>
+    <script src="../../../common/services/i18n.js"></script>
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
       // Ensure navigation templates are available as early as possible
       loadTemplates(["header", "footer"], true);
     </script>
@@ -764,7 +778,7 @@
             >
               <div class="featured-post-image">
                 <img
-                  src="/shared/assets/media/blog/featured-post.jpg"
+                  src="../../../shared/assets/media/blog/featured-post.jpg"
                   alt="Featured post"
                   itemprop="image"
                   loading="eager"
@@ -778,7 +792,7 @@
                 >
                 <h2 itemprop="headline">
                   <a
-                    href="/pages/blog/posts/essential-post-op-care"
+                    href="../../../pages/blog/posts/essential-post-op-care"
                     data-i18n="blog.gallery.featured.title"
                   >
                     Essential Tips for Post-Operative Home Care
@@ -807,7 +821,7 @@
                   safe recovery process.
                 </p>
                 <a
-                  href="/pages/blog/posts/essential-post-op-care"
+                  href="../../../pages/blog/posts/essential-post-op-care"
                   class="cta-button"
                   data-i18n="blog.gallery.featured.cta"
                 >
@@ -827,7 +841,7 @@
               >
                 <div class="post-card-image">
                   <img
-                    src="/shared/assets/media/blog/managing-chronic-pain.jpg"
+                    src="../../../shared/assets/media/blog/managing-chronic-pain.jpg"
                     alt="Managing chronic pain"
                     itemprop="image"
                   />
@@ -904,7 +918,7 @@
               >
                 <div class="post-card-image">
                   <img
-                    src="/shared/assets/media/blog/nutrition-recovery.jpg"
+                    src="../../../shared/assets/media/blog/nutrition-recovery.jpg"
                     alt="Nutrition for recovery"
                     itemprop="image"
                   />
@@ -981,7 +995,7 @@
               >
                 <div class="post-card-image">
                   <img
-                    src="/shared/assets/media/blog/family-caregiver.jpg"
+                    src="../../../shared/assets/media/blog/family-caregiver.jpg"
                     alt="Family caregiver guide"
                     itemprop="image"
                   />
@@ -1095,7 +1109,7 @@
 
     <!-- Component System -->
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
 
       // Load templates and initialize components
       (async () => {

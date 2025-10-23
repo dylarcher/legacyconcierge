@@ -13,7 +13,7 @@
 import {
 	getAttributeOr,
 	getBooleanAttribute,
-} from "/common/core/component-loader.js";
+} from "@/core/component-loader.js";
 
 /**
  * Badge component for status indicators

@@ -3,8 +3,8 @@
  * Custom elements for various card types
  */
 
-import { cloneTemplate } from "/common/core/component-loader.js";
-import { getAttributeOr, getBooleanAttribute } from "/common/core/helpers.js";
+import { cloneTemplate } from "@/core/component-loader.js";
+import { getAttributeOr, getBooleanAttribute } from "@/core/helpers.js";
 
 /**
  * Base Card Component

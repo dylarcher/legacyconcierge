@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="./common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "./common/",
+          "#/": "./shared/",
+          "$/": "./pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -13,9 +27,9 @@
     <title>Legacy Concierge - Premier In-Home Nursing Care</title>
 
     <!-- Favicons -->
-    <link rel="icon" href="/favicon.svg" />
-    <link rel="mask-icon" href="/mask-icon.svg" color="#5bbad5" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="mask-icon" href="./mask-icon.svg" color="#5bbad5" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta
       name="description"
       content="Experience the pinnacle of private nursing with Legacy Concierge. Our elite, compassionate nurses provide bespoke in-home care, from post-op recovery to chronic condition management."
@@ -66,7 +80,7 @@
       rel="stylesheet"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <link rel="stylesheet" href="./shared/theme/style.css" />
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
@@ -224,13 +238,13 @@
     <lc-footer></lc-footer>
 
     <!-- Existing Scripts -->
-    <script src="/common/services/theme.js"></script>
-    <script src="/common/utils/app.js"></script>
-    <script src="/common/services/i18n.js"></script>
+    <script src="./common/services/theme.js"></script>
+    <script src="./common/utils/app.js"></script>
+    <script src="./common/services/i18n.js"></script>
 
     <!-- Component System -->
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
 
       // Function to populate info cards
       async function populateInfoCards() {
@@ -340,6 +354,6 @@
     </script>
 
     <!-- Development Tools (Web Vitals, etc.) -->
-    <script type="module" src="/common/tools/dev-tools.js"></script>
+    <script type="module" src="./common/tools/dev-tools.js"></script>
   </body>
 </html>
