@@ -78,14 +78,10 @@ Created a **Universal Path Resolver** that automatically detects and adapts to a
 
 #### What Was Created
 
-**1. Inline Path Resolver Script** (49 HTML files)
-Added as the FIRST script in every `<head>` tag:
-```javascript
-// Detects environment
-// Sets window.BASE_PATH
-// Updates import map dynamically
-// Provides window.resolvePath() helper
-```
+**1. External Path Resolver Script** (49 HTML files)
+Added as the FIRST script in every `<head>` tag as an external reference:
+```html
+<script src="../common/core/path-resolver-init.js"></script>
 
 **2. Fixed All HTML Paths to Relative** (51 HTML files)
 - Root level: `./common/...`, `./shared/...`
