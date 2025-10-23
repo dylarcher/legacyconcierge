@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <!-- GitHub Pages Base Path - Must be set before any resource loads -->
     <base href="/legacyconcierge/" />
 <meta
@@ -14,7 +28,7 @@
       itemprop="description"
     />
     <title itemprop="name">Fullscreen Video Background</title>
-    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../shared/theme/style.css" />
     <style>
       body {
         margin: 0;
@@ -73,11 +87,11 @@
         itemprop="contentUrl"
       >
         <source
-          src="/shared/assets/media/videos/bg-high-quality-1080p.mp4"
+          src="../../../shared/assets/media/videos/bg-high-quality-1080p.mp4"
           type="video/mp4"
         />
         <source
-          src="/shared/assets/media/videos/bg-high-quality-1080p.webm"
+          src="../../../shared/assets/media/videos/bg-high-quality-1080p.webm"
           type="video/webm"
         />
         Your browser does not support the video tag.

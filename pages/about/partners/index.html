@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Partners - Legacy Concierge Network</title>
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="../../../favicon.svg" />
     <meta
       name="description"
       content="Legacy Concierge partners with Southern California's finest healthcare providers to deliver unrivaled, integrated care. Join our premier network."
@@ -53,7 +67,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../shared/theme/style.css" />
   </head>
   <body itemscope itemtype="http://schema.org/WebPage">
     <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
@@ -67,7 +81,7 @@
           <h2 data-i18n="partners.cta.title"></h2>
           <p data-i18n="partners.cta.text"></p>
           <a
-            href="/pages/contact/"
+            href="../../../pages/contact/"
             class="cta-button"
             data-i18n="partners.cta.button"
           ></a>
@@ -75,11 +89,11 @@
       </section>
     </main>
     <lc-footer></lc-footer>
-    <script src="/common/services/theme.js"></script>
-    <script src="/common/utils/app.js"></script>
-    <script src="/common/services/i18n.js"></script>
+    <script src="../../../common/services/theme.js"></script>
+    <script src="../../../common/utils/app.js"></script>
+    <script src="../../../common/services/i18n.js"></script>
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
       async function populatePartnerCards() {
         try {
           const response = await fetch(

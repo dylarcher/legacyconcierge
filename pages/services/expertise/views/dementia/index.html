@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <!-- GitHub Pages Base Path - Must be set before any resource loads -->
     <base href="/legacyconcierge/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="expertise-detail.dementia.title"></title>
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="../../../../../favicon.svg" />
     <meta name="description" data-i18n="expertise-detail.dementia.subtitle" />
     <link
       rel="canonical"
@@ -18,7 +32,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../../../shared/theme/style.css" />
   </head>
   <body itemscope itemtype="http://schema.org/ServicePage">
     <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
@@ -51,11 +65,11 @@
       </section>
     </main>
     <lc-footer></lc-footer>
-    <script src="/common/services/theme.js"></script>
-    <script src="/common/utils/app.js"></script>
-    <script src="/common/services/i18n.js"></script>
+    <script src="../../../../../common/services/theme.js"></script>
+    <script src="../../../../../common/utils/app.js"></script>
+    <script src="../../../../../common/services/i18n.js"></script>
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
       (async () => {
         try {
           const templateResults = await loadTemplates(

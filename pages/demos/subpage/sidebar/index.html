@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <!-- GitHub Pages Base Path - Must be set before any resource loads -->
     <base href="/legacyconcierge/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subpage with Sidebar - Legacy Concierge</title>
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="../../../../favicon.svg" />
 
-    <link rel="stylesheet" href="/shared/theme/style.css" />
-    <link rel="stylesheet" href="/shared/theme/layouts/sidebar.css" />
+    <link rel="stylesheet" href="../../../../shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../../shared/theme/layouts/sidebar.css" />
 
     <style>
       /* Sidebar Layout Styles */
@@ -156,7 +170,7 @@
     </style>
 
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
 
       document.addEventListener("DOMContentLoaded", async () => {
         await initializeComponents(["navigation"]);
@@ -232,26 +246,26 @@
               <ul>
                 <li>
                   <a
-                    href="/pages/treatments"
+                    href="../../../../pages/treatments"
                     data-i18n="sidebar.quickLinks.treatments"
                     >Our Treatments</a
                   >
                 </li>
                 <li>
                   <a
-                    href="/pages/expertise"
+                    href="../../../../pages/expertise"
                     data-i18n="sidebar.quickLinks.expertise"
                     >Specialized Expertise</a
                   >
                 </li>
                 <li>
-                  <a href="/pages/team" data-i18n="sidebar.quickLinks.team"
+                  <a href="../../../../pages/team" data-i18n="sidebar.quickLinks.team"
                     >Meet Our Team</a
                   >
                 </li>
                 <li>
                   <a
-                    href="/pages/contact"
+                    href="../../../../pages/contact"
                     data-i18n="sidebar.quickLinks.contact"
                     >Contact Us</a
                   >
@@ -286,7 +300,7 @@
             <div class="sidebar-section">
               <h3 data-i18n="sidebar.featured.title">Featured</h3>
               <img
-                src="/shared/assets/media/sidebar-featured.jpg"
+                src="../../../../shared/assets/media/sidebar-featured.jpg"
                 alt="Compassionate Nursing Care"
                 class="sidebar-image"
               />
@@ -294,7 +308,7 @@
                 Learn more about our award-winning care approach.
               </p>
               <a
-                href="/pages/about"
+                href="../../../../pages/about"
                 class="cta-button"
                 data-i18n="sidebar.featured.cta"
               >
@@ -309,7 +323,7 @@
                 Our team is available 24/7 to answer your questions.
               </p>
               <a
-                href="/pages/contact"
+                href="../../../../pages/contact"
                 class="cta-button"
                 data-i18n="sidebar.cta.button"
               >
@@ -323,8 +337,8 @@
 
     <lc-footer></lc-footer>
 
-    <script src="/common/services/i18n.js"></script>
-    <script type="module" src="/common/components/lc-header.js"></script>
-    <script type="module" src="/common/components/lc-footer.js"></script>
+    <script src="../../../../common/services/i18n.js"></script>
+    <script type="module" src="../../../../common/components/lc-header.js"></script>
+    <script type="module" src="../../../../common/components/lc-footer.js"></script>
   </body>
 </html>

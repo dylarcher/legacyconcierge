@@ -93,5 +93,5 @@ When adding new configuration files:
 
 For more details on configurations:
 - Biome: See `CONTRIBUTING.md` for code style guidelines
-- Lighthouse CI: See `../docs/how-to/PHASE_2_LIGHTHOUSE_CI.md` for audit details
+- Lighthouse CI: See `../docs/how-to-guides/PHASE_2_LIGHTHOUSE_CI.md` for audit details
 - TypeScript: See inline comments in `tsconfig.json`
