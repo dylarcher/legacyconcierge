@@ -4,8 +4,8 @@
  * Small, cacheable script that MUST load before any modules
  */
 
-(function() {
-	'use strict';
+(() => {
+	
 
 	// Detect environment and set base path
 	const hostname = window.location.hostname;
@@ -27,7 +27,7 @@
 
 	// Update import map if it exists
 	// This runs on DOMContentLoaded to ensure import map script exists
-	const updateImportMap = function() {
+	const updateImportMap = () => {
 		const importMapScript = document.querySelector('script[type="importmap"]');
 		if (importMapScript) {
 			try {
@@ -62,13 +62,13 @@
 	}
 
 	// Helper function for resolving paths in scripts
-	window.resolvePath = function(p) {
+	window.resolvePath = (p) => {
 		const cleanPath = p.startsWith('/') ? p.slice(1) : p;
 		return basePath ? `${basePath}/${cleanPath}` : `/${cleanPath}`;
 	};
 
 	// Helper for resolving relative paths based on current depth
-	window.resolveRelativePath = function(p) {
+	window.resolveRelativePath = (p) => {
 		const cleanPath = p.startsWith('/') ? p.slice(1) : p;
 		const currentPath = window.location.pathname.replace(basePath, '');
 		const depth = currentPath.split('/').filter(s => s && s !== 'index.html').length;

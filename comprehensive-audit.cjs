@@ -104,9 +104,9 @@ function analyzeFile(filePath, relativePath) {
   const lines = content.split('\n');
 
   // Calculate URL path for this page
-  const urlPath = relativePath === 'index.html'
+  const _urlPath = relativePath === 'index.html'
     ? '/'
-    : '/' + relativePath.replace('/index.html', '');
+    : `/${relativePath.replace('/index.html', '')}`;
 
   lines.forEach((line, index) => {
     const lineNum = index + 1;

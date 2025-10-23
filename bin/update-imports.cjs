@@ -39,7 +39,7 @@ async function updateImports() {
   for (const file of jsFiles) {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     let changes = 0;
 
     // Apply all replacements
