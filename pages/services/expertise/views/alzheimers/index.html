@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="expertise-detail.alzheimers.title"></title>
+    <link rel="icon" href="/favicon.svg" />
+    <meta name="description" data-i18n="expertise-detail.alzheimers.subtitle" />
+    <link
+      rel="canonical"
+      href="https://www.legacyconcierge.com/expertise/alzheimers.html"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans:wght@400&family=Montserrat:wght@400;600&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/shared/theme/style.css" />
+  </head>
+  <body itemscope itemtype="http://schema.org/ServicePage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+    <lc-header></lc-header>
+    <main role="main" id="main">
+      <section class="container page-content">
+        <h1 itemprop="name" data-i18n="expertise-detail.alzheimers.title"></h1>
+        <p
+          class="page-subtitle"
+          itemprop="description"
+          data-i18n="expertise-detail.alzheimers.subtitle"
+        ></p>
+        <div class="service-details" itemprop="mainContentOfPage">
+          <div class="service-image">
+            <img
+              data-i18n-attr="src:alzheimers.image|alt:alzheimers.alt"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="service-description">
+            <h2
+              itemprop="headline"
+              data-i18n="expertise-detail.alzheimers.h2"
+            ></h2>
+            <p data-i18n="expertise-detail.alzheimers.text"></p>
+            <ul data-i18n="expertise-detail.alzheimers.features"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <lc-footer></lc-footer>
+    <script src="/common/services/theme.js"></script>
+    <script src="/common/utils/app.js"></script>
+    <script src="/common/services/i18n.js"></script>
+    <script type="module">
+      import { loadTemplates } from "/common/core/component-loader.js";
+      (async () => {
+        try {
+          const templateResults = await loadTemplates(
+            ["header", "footer", "cards"],
+            true
+          );
+          if (!templateResults.every((r) => r)) {
+            return console.error(
+              "✗ Some templates failed to load. Check console for details."
+            );
+          }
+          await Promise.all([
+            import("/common/components/lc-header.js"),
+            import("/common/components/lc-footer.js"),
+            import("/common/components/lc-card.js"),
+          ]);
+          await new Promise((resolve) => setTimeout(resolve, 100));
+          if (window.applyTranslations) await window.applyTranslations();
+          if (window.setupThemeToggle) window.setupThemeToggle();
+        } catch (error) {
+          console.error("Failed to initialize components:", error);
+        }
+      })();
+    </script>
+  </body>
+</html>

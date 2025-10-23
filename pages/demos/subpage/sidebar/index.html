@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subpage with Sidebar - Legacy Concierge</title>
+    <link rel="icon" href="/favicon.svg" />
+
+    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <link rel="stylesheet" href="/shared/theme/layouts/sidebar.css" />
+
+    <style>
+      /* Sidebar Layout Styles */
+      .sidebar-layout {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 3rem;
+        margin-top: 2rem;
+      }
+
+      .main-content {
+        min-width: 0; /* Prevent grid overflow */
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 100px;
+        height: fit-content;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+      }
+
+      .sidebar-section {
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .sidebar-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+        border-bottom: 2px solid var(--accent-primary);
+        padding-bottom: 0.5rem;
+      }
+
+      .sidebar-section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar-section li {
+        margin-bottom: 0.75rem;
+      }
+
+      .sidebar-section a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        display: block;
+        padding: 0.25rem 0;
+      }
+
+      .sidebar-section a:hover {
+        color: var(--accent-primary);
+      }
+
+      .sidebar-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .sidebar-cta {
+        background: var(--accent-primary);
+        color: white;
+      }
+
+      .sidebar-cta h3 {
+        color: white;
+        border-color: white;
+      }
+
+      .sidebar-cta .cta-button {
+        background: white;
+        color: var(--accent-primary);
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .sidebar-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+          position: static;
+          max-height: none;
+        }
+      }
+
+      /* Article Content Styles */
+      .article-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 2px solid var(--border-color);
+      }
+
+      .article-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+
+      .article-meta {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .article-content h2 {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .article-content h3 {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+
+      .article-content p {
+        line-height: 1.8;
+        margin-bottom: 1.25rem;
+      }
+
+      .article-content ul,
+      .article-content ol {
+        margin-bottom: 1.25rem;
+        padding-left: 2rem;
+      }
+
+      .article-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+    </style>
+
+    <script type="module">
+      import { initializeComponents } from "/common/core/component-loader.js";
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        await initializeComponents(["navigation"]);
+      });
+    </script>
+  </head>
+
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <a href="#main" class="skip-link" data-i18n="accessibility.skipToMain"></a>
+
+    <lc-header solid></lc-header>
+
+    <main role="main" id="main">
+      <div class="container">
+        <div class="sidebar-layout">
+          <!-- Main Content Area -->
+          <article
+            class="main-content"
+            itemscope
+            itemtype="http://schema.org/Article"
+          >
+            <header class="article-header">
+              <h1 itemprop="headline" data-i18n="page.title">
+                About Our Services
+              </h1>
+              <div class="article-meta">
+                <time itemprop="datePublished" datetime="2025-10-19">
+                  October 19, 2025
+                </time>
+                <span>•</span>
+                <span>5 min read</span>
+              </div>
+            </header>
+
+            <div class="article-content" itemprop="articleBody">
+              <p data-i18n="page.intro">
+                Legacy Concierge provides premier in-home nursing care with a
+                focus on compassion, expertise, and personalized attention.
+              </p>
+
+              <h2 data-i18n="page.section1.title">Our Approach</h2>
+              <p data-i18n="page.section1.content">
+                We believe that quality healthcare should be accessible in the
+                comfort of your own home. Our team of experienced nurses brings
+                hospital-quality care directly to you.
+              </p>
+
+              <h3 data-i18n="page.section1.subsection.title">
+                What Sets Us Apart
+              </h3>
+              <ul data-i18n="page.section1.subsection.features">
+                <li>24/7 availability</li>
+                <li>Experienced, licensed nurses</li>
+                <li>Personalized care plans</li>
+                <li>Comprehensive medical support</li>
+              </ul>
+
+              <h2 data-i18n="page.section2.title">Our Services</h2>
+              <p data-i18n="page.section2.content">
+                From post-operative recovery to chronic condition management, we
+                offer a full range of nursing services tailored to your needs.
+              </p>
+
+              <!-- Add more content as needed -->
+            </div>
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="sidebar" role="complementary">
+            <!-- Quick Links Section -->
+            <div class="sidebar-section">
+              <h3 data-i18n="sidebar.quickLinks.title">Quick Links</h3>
+              <ul>
+                <li>
+                  <a
+                    href="/pages/treatments"
+                    data-i18n="sidebar.quickLinks.treatments"
+                    >Our Treatments</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pages/expertise"
+                    data-i18n="sidebar.quickLinks.expertise"
+                    >Specialized Expertise</a
+                  >
+                </li>
+                <li>
+                  <a href="/pages/team" data-i18n="sidebar.quickLinks.team"
+                    >Meet Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pages/contact"
+                    data-i18n="sidebar.quickLinks.contact"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="sidebar-section">
+              <h3 data-i18n="sidebar.resources.title">Resources</h3>
+              <ul>
+                <li><a href="#" data-i18n="sidebar.resources.faq">FAQs</a></li>
+                <li>
+                  <a href="#" data-i18n="sidebar.resources.insurance"
+                    >Insurance Information</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="sidebar.resources.forms"
+                    >Patient Forms</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-i18n="sidebar.resources.guides"
+                    >Care Guides</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="sidebar-section">
+              <h3 data-i18n="sidebar.featured.title">Featured</h3>
+              <img
+                src="/shared/assets/media/sidebar-featured.jpg"
+                alt="Compassionate Nursing Care"
+                class="sidebar-image"
+              />
+              <p data-i18n="sidebar.featured.description">
+                Learn more about our award-winning care approach.
+              </p>
+              <a
+                href="/pages/about"
+                class="cta-button"
+                data-i18n="sidebar.featured.cta"
+              >
+                Read More
+              </a>
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="sidebar-section sidebar-cta">
+              <h3 data-i18n="sidebar.cta.title">Need Help?</h3>
+              <p data-i18n="sidebar.cta.description">
+                Our team is available 24/7 to answer your questions.
+              </p>
+              <a
+                href="/pages/contact"
+                class="cta-button"
+                data-i18n="sidebar.cta.button"
+              >
+                Contact Us
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <lc-footer></lc-footer>
+
+    <script src="/common/services/i18n.js"></script>
+    <script type="module" src="/common/components/lc-header.js"></script>
+    <script type="module" src="/common/components/lc-footer.js"></script>
+  </body>
+</html>

@@ -1,9 +1,3 @@
-# Git LFS configuration for large media files
-*.mp4 filter=lfs diff=lfs merge=lfs -text
-*.webm filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-
 # Ensure all text files use LF line endings and UTF-8 encoding
 * text=auto eol=lf
 
@@ -18,6 +12,7 @@
 *.xml text eol=lf
 *.txt text eol=lf
 *.py text eol=lf
+*.sh text eol=lf
 
 # Binary files (non-LFS)
 *.gif binary
@@ -28,4 +23,15 @@
 *.ttf binary
 *.eot binary
 *.otf binary
-*.pdf binary
+
+# Git LFS configuration for large media files
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.avif filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.mp3 filter=lfs diff=lfs merge=lfs -text
+*.wav filter=lfs diff=lfs merge=lfs -text

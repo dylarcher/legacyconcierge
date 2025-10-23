@@ -1,0 +1,45 @@
+{
+	"splash": {
+		"header": {
+			"logo": "Legacy Concierge",
+			"about": "Acerca de",
+			"contact": "Contacto"
+		},
+		"hero": {
+			"logo": "Legacy Concierge",
+			"title": "Cuidado Compasivo,<br>Donde Usted Llama Hogar",
+			"tagline": "Servicios de enfermería en el hogar de primera clase para quienes más importan",
+			"description": "Experimente el más alto nivel de atención médica personalizada en la comodidad y dignidad de su propio hogar. Nuestro equipo de enfermeras expertas brinda apoyo las 24 horas del día, los 7 días de la semana, adaptado a sus necesidades únicas.",
+			"cta": {
+				"primary": "Comience Hoy",
+				"secondary": "Aprende Más"
+			},
+			"scroll": "Explorar"
+		},
+		"features": {
+			"title": "¿Por Qué Elegir Legacy Concierge?",
+			"subtitle": "Brindamos atención incomparable con compasión, experiencia y dedicación",
+			"items": [
+				{
+					"title": "Atención Experta",
+					"description": "Enfermeras con licencia y experiencia que brindan atención de calidad hospitalaria en el hogar"
+				},
+				{
+					"title": "Disponibilidad 24/7",
+					"description": "Apoyo las 24 horas cuando lo necesite, día o noche"
+				},
+				{
+					"title": "Cuidado Personalizado",
+					"description": "Planes de atención personalizados diseñados específicamente para sus necesidades únicas"
+				},
+				{
+					"title": "Comodidad del Hogar",
+					"description": "Reciba atención en la comodidad, privacidad y dignidad de su propio hogar"
+				}
+			]
+		},
+		"footer": {
+			"copyright": "&copy; 2025 Legacy Concierge. Todos los derechos reservados."
+		}
+	}
+}

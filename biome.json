@@ -1,18 +1,24 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.7/schema.json",
+  "files": {
+    "ignoreUnknown": true
+  },
   "formatter": {
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
     "enabled": true,
+    "formatWithErrors": false,
+    "includes": ["*.js", "*.css", "*.json"],
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 80,
     "lineEnding": "lf",
-    "formatWithErrors": false,
-    "attributePosition": "auto"
+    "lineWidth": 80,
+    "useEditorconfig": true
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true,
       "a11y": {
         "recommended": true
       },
@@ -25,6 +31,7 @@
       "performance": {
         "recommended": true
       },
+      "recommended": true,
       "security": {
         "recommended": true
       },

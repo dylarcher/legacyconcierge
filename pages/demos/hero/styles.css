@@ -1,0 +1,672 @@
+:root {
+	/* ==================================================
+        MEDIA FILE PATH VARIABLES
+        Centralized paths for all video and image assets
+        ================================================== */
+
+	/* jpg/jpeg - All image fallbacks */
+	--media-jpg-max-img: url("media/img/jpeg/img-shorebreak-3840x2160.jpg");
+	--media-jpg-wide-img: url("media/img/jpeg/img-shorebreak-3440x1440.jpg");
+	--media-jpg-qhd-img: url("media/img/jpeg/img-shorebreak-2560x1440.jpg");
+	--media-jpg-mid-img: url("media/img/jpeg/img-shorebreak-1920x1080.jpg");
+	--media-jpg-tall-img: url("media/img/jpeg/img-shorebreak-1080x1920.jpg");
+	--media-jpg-min-img: url("media/img/jpeg/img-shorebreak-1280x720.jpg");
+
+	/* png - High resolution fallbacks */
+	--media-png-max-img: url("media/img/png/res-144-waves-3452x2004.png");
+	--media-png-wide-img: url("media/img/png/res-144-waves-3440x1440.png");
+	--media-png-qhd-img: url("media/img/png/res-144-waves-2560x1440.png");
+	--media-png-mid-img: url("media/img/png/res-144-waves-1920x1080.png");
+	--media-png-tall-img: url("media/img/png/res-144-waves-1080x1920.png");
+
+	/* mp4 - H.264 videos for broad compatibility */
+	--media-mp4-max-vid: url("media/vid/mp4/bg-high-quality-2160p.mp4");
+	--media-mp4-qhd-vid: url("media/vid/mp4/bg-high-quality-1440p.mp4");
+	--media-mp4-hd-vid: url("media/vid/mp4/bg-high-quality-1080p.mp4");
+	--media-mp4-compat-hd-vid: url("media/vid/mp4/bg-compatibility-1080p.mp4");
+	--media-mp4-compat-720-vid: url("media/vid/mp4/bg-compatibility-720p.mp4");
+	--media-mp4-compat-480-vid: url("media/vid/mp4/bg-compatibility-480p.mp4");
+	--media-mp4-mobile-hd-vid: url("media/vid/mp4/bg-mobile-first-1080p.mp4");
+	--media-mp4-mobile-720-vid: url("media/vid/mp4/bg-mobile-first-720p.mp4");
+	--media-mp4-mobile-480-vid: url("media/vid/mp4/bg-mobile-first-480p.mp4");
+	--media-mp4-mobile-360-vid: url("media/vid/mp4/bg-mobile-first-360p.mp4");
+	--media-mp4-saver-720-vid: url("media/vid/mp4/bg-bandwidth-saver-720p.mp4");
+	--media-mp4-saver-480-vid: url("media/vid/mp4/bg-bandwidth-saver-480p.mp4");
+	--media-mp4-saver-360-vid: url("media/vid/mp4/bg-bandwidth-saver-360p.mp4");
+
+	/* webm - VP9 videos for modern browsers (better compression) */
+	--media-webm-max-vid: url("media/vid/webm/bg-high-quality-2160p.webm");
+	--media-webm-qhd-vid: url("media/vid/webm/bg-high-quality-1440p.webm");
+	--media-webm-hd-vid: url("media/vid/webm/bg-high-quality-1080p.webm");
+	--media-webm-mobile-hd-vid: url("media/vid/webm/bg-mobile-first-1080p.webm");
+	--media-webm-mobile-720-vid: url("media/vid/webm/bg-mobile-first-720p.webm");
+	--media-webm-mobile-480-vid: url("media/vid/webm/bg-mobile-first-480p.webm");
+	--media-webm-mobile-360-vid: url("media/vid/webm/bg-mobile-first-360p.webm");
+	--media-webm-saver-720-vid: url("media/vid/webm/bg-bandwidth-saver-720p.webm");
+	--media-webm-saver-480-vid: url("media/vid/webm/bg-bandwidth-saver-480p.webm");
+	--media-webm-saver-360-vid: url("media/vid/webm/bg-bandwidth-saver-360p.webm");
+
+	/* ==================================================
+        COLOR SYSTEM
+        Design tokens for consistent theming
+        ================================================== */
+
+	/* base color ranges */
+	--brand-hue: 210;
+	--brand-saturation: 1;
+	--brand-lightness: 0.36;
+
+	/* light theme (default) */
+	--background: 0 0 1;
+	--foreground: 222 0.48 0.12;
+
+	/* color role types */
+	--primary: var(--brand-hue) var(--brand-saturation) var(--brand-lightness);
+	--primary-foreground: 210 0.36 0.96;
+
+	--secondary: 210 0.36 0.96;
+	--secondary-foreground: 222 0.48 0.12;
+
+	--muted: 210 0.36 0.96;
+	--muted-foreground: 215 0.16 0.48;
+
+	--accent: 210 0.36 0.96;
+	--accent-foreground: 222 0.48 0.12;
+
+	--destructive: 0 0.8 0.64;
+	--destructive-foreground: 210 0.4 0.96;
+
+	--success: 142 0.72 0.36;
+	--success-foreground: 210 0.4 0.96;
+
+	--border: 214 0.32 0.92;
+	--ring: var(--brand-hue) var(--brand-saturation) var(--brand-lightness);
+
+	.dark {
+		/* dark theme color roles */
+		--background: 222 0.48 0.12;
+		--foreground: 210 0.4 0.96;
+
+		--primary: var(--brand-hue) var(--brand-saturation) var(--brand-lightness);
+		--primary-foreground: 210 0.4 0.96;
+
+		--secondary: 217 0.33 0.18;
+		--secondary-foreground: 210 0.36 0.96;
+
+		--muted: 217 0.33 0.18;
+		--muted-foreground: 215 0.24 0.64;
+
+		--accent: 217 0.32 0.18;
+		--accent-foreground: 210 0.36 0.96;
+
+		--border: 217 0.32 0.18;
+	}
+}
+
+/* converting hsl variables to actual colors */
+[role="application"],
+[role="document"],
+body {
+	background-color: color(srgb, var(--background));
+	background-image: linear-gradient(
+		to bottom right,
+		color(srgb, var(--background)),
+		color(srgb, var(--muted))
+	);
+	color: color(srgb, var(--foreground));
+}
+
+:any-link:is([role="button" i], [role="radiogroup" i], [role="switch" i]),
+::backdrop,
+::details-content,
+[aria-hidden],
+button,
+input:is(
+		[type="button" i],
+		[type="reset" i],
+		[type="submit" i],
+		[type="checkbox" i],
+		[type="radio" i]
+	),
+select,
+summary {
+	interpolate-size: allow-keywords;
+}
+
+[data-priority] {
+	border: 1px solid transparent;
+}
+
+[data-priority="primary" i] {
+	background-color: color(srgb, var(--primary));
+	color: color(srgb, var(--primary-foreground));
+}
+
+[data-priority="secondary" i] {
+	background-color: color(srgb, var(--secondary));
+	color: color(srgb, var(--secondary-foreground));
+	border-color: color(srgb, var(--border));
+}
+
+/* dynamic theme adjustment */
+[data-accent="blue"] {
+	--brand-hue: 210;
+}
+
+[data-accent="green"] {
+	--brand-hue: 148;
+}
+
+[data-accent="purple"] {
+	--brand-hue: 280;
+}
+
+[data-accent="orange"] {
+	--brand-hue: 32;
+}
+
+@media (prefers-reduced-motion) {
+	[data-priority] {
+		animation-delay: 32ms;
+		animation-duration: 64ms;
+		animation-iteration-count: 1;
+		interpolate-size: numeric-only;
+		transition-duration: 64ms;
+		transition-delay: 32ms;
+	}
+}
+
+@supports (color: color(oklch, var(--border))) {
+	[role="application"],
+	[role="document"],
+	body {
+		background-color: color(oklch, var(--background));
+		color: color(oklch, var(--foreground));
+	}
+
+	[data-priority="primary" i] {
+		background-color: color(oklch, var(--primary));
+		color: color(oklch, var(--primary-foreground));
+	}
+
+	[data-priority="secondary" i] {
+		background-color: color(oklch, var(--secondary));
+		color: color(oklch, var(--secondary-foreground));
+		border-color: color(oklch, var(--border));
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+html {
+	inline-size: 100%;
+	block-size: 100%;
+	overflow-x: hidden;
+	font-family:
+		-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-block-size: 100vh;
+}
+
+.video-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	inline-size: 100%;
+	block-size: 100%;
+	z-index: -1;
+	pointer-events: none;
+	overflow: hidden;
+	background-image: var(--media-png-tall-img);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+/* Darken overlay for better text contrast */
+.video-background::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background-image: url(media/img/svg/bg-overlay-minimal-moves.svg);
+	/*
+        background-image: url(media/img/svg/bg-overlay-aggressive-acts.svg);
+        background-image: url(media/img/svg/bg-overlay-subtle-motion.svg);
+    */
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	opacity: 0.72;
+	filter: brightness(0.96) contrast(1.12) saturate(1.2);
+}
+
+.video-background video {
+	min-inline-size: 100%;
+	min-block-size: 100%;
+	inline-size: auto;
+	block-size: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+	display: block;
+}
+
+.video-background :is(video, picture) {
+	filter: brightness(0.8);
+}
+
+/* Hide video on very slow connections or if video fails */
+.video-background.no-video {
+	background-image: url("media/img/png/res-144-waves-1920x1080.png");
+	filter: brightness(0.7);
+}
+
+.video-background.no-video video {
+	display: none;
+	visibility: hidden;
+}
+
+@media (prefers-reduced-motion) {
+	.video-background video {
+		display: none;
+		visibility: hidden;
+	}
+
+	.video-background :is(video, picture),
+	.video-background.no-video {
+		filter: brightness(0.8);
+	}
+
+	.video-background::before {
+		backdrop-filter: blur(1px);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.video-background::before {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}
+
+@media (prefers-contrast: less) {
+	.video-background :is(video, picture),
+	.video-background.no-video {
+		filter: contrast(0.8);
+	}
+
+	.video-background::before {
+		backdrop-filter: unset;
+	}
+}
+
+@media (prefers-contrast: more) {
+	.video-background :is(video, picture),
+	.video-background.no-video {
+		filter: contrast(1.1);
+	}
+
+	.video-background::before {
+		backdrop-filter: none;
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+}
+
+@media (prefers-reduced-data) {
+	.video-background video {
+		display: none;
+		visibility: hidden;
+	}
+
+	.video-background.no-video {
+		background-image: var(--media-jpg-min-img);
+	}
+
+	.video-background::before {
+		background-color: rgba(0, 0, 0, 0.5);
+		backdrop-filter: none;
+	}
+}
+
+/* Main content container */
+.content-overlay {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 2rem;
+	color: white;
+	text-align: center;
+	inline-size: 100%;
+	max-inline-size: 1200px;
+	margin-inline: auto;
+}
+
+[aria-label="static image media" i] {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+}
+
+/* ===================================
+    WCAG 2.2 AA Accessibility Styles
+    =================================== */
+
+/* Visually hidden class for screen reader only content */
+.visually-hidden {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	white-space: nowrap;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	z-index: 999999;
+	padding: 1em 1.5em;
+	background-color: color(srgb, var(--primary));
+	color: color(srgb, var(--primary-foreground));
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 0;
+	outline: 3px solid transparent;
+	outline-offset: 2px;
+}
+
+.skip-link:focus {
+	top: 1rem;
+	left: 1rem;
+	outline-color: color(srgb, var(--ring));
+}
+
+@supports (color: color(oklch, var(--primary))) {
+	.skip-link {
+		background-color: color(oklch, var(--primary));
+		color: color(oklch, var(--primary-foreground));
+	}
+
+	.skip-link:focus {
+		outline-color: color(oklch, var(--ring));
+	}
+}
+
+/* Focus indicators for WCAG 2.2 Success Criterion 2.4.11 and 2.4.13 */
+*:focus {
+	outline: 2px solid color(srgb, var(--ring));
+	outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+	outline: none;
+}
+
+*:focus-visible {
+	outline: 3px solid color(srgb, var(--ring));
+	outline-offset: 3px;
+	transition: outline-offset 0.2s ease;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible {
+	outline: 3px solid color(srgb, var(--ring));
+	outline-offset: 3px;
+	box-shadow: 0 0 0 5px color(srgb, var(--ring) / 0.1);
+}
+
+@supports (color: color(oklch, var(--ring))) {
+	*:focus {
+		outline-color: color(oklch, var(--ring));
+	}
+
+	*:focus-visible {
+		outline-color: color(oklch, var(--ring));
+	}
+
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible,
+	[tabindex]:focus-visible,
+	[role="button"]:focus-visible,
+	[role="link"]:focus-visible {
+		outline-color: color(oklch, var(--ring));
+		box-shadow: 0 0 0 5px color(oklch, var(--ring) / 0.1);
+	}
+}
+
+/* Text spacing override support for WCAG 2.2 SC 1.4.12 */
+* {
+	line-height: var(--custom-line-height, inherit);
+	letter-spacing: var(--custom-letter-spacing, inherit);
+	word-spacing: var(--custom-word-spacing, inherit);
+}
+
+p,
+li,
+dd,
+dt {
+	line-height: var(--custom-line-height, 1.5);
+	letter-spacing: var(--custom-letter-spacing, normal);
+	word-spacing: var(--custom-word-spacing, normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: var(--custom-line-height, 1.2);
+	letter-spacing: var(--custom-letter-spacing, normal);
+}
+
+/* Minimum target size for WCAG 2.2 SC 2.5.8 */
+a,
+button,
+input,
+select,
+textarea,
+[role="button"],
+[role="link"],
+[tabindex]:not([tabindex="-1"]) {
+	min-block-size: 44px;
+	min-inline-size: 44px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+	*:focus-visible,
+	a:focus-visible,
+	button:focus-visible {
+		outline-width: 4px;
+		outline-offset: 4px;
+	}
+
+	.skip-link:focus {
+		outline-width: 4px;
+	}
+}
+
+/* Reduced motion respects user preferences */
+@media (prefers-reduced-motion: reduce) {
+	*:focus-visible,
+	a:focus-visible,
+	button:focus-visible {
+		transition: none;
+	}
+}
+
+/* Forced colors mode support (Windows High Contrast Mode) */
+@media (forced-colors: active) {
+	*:focus-visible {
+		outline: 3px solid;
+	}
+
+	.skip-link {
+		forced-color-adjust: none;
+	}
+}
+
+.hero-section {
+	margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+	font-size: 3.5rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.subtitle {
+	font-size: 1.25rem;
+	margin-bottom: 2.5rem;
+	font-weight: 300;
+}
+
+.cta-button {
+	padding: 0.8rem 1.8rem;
+	font-size: 1rem;
+	font-weight: 500;
+	background: transparent;
+	border: 1px solid white;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+	text-decoration: none;
+	display: inline-block;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+	background: white;
+	color: #fff;
+}
+
+.info-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.card {
+	background: linear-gradient(
+		-12deg,
+		rgba(24, 32, 36, 0.8),
+		rgba(8, 24, 32, 0.64)
+	);
+	padding: 2.5rem 1rem;
+	border-radius: 4px;
+	position: relative;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.64s ease;
+	box-shadow:
+		0 4px 24px -9px #112,
+		inset 0 1px 1px -1px #cde8,
+		1px 2px 4px -3px #000;
+}
+
+.card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	outline: 2px solid #25e1;
+	outline-offset: -1px;
+	border-radius: 4px;
+	pointer-events: none;
+	transition: all 0.8s ease;
+	opacity: 1;
+	z-index: -1;
+	background: linear-gradient(0deg, #0214, #0023);
+}
+
+.card:hover {
+	border-color: rgba(255, 255, 255, 0.3);
+	transform: scale(1.0625);
+}
+
+.card:hover::after {
+	opacity: 0.4;
+	background: linear-gradient(45deg, #0004, #1218);
+}
+
+.card h2 {
+	margin-bottom: 0.75rem;
+	font-size: 1.25rem;
+	font-weight: 500;
+	transition: all 0.8s ease;
+	opacity: 1;
+	text-wrap: pretty;
+}
+
+.card p {
+	line-height: 1.5;
+	opacity: 0.48;
+	transition: 0.24s all 0.64s ease;
+	color: #fff;
+	text-wrap: balanced;
+}
+
+.card:hover h2 {
+	opacity: 0.64;
+}
+
+.card:hover p {
+	opacity: 1;
+}
+
+@media (max-width: 48em) {
+	.hero-section h1 {
+		font-size: 2.5rem;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+	}
+
+	.info-section {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.legacyconcierge.com/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/about/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/team/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/contact/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/careers/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/partners/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/blog/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/privacy/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/terms/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Treatments Pages -->
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/post-op-recovery/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/mental-health/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/rehab-addiction/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/eating-disorders/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/cardiac-pulmonary/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/iv-therapy/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/treatments/views/pain-management/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Expertise Pages -->
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/dementia/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/als/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/parkinsons/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/alzheimers/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/heart-disease/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/oncology/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/ostomy-management/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/stroke-recovery/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/ms/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/diabetes-management/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/expertise/views/tbi/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Example Pages -->
+  <url>
+    <loc>https://www.legacyconcierge.com/pages/examples/</loc>
+    <lastmod>2025-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!--
+  Legacy URLs from previous site (commented out for reference):
+  These URLs redirect to the new structure above
+
+  <url><loc>https://legacyconcierge.com/concierge-treatments/cardiac-and-pulmonary-oversight/</loc></url>
+  <url><loc>https://legacyconcierge.com/concierge-treatments/eating-disorders-and-monitoring/</loc></url>
+  <url><loc>https://legacyconcierge.com/concierge-treatments/iv-and-infusion-therapy/</loc></url>
+  <url><loc>https://legacyconcierge.com/concierge-treatments/mental-health-services/</loc></url>
+  <url><loc>https://legacyconcierge.com/concierge-treatments/pain-management/</loc></url>
+  <url><loc>https://legacyconcierge.com/concierge-treatments/post-op-recovery-hospital-to-home/</loc></url>
+  <url><loc>https://legacyconcierge.com/concierge-treatments/rehab-and-addiction/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/als-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/alzheimers-concierge-nursing-private-duty-nurse-near-me-2/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/dementia-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/diabetes-management-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/heart-disease-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/ms-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/oncology-care-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/ostomy-management-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/parkinsons-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/stroke-recovery-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/specialized-expertise/trauma-related-injuries-tbi-concierge-nursing-private-duty-nurse-near-me/</loc></url>
+  <url><loc>https://legacyconcierge.com/careers-disabled/</loc></url>
+  <url><loc>https://legacyconcierge.com/locations/</loc></url>
+  <url><loc>https://legacyconcierge.com/news-updates/</loc></url>
+  -->
+</urlset>

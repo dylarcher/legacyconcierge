@@ -1,0 +1,77 @@
+{
+  "name": "Legacy Concierge - Premier In-Home Nursing Care",
+  "short_name": "Legacy Concierge",
+  "description": "Elite concierge nursing services providing compassionate, personalized in-home care for post-surgical recovery, chronic condition management, wellness optimization, and palliative support.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2f4f4f",
+  "background_color": "#f8f8ff",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["health", "medical", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/shared/assets/media/images/hero/img-shorebreak-1280x720.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Legacy Concierge homepage on desktop"
+    },
+    {
+      "src": "/shared/assets/media/images/hero/img-shorebreak-1080x1920.jpg",
+      "sizes": "1080x1920",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Legacy Concierge homepage on mobile"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/pages/contact/",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Browse our concierge nursing services",
+      "url": "/pages/treatments/",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "About Our Team",
+      "short_name": "Team",
+      "description": "Meet our elite nursing team",
+      "url": "/pages/team/",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
+}

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Legacy Concierge"
+abstract: >-
+  Our concierge nurses provide comprehensive, bespoke care, from
+  post-surgical recovery and chronic condition management to wellness
+  optimization and palliative support. With 24/7 coordination and clinical
+  oversight, we ensure your health is managed with precision and compassion,
+  wherever you are.
+authors:
+  - family-names: Archer
+    given-names: Dylan
+    email: dylarcher@gmail.com
+    orcid: https://orcid.org/0009-0004-9903-2084
+repository-code: "https://github.com/dylarcher/legacyconcierge"
+url: "https://github.com/dylarcher/legacyconcierge#readme"
+version: 1.0.0
+date-released: 2025-10-22
+license: ISC
+keywords:
+  - healthcare
+  - nursing
+  - in-home-care
+  - end-of-life-care
+  - static-site
+  - i18n
+  - accessibility
+  - wcag
+  - internationalization
+  - vanilla-javascript
+  - web-components

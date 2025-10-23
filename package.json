@@ -1,7 +1,24 @@
 {
-  "name": "legacy-concierge",
-  "version": "1.0.0",
+  "author": {
+    "email": "dylarcher@gmail.com",
+    "name": "Dylan Archer",
+    "url": "https://github.com/dylarcher"
+  },
+  "bugs": {
+    "url": "https://github.com/dylarcher/legacyconcierge/issues"
+  },
   "description": "Our concierge nurses provide comprehensive, bespoke care, from post-surgical recovery and chronic condition management to wellness optimization and palliative support. With 24/7 coordination and clinical oversight, we ensure your health is managed with precision and compassion, wherever you are.",
+  "devDependencies": {
+    "@biomejs/biome": "2.2.7",
+    "@lhci/cli": "0.15.1",
+    "lighthouse": "13.0.1",
+    "web-vitals": "5.1.0"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10"
+  },
+  "homepage": "https://github.com/dylarcher/legacyconcierge#readme",
   "keywords": [
     "healthcare",
     "nursing",
@@ -12,34 +29,44 @@
     "accessibility",
     "wcag"
   ],
-  "homepage": "https://github.com/dylarcher/legacyconcierge#readme",
-  "bugs": {
-    "url": "https://github.com/dylarcher/legacyconcierge/issues"
+  "license": "ISC",
+  "main": "index.html",
+  "name": "legacy-concierge",
+  "overrides": {
+    "glob": "^11.0.0",
+    "inflight": "npm:@badgateway/inflight@^1.0.0",
+    "rimraf": "^6.0.1",
+    "tmp": "^0.2.4",
+    "ws": {
+      ".": "^8.18.0",
+      "bufferutil": "^4.0.8",
+      "utf-8-validate": "^6.0.4"
+    }
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dylarcher/legacyconcierge.git"
   },
-  "license": "ISC",
-  "author": "Dylan Archer <dylarcher@gmail.com> (@dylarcher)",
-  "type": "module",
-  "main": "index.html",
   "scripts": {
-    "start": "python3 -m http.server 8000",
+    "biome": "npx @biomejs/biome",
+    "check": "npm run biome -- check .",
+    "check:fix": "npm run biome -- check --write .",
     "dev": "python3 -m http.server 8000",
-    "format": "npx @biomejs/biome format --write .",
-    "format:check": "npx @biomejs/biome format .",
-    "lint": "npx @biomejs/biome lint .",
-    "lint:fix": "npx @biomejs/biome lint --write .",
-    "check": "npx @biomejs/biome check .",
-    "check:fix": "npx @biomejs/biome check --write .",
-    "test": "echo 'tests coming soon'"
+    "lighthouse": "npx lhci autorun",
+    "lighthouse:mobile": "npm run lighthouse --config=configs/lighthouserc.mobile.js",
+    "lighthouse:quick": "npx lighthouse http://localhost:8000 --view --preset=desktop",
+    "lighthouse:report": "npm run lighthouse --upload.target=filesystem --upload.outputDir=.lighthouse",
+    "lint": "npm run biome -- lint .",
+    "lint:fix": "npm run biome -- lint --write .",
+    "mdlint": "npx markdownlint-cli **/*.md",
+    "mdlint:fix": "npm run mdlint --fix",
+    "paths:audit": "npm run paths:fix --dry-run",
+    "paths:fix": "node bin/rewrite-paths.cjs",
+    "test": "echo 'Error: no test suite configured' && exit 1",
+    "tidy": "npm run biome -- format .",
+    "tidy:fix": "npm run biome -- format --write .",
+    "validate": "npm run check && npm run paths"
   },
-  "engines": {
-    "node": ">=22.14.0",
-    "npm": ">=10.9.2"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.2.5"
-  }
+  "type": "module",
+  "version": "1.0.0"
 }

@@ -1,0 +1,149 @@
+{
+	"blog": {
+		"gallery": {
+			"featured": {
+				"badge": "Featured Article",
+				"cta": "Read Article",
+				"date": "October 19, 2025",
+				"excerpt": "Recovering from surgery at home requires careful attention and proper care. Learn the essential tips to ensure a smooth and safe recovery process.",
+				"readingTime": "5 min read",
+				"title": "Essential Tips for Post-Operative Home Care"
+			},
+			"posts": [
+				{
+					"category": "Health Tips",
+					"date": "Oct 15",
+					"excerpt": "Effective strategies for long-term pain management and improving quality of life.",
+					"readingTime": "4 min",
+					"title": "Managing Chronic Pain at Home"
+				},
+				{
+					"category": "Post-Op Care",
+					"date": "Oct 12",
+					"excerpt": "Foods that promote healing and help you recover faster from surgery.",
+					"readingTime": "6 min",
+					"title": "Nutrition for Faster Recovery"
+				},
+				{
+					"category": "Family Care",
+					"date": "Oct 8",
+					"excerpt": "Supporting loved ones through recovery: tips for family members providing care.",
+					"readingTime": "7 min",
+					"title": "A Guide for Family Caregivers"
+				}
+			],
+			"sidebar": {
+				"categories": {
+					"all": "All Articles",
+					"chronic": "Chronic Conditions",
+					"family": "Family Care",
+					"health": "Health Tips",
+					"postOp": "Post-Op Care",
+					"title": "Categories"
+				},
+				"search": {
+					"placeholder": "Search articles...",
+					"title": "Search"
+				},
+				"tags": {
+					"items": [
+						"Recovery",
+						"Nursing",
+						"Home Care",
+						"Pain Management",
+						"Nutrition",
+						"Elderly Care",
+						"Medication",
+						"Wellness"
+					],
+					"title": "Popular Tags"
+				}
+			},
+			"sort": {
+				"oldest": "Oldest First",
+				"popular": "Most Popular",
+				"recent": "Most Recent"
+			},
+			"subtitle": "Expert advice and tips from our nursing professionals",
+			"title": "Health & Care Insights"
+		},
+		"post": {
+			"author": "Dr. Sarah Johnson",
+			"authorBio": {
+				"name": "Dr. Sarah Johnson",
+				"title": "Chief Nursing Officer | 15+ years experience"
+			},
+			"category": "Health Tips",
+			"content": {
+				"intro": "Recovering from surgery is a critical period that requires proper care and attention. Whether you've had a minor procedure or major surgery, the quality of your post-operative care can significantly impact your recovery timeline and overall outcome.",
+				"section1": {
+					"p1": "Post-operative care begins the moment you leave the hospital or surgical center. This phase is crucial for preventing complications and ensuring proper healing.",
+					"subsection1": {
+						"list": [
+							"Following medication schedules",
+							"Proper wound care and hygiene",
+							"Adequate rest and nutrition",
+							"Gradual activity increase",
+							"Regular monitoring of vital signs"
+						],
+						"title": "Key Recovery Factors"
+					},
+					"title": "Understanding Post-Op Care"
+				},
+				"section2": {
+					"p1": "Managing pain effectively is essential for a comfortable recovery. Work closely with your healthcare provider to develop a pain management plan that works for you.",
+					"quote": "Proper pain management isn't just about comfort—it allows patients to participate in necessary activities like walking and deep breathing, which are crucial for preventing complications. - Dr. Sarah Johnson",
+					"title": "Pain Management at Home"
+				},
+				"section3": {
+					"list": [
+						"Fever above 100.4°F (38°C)",
+						"Increasing pain not relieved by medication",
+						"Redness, swelling, or drainage from incision",
+						"Shortness of breath or chest pain",
+						"Unusual bleeding"
+					],
+					"p1": "Knowing when to seek medical attention is crucial. Contact your healthcare provider immediately if you experience any of these symptoms:",
+					"title": "When to Contact Your Healthcare Provider"
+				}
+			},
+			"date": "October 19, 2025",
+			"excerpt": "Recovering from surgery at home requires careful attention and proper care. Learn the essential tips to ensure a smooth and safe recovery process.",
+			"image": "/shared/assets/media/stock/bedroom-potted-plants-in-corner.jpg",
+			"imageAlt": "Post-operative care",
+			"imageCaption": "Professional nurse providing post-operative care at home",
+			"share": {
+				"title": "Share this article"
+			},
+			"tags": ["Post-Op Care", "Recovery", "Home Care", "Nursing"],
+			"title": "Essential Tips for Post-Operative Home Care"
+		},
+		"sidebar": {
+			"cta": {
+				"button": "Contact Us",
+				"description": "Our expert nurses are available 24/7 to provide post-operative care at home.",
+				"title": "Need Professional Care?"
+			},
+			"related": {
+				"posts": [
+					{
+						"excerpt": "Effective strategies for long-term pain management",
+						"title": "Managing Chronic Pain at Home"
+					},
+					{
+						"excerpt": "Foods that promote healing and strength",
+						"title": "Nutrition for Recovery"
+					},
+					{
+						"excerpt": "Supporting loved ones through recovery",
+						"title": "Family Caregiver Guide"
+					}
+				],
+				"title": "Related Articles"
+			},
+			"toc": {
+				"title": "Table of Contents"
+			}
+		}
+	}
+}

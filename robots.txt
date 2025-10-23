@@ -1,0 +1,66 @@
+# robots.txt for Legacy Concierge
+# https://www.legacyconcierge.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.legacyconcierge.com/sitemap.xml
+
+# Allow all crawlers access to CSS, JS, and media files
+Allow: /theme/
+Allow: /tools/
+Allow: /assets/
+Allow: /components/
+
+# Disallow development tools and reports
+Disallow: /tools/dev-tools.js
+Disallow: /tools/web-vitals.js
+Disallow: /.lighthouse/
+Disallow: /.lighthouseci/
+
+# Disallow configuration files
+Disallow: /configs/
+Disallow: /.well-known/
+
+# Disallow example/template pages (optional - remove if you want these indexed)
+Disallow: /pages/examples/
+
+# Specific bot rules
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# GPTBot (OpenAI)
+User-agent: GPTBot
+Allow: /
+
+# Common AI/LLM bots (allow for healthcare information dissemination)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Host information (optional)
+# Host: www.legacyconcierge.com
