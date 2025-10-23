@@ -102,10 +102,10 @@
             );
           }
           await Promise.all([
-            import("/common/components/lc-header.js"),
-            import("/common/components/lc-footer.js"),
-            import("/common/components/lc-card.js"),
-            import("/common/components/lc-blog.js"),
+            import("@/components/lc-header.js"),
+            import("@/components/lc-footer.js"),
+            import("@/components/lc-card.js"),
+            import("@/components/lc-blog.js"),
           ]);
           await new Promise((resolve) => setTimeout(resolve, 100));
           if (window.applyTranslations) await window.applyTranslations();
