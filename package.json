@@ -32,19 +32,6 @@
   "license": "ISC",
   "main": "index.html",
   "name": "legacy-concierge",
-  "optionalDependencies": {
-    "@biomejs/cli-darwin-arm64": "2.2.7",
-    "@biomejs/cli-darwin-x64": "2.2.7",
-    "@biomejs/cli-linux-arm64": "2.2.7",
-    "@biomejs/cli-linux-arm64-musl": "2.2.7",
-    "@biomejs/cli-linux-x64": "2.2.7",
-    "@biomejs/cli-linux-x64-musl": "2.2.7",
-    "@biomejs/cli-win32-arm64": "2.2.7",
-    "@biomejs/cli-win32-x64": "2.2.7",
-    "bufferutil": "^4.0.8",
-    "encoding": "^0.1.13",
-    "utf-8-validate": "^6.0.4"
-  },
   "overrides": {
     "glob": "^11.0.0",
     "inflight": "npm:@badgateway/inflight@^1.0.0",
