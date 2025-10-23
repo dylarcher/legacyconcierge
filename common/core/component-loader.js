@@ -148,6 +148,12 @@ function cloneTemplate(templateId) {
  * @returns {Promise<void>}
  */
 async function initializeComponent(componentName) {
+	// Validate component name to prevent path traversal attacks
+	if (!isValidComponentName(componentName)) {
+		console.error(`Invalid component name: ${componentName}. Only alphanumeric, underscore, and dash characters are allowed.`);
+		return;
+	}
+
 	// Load template first
 	await loadTemplate(componentName);
 
@@ -218,14 +224,14 @@ function onReady(callback) {
 
 // Export functions for use in modules
 export {
-	autoInitializeComponents,
-	cloneTemplate,
-	getTemplate,
-	initializeComponent,
-	initializeComponents,
-	loadTemplate,
-	loadTemplates,
-	onReady,
+    autoInitializeComponents,
+    cloneTemplate,
+    getTemplate,
+    initializeComponent,
+    initializeComponents,
+    loadTemplate,
+    loadTemplates,
+    onReady
 };
 
 // Also expose globally for non-module usage

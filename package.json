@@ -62,6 +62,7 @@
     "mdlint:fix": "npm run mdlint --fix",
     "paths:audit": "npm run paths:fix --dry-run",
     "paths:fix": "node bin/rewrite-paths.cjs",
+    "paths:setup": "node bin/add-path-resolver-external.cjs && node bin/fix-html-paths.cjs && node bin/fix-inline-imports.cjs && node bin/update-imports.cjs",
     "test": "echo 'Error: no test suite configured' && exit 1",
     "tidy": "npm run biome -- format .",
     "tidy:fix": "npm run biome -- format --write .",

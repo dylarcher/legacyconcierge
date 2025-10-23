@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../common/core/path-resolver-init.js"></script>
+
+    <!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Post Title - Legacy Concierge</title>
-    <link rel="icon" href="/favicon.svg" />
+    <link rel="icon" href="../../../favicon.svg" />
 
-    <link rel="stylesheet" href="/shared/theme/style.css" />
-    <link rel="stylesheet" href="/shared/theme/layouts/blog.css" />
+    <link rel="stylesheet" href="../../../shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../shared/theme/layouts/blog.css" />
 
     <style>
       /* Blog Post Layout Styles */
@@ -401,7 +415,7 @@
     </style>
 
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
 
       document.addEventListener("DOMContentLoaded", async () => {
         await initializeComponents(["header", "footer"]);
@@ -509,10 +523,10 @@
       }
     </script>
 
-    <script src="/common/services/theme.js"></script>
-    <script src="/common/services/i18n.js"></script>
+    <script src="../../../common/services/theme.js"></script>
+    <script src="../../../common/services/i18n.js"></script>
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
       loadTemplates(["header", "footer"], true);
     </script>
   </head>
@@ -531,7 +545,7 @@
             <header class="post-header">
               <div class="post-meta">
                 <a
-                  href="/pages/blog/categories/health-tips"
+                  href="../../../pages/blog/categories/health-tips"
                   class="post-category"
                   data-i18n="blog.post.category"
                 >
@@ -613,7 +627,7 @@
             <!-- Featured Image -->
             <figure class="post-featured-image">
               <img
-                src="/shared/assets/media/blog/post-op-care.jpg"
+                src="../../../shared/assets/media/blog/post-op-care.jpg"
                 alt="Post-operative home care"
                 itemprop="image"
                 loading="eager"
@@ -626,7 +640,7 @@
             <!-- Author Info -->
             <aside class="post-author">
               <img
-                src="/shared/assets/media/team/sarah-johnson.jpg"
+                src="../../../shared/assets/media/team/sarah-johnson.jpg"
                 alt="Dr. Sarah Johnson"
                 class="post-author-avatar"
               />
@@ -706,28 +720,28 @@
             <!-- Tags -->
             <div class="post-tags">
               <a
-                href="/pages/blog/tags/post-op-care"
+                href="../../../pages/blog/tags/post-op-care"
                 class="post-tag"
                 data-i18n="blog.post.tags[0]"
               >
                 Post-Op Care
               </a>
               <a
-                href="/pages/blog/tags/recovery"
+                href="../../../pages/blog/tags/recovery"
                 class="post-tag"
                 data-i18n="blog.post.tags[1]"
               >
                 Recovery
               </a>
               <a
-                href="/pages/blog/tags/home-care"
+                href="../../../pages/blog/tags/home-care"
                 class="post-tag"
                 data-i18n="blog.post.tags[2]"
               >
                 Home Care
               </a>
               <a
-                href="/pages/blog/tags/nursing"
+                href="../../../pages/blog/tags/nursing"
                 class="post-tag"
                 data-i18n="blog.post.tags[3]"
               >
@@ -813,7 +827,7 @@
                 care at home.
               </p>
               <a
-                href="/pages/contact"
+                href="../../../pages/contact"
                 class="cta-button"
                 style="background: white; color: var(--accent-primary)"
                 data-i18n="blog.sidebar.cta.button"
@@ -832,7 +846,7 @@
 
     <!-- Component System -->
     <script type="module">
-      import { loadTemplates } from "/common/core/component-loader.js";
+      import { loadTemplates } from "@/core/component-loader.js";
 
       // Load templates and initialize components
       (async () => {

@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../common/core/path-resolver-init.js"></script>
+
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Component Example - Legacy Concierge</title>
-    <link rel="stylesheet" href="/shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../shared/theme/style.css" />
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
       document.addEventListener("DOMContentLoaded", async () => {
         await initializeComponents(["navigation", "cards"]);
         if (window.applyTranslations) {
@@ -14,8 +27,8 @@
         }
       });
     </script>
-    <script src="/common/services/i18n.js"></script>
-    <script src="/common/services/theme.js"></script>
+    <script src="../../../common/services/i18n.js"></script>
+    <script src="../../../common/services/theme.js"></script>
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
@@ -65,7 +78,7 @@
           >
             <img
               slot="image"
-              src="/shared/assets/media/service-post-op.jpg"
+              src="../../../shared/assets/media/service-post-op.jpg"
               alt="Post-Op Recovery"
             />
             <h3 slot="title">Post-Op Recovery</h3>
@@ -74,45 +87,45 @@
             </p>
             <a
               slot="actions"
-              href="/pages/treatments/views/post-op-recovery"
+              href="../../../pages/treatments/views/post-op-recovery"
               class="cta-button"
               >Learn More</a
             >
           </lc-card>
           <lc-card
             variant="service"
-            href="/pages/treatments/views/mental-health"
+            href="../../../pages/treatments/views/mental-health"
             animated
           >
             <img
               slot="image"
-              src="/shared/assets/media/service-mental-health.jpg"
+              src="../../../shared/assets/media/service-mental-health.jpg"
               alt="Mental Health"
             />
             <h3 slot="title">Mental Health Support</h3>
             <p slot="description">Compassionate care for mental wellness.</p>
             <a
               slot="actions"
-              href="/pages/treatments/views/mental-health"
+              href="../../../pages/treatments/views/mental-health"
               class="cta-button"
               >Learn More</a
             >
           </lc-card>
           <lc-card
             variant="service"
-            href="/pages/treatments/views/iv-therapy"
+            href="../../../pages/treatments/views/iv-therapy"
             animated
           >
             <img
               slot="image"
-              src="/shared/assets/media/service-iv.jpg"
+              src="../../../shared/assets/media/service-iv.jpg"
               alt="IV Therapy"
             />
             <h3 slot="title">IV Therapy</h3>
             <p slot="description">In-home infusion therapy services.</p>
             <a
               slot="actions"
-              href="/pages/treatments/views/iv-therapy"
+              href="../../../pages/treatments/views/iv-therapy"
               class="cta-button"
               >Learn More</a
             >
@@ -161,8 +174,8 @@
       </section>
     </main>
     <lc-footer></lc-footer>
-    <script type="module" src="/common/components/lc-header.js"></script>
-    <script type="module" src="/common/components/lc-footer.js"></script>
-    <script type="module" src="/common/components/lc-card.js"></script>
+    <script type="module" src="../../../common/components/lc-header.js"></script>
+    <script type="module" src="../../../common/components/lc-footer.js"></script>
+    <script type="module" src="../../../common/components/lc-card.js"></script>
   </body>
 </html>

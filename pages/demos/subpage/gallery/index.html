@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bentobox Grid Layout - Legacy Concierge</title>
-    <link rel="icon" href="/favicon.svg" />
+    <!-- Universal Path Resolver - Loads first, cached across pages -->
+    <script src="../../../../common/core/path-resolver-init.js"></script>
 
-    <link rel="stylesheet" href="/shared/theme/style.css" />
-    <link rel="stylesheet" href="/shared/theme/layouts/bentobox.css" />
+<!-- Import map for module path aliases -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@/": "/common/",
+          "#/": "/shared/",
+          "$/": "/pages/"
+        }
+      }
+    </script>
+
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bentobox Grid Layout - Legacy Concierge</title>
+    <link rel="icon" href="../../../../favicon.svg" />
+
+    <link rel="stylesheet" href="../../../../shared/theme/style.css" />
+    <link rel="stylesheet" href="../../../../shared/theme/layouts/bentobox.css" />
 
     <style>
       /* Bentobox Grid Layout Styles */
@@ -209,7 +222,7 @@
     </style>
 
     <script type="module">
-      import { initializeComponents } from "/common/core/component-loader.js";
+      import { initializeComponents } from "@/core/component-loader.js";
 
       document.addEventListener("DOMContentLoaded", async () => {
         await initializeComponents(["navigation", "cards", "icon"]);
@@ -353,7 +366,7 @@
           <!-- Wide Card with Image -->
           <article class="bento-card wide has-image" data-category="expertise">
             <img
-              src="/shared/assets/media/bento-nursing.jpg"
+              src="../../../../shared/assets/media/bento-nursing.jpg"
               alt="Nursing Care"
               class="bento-image"
             />
@@ -408,10 +421,10 @@
 
     <lc-footer></lc-footer>
 
-    <script src="/common/services/i18n.js"></script>
-    <script type="module" src="/common/components/lc-header.js"></script>
-    <script type="module" src="/common/components/lc-footer.js"></script>
-    <script type="module" src="/common/components/lc-card.js"></script>
-    <script type="module" src="/common/components/lc-icon.js"></script>
+    <script src="../../../../common/services/i18n.js"></script>
+    <script type="module" src="../../../../common/components/lc-header.js"></script>
+    <script type="module" src="../../../../common/components/lc-footer.js"></script>
+    <script type="module" src="../../../../common/components/lc-card.js"></script>
+    <script type="module" src="../../../../common/components/lc-icon.js"></script>
   </body>
 </html>

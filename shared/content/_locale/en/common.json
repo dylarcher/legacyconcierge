@@ -9,6 +9,30 @@
         "toggleNavigation": "Toggle navigation menu",
         "toggleTheme": "Toggle between dark/light theme modes"
     },
+    "contactDialog": {
+        "cancel": "Cancel",
+        "description": "Fill out this form to request a personalized consultation with our team.",
+        "email": "Email Address",
+        "emailError": "Please enter a valid email address",
+        "message": "Message",
+        "messageError": "Please enter a message (10-1000 characters)",
+        "name": "Full Name",
+        "nameError": "Please enter your full name (2-100 characters)",
+        "phone": "Phone Number",
+        "phoneError": "Please enter a valid phone number (123-456-7890)",
+        "selectService": "Select a service...",
+        "service": "Service Interest",
+        "serviceError": "Please select a service",
+        "services": {
+            "chronic": "Chronic Condition Management",
+            "other": "Other",
+            "palliative": "Palliative Care",
+            "postOp": "Post-Operative Care",
+            "wellness": "Wellness & Prevention"
+        },
+        "submit": "Submit Request",
+        "title": "Personalized Consultation"
+    },
     "footer": {
         "company": {
             "careers": "Careers",
