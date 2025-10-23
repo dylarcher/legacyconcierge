@@ -8,7 +8,7 @@
  * - localStorage persistence
  */
 
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 test.describe('Internationalization (i18n)', () => {
 	test.beforeEach(async ({ page }) => {
@@ -37,7 +37,7 @@ test.describe('Internationalization (i18n)', () => {
 		expect(newLang).not.toBe(initialLang);
 	});
 
-	test('should persist language preference', async ({ page, context }) => {
+	test('should persist language preference', async ({ page }) => {
 		// Switch to Spanish
 		const languageToggle = page.locator('.language-toggle');
 		await languageToggle.click();
@@ -202,7 +202,7 @@ test.describe('Theme System', () => {
 		expect(darkBg).not.toBe(lightBg);
 	});
 
-	test('should respect prefers-color-scheme', async ({ page, context }) => {
+	test('should respect prefers-color-scheme', async ({ context }) => {
 		// Create a new page with dark color scheme preference
 		const darkPage = await context.newPage();
 		await darkPage.emulateMedia({ colorScheme: 'dark' });
@@ -213,7 +213,7 @@ test.describe('Theme System', () => {
 		await darkPage.reload();
 
 		// Should load dark theme
-		const theme = await darkPage.getAttribute('html', 'data-theme');
+		const _theme = await darkPage.getAttribute('html', 'data-theme');
 		// Note: This test assumes the theme system respects prefers-color-scheme
 		// If not implemented, the test will need adjustment
 
@@ -286,7 +286,7 @@ test.describe('Combined i18n and Theme', () => {
 		await expect(dialog).toBeVisible();
 
 		// Check theme is applied to shadow DOM
-		const hasDarkStyles = await page.evaluate(() => {
+		const _hasDarkStyles = await page.evaluate(() => {
 			const dialog = document.querySelector('lc-contact-dialog');
 			const shadowRoot = dialog.shadowRoot;
 			const dialogElement = shadowRoot.querySelector('.dialog');

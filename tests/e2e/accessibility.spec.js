@@ -10,8 +10,8 @@
  * - Form accessibility
  */
 
-import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { expect, test } from '@playwright/test';
 
 test.describe('Accessibility - WCAG 2.2 AA', () => {
 	test('homepage should not have accessibility violations', async ({ page }) => {
@@ -112,7 +112,7 @@ test.describe('Keyboard Navigation', () => {
 		const hasVisibleFocus =
 			focusStyles.outline !== 'none' ||
 			focusStyles.boxShadow !== 'none' ||
-			parseInt(focusStyles.outlineWidth) > 0;
+			parseInt(focusStyles.outlineWidth, 10) > 0;
 
 		expect(hasVisibleFocus).toBe(true);
 	});
@@ -175,11 +175,11 @@ test.describe('Keyboard Navigation', () => {
 			iterations++;
 
 			// Check if focus is still within dialog
-			const focusedElement = await page.evaluate(() => {
+			const _focusedElement = await page.evaluate(() => {
 				const activeElement = document.activeElement;
 				// Check if active element is within the dialog
 				const dialog = document.querySelector('lc-contact-dialog');
-				return dialog && dialog.contains(activeElement);
+				return dialog?.contains(activeElement);
 			});
 
 			// For shadow DOM components, this check might need adjustment
@@ -242,7 +242,7 @@ test.describe('ARIA Attributes', () => {
 		const headings = await page.evaluate(() => {
 			const headingElements = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
 			return headingElements.map(h => ({
-				level: parseInt(h.tagName[1]),
+				level: parseInt(h.tagName[1], 10),
 				text: h.textContent.trim(),
 			}));
 		});
@@ -323,7 +323,7 @@ test.describe('Color Contrast', () => {
 	test('should meet WCAG AA contrast requirements', async ({ page }) => {
 		await page.goto('/');
 
-		const violations = await new AxeBuilder({ page })
+		const _violations = await new AxeBuilder({ page })
 			.withTags(['wcag2aa'])
 			.disableRules(['color-contrast']) // We'll do manual check
 			.analyze();
@@ -380,7 +380,7 @@ test.describe('Form Validation', () => {
 });
 
 test.describe('Reduced Motion', () => {
-	test('should respect prefers-reduced-motion', async ({ page, context }) => {
+	test('should respect prefers-reduced-motion', async ({ page }) => {
 		// Set reduced motion preference
 		await page.emulateMedia({ reducedMotion: 'reduce' });
 		await page.goto('/');

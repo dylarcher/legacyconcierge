@@ -1,77 +1,77 @@
 {
-  "name": "Legacy Concierge - Premier In-Home Nursing Care",
-  "short_name": "Legacy Concierge",
-  "description": "Elite concierge nursing services providing compassionate, personalized in-home care for post-surgical recovery, chronic condition management, wellness optimization, and palliative support.",
-  "start_url": "/",
-  "scope": "/",
-  "display": "standalone",
-  "orientation": "portrait-primary",
-  "theme_color": "#2f4f4f",
   "background_color": "#f8f8ff",
-  "lang": "en-US",
-  "dir": "ltr",
   "categories": ["health", "medical", "lifestyle"],
+  "description": "Elite concierge nursing services providing compassionate, personalized in-home care for post-surgical recovery, chronic condition management, wellness optimization, and palliative support.",
+  "dir": "ltr",
+  "display": "standalone",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "purpose": "any",
       "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "src": "/favicon.svg",
+      "type": "image/svg+xml"
     }
   ],
+  "lang": "en-US",
+  "name": "Legacy Concierge - Premier In-Home Nursing Care",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "scope": "/",
   "screenshots": [
     {
-      "src": "/shared/assets/media/images/hero/img-shorebreak-1280x720.jpg",
-      "sizes": "1280x720",
-      "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "Legacy Concierge homepage on desktop"
+      "label": "Legacy Concierge homepage on desktop",
+      "sizes": "1280x720",
+      "src": "/shared/assets/media/images/hero/img-shorebreak-1280x720.jpg",
+      "type": "image/jpeg"
     },
     {
-      "src": "/shared/assets/media/images/hero/img-shorebreak-1080x1920.jpg",
-      "sizes": "1080x1920",
-      "type": "image/jpeg",
       "form_factor": "narrow",
-      "label": "Legacy Concierge homepage on mobile"
+      "label": "Legacy Concierge homepage on mobile",
+      "sizes": "1080x1920",
+      "src": "/shared/assets/media/images/hero/img-shorebreak-1080x1920.jpg",
+      "type": "image/jpeg"
     }
   ],
+  "short_name": "Legacy Concierge",
   "shortcuts": [
     {
+      "description": "Get in touch with our team",
+      "icons": [
+        {
+          "sizes": "96x96",
+          "src": "/favicon.svg"
+        }
+      ],
       "name": "Contact Us",
       "short_name": "Contact",
-      "description": "Get in touch with our team",
-      "url": "/pages/contact/",
-      "icons": [
-        {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/pages/contact/"
     },
     {
+      "description": "Browse our concierge nursing services",
+      "icons": [
+        {
+          "sizes": "96x96",
+          "src": "/favicon.svg"
+        }
+      ],
       "name": "Our Services",
       "short_name": "Services",
-      "description": "Browse our concierge nursing services",
-      "url": "/pages/treatments/",
-      "icons": [
-        {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
-        }
-      ]
+      "url": "/pages/treatments/"
     },
     {
-      "name": "About Our Team",
-      "short_name": "Team",
       "description": "Meet our elite nursing team",
-      "url": "/pages/team/",
       "icons": [
         {
-          "src": "/favicon.svg",
-          "sizes": "96x96"
+          "sizes": "96x96",
+          "src": "/favicon.svg"
         }
-      ]
+      ],
+      "name": "About Our Team",
+      "short_name": "Team",
+      "url": "/pages/team/"
     }
   ],
-  "prefer_related_applications": false
+  "start_url": "/",
+  "theme_color": "#2f4f4f"
 }

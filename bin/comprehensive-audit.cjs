@@ -5,8 +5,8 @@
  * Checks CSS paths, JS paths, image paths, navigation links, and broken links
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const BASE_DIR = process.env.BASE_DIR || process.cwd();
 
@@ -231,7 +231,7 @@ function walkDirectory(dir, baseDir = BASE_DIR) {
       // Track found pages
       const urlPath = relativePath === 'index.html'
         ? '/'
-        : '/' + relativePath.replace('/index.html', '');
+        : `/${relativePath.replace('/index.html', '')}`;
       foundPages.add(urlPath);
 
       analyzeFile(filePath, relativePath);
