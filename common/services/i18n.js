@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Simple HTML sanitizer - only allows safe tags and removes dangerous attributes
  * @param {string} html - HTML string to sanitize

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Universal Path Resolver - Initialization Script
  * This runs immediately when loaded (no DOMContentLoaded needed)

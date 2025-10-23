@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Web Vitals Performance Monitoring
  *

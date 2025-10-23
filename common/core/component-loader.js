@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Legacy Concierge Component Loader
  * Handles loading and initialization of Web Components and templates

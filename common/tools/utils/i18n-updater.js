@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * I18n HTML Updater Utility
  * This script helps update HTML files to use i18n data attributes

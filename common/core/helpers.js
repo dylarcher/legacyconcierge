@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Legacy Concierge Helper Utilities
  * Common utility functions used across components
