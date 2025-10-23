@@ -41,8 +41,9 @@ class LcIcon extends HTMLElement {
 	// Get the path to icon using root-relative path
 	getIconPath() {
 		const iconName = this.getAttribute("name") || "home";
-		// Use root-relative path for consistent resolution regardless of page depth
-		return `/shared/assets/icons/icon-${iconName}.svg`;
+		// Use resolvePath for GitHub Pages compatibility
+		const path = `shared/assets/icons/icon-${iconName}.svg`;
+		return window.resolvePath ? window.resolvePath(path) : `/${path}`;
 	}
 
 	// Size mapping

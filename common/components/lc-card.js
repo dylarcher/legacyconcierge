@@ -13,12 +13,18 @@ import { getAttributeOr, getBooleanAttribute } from "@/core/helpers.js";
 class LCCard extends HTMLElement {
 	/**
 	 * Get base path for resource loading (handles GitHub Pages deployment)
+	 * Uses the global BASE_PATH set by path-resolver-init.js
 	 */
 	getBasePath() {
+		// Use global BASE_PATH if available (set by path-resolver-init.js)
+		if (window.BASE_PATH !== undefined) {
+			return window.BASE_PATH ? `${window.BASE_PATH}/` : "/";
+		}
+
+		// Fallback: detect GitHub Pages base path
 		const path = window.location.pathname;
 		const pathParts = path.split("/").filter((p) => p);
 
-		// Check if first segment looks like a GitHub Pages repo name
 		if (
 			pathParts.length > 0 &&
 			pathParts[0] !== "pages" &&
@@ -150,12 +156,18 @@ class LCCard extends HTMLElement {
 class LCCardGrid extends HTMLElement {
 	/**
 	 * Get base path for resource loading (handles GitHub Pages deployment)
+	 * Uses the global BASE_PATH set by path-resolver-init.js
 	 */
 	getBasePath() {
+		// Use global BASE_PATH if available (set by path-resolver-init.js)
+		if (window.BASE_PATH !== undefined) {
+			return window.BASE_PATH ? `${window.BASE_PATH}/` : "/";
+		}
+
+		// Fallback: detect GitHub Pages base path
 		const path = window.location.pathname;
 		const pathParts = path.split("/").filter((p) => p);
 
-		// Check if first segment looks like a GitHub Pages repo name
 		if (
 			pathParts.length > 0 &&
 			pathParts[0] !== "pages" &&
@@ -246,12 +258,18 @@ class LCCardGrid extends HTMLElement {
 class LCBentoGrid extends HTMLElement {
 	/**
 	 * Get base path for resource loading (handles GitHub Pages deployment)
+	 * Uses the global BASE_PATH set by path-resolver-init.js
 	 */
 	getBasePath() {
+		// Use global BASE_PATH if available (set by path-resolver-init.js)
+		if (window.BASE_PATH !== undefined) {
+			return window.BASE_PATH ? `${window.BASE_PATH}/` : "/";
+		}
+
+		// Fallback: detect GitHub Pages base path
 		const path = window.location.pathname;
 		const pathParts = path.split("/").filter((p) => p);
 
-		// Check if first segment looks like a GitHub Pages repo name
 		if (
 			pathParts.length > 0 &&
 			pathParts[0] !== "pages" &&
