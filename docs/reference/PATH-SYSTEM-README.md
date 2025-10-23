@@ -29,7 +29,7 @@ Every HTML page loads `common/core/path-resolver-init.js` as the **first script*
 ```
 
 **Benefits:**
-- Browser caches the script (downloaded once, used 49 times)
+- Script is inlined in each HTML file (downloaded 49 times, not cached as a single external file)
 - Runs immediately before any modules load
 - Updates import map dynamically based on environment
 
