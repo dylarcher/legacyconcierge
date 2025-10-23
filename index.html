@@ -19,12 +19,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-
-    <!-- GitHub Pages Base Path - Must be set before any resource loads -->
-    <base href="/legacyconcierge/" />
-
-    <title>Legacy Concierge - Premier In-Home Nursing Care</title>
+    /><title>Legacy Concierge - Premier In-Home Nursing Care</title>
 
     <!-- Favicons -->
     <link rel="icon" href="./favicon.svg" />
@@ -237,10 +232,16 @@
     <!-- Footer Component -->
     <lc-footer></lc-footer>
 
+    <!-- Contact Dialog -->
+    <lc-contact-dialog id="contact-dialog"></lc-contact-dialog>
+
     <!-- Existing Scripts -->
     <script src="./common/services/theme.js"></script>
     <script src="./common/utils/app.js"></script>
     <script src="./common/services/i18n.js"></script>
+
+    <!-- Contact Dialog Component -->
+    <script type="module" src="./common/components/contact-dialog.js"></script>
 
     <!-- Component System -->
     <script type="module">
@@ -346,6 +347,17 @@
               window.switchLanguage(newLang);
             });
             console.log("✓ Language toggle initialized");
+          }
+
+          // Setup CTA button to open contact dialog
+          const ctaButton = document.querySelector(".cta-button");
+          const contactDialog = document.getElementById("contact-dialog");
+          if (ctaButton && contactDialog) {
+            ctaButton.addEventListener("click", (e) => {
+              e.preventDefault();
+              contactDialog.open();
+            });
+            console.log("✓ Contact dialog initialized");
           }
         } catch (error) {
           console.error("Failed to initialize components:", error);

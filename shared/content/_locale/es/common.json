@@ -9,6 +9,30 @@
 		"switchLanguage": "Cambiar idioma",
 		"toggleTheme": "Alternar modo oscuro/claro"
 	},
+	"contactDialog": {
+		"title": "Consulta Personalizada",
+		"description": "Complete este formulario para solicitar una consulta personalizada con nuestro equipo.",
+		"name": "Nombre Completo",
+		"nameError": "Por favor ingrese su nombre completo (2-100 caracteres)",
+		"email": "Correo Electrónico",
+		"emailError": "Por favor ingrese un correo electrónico válido",
+		"phone": "Número de Teléfono",
+		"phoneError": "Por favor ingrese un número de teléfono válido (123-456-7890)",
+		"service": "Interés en Servicio",
+		"serviceError": "Por favor seleccione un servicio",
+		"selectService": "Seleccione un servicio...",
+		"services": {
+			"postOp": "Cuidado Post-Operatorio",
+			"chronic": "Manejo de Condiciones Crónicas",
+			"palliative": "Cuidados Paliativos",
+			"wellness": "Bienestar y Prevención",
+			"other": "Otro"
+		},
+		"message": "Mensaje",
+		"messageError": "Por favor ingrese un mensaje (10-1000 caracteres)",
+		"cancel": "Cancelar",
+		"submit": "Enviar Solicitud"
+	},
 	"language": {
 		"current": "ES",
 		"switch": "EN"
