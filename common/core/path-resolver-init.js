@@ -32,43 +32,49 @@
 	console.log(`[Path Resolver] Environment detected: ${hostname}, Base path: "${basePath || '/'}"`);
 
 	/**
-	 * Updates the import map based on detected environment
-	 * Modifies the importmap to use correct base paths
+	 * Injects the import map with correct base paths
+	 * Import maps MUST be injected before any module scripts run
 	 * @private
 	 */
-	const updateImportMap = () => {
-		const importMapScript = document.querySelector('script[type="importmap"]');
-		if (importMapScript) {
-			try {
-				const importMap = JSON.parse(importMapScript.textContent);
-				if (basePath) {
-					importMap.imports = {
-						'@/': `${basePath}/common/`,
-						'#/': `${basePath}/shared/`,
-						'$/': `${basePath}/pages/`
-					};
-				} else {
-					// Use absolute paths for localhost/production (works from any page depth)
-					importMap.imports = {
-						'@/': '/common/',
-						'#/': '/shared/',
-						'$/': '/pages/'
-					};
-				}
-				importMapScript.textContent = JSON.stringify(importMap, null, 2);
-				console.log('[Path Resolver] Import map updated');
-			} catch(e) {
-				console.error('[Path Resolver] Failed to update import map:', e);
-			}
+	const injectImportMap = () => {
+		// Check if import map already exists (shouldn't if HTML was updated correctly)
+		const existingMap = document.querySelector('script[type="importmap"]');
+		if (existingMap) {
+			console.warn('[Path Resolver] Import map already exists, removing it');
+			existingMap.remove();
 		}
+
+		// Create import map with correct base paths
+		const importMap = {
+			imports: basePath ? {
+				'@/': `${basePath}/common/`,
+				'#/': `${basePath}/shared/`,
+				'$/': `${basePath}/pages/`
+			} : {
+				'@/': '/common/',
+				'#/': '/shared/',
+				'$/': '/pages/'
+			}
+		};
+
+		// Inject import map into the document head
+		const script = document.createElement('script');
+		script.type = 'importmap';
+		script.textContent = JSON.stringify(importMap, null, 2);
+
+		// Insert as first child of head to ensure it's before any module scripts
+		const head = document.head || document.getElementsByTagName('head')[0];
+		if (head.firstChild) {
+			head.insertBefore(script, head.firstChild);
+		} else {
+			head.appendChild(script);
+		}
+
+		console.log('[Path Resolver] Import map injected:', importMap.imports);
 	};
 
-	// Update immediately if DOM is already ready
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', updateImportMap);
-	} else {
-		updateImportMap();
-	}
+	// Inject import map immediately - must happen before any modules load
+	injectImportMap();
 
 	/**
 	 * Resolves a path relative to the project root
