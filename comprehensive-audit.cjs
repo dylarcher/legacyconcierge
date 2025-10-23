@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_DIR = '/Users/darcher/Dev/legacy-concierge';
+const BASE_DIR = process.env.BASE_DIR || process.cwd();
 
 const issues = {
   missingPages: [],
