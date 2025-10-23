@@ -3,8 +3,8 @@
  * Custom element for consistent footer across all pages
  */
 
-import { cloneTemplate } from "/common/core/component-loader.js";
-import { getAttributeOr } from "/common/core/helpers.js";
+import { cloneTemplate } from "../core/component-loader.js";
+import { getAttributeOr } from "../core/helpers.js";
 
 class LCFooter extends HTMLElement {
 	/**
