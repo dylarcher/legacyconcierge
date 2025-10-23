@@ -24,7 +24,8 @@ function detectBasePath() {
 	}
 
 	// GitHub Pages - detect repository name from path
-	if (hostname.includes('github.io')) {
+	// Robust check: hostnames ending with '.github.io' (GitHub Pages)
+	if (hostname.endsWith('.github.io')) {
 		const pathParts = pathname.split('/').filter(p => p);
 		// First segment is usually the repository name
 		if (pathParts.length > 0 && pathParts[0] !== 'pages') {
