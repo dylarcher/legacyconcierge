@@ -17,7 +17,7 @@ import {
 	cloneTemplate,
 	getAttributeOr,
 	getBooleanAttribute,
-} from "/common/core/component-loader.js";
+} from "@/core/component-loader.js";
 
 /**
  * Base form element class with common validation logic

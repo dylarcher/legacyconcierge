@@ -12,7 +12,7 @@
 import {
 	cloneTemplate,
 	getBooleanAttribute,
-} from "/common/core/component-loader.js";
+} from "@/core/component-loader.js";
 
 /**
  * Blog card component for post previews

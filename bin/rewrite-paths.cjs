@@ -2,8 +2,8 @@
 /**
  * Rewrite legacy paths to new /common and /shared structure across HTML/JSON.
  */
-const fs = require("fs");
-const path = require("path");
+const fs = require("node:fs");
+const path = require("node:path");
 
 const PROJECT_ROOT = process.cwd();
 const DRY_RUN = process.argv.includes("--dry-run");
