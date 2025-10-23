@@ -54,7 +54,7 @@ async function loadWebVitals() {
 		await import("/common/libs/web-vitals.js");
 		console.log("✓ Web Vitals monitoring loaded");
 	} catch (error) {
-		console.error("✗ Failed to load Web Vitals:", error);
+		console.error("✗ Failed to load Web Vitals. Please verify that '/common/libs/web-vitals.js' exists and the path is correct.", error);
 	}
 }
 
