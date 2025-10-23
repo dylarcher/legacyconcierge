@@ -39,11 +39,11 @@
 						'$/': basePath + '/pages/'
 					};
 				} else {
-					// Use root-relative for localhost/production
+					// Use absolute paths for localhost/production (works from any page depth)
 					importMap.imports = {
-						'@/': './common/',
-						'#/': './shared/',
-						'$/': './pages/'
+						'@/': '/common/',
+						'#/': '/shared/',
+						'$/': '/pages/'
 					};
 				}
 				importMapScript.textContent = JSON.stringify(importMap, null, 2);
