@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (skipLink) {
 		skipLink.addEventListener('click', (event) => {
 			event.preventDefault();
-			const mainContent = document.querySelector('#main, main');
+			const mainContent = document.querySelector('main, #main');
 			if (mainContent) {
 				// Set tabindex to make it focusable
 				mainContent.setAttribute('tabindex', '-1');
