@@ -38,7 +38,7 @@ class LCLightbox extends BaseComponent {
   constructor() {
     super();
     this.useShadowDOM = false;
-    this.lightboxId = `lc-lightbox-${Math.random().toString(36).substr(2, 9)}`;
+    this.lightboxId = `lc-lightbox-${Math.random().toString(36).substring(2, 11)}`;
     this.previousFocus = null;
   }
 

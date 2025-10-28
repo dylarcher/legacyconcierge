@@ -269,9 +269,7 @@ class LCBadge extends BaseComponent {
         outline-offset: 1px;
       }
 
-      .lc-badge--removable {
-        padding-right: var(--space-2);
-      }
+      /* .lc-badge--removable class no longer adds redundant padding-right; spacing is handled by gap */
     `;
 
     document.head.appendChild(style);

@@ -34,7 +34,7 @@ class LCModal extends BaseComponent {
   constructor() {
     super();
     this.useShadowDOM = false;
-    this.modalId = `lc-modal-${Math.random().toString(36).substr(2, 9)}`;
+    this.modalId = `lc-modal-${Math.random().toString(36).substring(2, 11)}`;
     this.previousFocus = null;
     this.focusableElements = [];
     this.firstFocusable = null;

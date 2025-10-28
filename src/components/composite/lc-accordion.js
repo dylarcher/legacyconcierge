@@ -27,7 +27,7 @@ class LCAccordion extends BaseComponent {
   constructor() {
     super();
     this.useShadowDOM = false;
-    this.accordionId = `lc-accordion-${Math.random().toString(36).substr(2, 9)}`;
+    this.accordionId = `lc-accordion-${Math.random().toString(36).substring(2, 11)}`;
     this.openPanels = new Set();
   }
 

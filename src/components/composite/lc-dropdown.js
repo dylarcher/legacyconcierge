@@ -31,7 +31,7 @@ class LCDropdown extends BaseComponent {
   constructor() {
     super();
     this.useShadowDOM = false;
-    this.dropdownId = `lc-dropdown-${Math.random().toString(36).substr(2, 9)}`;
+    this.dropdownId = `lc-dropdown-${Math.random().toString(36).substring(2, 11)}`;
     this.isOpen = false;
     this.focusedIndex = -1;
   }

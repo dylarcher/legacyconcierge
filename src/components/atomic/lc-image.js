@@ -67,7 +67,7 @@ class LCImage extends BaseComponent {
     const height = this.getAttr('height');
     const aspectRatio = this.getAttr('aspect-ratio');
     const objectFit = this.getAttr('object-fit', 'cover');
-    const lazy = this.getBoolAttr('lazy') !== false; // Default to true
+    const lazy = this.getBoolAttr('lazy', true);
     const placeholder = this.getAttr('placeholder', 'var(--bg-surface-secondary)');
     const sizes = this.getAttr('sizes');
     const srcset = this.getAttr('srcset');

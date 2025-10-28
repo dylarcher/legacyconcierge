@@ -44,7 +44,7 @@ class LCSlider extends BaseComponent {
   constructor() {
     super();
     this.useShadowDOM = false;
-    this.sliderId = `lc-slider-${Math.random().toString(36).substr(2, 9)}`;
+    this.sliderId = `lc-slider-${Math.random().toString(36).substring(2, 11)}`;
     this.autoplayTimer = null;
     this.touchStartX = 0;
     this.touchEndX = 0;
