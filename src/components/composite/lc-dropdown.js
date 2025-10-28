@@ -21,9 +21,9 @@
  * </lc-dropdown>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCDropdown extends BaseComponent {
+class LCDropdown extends Component {
   static get observedAttributes() {
     return ['placement', 'trigger', 'items'];
   }
@@ -38,7 +38,7 @@ class LCDropdown extends BaseComponent {
 
   async render() {
     const placement = this.getAttr('placement', 'bottom-start');
-    const trigger = this.getAttr('trigger', 'click');
+    const _trigger = this.getAttr('trigger', 'click');
     const items = this.getJsonAttr('items', []);
 
     // Extract trigger slot
@@ -150,7 +150,7 @@ class LCDropdown extends BaseComponent {
 
     // Menu item clicks
     menuItems.forEach((item, index) => {
-      this.on(item, 'click', (event) => {
+      this.on(item, 'click', (_event) => {
         const items = this.getJsonAttr('items', []);
         const itemData = items.filter(i => !i.divider)[index];
 
@@ -194,7 +194,7 @@ class LCDropdown extends BaseComponent {
         event.preventDefault();
         this.focusLastItem();
       } else if (event.key === 'Enter' || event.key === ' ') {
-        if (document.activeElement && document.activeElement.classList.contains('lc-dropdown__item')) {
+        if (document.activeElement?.classList.contains('lc-dropdown__item')) {
           // Let the native click handle it
           return;
         }
@@ -332,7 +332,7 @@ class LCDropdown extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

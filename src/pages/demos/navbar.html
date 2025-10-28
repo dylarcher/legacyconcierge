@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Components - Legacy Concierge</title>
+
+  <!-- Design Tokens -->
+  <link rel="stylesheet" href="../tokens/design-tokens.css">
+  <link rel="stylesheet" href="../tokens/component-tokens.css">
+  <link rel="stylesheet" href="../tokens/base.css">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .demo-section {
+      padding: var(--space-12) var(--space-4);
+      border-bottom: 1px solid var(--border-default);
+    }
+
+    .demo-section:last-child {
+      border-bottom: none;
+    }
+
+    .demo-section__title {
+      font-family: var(--font-family-serif);
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--text-primary);
+      margin: 0 0 var(--space-2);
+      max-width: var(--container-xl);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .demo-section__description {
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+      margin: 0 0 var(--space-8);
+      max-width: var(--container-xl);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .demo-container {
+      max-width: var(--container-xl);
+      margin: 0 auto;
+    }
+
+    .demo-block {
+      margin-bottom: var(--space-8);
+      padding: var(--space-6);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-lg);
+    }
+
+    .demo-block__label {
+      font-family: var(--font-family-accent);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 0 0 var(--space-4);
+    }
+
+    .demo-spacer {
+      height: var(--space-16);
+    }
+
+    /* Header demo - simulate content below */
+    .header-demo-content {
+      padding: var(--space-16) var(--space-4);
+      text-align: center;
+    }
+
+    .header-demo-content h1 {
+      font-family: var(--font-family-serif);
+      font-size: var(--font-size-4xl);
+      margin: 0 0 var(--space-4);
+    }
+
+    .header-demo-content p {
+      font-size: var(--font-size-lg);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Sticky demo showcase */
+    .sticky-demo-container {
+      position: relative;
+      height: 500px;
+      overflow-y: auto;
+      border: 2px solid var(--border-default);
+      border-radius: var(--radius-lg);
+    }
+
+    .sticky-demo-content {
+      padding: var(--space-8);
+      min-height: 800px;
+    }
+
+    /* Nav dropdown showcase */
+    .nav-demo-wrapper {
+      padding: var(--space-8);
+      background: var(--bg-surface-secondary);
+      border-radius: var(--radius-lg);
+    }
+  </style>
+
+  <!-- Load utilities -->
+  <script type="module">
+    import '../utilities/path-resolver.js';
+    import '../utilities/theme-manager.js';
+    import '../utilities/i18n.js';
+  </script>
+
+  <!-- Load components -->
+  <script type="module" src="../components/base/Component.js"></script>
+  <script type="module" src="../components/atomic/lc-button.js"></script>
+  <script type="module" src="../components/navigation/lc-breadcrumb.js"></script>
+  <script type="module" src="../components/navigation/lc-pagination.js"></script>
+  <script type="module" src="../components/navigation/lc-nav.js"></script>
+  <script type="module" src="../components/navigation/lc-header.js"></script>
+  <script type="module" src="../components/navigation/lc-footer.js"></script>
+</head>
+<body>
+
+  <!-- Header Component Demo (Sticky) -->
+  <lc-header
+    site-name="Legacy Concierge"
+    logo="/assets/images/logo.svg"
+    sticky
+    nav-items='[
+      {"label": "Home", "href": "/", "current": true},
+      {"label": "Services", "href": "/services", "items": [
+        {"label": "Digital Legacy", "href": "/services/digital"},
+        {"label": "Legal Support", "href": "/services/legal"},
+        {"label": "Memorial Services", "href": "/services/memorial"}
+      ]},
+      {"label": "About", "href": "/about"},
+      {"label": "Blog", "href": "/blog"},
+      {"label": "Contact", "href": "/contact"}
+    ]'
+  >
+    <div slot="actions">
+      <lc-button variant="outline" size="sm" id="theme-toggle">Toggle Theme</lc-button>
+      <lc-button variant="primary" size="sm" href="/contact">Get Started</lc-button>
+    </div>
+  </lc-header>
+
+  <main>
+    <!-- Breadcrumb Component -->
+    <section class="demo-section">
+      <div class="demo-container">
+        <h2 class="demo-section__title">Breadcrumb Navigation</h2>
+        <p class="demo-section__description">
+          Breadcrumb trails show the user's current location in the site hierarchy and provide quick navigation back to parent pages.
+        </p>
+
+        <!-- Basic Breadcrumb -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Basic Breadcrumb</h3>
+          <lc-breadcrumb
+            items='[
+              {"label": "Home", "href": "/"},
+              {"label": "Services", "href": "/services"},
+              {"label": "Digital Legacy", "current": true}
+            ]'
+          ></lc-breadcrumb>
+        </div>
+
+        <!-- Custom Separator -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Custom Separator (→)</h3>
+          <lc-breadcrumb
+            separator="→"
+            items='[
+              {"label": "Home", "href": "/"},
+              {"label": "Blog", "href": "/blog"},
+              {"label": "Category", "href": "/blog/category"},
+              {"label": "Article Title", "current": true}
+            ]'
+          ></lc-breadcrumb>
+        </div>
+
+        <!-- Long Path -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Deep Navigation Path</h3>
+          <lc-breadcrumb
+            items='[
+              {"label": "Home", "href": "/"},
+              {"label": "Resources", "href": "/resources"},
+              {"label": "Documentation", "href": "/resources/docs"},
+              {"label": "Components", "href": "/resources/docs/components"},
+              {"label": "Navigation", "href": "/resources/docs/components/navigation"},
+              {"label": "Breadcrumb", "current": true}
+            ]'
+          ></lc-breadcrumb>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination Component -->
+    <section class="demo-section">
+      <div class="demo-container">
+        <h2 class="demo-section__title">Pagination</h2>
+        <p class="demo-section__description">
+          Pagination controls allow users to navigate through paginated content with clear indicators of current position.
+        </p>
+
+        <!-- Basic Pagination -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Basic Pagination (Page 3 of 10)</h3>
+          <lc-pagination
+            current="3"
+            total="10"
+            siblings="1"
+          ></lc-pagination>
+        </div>
+
+        <!-- With First/Last -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">With First/Last Buttons</h3>
+          <lc-pagination
+            current="5"
+            total="20"
+            siblings="2"
+            show-first-last
+          ></lc-pagination>
+        </div>
+
+        <!-- Custom Labels -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Custom Labels</h3>
+          <lc-pagination
+            current="1"
+            total="5"
+            prev-label="← Prev"
+            next-label="Next →"
+          ></lc-pagination>
+        </div>
+
+        <!-- Edge Cases -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">First Page (Prev Disabled)</h3>
+          <lc-pagination
+            current="1"
+            total="10"
+          ></lc-pagination>
+        </div>
+
+        <div class="demo-block">
+          <h3 class="demo-block__label">Last Page (Next Disabled)</h3>
+          <lc-pagination
+            current="10"
+            total="10"
+          ></lc-pagination>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nav Component -->
+    <section class="demo-section">
+      <div class="demo-container">
+        <h2 class="demo-section__title">Navigation Menu</h2>
+        <p class="demo-section__description">
+          Flexible navigation menus with support for nested dropdowns, horizontal and vertical orientations, and mobile modes.
+        </p>
+
+        <!-- Horizontal Nav -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Horizontal Navigation with Dropdowns</h3>
+          <div class="nav-demo-wrapper">
+            <lc-nav
+              orientation="horizontal"
+              items='[
+                {"label": "Home", "href": "/"},
+                {"label": "Services", "href": "/services", "items": [
+                  {"label": "Digital Legacy", "href": "/services/digital"},
+                  {"label": "Legal Support", "href": "/services/legal"},
+                  {"label": "Memorial Services", "href": "/services/memorial"},
+                  {"label": "Concierge Support", "href": "/services/concierge"}
+                ]},
+                {"label": "About", "href": "/about", "items": [
+                  {"label": "Our Story", "href": "/about/story"},
+                  {"label": "Team", "href": "/about/team"},
+                  {"label": "Careers", "href": "/about/careers"}
+                ]},
+                {"label": "Blog", "href": "/blog", "current": true},
+                {"label": "Contact", "href": "/contact"}
+              ]'
+            ></lc-nav>
+          </div>
+        </div>
+
+        <!-- Vertical Nav -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Vertical Navigation (Sidebar Style)</h3>
+          <div style="max-width: 300px;">
+            <lc-nav
+              orientation="vertical"
+              items='[
+                {"label": "Dashboard", "href": "/dashboard", "current": true},
+                {"label": "Profile", "href": "/profile"},
+                {"label": "Settings", "href": "/settings", "items": [
+                  {"label": "Account", "href": "/settings/account"},
+                  {"label": "Security", "href": "/settings/security"},
+                  {"label": "Notifications", "href": "/settings/notifications"}
+                ]},
+                {"label": "Help", "href": "/help"},
+                {"label": "Logout", "href": "/logout"}
+              ]'
+            ></lc-nav>
+          </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Mobile Navigation Mode</h3>
+          <lc-nav
+            orientation="vertical"
+            mobile
+            items='[
+              {"label": "Home", "href": "/"},
+              {"label": "Services", "href": "/services", "items": [
+                {"label": "Digital Legacy", "href": "/services/digital"},
+                {"label": "Legal Support", "href": "/services/legal"}
+              ]},
+              {"label": "About", "href": "/about"},
+              {"label": "Contact", "href": "/contact"}
+            ]'
+          ></lc-nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Header Component Variations -->
+    <section class="demo-section">
+      <div class="demo-container">
+        <h2 class="demo-section__title">Header Component</h2>
+        <p class="demo-section__description">
+          Global site header with logo, navigation, mobile menu toggle, and customizable actions. The main header at the top of this page is sticky.
+        </p>
+
+        <!-- Transparent Header Demo -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Transparent Header (For Hero Overlays)</h3>
+          <div style="position: relative; background: linear-gradient(135deg, var(--color-primary-600), var(--color-accent-600)); padding: var(--space-16); border-radius: var(--radius-lg);">
+            <lc-header
+              site-name="Legacy Concierge"
+              transparent
+              nav-items='[
+                {"label": "Home", "href": "/"},
+                {"label": "Services", "href": "/services"},
+                {"label": "About", "href": "/about"}
+              ]'
+            >
+              <div slot="actions">
+                <lc-button variant="outline" size="sm">Sign In</lc-button>
+              </div>
+            </lc-header>
+            <div class="header-demo-content" style="color: white;">
+              <h1 style="color: white;">Preserve Your Digital Legacy</h1>
+              <p style="color: rgba(255,255,255,0.9);">Transparent header blends with the hero background</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sticky Header Demo -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Sticky Header in Scrolling Container</h3>
+          <div class="sticky-demo-container">
+            <lc-header
+              site-name="Legacy Concierge"
+              logo="/assets/images/logo.svg"
+              sticky
+              nav-items='[
+                {"label": "Home", "href": "/"},
+                {"label": "Services", "href": "/services"},
+                {"label": "About", "href": "/about"}
+              ]'
+            >
+            </lc-header>
+            <div class="sticky-demo-content">
+              <h3>Scroll to see sticky behavior</h3>
+              <p>The header will remain at the top as you scroll.</p>
+              <p style="margin-top: var(--space-8);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Test -->
+        <div class="demo-block">
+          <h3 class="demo-block__label">Mobile Menu (Resize browser to &lt; 768px)</h3>
+          <p style="color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+            On mobile screens, the navigation collapses into a hamburger menu. The menu at the top of this page demonstrates this behavior.
+          </p>
+          <lc-button variant="outline" size="sm" onclick="window.dispatchEvent(new Event('resize'))">
+            Test Resize Event
+          </lc-button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div class="demo-spacer"></div>
+  </main>
+
+  <!-- Footer Component Demo -->
+  <lc-footer
+    copyright="© 2025 Legacy Concierge. All rights reserved."
+    columns='[
+      {
+        "title": "Company",
+        "links": [
+          {"label": "About Us", "href": "/about"},
+          {"label": "Our Team", "href": "/about/team"},
+          {"label": "Careers", "href": "/careers"},
+          {"label": "Press Kit", "href": "/press"}
+        ]
+      },
+      {
+        "title": "Services",
+        "links": [
+          {"label": "Digital Legacy", "href": "/services/digital"},
+          {"label": "Legal Support", "href": "/services/legal"},
+          {"label": "Memorial Services", "href": "/services/memorial"},
+          {"label": "Concierge Support", "href": "/services/concierge"}
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          {"label": "Blog", "href": "/blog"},
+          {"label": "Help Center", "href": "/help"},
+          {"label": "Documentation", "href": "/docs"},
+          {"label": "FAQs", "href": "/faq"}
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {"label": "Privacy Policy", "href": "/privacy"},
+          {"label": "Terms of Service", "href": "/terms"},
+          {"label": "Cookie Policy", "href": "/cookies"},
+          {"label": "Accessibility", "href": "/accessibility"}
+        ]
+      }
+    ]'
+    social='[
+      {"platform": "facebook", "href": "https://facebook.com/legacyconcierge"},
+      {"platform": "twitter", "href": "https://twitter.com/legacyconcierge"},
+      {"platform": "linkedin", "href": "https://linkedin.com/company/legacyconcierge"},
+      {"platform": "instagram", "href": "https://instagram.com/legacyconcierge"}
+    ]'
+  >
+    <div slot="bottom">
+      <p style="font-size: var(--font-size-sm); color: var(--text-muted); text-align: center; margin: var(--space-4) 0 0;">
+        Made with care for families preserving their digital legacy.
+      </p>
+    </div>
+  </lc-footer>
+
+  <!-- Event listeners for interactive elements -->
+  <script type="module">
+    import { themeManager } from '../utilities/theme-manager.js';
+
+    // Theme toggle functionality
+    document.getElementById('theme-toggle')?.addEventListener('click', () => {
+      const currentTheme = themeManager.currentTheme;
+      themeManager.setTheme(currentTheme === 'light' ? 'dark' : 'light');
+    });
+
+    // Log navigation events
+    document.addEventListener('lc-breadcrumb-click', (event) => {
+      console.log('Breadcrumb clicked:', event.detail);
+    });
+
+    document.addEventListener('lc-pagination-change', (event) => {
+      console.log('Page changed to:', event.detail.page);
+    });
+
+    document.addEventListener('lc-nav-click', (event) => {
+      console.log('Nav link clicked:', event.detail.label, event.detail.href);
+    });
+
+    document.addEventListener('lc-header-menu-toggle', (event) => {
+      console.log('Mobile menu toggled:', event.detail.open ? 'opened' : 'closed');
+    });
+  </script>
+</body>
+</html>

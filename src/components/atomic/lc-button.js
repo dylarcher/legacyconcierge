@@ -13,9 +13,9 @@
  * <lc-button variant="outline" href="/contact">Contact Us</lc-button>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCButton extends BaseComponent {
+class LCButton extends Component {
   static get observedAttributes() {
     return ['variant', 'size', 'disabled', 'href', 'type'];
   }
@@ -100,7 +100,7 @@ class LCButton extends BaseComponent {
     }
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

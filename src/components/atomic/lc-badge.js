@@ -18,9 +18,9 @@
  * <lc-badge variant="primary" removable>Tag</lc-badge>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCBadge extends BaseComponent {
+class LCBadge extends Component {
   static get observedAttributes() {
     return ['variant', 'size', 'outline', 'dot', 'pill', 'removable'];
   }
@@ -106,7 +106,7 @@ class LCBadge extends BaseComponent {
     }
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

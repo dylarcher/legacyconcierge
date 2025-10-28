@@ -24,10 +24,10 @@
  * ></lc-slider>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCSlider extends BaseComponent {
+class LCSlider extends Component {
   static get observedAttributes() {
     return [
       'slides',
@@ -54,7 +54,7 @@ class LCSlider extends BaseComponent {
     const slides = this.getJsonAttr('slides', []);
     const active = this.getNumAttr('active', 0);
     const autoplay = this.getBoolAttr('autoplay');
-    const interval = this.getNumAttr('interval', 5000);
+    const _interval = this.getNumAttr('interval', 5000);
     const loop = this.getBoolAttr('loop') !== false; // Default true
     const showArrows = this.getBoolAttr('show-arrows') !== false; // Default true
     const showDots = this.getBoolAttr('show-dots') !== false; // Default true
@@ -392,7 +392,7 @@ class LCSlider extends BaseComponent {
   onAttributeChanged(name, oldValue, newValue) {
     if (name === 'active' && this._initialized && oldValue !== newValue) {
       const index = parseInt(newValue, 10);
-      if (!isNaN(index)) {
+      if (!Number.isNaN(index)) {
         this.goToSlide(index);
       }
     } else if (name === 'autoplay' && this._initialized) {

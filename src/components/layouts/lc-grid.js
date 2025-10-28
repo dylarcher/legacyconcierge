@@ -26,9 +26,9 @@
  * </lc-grid>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCGrid extends BaseComponent {
+class LCGrid extends Component {
   static get observedAttributes() {
     return [
       'cols',
@@ -100,7 +100,7 @@ class LCGrid extends BaseComponent {
     this.applyStyles();
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

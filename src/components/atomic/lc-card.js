@@ -26,10 +26,10 @@
  * </lc-card>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCCard extends BaseComponent {
+class LCCard extends Component {
   static get observedAttributes() {
     return [
       'variant',
@@ -100,7 +100,9 @@ class LCCard extends BaseComponent {
     // Body
     html += '<div class="lc-card__body">';
     const tempDiv = document.createElement('div');
-    defaultContent.forEach(node => tempDiv.appendChild(node));
+    for (const node of defaultContent) {
+      tempDiv.appendChild(node);
+    }
     html += tempDiv.innerHTML;
     html += '</div>';
 
@@ -173,7 +175,7 @@ class LCCard extends BaseComponent {
     }
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

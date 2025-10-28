@@ -20,9 +20,9 @@
  * </lc-tabs>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCTabs extends BaseComponent {
+class LCTabs extends Component {
   static get observedAttributes() {
     return ['orientation', 'active', 'variant'];
   }

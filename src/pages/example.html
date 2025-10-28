@@ -281,10 +281,10 @@
 
   <!-- Scripts -->
   <script type="module">
+    import i18n from '../utilities/i18n.js';
     // Import utilities
     import pathResolver from '../utilities/path-resolver.js';
     import themeManager from '../utilities/theme-manager.js';
-    import i18n from '../utilities/i18n.js';
 
     // Import components
     import '../components/atomic/lc-button.js';
@@ -299,7 +299,7 @@
     // Apply translations (create placeholder translations if they don't exist)
     try {
       await i18n.apply(document.body, 'example');
-    } catch (error) {
+    } catch (_error) {
       console.log('Note: Example translations not found, using default content');
     }
 

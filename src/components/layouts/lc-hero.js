@@ -28,10 +28,10 @@
  * </lc-hero>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCHero extends BaseComponent {
+class LCHero extends Component {
   static get observedAttributes() {
     return [
       'variant',
@@ -159,7 +159,7 @@ class LCHero extends BaseComponent {
     }
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

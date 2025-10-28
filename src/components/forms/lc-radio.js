@@ -27,9 +27,9 @@
  * ></lc-radio>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCRadio extends BaseComponent {
+class LCRadio extends Component {
   static get observedAttributes() {
     return [
       'name',
@@ -275,7 +275,7 @@ class LCRadio extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(name, _oldValue, newValue) {
     if (this._initialized && name !== 'checked') {
       this.rerender();
     } else if (name === 'checked' && this._initialized) {

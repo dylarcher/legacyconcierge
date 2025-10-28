@@ -16,10 +16,10 @@
  * <lc-icon name="decorative-star" decorative></lc-icon>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCIcon extends BaseComponent {
+class LCIcon extends Component {
   static get observedAttributes() {
     return ['name', 'size', 'custom-size', 'color', 'label', 'decorative'];
   }
@@ -117,7 +117,7 @@ class LCIcon extends BaseComponent {
       // Cache and return
       this.svgCache.set(name, svgContent);
       return svgContent;
-    } catch (error) {
+    } catch (_error) {
       console.warn(`Icon sprite not available, loading individual file for: ${name}`);
 
       try {
@@ -141,7 +141,7 @@ class LCIcon extends BaseComponent {
     }
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

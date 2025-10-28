@@ -65,72 +65,30 @@ export default {
 
       assertions: {
         // Performance thresholds
-        "categories:performance": [
-          "error",
-          { minScore: 0.75, aggregationMethod: "median-run" },
-        ],
+        "categories:performance": ["error", { minScore: 0.75, aggregationMethod: "median-run" }],
 
         // Accessibility thresholds (WCAG 2.2 AA compliance)
-        "categories:accessibility": [
-          "error",
-          { minScore: 0.9, aggregationMethod: "median-run" },
-        ],
+        "categories:accessibility": ["error", { minScore: 0.9, aggregationMethod: "median-run" }],
 
         // Best practices thresholds
-        "categories:best-practices": [
-          "warn",
-          { minScore: 0.85, aggregationMethod: "median-run" },
-        ],
+        "categories:best-practices": ["warn", { minScore: 0.85, aggregationMethod: "median-run" }],
 
         // SEO thresholds
-        "categories:seo": [
-          "warn",
-          { minScore: 0.85, aggregationMethod: "median-run" },
-        ],
+        "categories:seo": ["warn", { minScore: 0.85, aggregationMethod: "median-run" }],
 
         // Core Web Vitals (stricter thresholds)
-        "first-contentful-paint": [
-          "warn",
-          { maxNumericValue: 2000, aggregationMethod: "median-run" },
-        ],
-        "largest-contentful-paint": [
-          "error",
-          { maxNumericValue: 2500, aggregationMethod: "median-run" },
-        ],
-        "cumulative-layout-shift": [
-          "error",
-          { maxNumericValue: 0.1, aggregationMethod: "median-run" },
-        ],
-        "total-blocking-time": [
-          "warn",
-          { maxNumericValue: 300, aggregationMethod: "median-run" },
-        ],
-        "speed-index": [
-          "warn",
-          { maxNumericValue: 3400, aggregationMethod: "median-run" },
-        ],
+        "first-contentful-paint": ["warn", { maxNumericValue: 2000, aggregationMethod: "median-run" }],
+        "largest-contentful-paint": ["error", { maxNumericValue: 2500, aggregationMethod: "median-run" }],
+        "cumulative-layout-shift": ["error", { maxNumericValue: 0.1, aggregationMethod: "median-run" }],
+        "total-blocking-time": ["warn", { maxNumericValue: 300, aggregationMethod: "median-run" }],
+        "speed-index": ["warn", { maxNumericValue: 3400, aggregationMethod: "median-run" }],
 
         // Resource budgets
-        "resource-summary:script:size": [
-          "warn",
-          { maxNumericValue: 300000, aggregationMethod: "median-run" },
-        ], // 300KB
-        "resource-summary:image:size": [
-          "warn",
-          { maxNumericValue: 500000, aggregationMethod: "median-run" },
-        ], // 500KB
-        "resource-summary:stylesheet:size": [
-          "warn",
-          { maxNumericValue: 100000, aggregationMethod: "median-run" },
-        ], // 100KB
-        "resource-summary:font:size": [
-          "warn",
-          { maxNumericValue: 150000, aggregationMethod: "median-run" },
-        ], // 150KB
-        "resource-summary:total:size": [
-          "warn",
-          { maxNumericValue: 1500000, aggregationMethod: "median-run" },
-        ], // 1.5MB
+        "resource-summary:script:size": ["warn", { maxNumericValue: 300000, aggregationMethod: "median-run" }], // 300KB
+        "resource-summary:image:size": ["warn", { maxNumericValue: 500000, aggregationMethod: "median-run" }], // 500KB
+        "resource-summary:stylesheet:size": ["warn", { maxNumericValue: 100000, aggregationMethod: "median-run" }], // 100KB
+        "resource-summary:font:size": ["warn", { maxNumericValue: 150000, aggregationMethod: "median-run" }], // 150KB
+        "resource-summary:total:size": ["warn", { maxNumericValue: 1500000, aggregationMethod: "median-run" }], // 1.5MB
 
         // Accessibility requirements
         "color-contrast": ["error", { minScore: 1 }],

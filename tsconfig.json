@@ -1,43 +1,42 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "moduleResolution": "bundler",
     "allowJs": true,
+    "alwaysStrict": true,
+    "baseUrl": ".",
     "checkJs": true,
-    "noEmit": true,
     "declaration": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "outDir": "types",
-    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
+    "noImplicitReturns": false,
     "noImplicitThis": true,
-    "alwaysStrict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
-    "rootDir": ".",
+    "outDir": "types",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./common/*"],
       "#/*": ["./shared/*"],
-      "$/*": ["./pages/*"]
-    }
+      "$/*": ["./pages/*"],
+      "@/*": ["./common/*"],
+      "~/*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "ES2022"
   },
-  "include": ["**/*"],
   "exclude": [
     "**/*.d.ts",
     "**/*.spec.*",
@@ -50,5 +49,10 @@
     ".vscode/",
     ".tmp/",
     ".claude/"
-  ]
+  ],
+  "include": ["**/*"],
+  "typeAcquisition": {
+    "enable": true,
+    "include": ["node", "playwright", "biome", "lighthouse", "chrome"]
+  }
 }

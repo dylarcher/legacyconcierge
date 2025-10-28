@@ -20,10 +20,10 @@
  * ></lc-lightbox>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCLightbox extends BaseComponent {
+class LCLightbox extends Component {
   static get observedAttributes() {
     return [
       'images',
@@ -63,7 +63,7 @@ class LCLightbox extends BaseComponent {
     const imageSrc = currentImage.src ? pathResolver.resolveAsset(currentImage.src) : '';
 
     // Build HTML
-    let html = `
+    const html = `
       <!-- Backdrop -->
       <div class="lc-lightbox__backdrop" aria-hidden="true"></div>
 
@@ -412,7 +412,7 @@ class LCLightbox extends BaseComponent {
       }
     } else if (name === 'active' && this._initialized && oldValue !== newValue) {
       const index = parseInt(newValue, 10);
-      if (!isNaN(index)) {
+      if (!Number.isNaN(index)) {
         this.updateImage(index);
       }
     } else if (this._initialized && name !== 'open' && name !== 'active') {

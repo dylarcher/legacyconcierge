@@ -24,9 +24,9 @@
  * </lc-modal>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCModal extends BaseComponent {
+class LCModal extends Component {
   static get observedAttributes() {
     return ['open', 'size', 'dismissible', 'show-close', 'title'];
   }
@@ -44,7 +44,7 @@ class LCModal extends BaseComponent {
   async render() {
     const open = this.getBoolAttr('open');
     const size = this.getAttr('size', 'base');
-    const dismissible = this.getBoolAttr('dismissible') !== false; // Default true
+    const _dismissible = this.getBoolAttr('dismissible') !== false; // Default true
     const showClose = this.getBoolAttr('show-close') !== false; // Default true
     const title = this.getAttr('title');
 
@@ -62,7 +62,7 @@ class LCModal extends BaseComponent {
     ];
 
     // Build HTML
-    let html = `
+    const html = `
       <!-- Backdrop -->
       <div class="lc-modal__backdrop" aria-hidden="true"></div>
 
@@ -313,7 +313,7 @@ class LCModal extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(name, _oldValue, newValue) {
     if (name === 'open' && this._initialized) {
       const isOpen = newValue !== null;
       const wrapper = this.$('.lc-modal');

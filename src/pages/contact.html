@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="contact">
+  <meta name="description" content="Contact Legacy Concierge - Get in touch for a free consultation and learn how we can help with your care needs.">
+
+  <title>Contact Us - Legacy Concierge</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* Contact Hero Styles */
+    .contact-hero {
+      padding: var(--space-16, 4rem) 0 var(--space-12, 3rem);
+      background: linear-gradient(135deg, var(--bg-primary, #2563eb) 0%, var(--bg-primary-hover, #1d4ed8) 100%);
+      color: var(--text-on-primary, #ffffff);
+      text-align: center;
+    }
+
+    .contact-hero__container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 var(--space-6, 1.5rem);
+    }
+
+    .contact-hero__subtitle {
+      margin: 0 0 var(--space-3, 0.75rem);
+      font-size: var(--font-size-sm, 0.875rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .contact-hero__title {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .contact-hero__description {
+      margin: 0;
+      font-size: var(--font-size-lg, 1.125rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: var(--space-12, 3rem) 0 var(--space-8, 2rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <!-- Contact Hero -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="contact-hero__container">
+        <p class="contact-hero__subtitle" data-i18n="contact.hero.subtitle">Get in Touch</p>
+        <h1 id="contact-hero-title" class="contact-hero__title" data-i18n="contact.hero.title">
+          We're Here to Help
+        </h1>
+        <p class="contact-hero__description" data-i18n="contact.hero.description">
+          Have questions about our services? Ready to schedule a consultation? Fill out the form below and we'll get back to you within 24 hours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form Template -->
+    <div id="contact-form-placeholder">
+      <script>
+        fetch('/src/components/templates/contact-form.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('contact-form-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- Contact Info Template -->
+    <div id="contact-info-placeholder">
+      <script>
+        fetch('/src/components/templates/contact-info.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('contact-info-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <!-- Form validation enhancement -->
+  <script type="module">
+    document.addEventListener('lc:ready', () => {
+      const form = document.querySelector('.contact-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Basic validation
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        // Submit form (would integrate with backend)
+        console.log('Form submitted:', data);
+
+        // Show success message
+        const success = form.querySelector('.contact-form__success');
+        if (success) {
+          success.removeAttribute('hidden');
+          form.querySelector('.contact-form__grid').setAttribute('hidden', '');
+        }
+      });
+    });
+  </script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none; }
+    </style>
+  </noscript>
+</body>
+</html>

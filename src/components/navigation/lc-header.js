@@ -28,10 +28,10 @@
  * </lc-header>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCHeader extends BaseComponent {
+class LCHeader extends Component {
   static get observedAttributes() {
     return ['logo', 'logo-alt', 'site-name', 'nav-items', 'sticky', 'transparent'];
   }
@@ -176,7 +176,7 @@ class LCHeader extends BaseComponent {
 
     // Handle scroll for sticky header
     if (this.getBoolAttr('sticky')) {
-      let lastScroll = 0;
+      let _lastScroll = 0;
 
       this.on(window, 'scroll', () => {
         const currentScroll = window.pageYOffset;
@@ -190,7 +190,7 @@ class LCHeader extends BaseComponent {
           }
         }
 
-        lastScroll = currentScroll;
+        _lastScroll = currentScroll;
       });
     }
   }
@@ -267,7 +267,7 @@ class LCHeader extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

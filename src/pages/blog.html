@@ -233,7 +233,9 @@
           const filter = btn.dataset.filter;
 
           // Update active state
-          filterBtns.forEach(b => b.classList.remove('active'));
+          for (const b of filterBtns) {
+            b.classList.remove('active');
+          }
           btn.classList.add('active');
 
           // Filter articles
@@ -251,7 +253,7 @@
 
   <noscript>
     <style>
-      .requires-js { display: none !important; }
+      .requires-js { display: none; }
     </style>
   </noscript>
 </body>

@@ -26,9 +26,9 @@
  * </lc-layout>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCLayout extends BaseComponent {
+class LCLayout extends Component {
   static get observedAttributes() {
     return [
       'variant',
@@ -119,7 +119,7 @@ class LCLayout extends BaseComponent {
     this.applyStyles();
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

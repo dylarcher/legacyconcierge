@@ -27,9 +27,9 @@
  * </lc-form>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCForm extends BaseComponent {
+class LCForm extends Component {
   static get observedAttributes() {
     return [
       'action',
@@ -55,7 +55,7 @@ class LCForm extends BaseComponent {
     const method = this.getAttr('method', 'post');
     const encoding = this.getAttr('encoding');
     const validate = this.getBoolAttr('validate') !== false; // Default true
-    const preventDefault = this.getBoolAttr('prevent-default');
+    const _preventDefault = this.getBoolAttr('prevent-default');
     const submitText = this.getAttr('submit-text', 'Submit');
     const submitVariant = this.getAttr('submit-variant', 'primary');
 
@@ -402,7 +402,7 @@ class LCForm extends BaseComponent {
     if (errorDiv) errorDiv.style.display = 'none';
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

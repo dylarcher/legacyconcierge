@@ -33,9 +33,9 @@
  * ></lc-footer>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCFooter extends BaseComponent {
+class LCFooter extends Component {
   static get observedAttributes() {
     return ['copyright', 'columns', 'social'];
   }
@@ -195,7 +195,7 @@ class LCFooter extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

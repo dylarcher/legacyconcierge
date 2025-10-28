@@ -17,9 +17,9 @@
  * ></lc-accordion>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCAccordion extends BaseComponent {
+class LCAccordion extends Component {
   static get observedAttributes() {
     return ['items', 'allow-multiple', 'variant'];
   }
@@ -33,7 +33,7 @@ class LCAccordion extends BaseComponent {
 
   async render() {
     const items = this.getJsonAttr('items', []);
-    const allowMultiple = this.getBoolAttr('allow-multiple');
+    const _allowMultiple = this.getBoolAttr('allow-multiple');
     const variant = this.getAttr('variant', 'default');
 
     if (items.length === 0) {
@@ -340,7 +340,7 @@ class LCAccordion extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

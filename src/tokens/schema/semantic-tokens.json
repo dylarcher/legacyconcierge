@@ -1,0 +1,573 @@
+{
+  "semantic": {
+    "common": {
+      "focus": {
+        "ring-width": {
+          "value": "2px",
+          "type": "dimension",
+          "description": "Focus ring width"
+        },
+        "ring-offset": {
+          "value": "2px",
+          "type": "dimension",
+          "description": "Focus ring offset"
+        }
+      }
+    },
+    "light": {
+      "background": {
+        "page": {
+          "value": "{base.color.secondary.50}",
+          "type": "color",
+          "description": "Main page background color"
+        },
+        "surface": {
+          "value": "{base.color.white}",
+          "type": "color",
+          "description": "Primary surface background (cards, modals, etc.)"
+        },
+        "surface-secondary": {
+          "value": "{base.color.secondary.100}",
+          "type": "color",
+          "description": "Secondary surface background"
+        },
+        "surface-tertiary": {
+          "value": "{base.color.secondary.200}",
+          "type": "color",
+          "description": "Tertiary surface background"
+        },
+        "overlay": {
+          "value": "#00000080",
+          "$value-legacy": "color(srgb 0 0 0 / 0.5)",
+          "$value-modern": "oklch(0% 0 0 / 0.5)",
+          "type": "color",
+          "description": "Modal backdrop overlay"
+        },
+        "overlay-light": {
+          "value": "#00000040",
+          "$value-legacy": "color(srgb 0 0 0 / 0.25)",
+          "$value-modern": "oklch(0% 0 0 / 0.25)",
+          "type": "color",
+          "description": "Light overlay for hover states"
+        }
+      },
+      "text": {
+        "primary": {
+          "value": "{base.color.primary.800}",
+          "type": "color",
+          "description": "Primary text color"
+        },
+        "secondary": {
+          "value": "{base.color.primary.600}",
+          "type": "color",
+          "description": "Secondary text color"
+        },
+        "tertiary": {
+          "value": "{base.color.neutral.600}",
+          "type": "color",
+          "description": "Tertiary text color"
+        },
+        "muted": {
+          "value": "{base.color.neutral.500}",
+          "type": "color",
+          "description": "Muted text color"
+        },
+        "disabled": {
+          "value": "{base.color.neutral.400}",
+          "type": "color",
+          "description": "Disabled text color"
+        },
+        "on-primary": {
+          "value": "{base.color.white}",
+          "type": "color",
+          "description": "Text color on primary background"
+        },
+        "on-secondary": {
+          "value": "{base.color.white}",
+          "type": "color",
+          "description": "Text color on secondary background"
+        },
+        "on-primary-muted": {
+          "value": "#FFFFFFCC",
+          "$value-legacy": "color(srgb 1 1 1 / 0.8)",
+          "$value-modern": "oklch(100% 0 0 / 0.8)",
+          "type": "color",
+          "description": "Muted text on primary backgrounds"
+        },
+        "link": {
+          "value": "{base.color.primary.600}",
+          "type": "color",
+          "description": "Link text color"
+        },
+        "link-hover": {
+          "value": "{base.color.primary.700}",
+          "type": "color",
+          "description": "Link hover text color"
+        }
+      },
+      "border": {
+        "default": {
+          "value": "{base.color.neutral.300}",
+          "type": "color",
+          "description": "Default border color"
+        },
+        "light": {
+          "value": "{base.color.neutral.200}",
+          "type": "color",
+          "description": "Light border color"
+        },
+        "strong": {
+          "value": "{base.color.neutral.400}",
+          "type": "color",
+          "description": "Strong/emphasized border color"
+        },
+        "on-primary": {
+          "value": "#FFFFFF33",
+          "$value-legacy": "color(srgb 1 1 1 / 0.2)",
+          "$value-modern": "oklch(100% 0 0 / 0.2)",
+          "type": "color",
+          "description": "Border on primary background"
+        },
+        "focus": {
+          "value": "{base.color.primary.500}",
+          "type": "color",
+          "description": "Focus state border color"
+        },
+        "error": {
+          "value": "{base.color.error.500}",
+          "type": "color",
+          "description": "Error state border color"
+        },
+        "success": {
+          "value": "{base.color.success.500}",
+          "type": "color",
+          "description": "Success state border color"
+        }
+      },
+      "interactive": {
+        "default": {
+          "value": "{base.color.primary.600}",
+          "type": "color",
+          "description": "Default interactive element color"
+        },
+        "hover": {
+          "value": "{base.color.primary.700}",
+          "type": "color",
+          "description": "Hover state color"
+        },
+        "active": {
+          "value": "{base.color.primary.800}",
+          "type": "color",
+          "description": "Active state color"
+        },
+        "disabled": {
+          "value": "{base.color.neutral.300}",
+          "type": "color",
+          "description": "Disabled state color"
+        }
+      },
+      "brand": {
+        "primary": {
+          "value": "{base.color.primary.800}",
+          "type": "color",
+          "description": "Primary brand color"
+        },
+        "primary-hover": {
+          "value": "{base.color.primary.700}",
+          "type": "color",
+          "description": "Primary brand hover"
+        },
+        "primary-active": {
+          "value": "{base.color.primary.800}",
+          "type": "color",
+          "description": "Primary brand active"
+        },
+        "secondary": {
+          "value": "{base.color.secondary.800}",
+          "type": "color",
+          "description": "Secondary brand color"
+        },
+        "secondary-hover": {
+          "value": "{base.color.secondary.700}",
+          "type": "color",
+          "description": "Secondary brand hover"
+        },
+        "secondary-active": {
+          "value": "{base.color.secondary.900}",
+          "type": "color",
+          "description": "Secondary brand active"
+        },
+        "accent": {
+          "value": "{base.color.accent.600}",
+          "type": "color",
+          "description": "Accent brand color"
+        }
+      },
+      "status": {
+        "success": {
+          "value": "{base.color.success.500}",
+          "type": "color",
+          "description": "Success status color"
+        },
+        "warning": {
+          "value": "{base.color.warning.500}",
+          "type": "color",
+          "description": "Warning status color"
+        },
+        "error": {
+          "value": "{base.color.error.500}",
+          "type": "color",
+          "description": "Error status color"
+        },
+        "info": {
+          "value": "{base.color.info.500}",
+          "type": "color",
+          "description": "Info status color"
+        },
+        "success-bg": {
+          "value": "{base.color.success.100}",
+          "type": "color",
+          "description": "Success background color"
+        },
+        "warning-bg": {
+          "value": "{base.color.warning.100}",
+          "type": "color",
+          "description": "Warning background color"
+        },
+        "error-bg": {
+          "value": "{base.color.error.100}",
+          "type": "color",
+          "description": "Error background color"
+        },
+        "info-bg": {
+          "value": "{base.color.info.100}",
+          "type": "color",
+          "description": "Info background color"
+        }
+      },
+      "shadow": {
+        "card": {
+          "value": "{base.shadow.base}",
+          "type": "shadow",
+          "description": "Card shadow"
+        },
+        "card-hover": {
+          "value": "{base.shadow.lg}",
+          "type": "shadow",
+          "description": "Card hover shadow"
+        },
+        "modal": {
+          "value": "{base.shadow.2xl}",
+          "type": "shadow",
+          "description": "Modal shadow"
+        },
+        "dropdown": {
+          "value": "{base.shadow.md}",
+          "type": "shadow",
+          "description": "Dropdown shadow"
+        }
+      },
+      "focus": {
+        "ring-color": {
+          "value": "{base.color.primary.500}",
+          "type": "color",
+          "description": "Focus ring color"
+        },
+        "ring-width": {
+          "value": "{semantic.common.focus.ring-width}",
+          "type": "dimension",
+          "description": "Focus ring width"
+        },
+        "ring-offset": {
+          "value": "{semantic.common.focus.ring-offset}",
+          "type": "dimension",
+          "description": "Focus ring offset"
+        }
+      }
+    },
+    "dark": {
+      "background": {
+        "page": {
+          "value": "{base.color.neutral.900}",
+          "type": "color",
+          "description": "Main page background color (dark mode)"
+        },
+        "surface": {
+          "value": "{base.color.neutral.800}",
+          "type": "color",
+          "description": "Primary surface background (dark mode)"
+        },
+        "surface-secondary": {
+          "value": "{base.color.neutral.700}",
+          "type": "color",
+          "description": "Secondary surface background (dark mode)"
+        },
+        "surface-tertiary": {
+          "value": "{base.color.neutral.600}",
+          "type": "color",
+          "description": "Tertiary surface background (dark mode)"
+        },
+        "overlay": {
+          "value": "#000000BF",
+          "$value-legacy": "color(srgb 0 0 0 / 0.75)",
+          "$value-modern": "oklch(0% 0 0 / 0.75)",
+          "type": "color",
+          "description": "Modal backdrop overlay (dark mode)"
+        },
+        "overlay-light": {
+          "value": "#00000080",
+          "$value-legacy": "color(srgb 0 0 0 / 0.5)",
+          "$value-modern": "oklch(0% 0 0 / 0.5)",
+          "type": "color",
+          "description": "Light overlay (dark mode)"
+        }
+      },
+      "text": {
+        "primary": {
+          "value": "{base.color.neutral.50}",
+          "type": "color",
+          "description": "Primary text color (dark mode)"
+        },
+        "secondary": {
+          "value": "{base.color.neutral.200}",
+          "type": "color",
+          "description": "Secondary text color (dark mode)"
+        },
+        "tertiary": {
+          "value": "{base.color.neutral.300}",
+          "type": "color",
+          "description": "Tertiary text color (dark mode)"
+        },
+        "muted": {
+          "value": "{base.color.neutral.400}",
+          "type": "color",
+          "description": "Muted text color (dark mode)"
+        },
+        "disabled": {
+          "value": "{base.color.neutral.500}",
+          "type": "color",
+          "description": "Disabled text color (dark mode)"
+        },
+        "on-primary": {
+          "value": "{base.color.white}",
+          "type": "color",
+          "description": "Text color on primary background (dark mode)"
+        },
+        "on-secondary": {
+          "value": "{base.color.neutral.900}",
+          "type": "color",
+          "description": "Text color on secondary background (dark mode)"
+        },
+        "link": {
+          "value": "{base.color.primary.300}",
+          "type": "color",
+          "description": "Link text color (dark mode)"
+        },
+        "link-hover": {
+          "value": "{base.color.primary.200}",
+          "type": "color",
+          "description": "Link hover text color (dark mode)"
+        },
+        "on-primary-muted": {
+          "value": "#FFFFFFCC",
+          "$value-legacy": "color(srgb 1 1 1 / 0.8)",
+          "$value-modern": "oklch(100% 0 0 / 0.8)",
+          "type": "color",
+          "description": "Muted text on primary backgrounds (dark mode)"
+        }
+      },
+      "border": {
+        "default": {
+          "value": "{base.color.neutral.600}",
+          "type": "color",
+          "description": "Default border color (dark mode)"
+        },
+        "light": {
+          "value": "{base.color.neutral.700}",
+          "type": "color",
+          "description": "Light border color (dark mode)"
+        },
+        "strong": {
+          "value": "{base.color.neutral.500}",
+          "type": "color",
+          "description": "Strong border color (dark mode)"
+        },
+        "on-primary": {
+          "value": "#FFFFFF33",
+          "$value-legacy": "color(srgb 1 1 1 / 0.2)",
+          "$value-modern": "oklch(100% 0 0 / 0.2)",
+          "type": "color",
+          "description": "Border on primary background (dark mode)"
+        },
+        "focus": {
+          "value": "{base.color.primary.400}",
+          "type": "color",
+          "description": "Focus state border color (dark mode)"
+        }
+      },
+      "interactive": {
+        "default": {
+          "value": "{base.color.primary.400}",
+          "type": "color",
+          "description": "Default interactive element color (dark mode)"
+        },
+        "hover": {
+          "value": "{base.color.primary.300}",
+          "type": "color",
+          "description": "Hover state color (dark mode)"
+        },
+        "active": {
+          "value": "{base.color.primary.200}",
+          "type": "color",
+          "description": "Active state color (dark mode)"
+        },
+        "disabled": {
+          "value": "{base.color.neutral.600}",
+          "type": "color",
+          "description": "Disabled state color (dark mode)"
+        }
+      },
+      "shadow": {
+        "card": {
+          "value": [
+            {
+              "x": "0",
+              "y": "4",
+              "blur": "6",
+              "spread": "-1",
+              "color": "rgba(0, 0, 0, 0.3)",
+              "$color-srgb": "color(srgb 0 0 0 / 0.3)",
+              "$color-oklch": "oklch(0% 0 0 / 0.3)"
+            },
+            {
+              "x": "0",
+              "y": "2",
+              "blur": "4",
+              "spread": "-2",
+              "color": "rgba(0, 0, 0, 0.3)",
+              "$color-srgb": "color(srgb 0 0 0 / 0.3)",
+              "$color-oklch": "oklch(0% 0 0 / 0.3)"
+            }
+          ],
+          "type": "shadow",
+          "description": "Card shadow (dark mode)"
+        },
+        "card-hover": {
+          "value": [
+            {
+              "x": "0",
+              "y": "20",
+              "blur": "25",
+              "spread": "-5",
+              "color": "rgba(0, 0, 0, 0.3)",
+              "$color-srgb": "color(srgb 0 0 0 / 0.3)",
+              "$color-oklch": "oklch(0% 0 0 / 0.3)"
+            },
+            {
+              "x": "0",
+              "y": "8",
+              "blur": "10",
+              "spread": "-6",
+              "color": "rgba(0, 0, 0, 0.3)",
+              "$color-srgb": "color(srgb 0 0 0 / 0.3)",
+              "$color-oklch": "oklch(0% 0 0 / 0.3)"
+            }
+          ],
+          "type": "shadow",
+          "description": "Card hover shadow (dark mode)"
+        },
+        "modal": {
+          "value": {
+            "x": "0",
+            "y": "50",
+            "blur": "100",
+            "spread": "-20",
+            "color": "rgba(0, 0, 0, 0.5)",
+            "$color-srgb": "color(srgb 0 0 0 / 0.5)",
+            "$color-oklch": "oklch(0% 0 0 / 0.5)"
+          },
+          "type": "shadow",
+          "description": "Modal shadow (dark mode)"
+        },
+        "dropdown": {
+          "value": [
+            {
+              "x": "0",
+              "y": "10",
+              "blur": "15",
+              "spread": "-3",
+              "color": "rgba(0, 0, 0, 0.3)",
+              "$color-srgb": "color(srgb 0 0 0 / 0.3)",
+              "$color-oklch": "oklch(0% 0 0 / 0.3)"
+            },
+            {
+              "x": "0",
+              "y": "4",
+              "blur": "6",
+              "spread": "-4",
+              "color": "rgba(0, 0, 0, 0.3)",
+              "$color-srgb": "color(srgb 0 0 0 / 0.3)",
+              "$color-oklch": "oklch(0% 0 0 / 0.3)"
+            }
+          ],
+          "type": "shadow",
+          "description": "Dropdown shadow (dark mode)"
+        }
+      },
+      "focus": {
+        "ring-color": {
+          "value": "{base.color.primary.400}",
+          "type": "color",
+          "description": "Focus ring color (dark mode)"
+        },
+        "ring-width": {
+          "value": "{semantic.common.focus.ring-width}",
+          "type": "dimension",
+          "description": "Focus ring width (dark mode)"
+        },
+        "ring-offset": {
+          "value": "{semantic.common.focus.ring-offset}",
+          "type": "dimension",
+          "description": "Focus ring offset (dark mode)"
+        }
+      },
+      "brand": {
+        "primary": {
+          "value": "{base.color.primary.400}",
+          "type": "color",
+          "description": "Primary brand color (dark mode)"
+        },
+        "primary-hover": {
+          "value": "{base.color.primary.300}",
+          "type": "color",
+          "description": "Primary brand hover (dark mode)"
+        },
+        "primary-active": {
+          "value": "{base.color.primary.200}",
+          "type": "color",
+          "description": "Primary brand active (dark mode)"
+        },
+        "secondary": {
+          "value": "{base.color.secondary.400}",
+          "type": "color",
+          "description": "Secondary brand color (dark mode)"
+        },
+        "secondary-hover": {
+          "value": "{base.color.secondary.300}",
+          "type": "color",
+          "description": "Secondary brand hover (dark mode)"
+        },
+        "secondary-active": {
+          "value": "{base.color.secondary.200}",
+          "type": "color",
+          "description": "Secondary brand active (dark mode)"
+        },
+        "accent": {
+          "value": "{base.color.accent.400}",
+          "type": "color",
+          "description": "Accent brand color (dark mode)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="home">
+  <meta name="description" content="Premium in-home nursing care - Variant A with video hero and testimonials">
+
+  <title>Legacy Concierge - Home (Variant A)</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <!-- Skip Link -->
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* Video Hero Styles */
+    .video-hero {
+      position: relative;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: var(--text-on-dark, #ffffff);
+    }
+
+    .video-hero__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .video-hero__video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-hero__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        rgba(30, 58, 95, 0.85) 0%,
+        rgba(30, 58, 95, 0.65) 100%
+      );
+    }
+
+    .video-hero__container {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container-max-width, 1280px);
+      margin: 0 auto;
+      padding: var(--space-12, 3rem) var(--space-6, 1.5rem);
+      width: 100%;
+    }
+
+    .video-hero__content {
+      max-width: 720px;
+    }
+
+    .video-hero__title {
+      margin: 0 0 var(--space-6, 1.5rem);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .video-hero__subtitle {
+      margin: 0 0 var(--space-8, 2rem);
+      font-size: var(--font-size-2xl, 1.5rem);
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 600px;
+    }
+
+    .video-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4, 1rem);
+      margin-bottom: var(--space-8, 2rem);
+    }
+
+    .video-hero__features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-6, 1.5rem);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .video-hero__features li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2, 0.5rem);
+      font-size: var(--font-size-lg, 1.125rem);
+      font-weight: 600;
+    }
+
+    .video-hero__features svg {
+      flex-shrink: 0;
+      color: var(--text-success, #10b981);
+    }
+
+    /* Video Control Button */
+    .video-hero__control {
+      position: absolute;
+      bottom: var(--space-8, 2rem);
+      right: var(--space-8, 2rem);
+      z-index: 2;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      border-radius: var(--radius-full, 9999px);
+      color: var(--text-on-dark, #ffffff);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all var(--transition-fast, 150ms);
+    }
+
+    .video-hero__control:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.6);
+      transform: scale(1.1);
+    }
+
+    /* Button base styles */
+    .button {
+      display: inline-block;
+      padding: var(--space-4, 1rem) var(--space-6, 1.5rem);
+      font-size: var(--font-size-lg, 1.125rem);
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      border-radius: var(--radius-lg, 0.5rem);
+      transition: all var(--transition-fast, 150ms);
+      cursor: pointer;
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .button--primary {
+      background: var(--bg-primary, #2563eb);
+      color: var(--text-on-primary, #ffffff);
+    }
+
+    .button--primary:hover {
+      background: var(--bg-primary-hover, #1d4ed8);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-xl, 0 20px 25px rgba(0, 0, 0, 0.3));
+    }
+
+    .button--secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--text-on-dark, #ffffff);
+      border-color: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .button--secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.6);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .video-hero {
+        min-height: 600px;
+      }
+      .video-hero__actions {
+        flex-direction: column;
+      }
+      .video-hero__actions .button {
+        width: 100%;
+      }
+      .video-hero__control {
+        bottom: var(--space-4, 1rem);
+        right: var(--space-4, 1rem);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button, .video-hero__control {
+        transition: none;
+      }
+      .button:hover, .video-hero__control:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template (inline for standalone functionality) -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <!-- Fallback header -->
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <!-- Video Hero Section -->
+    <section class="video-hero" aria-labelledby="hero-title">
+      <div class="video-hero__background">
+        <video
+          class="video-hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="/assets/images/hero/home-hero-poster.jpg"
+        >
+          <source src="/assets/videos/hero-background.mp4" type="video/mp4">
+          <source src="/assets/videos/hero-background.webm" type="video/webm">
+        </video>
+        <div class="video-hero__overlay" aria-hidden="true"></div>
+      </div>
+
+      <button class="video-hero__control requires-js" aria-label="Pause video" hidden>
+        <svg width="24" height="24" aria-hidden="true">
+          <use href="/assets/icons/sprite.svg#pause"></use>
+        </svg>
+      </button>
+
+      <div class="video-hero__container">
+        <div class="video-hero__content">
+          <h1 id="hero-title" class="video-hero__title" data-i18n="hero.title">
+            Compassionate Care at Home
+          </h1>
+
+          <p class="video-hero__subtitle" data-i18n="hero.subtitle">
+            Expert nursing services tailored to your unique needs. Professional, compassionate care in the comfort of your home.
+          </p>
+
+          <div class="video-hero__actions">
+            <a href="/contact" class="button button--primary" data-i18n="hero.cta.primary">
+              Get Started Today
+            </a>
+            <a href="/services" class="button button--secondary" data-i18n="hero.cta.secondary">
+              Our Services
+            </a>
+          </div>
+
+          <ul class="video-hero__features">
+            <li>
+              <svg width="28" height="28" aria-hidden="true">
+                <use href="/assets/icons/sprite.svg#check-circle"></use>
+              </svg>
+              <span data-i18n="hero.features[0]">Licensed & Certified Nurses</span>
+            </li>
+            <li>
+              <svg width="28" height="28" aria-hidden="true">
+                <use href="/assets/icons/sprite.svg#check-circle"></use>
+              </svg>
+              <span data-i18n="hero.features[1]">24/7 On-Call Support</span>
+            </li>
+            <li>
+              <svg width="28" height="28" aria-hidden="true">
+                <use href="/assets/icons/sprite.svg#check-circle"></use>
+              </svg>
+              <span data-i18n="hero.features[2]">Personalized Care Plans</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Grid Template -->
+    <div id="features-placeholder">
+      <script>
+        fetch('/src/components/templates/feature-grid.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('features-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- Testimonials Template -->
+    <div id="testimonials-placeholder">
+      <script>
+        fetch('/src/components/templates/testimonials.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('testimonials-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- CTA Template -->
+    <div id="cta-placeholder">
+      <script>
+        fetch('/src/components/templates/cta-section.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('cta-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <!-- Fallback footer -->
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <!-- Video control enhancement -->
+  <script type="module">
+    document.addEventListener('lc:ready', () => {
+      const video = document.querySelector('.video-hero__video');
+      const control = document.querySelector('.video-hero__control');
+      const icon = control?.querySelector('use');
+
+      if (!video || !control) return;
+
+      control.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+          control.setAttribute('aria-label', 'Pause video');
+          icon?.setAttribute('href', '/assets/icons/sprite.svg#pause');
+        } else {
+          video.pause();
+          control.setAttribute('aria-label', 'Play video');
+          icon?.setAttribute('href', '/assets/icons/sprite.svg#play');
+        }
+      });
+    });
+  </script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none; }
+      .no-js-message {
+        display: block;
+        padding: 1rem;
+        background: #fffbea;
+        border: 1px solid #f59e0b;
+        color: #92400e;
+        text-align: center;
+        margin: 1rem;
+      }
+    </style>
+    <div class="no-js-message">
+      <p><strong>JavaScript is disabled.</strong> Some features may not be available, but the site remains fully functional.</p>
+    </div>
+  </noscript>
+</body>
+</html>

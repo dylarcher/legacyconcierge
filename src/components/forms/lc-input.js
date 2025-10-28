@@ -38,9 +38,9 @@
  * ></lc-input>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCInput extends BaseComponent {
+class LCInput extends Component {
   static get observedAttributes() {
     return [
       'type',
@@ -393,7 +393,7 @@ class LCInput extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(name, _oldValue, newValue) {
     if (this._initialized && name !== 'value') {
       this.rerender();
     } else if (name === 'value' && this._initialized) {

@@ -10,10 +10,10 @@
 	},
 	"[html]": {
 		"editor.codeActionsOnSave": {
-			"source.fixAll.biome": "never",
-			"source.fixAll.prettier": "explicit"
+			"source.fixAll.biome": "explicit",
+			"source.fixAll.prettier": "never"
 		},
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "biomejs.biome"
 	},
 	"[javascript]": {
 		"editor.codeActionsOnSave": {

@@ -32,10 +32,10 @@
  * ></lc-image>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
-import pathResolver from '../../utilities/path-resolver.js';
+import pathResolver from '../../utils/path-resolver.js';
+import Component from '../base/Component.js';
 
-class LCImage extends BaseComponent {
+class LCImage extends Component {
   static get observedAttributes() {
     return [
       'src',
@@ -154,7 +154,7 @@ class LCImage extends BaseComponent {
     // Setup Intersection Observer for lazy loading (fallback)
     const img = this.querySelector('.lc-image__img');
 
-    if (img && img.dataset.src && !img.src) {
+    if (img?.dataset.src && !img.src) {
       this.setupIntersectionObserver(img);
     }
   }
@@ -231,7 +231,7 @@ class LCImage extends BaseComponent {
     });
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(name, _oldValue, newValue) {
     if (this._initialized && name !== 'alt') {
       // Alt can be updated without re-rendering
       if (name === 'alt') {

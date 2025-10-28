@@ -1,0 +1,567 @@
+/**
+ * Accessibility Styles
+ *
+ * WCAG 2.2 Level AAA compliant styles including:
+ * - Enhanced focus indicators
+ * - Motion preferences
+ * - High contrast mode support
+ * - Screen reader utilities
+ * - Text spacing support
+ * - Focus management
+ */
+
+/* ==========================================================================
+   Screen Reader Only Content
+   ========================================================================== */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Allow screen reader content to be focusable when navigated to via keyboard */
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ==========================================================================
+   Enhanced Focus Indicators (WCAG 2.2 Level AAA)
+   ========================================================================== */
+
+/*
+ * Focus indicators must:
+ * - Be visible against all backgrounds (3:1 contrast ratio minimum)
+ * - Have at least 2px thickness
+ * - Be clearly distinguishable from non-focused state
+ */
+
+:focus {
+  outline: 3px solid var(--color-focus, #2563eb);
+  outline-offset: 2px;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[role="button"]:focus,
+[role="link"]:focus,
+[tabindex]:focus {
+  outline: 3px solid var(--color-focus, #2563eb);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Focus visible (keyboard navigation only) */
+.using-keyboard *:focus {
+  outline: 3px solid var(--color-focus, #2563eb);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* Don't show focus outline for mouse clicks */
+:focus:not(.using-keyboard *:focus) {
+  outline-color: transparent;
+}
+
+/* Focus within (container has focused child) */
+.has-focus {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  border-radius: var(--radius-md, 0.375rem);
+}
+
+/* ==========================================================================
+   Skip Links
+   ========================================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 10000;
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background: var(--bg-primary, #2563eb);
+  color: var(--text-on-primary, #ffffff);
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-md, 0.375rem) 0;
+  transition: top var(--transition-fast, 150ms) ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--color-focus, #ffffff);
+  outline-offset: -3px;
+}
+
+/* ==========================================================================
+   Motion Preferences (prefers-reduced-motion)
+   ========================================================================== */
+
+/* Reduce or remove animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}
+
+/* Respect data attribute from JavaScript detection */
+[data-motion="reduced"] *,
+[data-motion="reduced"] *::before,
+[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms;
+  animation-iteration-count: 1;
+  transition-duration: 0.01ms;
+  scroll-behavior: auto;
+}
+
+/* ==========================================================================
+   High Contrast Mode Support
+   ========================================================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --border-width: 2px;
+    --outline-width: 3px;
+  }
+
+  /* Increase border visibility */
+  button,
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  /* Ensure focus indicators are very visible */
+  :focus {
+    outline-width: 4px;
+    outline-offset: 2px;
+  }
+
+  /* Remove subtle backgrounds */
+  .subtle {
+    background: transparent;
+    border: 2px solid currentColor;
+  }
+}
+
+/* Respect data attribute from JavaScript detection */
+[data-contrast="high"] {
+  --border-width: 2px;
+  --outline-width: 3px;
+}
+
+[data-contrast="high"] button,
+[data-contrast="high"] input,
+[data-contrast="high"] select,
+[data-contrast="high"] textarea {
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* ==========================================================================
+   Text Spacing (WCAG 2.2 Success Criterion 1.4.12)
+   ========================================================================== */
+
+/*
+ * Content must be readable when users override spacing:
+ * - Line height (line spacing) at least 1.5x font size
+ * - Spacing after paragraphs at least 2x font size
+ * - Letter spacing at least 0.12x font size
+ * - Word spacing at least 0.16x font size
+ */
+
+[data-user-spacing="true"] {
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  word-spacing: 0.16em;
+}
+
+[data-user-spacing="true"] p,
+[data-user-spacing="true"] li {
+  margin-bottom: 2em;
+}
+
+/* Ensure content doesn't break with increased spacing */
+[data-user-spacing="true"] * {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* ==========================================================================
+   Form Error Handling
+   ========================================================================== */
+
+/* Error summary */
+.form-error-summary {
+  padding: var(--space-4, 1rem);
+  margin-bottom: var(--space-6, 1.5rem);
+  background: #fef2f2;
+  border: 2px solid #dc2626;
+  border-radius: var(--radius-md, 0.375rem);
+  color: #991b1b;
+}
+
+.form-error-summary h2 {
+  margin: 0 0 var(--space-2, 0.5rem);
+  font-size: var(--font-size-lg, 1.125rem);
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.form-error-summary ul {
+  margin: 0;
+  padding-left: var(--space-5, 1.25rem);
+}
+
+.form-error-summary li {
+  margin-bottom: var(--space-1, 0.25rem);
+}
+
+.form-error-summary a {
+  color: #991b1b;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.form-error-summary a:hover {
+  color: #7f1d1d;
+}
+
+.form-error-summary a:focus {
+  outline-color: #dc2626;
+}
+
+/* Individual field errors */
+.form-field--error {
+  position: relative;
+}
+
+.form-field--error input,
+.form-field--error select,
+.form-field--error textarea {
+  border-color: #dc2626;
+  border-width: 2px;
+  background: #fef2f2;
+}
+
+.form-field--error label {
+  color: #991b1b;
+}
+
+.form-error-message {
+  display: block;
+  margin-top: var(--space-1, 0.25rem);
+  font-size: var(--font-size-sm, 0.875rem);
+  color: #991b1b;
+  font-weight: 600;
+}
+
+.form-error-message::before {
+  content: "⚠ ";
+  font-weight: 700;
+}
+
+/* Required field indicators */
+.required::after,
+[aria-required="true"] + label::after,
+[required] + label::after {
+  content: " *";
+  color: #dc2626;
+  font-weight: 700;
+}
+
+/* Success state */
+.form-field--success input,
+.form-field--success select,
+.form-field--success textarea {
+  border-color: #16a34a;
+  border-width: 2px;
+}
+
+.form-success-message {
+  display: block;
+  margin-top: var(--space-1, 0.25rem);
+  font-size: var(--font-size-sm, 0.875rem);
+  color: #15803d;
+  font-weight: 600;
+}
+
+.form-success-message::before {
+  content: "✓ ";
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Keyboard Navigation Indicators
+   ========================================================================== */
+
+/* Show keyboard navigation hints */
+.keyboard-hint {
+  display: none;
+  font-size: var(--font-size-xs, 0.75rem);
+  color: var(--text-tertiary, #9ca3af);
+  font-style: italic;
+}
+
+.using-keyboard .keyboard-hint {
+  display: inline-block;
+}
+
+/* Keyboard shortcut badges */
+.kbd {
+  display: inline-block;
+  padding: 0.125rem 0.375rem;
+  font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
+  font-size: 0.875em;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text-primary, #1f2937);
+  background: var(--bg-subtle, #f3f4f6);
+  border: 1px solid var(--border-base, #d1d5db);
+  border-radius: var(--radius-sm, 0.25rem);
+  box-shadow: 0 1px 0 var(--border-base, #d1d5db);
+}
+
+/* ==========================================================================
+   Focus Trap (for modals and dialogs)
+   ========================================================================== */
+
+[data-focus-trap] {
+  position: relative;
+}
+
+[data-focus-trap]::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+[data-focus-trap] > * {
+  position: relative;
+  z-index: 9999;
+}
+
+/* ==========================================================================
+   Live Regions
+   ========================================================================== */
+
+[role="status"],
+[role="alert"],
+[aria-live] {
+  position: relative;
+}
+
+/* Visual indicator for alerts (can be customized) */
+[role="alert"] {
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background: #fef2f2;
+  border-left: 4px solid #dc2626;
+  border-radius: var(--radius-md, 0.375rem);
+  color: #991b1b;
+}
+
+[role="status"] {
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  border-radius: var(--radius-md, 0.375rem);
+  color: #1e40af;
+}
+
+/* ==========================================================================
+   Target Size (WCAG 2.2 Success Criterion 2.5.8)
+   ========================================================================== */
+
+/*
+ * Interactive elements should be at least 44x44 CSS pixels
+ * (Level AAA: 44x44, Level AA: 24x24)
+ */
+
+button,
+a,
+input[type="checkbox"],
+input[type="radio"],
+[role="button"],
+[role="link"],
+[tabindex]:not([tabindex="-1"]) {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Ensure touch targets don't overlap */
+@media (pointer: coarse) {
+  button,
+  a,
+  [role="button"],
+  [role="link"] {
+    padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+    margin: var(--space-1, 0.25rem);
+  }
+}
+
+/* ==========================================================================
+   Color Contrast Utilities
+   ========================================================================== */
+
+/* Ensure text has sufficient contrast (7:1 for AAA) */
+.text-contrast-low {
+  color: var(--text-primary, #1f2937);
+  background: var(--bg-base, #ffffff);
+}
+
+.text-contrast-high {
+  color: #000000;
+  background: #ffffff;
+}
+
+/* Link contrast */
+a {
+  color: var(--text-link, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--text-link-hover, #1d4ed8);
+  text-decoration-thickness: 2px;
+}
+
+/* Ensure focus indicators have sufficient contrast */
+@supports (outline-color: color-contrast(white vs black, blue)) {
+  :focus {
+    outline-color: color-contrast(var(--bg-base) vs var(--color-focus), #2563eb);
+  }
+}
+
+/* ==========================================================================
+   Responsive Text (AAA requires up to 200% zoom without loss of content)
+   ========================================================================== */
+
+/* Ensure text scales properly */
+body {
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 112.5%; /* 18px base */
+  }
+}
+
+/* Use relative units for all text */
+h1, h2, h3, h4, h5, h6,
+p, li, a, button, input, label {
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.125rem);
+}
+
+/* ==========================================================================
+   Print Accessibility
+   ========================================================================== */
+
+@media print {
+  /* Show link URLs for accessibility */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.875em;
+    font-weight: normal;
+  }
+
+  /* Remove navigation elements */
+  nav, .skip-link, .keyboard-hint {
+    display: none;
+  }
+
+  /* Ensure sufficient contrast in print */
+  * {
+    background: white;
+    color: black;
+  }
+
+  /* Show focus indicators in print */
+  :focus {
+    outline: 2px solid black;
+  }
+}
+
+/* ==========================================================================
+   Accessibility Testing Helpers (Development Only)
+   ========================================================================== */
+
+/* Add these to help identify accessibility issues during development */
+[data-a11y-debug="true"] [role]:not([aria-label]):not([aria-labelledby]) {
+  outline: 3px dashed orange;
+}
+
+[data-a11y-debug="true"] img:not([alt]) {
+  outline: 3px dashed red;
+}
+
+[data-a11y-debug="true"] [tabindex]:not([tabindex="-1"]):not([tabindex="0"]) {
+  outline: 3px dashed yellow;
+}
+
+/* ==========================================================================
+   Utilities for Hiding Content
+   ========================================================================== */
+
+/* Hidden but available to screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Hidden from everyone */
+[hidden],
+.hidden {
+  display: none;
+}
+
+/* Conditionally hidden based on media */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none;
+  }
+}

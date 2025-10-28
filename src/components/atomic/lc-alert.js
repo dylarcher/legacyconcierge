@@ -22,9 +22,9 @@
  * </lc-alert>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCAlert extends BaseComponent {
+class LCAlert extends Component {
   static get observedAttributes() {
     return ['variant', 'title', 'dismissible', 'icon', 'role'];
   }
@@ -75,7 +75,9 @@ class LCAlert extends BaseComponent {
     // Message
     html += '<div class="lc-alert__message">';
     const tempDiv = document.createElement('div');
-    defaultContent.forEach(node => tempDiv.appendChild(node));
+    for (const node of defaultContent) {
+      tempDiv.appendChild(node);
+    }
     html += tempDiv.innerHTML;
     html += '</div>';
 
@@ -198,7 +200,7 @@ class LCAlert extends BaseComponent {
     }
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(_name, _oldValue, _newValue) {
     if (this._initialized) {
       this.rerender();
     }

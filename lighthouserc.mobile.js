@@ -52,40 +52,16 @@ export default {
     assert: {
       assertions: {
         // More lenient performance thresholds for mobile
-        "categories:performance": [
-          "error",
-          { minScore: 0.65, aggregationMethod: "median-run" },
-        ],
-        "categories:accessibility": [
-          "error",
-          { minScore: 0.9, aggregationMethod: "median-run" },
-        ],
-        "categories:best-practices": [
-          "warn",
-          { minScore: 0.85, aggregationMethod: "median-run" },
-        ],
-        "categories:seo": [
-          "warn",
-          { minScore: 0.85, aggregationMethod: "median-run" },
-        ],
+        "categories:performance": ["error", { minScore: 0.65, aggregationMethod: "median-run" }],
+        "categories:accessibility": ["error", { minScore: 0.9, aggregationMethod: "median-run" }],
+        "categories:best-practices": ["warn", { minScore: 0.85, aggregationMethod: "median-run" }],
+        "categories:seo": ["warn", { minScore: 0.85, aggregationMethod: "median-run" }],
 
         // Mobile Core Web Vitals (adjusted for slower connection)
-        "first-contentful-paint": [
-          "warn",
-          { maxNumericValue: 3000, aggregationMethod: "median-run" },
-        ],
-        "largest-contentful-paint": [
-          "error",
-          { maxNumericValue: 4000, aggregationMethod: "median-run" },
-        ],
-        "cumulative-layout-shift": [
-          "error",
-          { maxNumericValue: 0.1, aggregationMethod: "median-run" },
-        ],
-        "total-blocking-time": [
-          "warn",
-          { maxNumericValue: 600, aggregationMethod: "median-run" },
-        ],
+        "first-contentful-paint": ["warn", { maxNumericValue: 3000, aggregationMethod: "median-run" }],
+        "largest-contentful-paint": ["error", { maxNumericValue: 4000, aggregationMethod: "median-run" }],
+        "cumulative-layout-shift": ["error", { maxNumericValue: 0.1, aggregationMethod: "median-run" }],
+        "total-blocking-time": ["warn", { maxNumericValue: 600, aggregationMethod: "median-run" }],
 
         // Mobile-specific audits
         viewport: ["error", { minScore: 1 }],

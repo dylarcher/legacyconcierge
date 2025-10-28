@@ -32,9 +32,9 @@
  * ></lc-select>
  */
 
-import BaseComponent from '../base/BaseComponent.js';
+import Component from '../base/Component.js';
 
-class LCSelect extends BaseComponent {
+class LCSelect extends Component {
   static get observedAttributes() {
     return [
       'name',
@@ -527,7 +527,7 @@ class LCSelect extends BaseComponent {
     return div.innerHTML;
   }
 
-  onAttributeChanged(name, oldValue, newValue) {
+  onAttributeChanged(name, _oldValue, _newValue) {
     if (this._initialized && name !== 'value') {
       this.rerender();
     } else if (name === 'value' && this._initialized) {
