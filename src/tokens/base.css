@@ -7,6 +7,9 @@
 /* Import accessibility styles */
 @import url('./accessibility.css');
 
+/* Import performance optimization styles */
+@import url('./performance.css');
+
 /* ============================================
    RESET & NORMALIZE
    ============================================ */
