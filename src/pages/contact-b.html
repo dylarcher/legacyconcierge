@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="contact">
+  <meta name="description" content="Contact Legacy Concierge - Multiple ways to reach us including phone, email, and in-person visits.">
+
+  <title>Contact Us - Ways to Reach Us - Legacy Concierge</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* Split Contact Hero */
+    .split-contact-hero {
+      min-height: 500px;
+      background: var(--bg-base, #ffffff);
+    }
+
+    .split-contact-hero__container {
+      max-width: var(--container-max-width, 1280px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8, 2rem);
+      align-items: center;
+      min-height: 500px;
+    }
+
+    .split-contact-hero__content {
+      padding: var(--space-12, 3rem) var(--space-6, 1.5rem);
+    }
+
+    .split-contact-hero__subtitle {
+      margin: 0 0 var(--space-3, 0.75rem);
+      font-size: var(--font-size-sm, 0.875rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-primary-brand, #2563eb);
+    }
+
+    .split-contact-hero__title {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .split-contact-hero__description {
+      margin: 0 0 var(--space-8, 2rem);
+      font-size: var(--font-size-lg, 1.125rem);
+      line-height: 1.6;
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .split-contact-hero__quick-contact {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4, 1rem);
+    }
+
+    .quick-contact-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4, 1rem);
+      padding: var(--space-4, 1rem);
+      background: var(--bg-subtle, #f9fafb);
+      border-radius: var(--radius-lg, 0.5rem);
+    }
+
+    .quick-contact-item__icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: var(--bg-primary, #2563eb);
+      border-radius: var(--radius-full, 9999px);
+      color: var(--text-on-primary, #ffffff);
+    }
+
+    .quick-contact-item a {
+      font-size: var(--font-size-lg, 1.125rem);
+      font-weight: 600;
+      color: var(--text-link, #2563eb);
+      text-decoration: none;
+    }
+
+    .quick-contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .split-contact-hero__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 1024px) {
+      .split-contact-hero__container {
+        grid-template-columns: 1fr;
+      }
+
+      .split-contact-hero__image {
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <!-- Split Contact Hero -->
+    <section class="split-contact-hero" aria-labelledby="contact-title">
+      <div class="split-contact-hero__container">
+        <div class="split-contact-hero__content">
+          <p class="split-contact-hero__subtitle" data-i18n="contact.hero.subtitle">Get in Touch</p>
+          <h1 id="contact-title" class="split-contact-hero__title" data-i18n="contact.hero.title">
+            Multiple Ways to Reach Us
+          </h1>
+          <p class="split-contact-hero__description" data-i18n="contact.hero.description">
+            Whether you prefer to call, email, or visit in person, we're here to answer your questions and help you get the care you need.
+          </p>
+
+          <!-- Quick Contact Methods -->
+          <div class="split-contact-hero__quick-contact">
+            <div class="quick-contact-item">
+              <div class="quick-contact-item__icon" aria-hidden="true">
+                <svg width="24" height="24">
+                  <use href="/assets/icons/sprite.svg#phone"></use>
+                </svg>
+              </div>
+              <div>
+                <div data-i18n="contact.quick.phone.label" style="font-size: 0.875rem; color: var(--text-secondary);">Call Us 24/7</div>
+                <a href="tel:+1-305-555-0100">+1 (305) 555-0100</a>
+              </div>
+            </div>
+
+            <div class="quick-contact-item">
+              <div class="quick-contact-item__icon" aria-hidden="true">
+                <svg width="24" height="24">
+                  <use href="/assets/icons/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <div>
+                <div data-i18n="contact.quick.email.label" style="font-size: 0.875rem; color: var(--text-secondary);">Email Us</div>
+                <a href="mailto:info@legacyconcierge.com">info@legacyconcierge.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split-contact-hero__image-container">
+          <img
+            src="/assets/images/contact/contact-hero.jpg"
+            alt="Friendly healthcare professional ready to help"
+            class="split-contact-hero__image"
+            width="600"
+            height="500"
+            loading="eager"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info Template -->
+    <div id="contact-info-placeholder">
+      <script>
+        fetch('/src/components/templates/contact-info.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('contact-info-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- Contact Form Template -->
+    <div id="contact-form-placeholder">
+      <script>
+        fetch('/src/components/templates/contact-form.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('contact-form-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <!-- Form validation enhancement -->
+  <script type="module">
+    document.addEventListener('lc:ready', () => {
+      const form = document.querySelector('.contact-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Basic validation
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        // Submit form (would integrate with backend)
+        console.log('Form submitted:', data);
+
+        // Show success message
+        const success = form.querySelector('.contact-form__success');
+        if (success) {
+          success.removeAttribute('hidden');
+          form.querySelector('.contact-form__grid').setAttribute('hidden', '');
+        }
+      });
+    });
+  </script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none !important; }
+    </style>
+  </noscript>
+</body>
+</html>
