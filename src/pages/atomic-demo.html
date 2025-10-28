@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atomic Components Demo - Legacy Concierge">
+  <meta name="theme-color" content="#f9f7f4">
+  <title>Atomic Components Demo - Legacy Concierge</title>
+
+  <!-- Design Tokens & Base Styles -->
+  <link rel="stylesheet" href="../tokens/design-tokens.css">
+  <link rel="stylesheet" href="../tokens/component-tokens.css">
+  <link rel="stylesheet" href="../tokens/base.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Raleway:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .demo-section-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .demo-section-title {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--space-4);
+    }
+
+    .demo-group {
+      margin-bottom: var(--space-8);
+    }
+
+    .demo-group-title {
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--space-4);
+      color: var(--text-secondary);
+    }
+
+    .demo-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      align-items: flex-start;
+    }
+
+    .demo-items--vertical {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      z-index: var(--z-fixed);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Hero -->
+  <lc-hero variant="gradient" height="sm" align="center" valign="center">
+    <h1>Atomic Components</h1>
+    <p style="opacity: 0.9;">Small, reusable UI building blocks</p>
+  </lc-hero>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Buttons -->
+    <lc-section variant="default" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Buttons</h2>
+        <p>Interactive buttons with multiple variants and sizes</p>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Variants</h3>
+        <div class="demo-items">
+          <lc-button variant="primary">Primary</lc-button>
+          <lc-button variant="secondary">Secondary</lc-button>
+          <lc-button variant="outline">Outline</lc-button>
+          <lc-button variant="ghost">Ghost</lc-button>
+          <lc-button variant="primary" disabled>Disabled</lc-button>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Sizes</h3>
+        <div class="demo-items">
+          <lc-button variant="primary" size="sm">Small</lc-button>
+          <lc-button variant="primary" size="base">Base</lc-button>
+          <lc-button variant="primary" size="lg">Large</lc-button>
+        </div>
+      </div>
+    </lc-section>
+
+    <!-- Cards -->
+    <lc-section variant="alt" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Cards</h2>
+        <p>Versatile content containers with multiple styles</p>
+      </div>
+
+      <lc-grid cols="1" cols-md="2" cols-lg="3" gap="6">
+        <lc-card variant="default" hoverable>
+          <h3>Default Card</h3>
+          <p>Simple bordered card with hover effect</p>
+        </lc-card>
+
+        <lc-card variant="elevated" hoverable>
+          <h3>Elevated Card</h3>
+          <p>Card with shadow elevation</p>
+        </lc-card>
+
+        <lc-card variant="outlined">
+          <h3>Outlined Card</h3>
+          <p>Card with thicker border</p>
+        </lc-card>
+
+        <lc-card variant="filled">
+          <h3>Filled Card</h3>
+          <p>Card with filled background</p>
+        </lc-card>
+
+        <lc-card variant="elevated" hoverable clickable>
+          <h3>Clickable Card</h3>
+          <p>This entire card is clickable</p>
+        </lc-card>
+
+        <lc-card variant="default">
+          <div slot="header">
+            <h3>Header & Footer</h3>
+          </div>
+          <p>Card with dedicated header and footer sections</p>
+          <div slot="footer">
+            <lc-button variant="primary" size="sm">Action</lc-button>
+          </div>
+        </lc-card>
+      </lc-grid>
+    </lc-section>
+
+    <!-- Badges -->
+    <lc-section variant="default" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Badges</h2>
+        <p>Small labels for categorization and status</p>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Variants</h3>
+        <div class="demo-items">
+          <lc-badge variant="default">Default</lc-badge>
+          <lc-badge variant="primary">Primary</lc-badge>
+          <lc-badge variant="secondary">Secondary</lc-badge>
+          <lc-badge variant="success">Success</lc-badge>
+          <lc-badge variant="warning">Warning</lc-badge>
+          <lc-badge variant="error">Error</lc-badge>
+          <lc-badge variant="info">Info</lc-badge>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Outline Style</h3>
+        <div class="demo-items">
+          <lc-badge variant="primary" outline>Primary</lc-badge>
+          <lc-badge variant="success" outline>Success</lc-badge>
+          <lc-badge variant="warning" outline>Warning</lc-badge>
+          <lc-badge variant="error" outline>Error</lc-badge>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Sizes & Shapes</h3>
+        <div class="demo-items">
+          <lc-badge variant="primary" size="sm">Small</lc-badge>
+          <lc-badge variant="primary" size="base">Base</lc-badge>
+          <lc-badge variant="primary" size="lg">Large</lc-badge>
+          <lc-badge variant="success" pill>Pill Shape</lc-badge>
+          <lc-badge variant="primary" removable>Removable</lc-badge>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Status Dots</h3>
+        <div class="demo-items">
+          <lc-badge variant="success" dot></lc-badge>
+          <span>Online</span>
+          <lc-badge variant="warning" dot></lc-badge>
+          <span>Away</span>
+          <lc-badge variant="error" dot></lc-badge>
+          <span>Offline</span>
+        </div>
+      </div>
+    </lc-section>
+
+    <!-- Alerts -->
+    <lc-section variant="alt" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Alerts</h2>
+        <p>Important messages and notifications</p>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">Basic Alerts</h3>
+        <div class="demo-items demo-items--vertical">
+          <lc-alert variant="info">
+            This is an informational message with some details.
+          </lc-alert>
+
+          <lc-alert variant="success">
+            Your changes have been saved successfully!
+          </lc-alert>
+
+          <lc-alert variant="warning">
+            Please review your settings before continuing.
+          </lc-alert>
+
+          <lc-alert variant="error">
+            An error occurred while processing your request.
+          </lc-alert>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">With Icons & Titles</h3>
+        <div class="demo-items demo-items--vertical">
+          <lc-alert variant="info" icon title="Information">
+            This alert includes an icon and a title for better clarity.
+          </lc-alert>
+
+          <lc-alert variant="success" icon title="Success!" dismissible>
+            This alert is dismissible. Click the × button to close it.
+          </lc-alert>
+
+          <lc-alert variant="warning" icon title="Warning" dismissible>
+            <p>This alert has multiple paragraphs of content.</p>
+            <p>It can contain any HTML markup you need.</p>
+          </lc-alert>
+        </div>
+      </div>
+
+      <div class="demo-group">
+        <h3 class="demo-group-title">With Actions</h3>
+        <div class="demo-items demo-items--vertical">
+          <lc-alert variant="error" icon title="Error">
+            Failed to load data from the server.
+            <div slot="actions">
+              <lc-button variant="outline" size="sm">Retry</lc-button>
+              <lc-button variant="ghost" size="sm">Cancel</lc-button>
+            </div>
+          </lc-alert>
+        </div>
+      </div>
+    </lc-section>
+
+    <!-- Images -->
+    <lc-section variant="default" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Images</h2>
+        <p>Responsive images with lazy loading</p>
+      </div>
+
+      <lc-grid cols="1" cols-md="2" cols-lg="3" gap="6">
+        <div>
+          <h3 class="demo-group-title">Default</h3>
+          <lc-image
+            src="https://via.placeholder.com/600x400"
+            alt="Placeholder image"
+            lazy
+          ></lc-image>
+        </div>
+
+        <div>
+          <h3 class="demo-group-title">Aspect Ratio 1:1</h3>
+          <lc-image
+            src="https://via.placeholder.com/600x600"
+            alt="Square image"
+            aspect-ratio="1/1"
+            lazy
+          ></lc-image>
+        </div>
+
+        <div>
+          <h3 class="demo-group-title">Rounded</h3>
+          <lc-image
+            src="https://via.placeholder.com/600x400"
+            alt="Rounded image"
+            rounded
+            radius="lg"
+            lazy
+          ></lc-image>
+        </div>
+
+        <div>
+          <h3 class="demo-group-title">Circle (1:1 + Full Radius)</h3>
+          <lc-image
+            src="https://via.placeholder.com/400x400"
+            alt="Circle image"
+            aspect-ratio="1/1"
+            rounded
+            radius="full"
+            lazy
+          ></lc-image>
+        </div>
+
+        <div>
+          <h3 class="demo-group-title">Aspect Ratio 16:9</h3>
+          <lc-image
+            src="https://via.placeholder.com/1920x1080"
+            alt="Widescreen image"
+            aspect-ratio="16/9"
+            lazy
+          ></lc-image>
+        </div>
+
+        <div>
+          <h3 class="demo-group-title">Object Fit: Contain</h3>
+          <lc-image
+            src="https://via.placeholder.com/600x400"
+            alt="Contained image"
+            aspect-ratio="1/1"
+            object-fit="contain"
+            lazy
+          ></lc-image>
+        </div>
+      </lc-grid>
+    </lc-section>
+
+    <!-- Combined Example -->
+    <lc-section variant="primary" padding="xl" contained container-size="lg">
+      <div style="text-align: center; color: white;">
+        <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-4);">
+          Component Library
+        </h2>
+        <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: var(--space-6);">
+          Build beautiful interfaces with reusable atomic components
+        </p>
+        <div style="display: inline-flex; gap: var(--space-2); flex-wrap: wrap; justify-content: center; margin-bottom: var(--space-6);">
+          <lc-badge variant="success" pill>5 Components</lc-badge>
+          <lc-badge variant="info" outline pill>Fully Accessible</lc-badge>
+          <lc-badge variant="secondary" pill>Theme Support</lc-badge>
+        </div>
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <lc-button variant="secondary" size="lg">Get Started</lc-button>
+          <lc-button variant="outline" size="lg">View Docs</lc-button>
+        </div>
+      </div>
+    </lc-section>
+  </main>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <lc-button variant="secondary" id="theme-toggle-btn" aria-label="Toggle theme">
+      🌓 Toggle Theme
+    </lc-button>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module">
+    // Import utilities
+    import pathResolver from '../utilities/path-resolver.js';
+    import themeManager from '../utilities/theme-manager.js';
+
+    // Import layout components
+    import '../components/layouts/lc-section.js';
+    import '../components/layouts/lc-hero.js';
+    import '../components/layouts/lc-grid.js';
+
+    // Import atomic components
+    import '../components/atomic/lc-button.js';
+    import '../components/atomic/lc-card.js';
+    import '../components/atomic/lc-badge.js';
+    import '../components/atomic/lc-alert.js';
+    import '../components/atomic/lc-image.js';
+
+    // Initialize
+    console.log('🚀 Atomic Components Demo');
+
+    // Theme toggle
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        themeManager.toggle();
+      });
+    }
+
+    // Listen for badge remove
+    document.addEventListener('lc-badge-remove', (event) => {
+      console.log('Badge removed:', event.detail);
+      event.detail.badge.removeBadge();
+    });
+
+    // Listen for alert dismiss
+    document.addEventListener('lc-alert-dismiss', (event) => {
+      console.log('Alert dismissed:', event.detail);
+    });
+
+    // Listen for card clicks
+    document.addEventListener('lc-card-click', (event) => {
+      console.log('Card clicked:', event.detail);
+      alert('Card clicked! Check console for details.');
+    });
+
+    // Listen for image load
+    document.addEventListener('lc-image-load', (event) => {
+      console.log('Image loaded:', event.detail);
+    });
+
+    console.log('✅ Atomic demo initialized!');
+  </script>
+</body>
+</html>
