@@ -30,7 +30,7 @@ class LCTabs extends BaseComponent {
   constructor() {
     super();
     this.useShadowDOM = false;
-    this.tabsId = `lc-tabs-${Math.random().toString(36).substr(2, 9)}`;
+    this.tabsId = `lc-tabs-${Math.random().toString(36).substring(2, 11)}`;
     this.tabs = [];
     this.panels = [];
   }
