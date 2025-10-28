@@ -8,6 +8,7 @@ import pathResolver from './utilities/path-resolver.js';
 import themeManager from './utilities/theme-manager.js';
 import i18n from './utilities/i18n.js';
 import AccessibilityManager from './utilities/accessibility.js';
+import PerformanceManager from './utilities/performance.js';
 
 /**
  * Component registry for lazy loading
@@ -111,6 +112,12 @@ class ProgressiveEnhancement {
       console.log('[Init] Accessibility manager initialized');
     }
 
+    // Initialize performance manager
+    if (!window.performanceManager) {
+      window.performanceManager = new PerformanceManager();
+      console.log('[Init] Performance manager initialized');
+    }
+
     // Make utilities globally available for convenience
     window.pathResolver = pathResolver;
     window.themeManager = themeManager;
@@ -122,6 +129,8 @@ class ProgressiveEnhancement {
     window.resolvePath = pathResolver.resolve.bind(pathResolver);
     window.resolveAsset = pathResolver.resolveAsset.bind(pathResolver);
     window.announce = window.accessibilityManager.announce.bind(window.accessibilityManager);
+    window.debounce = window.performanceManager.debounce.bind(window.performanceManager);
+    window.throttle = window.performanceManager.throttle.bind(window.performanceManager);
   }
 
   /**
