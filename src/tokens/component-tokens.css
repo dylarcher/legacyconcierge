@@ -57,29 +57,68 @@
   /* ============================================
      FORM COMPONENT TOKENS
      ============================================ */
-  --input-bg: var(--bg-surface);
-  --input-border: var(--border-default);
-  --input-border-focus: var(--border-focus);
-  --input-text: var(--text-primary);
-  --input-placeholder: var(--text-muted);
-  --input-disabled-bg: var(--bg-surface-secondary);
-  --input-disabled-text: var(--text-disabled);
 
-  --input-padding-x: var(--space-4);
-  --input-padding-y: var(--space-3);
-  --input-radius: var(--radius-base);
-  --input-font-size: var(--font-size-base);
+  /* Form field spacing */
+  --form-field-spacing: var(--space-6);
 
-  --input-error-border: var(--border-error);
-  --input-error-text: var(--status-error);
-  --input-success-border: var(--border-success);
-  --input-success-text: var(--status-success);
+  /* Form labels */
+  --form-label-font-size: var(--font-size-sm);
+  --form-label-font-weight: var(--font-weight-medium);
+  --form-label-color: var(--text-primary);
 
-  --label-font-size: var(--font-size-sm);
-  --label-font-weight: var(--font-weight-medium);
-  --label-text: var(--text-secondary);
+  /* Form inputs (text, textarea, select) */
+  --form-input-font-size: var(--font-size-base);
+  --form-input-line-height: 1.5;
+  --form-input-color: var(--text-primary);
+  --form-input-bg: var(--bg-surface);
+  --form-input-border-width: 1px;
+  --form-input-border-color: var(--border-default);
+  --form-input-border-hover-color: var(--border-strong);
+  --form-input-border-focus-color: var(--interactive-default);
+  --form-input-radius: var(--radius-base);
+  --form-input-padding-x: var(--space-4);
+  --form-input-padding-y: var(--space-3);
+  --form-input-padding-x-sm: var(--space-3);
+  --form-input-padding-y-sm: var(--space-2);
+  --form-input-padding-x-lg: var(--space-5);
+  --form-input-padding-y-lg: var(--space-4);
+  --form-input-placeholder-color: var(--text-muted);
+  --form-input-disabled-bg: var(--bg-surface-secondary);
+  --form-input-disabled-color: var(--text-muted);
+  --form-input-readonly-bg: var(--bg-surface-secondary);
+  --form-input-focus-shadow: 0 0 0 3px rgba(var(--color-primary-500-rgb, 59, 130, 246), 0.1);
+
+  /* Form validation states */
+  --form-error-color: var(--status-error);
+  --form-error-color-rgb: 220, 38, 38;
+  --form-success-color: var(--status-success);
+  --form-success-color-rgb: 22, 163, 74;
+
+  /* Checkbox and radio */
+  --form-checkbox-size: 20px;
+  --form-checkbox-radius: var(--radius-sm);
+  --form-radio-size: 20px;
+
+  /* Legacy aliases (for compatibility) */
+  --input-bg: var(--form-input-bg);
+  --input-border: var(--form-input-border-color);
+  --input-border-focus: var(--form-input-border-focus-color);
+  --input-text: var(--form-input-color);
+  --input-placeholder: var(--form-input-placeholder-color);
+  --input-disabled-bg: var(--form-input-disabled-bg);
+  --input-disabled-text: var(--form-input-disabled-color);
+  --input-padding-x: var(--form-input-padding-x);
+  --input-padding-y: var(--form-input-padding-y);
+  --input-radius: var(--form-input-radius);
+  --input-font-size: var(--form-input-font-size);
+  --input-error-border: var(--form-error-color);
+  --input-error-text: var(--form-error-color);
+  --input-success-border: var(--form-success-color);
+  --input-success-text: var(--form-success-color);
+  --label-font-size: var(--form-label-font-size);
+  --label-font-weight: var(--form-label-font-weight);
+  --label-text: var(--form-label-color);
   --label-margin-bottom: var(--space-2);
-
   --input-min-height: 44px; /* WCAG AAA touch target */
 
   /* ============================================
