@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium in-home nursing care services with compassionate, professional care tailored to your needs.">
+  <meta name="keywords" content="nursing care, home health, elderly care, post-surgical care, chronic illness support">
+  <meta name="author" content="Legacy Concierge">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Legacy Concierge - Compassionate Care at Home">
+  <meta property="og:description" content="Premium in-home nursing care services with compassionate, professional care tailored to your needs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://legacyconcierge.com/">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Legacy Concierge - Compassionate Care at Home">
+  <meta name="twitter:description" content="Premium in-home nursing care services with compassionate, professional care tailored to your needs.">
+  <meta name="twitter:image" content="/assets/images/twitter-card.jpg">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1e3a5f" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Legacy Concierge - Compassionate Care at Home</title>
+
+  <!-- Critical CSS (Design Tokens) -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <!-- Skip Link (Accessibility) -->
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to Main Content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header role="banner">
+    <!-- Will be enhanced by lc-header component or remain as semantic HTML -->
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Page-specific content goes here -->
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <!-- Will be enhanced by lc-footer component or remain as semantic HTML -->
+  </footer>
+
+  <!-- Progressive Enhancement Scripts (deferred) -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <!-- No JavaScript fallback -->
+  <noscript>
+    <style>
+      .requires-js {
+        display: none !important;
+      }
+      .no-js-message {
+        display: block;
+        padding: 1rem;
+        background: #fffbea;
+        border: 1px solid #f59e0b;
+        color: #92400e;
+        text-align: center;
+        margin: 1rem;
+      }
+    </style>
+    <div class="no-js-message">
+      <p><strong>JavaScript is disabled.</strong> Some features may not be available, but the site remains fully functional.</p>
+    </div>
+  </noscript>
+</body>
+</html>

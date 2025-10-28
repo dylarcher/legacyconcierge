@@ -1,0 +1,46 @@
+{
+	"contact": {
+		"address": "Address: 977 Vernon Ave, Venice, CA 90291",
+		"phone": "Phone: 1 (310) 974-4517",
+		"title": "Contact Information"
+	},
+	"description": "Terms of Use for Legacy Concierge website and services.",
+	"disclaimer": {
+		"content": "The materials on Legacy Concierge's website are provided 'as is'. Legacy Concierge makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.",
+		"title": "Disclaimer"
+	},
+	"governing": {
+		"content": "These terms and conditions are governed by and construed in accordance with the laws of California and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.",
+		"title": "Governing Law"
+	},
+	"heading": "Terms of Use",
+	"license": {
+		"grant": "Legacy Concierge grants you permission to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title.",
+		"prohibited": {
+			"commercial": "Use the materials for any commercial purpose or for any public display",
+			"copyright": "Remove any copyright or other proprietary notations from the materials",
+			"intro": "Under this license you may not:",
+			"mirror": "Transfer the materials to another person or mirror the materials on any other server",
+			"modify": "Modify or copy the materials",
+			"reverse": "Attempt to decompile or reverse engineer any software contained on Legacy Concierge's website"
+		},
+		"title": "Use License"
+	},
+	"limitations": {
+		"content": "In no event shall Legacy Concierge or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Legacy Concierge's website, even if Legacy Concierge or a Legacy Concierge authorized representative has been notified orally or in writing of the possibility of such damage.",
+		"title": "Limitations of Liability"
+	},
+	"links": {
+		"content": "Legacy Concierge has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Legacy Concierge of the site. Use of any such linked website is at the user's own risk.",
+		"title": "Links Policy"
+	},
+	"modifications": {
+		"content": "Legacy Concierge may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.",
+		"title": "Modifications"
+	},
+	"overview": {
+		"content": "By accessing and using this website, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by these terms, please do not use this site.",
+		"title": "Overview"
+	},
+	"title": "Terms of Use - Legacy Concierge"
+}

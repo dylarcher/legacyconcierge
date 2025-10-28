@@ -1,0 +1,259 @@
+<!-- Semantic Feature Grid - Works without JavaScript -->
+<section class="feature-grid" aria-labelledby="features-title">
+  <div class="feature-grid__container">
+    <!-- Section Header -->
+    <header class="feature-grid__header">
+      <p class="feature-grid__subtitle">Why Choose Us</p>
+      <h2 id="features-title" class="feature-grid__title">
+        Exceptional Care You Can Trust
+      </h2>
+      <p class="feature-grid__description">
+        We provide comprehensive in-home nursing care with a focus on compassion, professionalism, and personalized attention.
+      </p>
+    </header>
+
+    <!-- Features Grid -->
+    <div class="feature-grid__grid">
+      <!-- Feature Item -->
+      <article class="feature-grid__item">
+        <div class="feature-grid__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#shield-check"></use>
+          </svg>
+        </div>
+        <h3 class="feature-grid__item-title">Licensed Professionals</h3>
+        <p class="feature-grid__item-description">
+          Our team consists of fully licensed and certified healthcare professionals with years of experience.
+        </p>
+      </article>
+
+      <!-- Feature Item -->
+      <article class="feature-grid__item">
+        <div class="feature-grid__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#heart"></use>
+          </svg>
+        </div>
+        <h3 class="feature-grid__item-title">Compassionate Care</h3>
+        <p class="feature-grid__item-description">
+          We treat every patient with dignity, respect, and the compassion they deserve during their recovery.
+        </p>
+      </article>
+
+      <!-- Feature Item -->
+      <article class="feature-grid__item">
+        <div class="feature-grid__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <h3 class="feature-grid__item-title">24/7 Availability</h3>
+        <p class="feature-grid__item-description">
+          Round-the-clock support ensures you're never alone. Our team is available whenever you need us.
+        </p>
+      </article>
+
+      <!-- Feature Item -->
+      <article class="feature-grid__item">
+        <div class="feature-grid__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#user-group"></use>
+          </svg>
+        </div>
+        <h3 class="feature-grid__item-title">Personalized Plans</h3>
+        <p class="feature-grid__item-description">
+          Every care plan is tailored to your unique needs, medical condition, and personal preferences.
+        </p>
+      </article>
+
+      <!-- Feature Item -->
+      <article class="feature-grid__item">
+        <div class="feature-grid__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#home"></use>
+          </svg>
+        </div>
+        <h3 class="feature-grid__item-title">Home Comfort</h3>
+        <p class="feature-grid__item-description">
+          Receive professional medical care in the familiar, comfortable surroundings of your own home.
+        </p>
+      </article>
+
+      <!-- Feature Item -->
+      <article class="feature-grid__item">
+        <div class="feature-grid__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#document-check"></use>
+          </svg>
+        </div>
+        <h3 class="feature-grid__item-title">Insurance Support</h3>
+        <p class="feature-grid__item-description">
+          We work with most major insurance providers and help you navigate the billing process.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Base Styles -->
+<style>
+  .feature-grid {
+    padding: var(--space-16, 4rem) 0;
+    background: var(--bg-base, #ffffff);
+  }
+
+  .feature-grid__container {
+    max-width: var(--container-max-width, 1280px);
+    margin: 0 auto;
+    padding: 0 var(--space-6, 1.5rem);
+  }
+
+  .feature-grid__header {
+    max-width: 768px;
+    margin: 0 auto var(--space-12, 3rem);
+    text-align: center;
+  }
+
+  .feature-grid__subtitle {
+    margin: 0 0 var(--space-3, 0.75rem);
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary-brand, #2563eb);
+  }
+
+  .feature-grid__title {
+    margin: 0 0 var(--space-4, 1rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .feature-grid__description {
+    margin: 0;
+    font-size: var(--font-size-lg, 1.125rem);
+    line-height: 1.6;
+    color: var(--text-secondary, #6b7280);
+  }
+
+  .feature-grid__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-8, 2rem);
+  }
+
+  .feature-grid__item {
+    padding: var(--space-6, 1.5rem);
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-light, #e5e7eb);
+    border-radius: var(--radius-xl, 1rem);
+    transition: all var(--transition-base, 200ms);
+  }
+
+  .feature-grid__item:hover {
+    border-color: var(--border-primary, #2563eb);
+    box-shadow: var(--shadow-lg, 0 10px 15px rgba(0, 0, 0, 0.1));
+    transform: translateY(-4px);
+  }
+
+  .feature-grid__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-bottom: var(--space-4, 1rem);
+    background: linear-gradient(135deg, var(--bg-primary, #2563eb), var(--bg-primary-hover, #1d4ed8));
+    border-radius: var(--radius-xl, 1rem);
+    color: var(--text-on-primary, #ffffff);
+  }
+
+  .feature-grid__item-title {
+    margin: 0 0 var(--space-3, 0.75rem);
+    font-size: var(--font-size-xl, 1.25rem);
+    font-weight: 700;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .feature-grid__item-description {
+    margin: 0;
+    font-size: var(--font-size-base, 1rem);
+    line-height: 1.6;
+    color: var(--text-secondary, #6b7280);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .feature-grid {
+      padding: var(--space-12, 3rem) 0;
+    }
+
+    .feature-grid__header {
+      margin-bottom: var(--space-8, 2rem);
+    }
+
+    .feature-grid__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6, 1.5rem);
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .feature-grid__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Desktop large */
+  @media (min-width: 1280px) {
+    .feature-grid {
+      padding: var(--space-20, 5rem) 0;
+    }
+
+    .feature-grid__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .feature-grid__item {
+      transition: none;
+    }
+
+    .feature-grid__item:hover {
+      transform: none;
+    }
+  }
+
+  /* Dark theme support */
+  @media (prefers-color-scheme: dark) {
+    .feature-grid {
+      background: var(--bg-base-dark, #111827);
+    }
+
+    .feature-grid__title {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .feature-grid__description {
+      color: var(--text-secondary-dark, #9ca3af);
+    }
+
+    .feature-grid__item {
+      background: var(--bg-surface-dark, #1f2937);
+      border-color: var(--border-dark, #374151);
+    }
+
+    .feature-grid__item-title {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .feature-grid__item-description {
+      color: var(--text-secondary-dark, #9ca3af);
+    }
+  }
+</style>

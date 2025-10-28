@@ -1,0 +1,357 @@
+/**
+ * Component-Specific Design Tokens
+ * Extends base design tokens with component overrides
+ */
+
+:root {
+  /* ============================================
+     BUTTON COMPONENT TOKENS
+     ============================================ */
+  --button-padding-x: var(--space-6);
+  --button-padding-y: var(--space-3);
+  --button-padding-x-sm: var(--space-4);
+  --button-padding-y-sm: var(--space-2);
+  --button-padding-x-lg: var(--space-8);
+  --button-padding-y-lg: var(--space-4);
+
+  --button-font-size: var(--font-size-base);
+  --button-font-size-sm: var(--font-size-sm);
+  --button-font-size-lg: var(--font-size-md);
+  --button-font-weight: var(--font-weight-semibold);
+
+  --button-radius: var(--radius-base);
+  --button-transition: all var(--transition-base) var(--transition-ease-in-out);
+
+  --button-primary-bg: var(--brand-primary);
+  --button-primary-text: var(--text-on-primary);
+  --button-primary-hover: var(--interactive-hover);
+  --button-primary-active: var(--interactive-active);
+
+  --button-secondary-bg: var(--brand-secondary);
+  --button-secondary-text: var(--text-on-primary);
+  --button-secondary-hover: var(--color-secondary-700);
+  --button-secondary-active: var(--color-secondary-900);
+
+  --button-outline-border: var(--border-default);
+  --button-outline-text: var(--text-primary);
+  --button-outline-hover-bg: var(--bg-surface-secondary);
+
+  --button-ghost-text: var(--text-link);
+  --button-ghost-hover-bg: var(--bg-surface-secondary);
+
+  /* ============================================
+     CARD COMPONENT TOKENS
+     ============================================ */
+  --card-bg: var(--bg-surface);
+  --card-border: var(--border-light);
+  --card-radius: var(--radius-lg);
+  --card-shadow: var(--shadow-card);
+  --card-shadow-hover: var(--shadow-card-hover);
+  --card-padding: var(--space-6);
+  --card-padding-sm: var(--space-4);
+  --card-padding-lg: var(--space-8);
+
+  --card-header-border: var(--border-light);
+  --card-footer-border: var(--border-light);
+
+  /* ============================================
+     FORM COMPONENT TOKENS
+     ============================================ */
+
+  /* Form field spacing */
+  --form-field-spacing: var(--space-6);
+
+  /* Form labels */
+  --form-label-font-size: var(--font-size-sm);
+  --form-label-font-weight: var(--font-weight-medium);
+  --form-label-color: var(--text-primary);
+
+  /* Form inputs (text, textarea, select) */
+  --form-input-font-size: var(--font-size-base);
+  --form-input-line-height: 1.5;
+  --form-input-color: var(--text-primary);
+  --form-input-bg: var(--bg-surface);
+  --form-input-border-width: 1px;
+  --form-input-border-color: var(--border-default);
+  --form-input-border-hover-color: var(--border-strong);
+  --form-input-border-focus-color: var(--interactive-default);
+  --form-input-radius: var(--radius-base);
+  --form-input-padding-x: var(--space-4);
+  --form-input-padding-y: var(--space-3);
+  --form-input-padding-x-sm: var(--space-3);
+  --form-input-padding-y-sm: var(--space-2);
+  --form-input-padding-x-lg: var(--space-5);
+  --form-input-padding-y-lg: var(--space-4);
+  --form-input-placeholder-color: var(--text-muted);
+  --form-input-disabled-bg: var(--bg-surface-secondary);
+  --form-input-disabled-color: var(--text-muted);
+  --form-input-readonly-bg: var(--bg-surface-secondary);
+  --form-input-focus-shadow: 0 0 0 3px rgba(var(--color-primary-500-rgb, 59, 130, 246), 0.1);
+
+  /* Form validation states */
+  --form-error-color: var(--status-error);
+  --form-error-color-rgb: 220, 38, 38;
+  --form-success-color: var(--status-success);
+  --form-success-color-rgb: 22, 163, 74;
+
+  /* Checkbox and radio */
+  --form-checkbox-size: 20px;
+  --form-checkbox-radius: var(--radius-sm);
+  --form-radio-size: 20px;
+
+  /* Legacy aliases (for compatibility) */
+  --input-bg: var(--form-input-bg);
+  --input-border: var(--form-input-border-color);
+  --input-border-focus: var(--form-input-border-focus-color);
+  --input-text: var(--form-input-color);
+  --input-placeholder: var(--form-input-placeholder-color);
+  --input-disabled-bg: var(--form-input-disabled-bg);
+  --input-disabled-text: var(--form-input-disabled-color);
+  --input-padding-x: var(--form-input-padding-x);
+  --input-padding-y: var(--form-input-padding-y);
+  --input-radius: var(--form-input-radius);
+  --input-font-size: var(--form-input-font-size);
+  --input-error-border: var(--form-error-color);
+  --input-error-text: var(--form-error-color);
+  --input-success-border: var(--form-success-color);
+  --input-success-text: var(--form-success-color);
+  --label-font-size: var(--form-label-font-size);
+  --label-font-weight: var(--form-label-font-weight);
+  --label-text: var(--form-label-color);
+  --label-margin-bottom: var(--space-2);
+  --input-min-height: 44px; /* WCAG AAA touch target */
+
+  /* ============================================
+     NAVIGATION COMPONENT TOKENS
+     ============================================ */
+  --nav-bg: var(--bg-surface);
+  --nav-text: var(--text-primary);
+  --nav-link-hover: var(--text-link-hover);
+  --nav-link-active: var(--interactive-active);
+  --nav-border: var(--border-light);
+
+  --nav-height: 72px;
+  --nav-height-mobile: 64px;
+  --nav-padding-x: var(--space-6);
+  --nav-padding-y: var(--space-4);
+  --nav-shadow: var(--shadow-sm);
+
+  --nav-mobile-bg: var(--bg-surface);
+  --nav-mobile-overlay: var(--bg-overlay);
+
+  /* ============================================
+     HEADER COMPONENT TOKENS
+     ============================================ */
+  --header-bg: var(--nav-bg);
+  --header-text: var(--nav-text);
+  --header-height: var(--nav-height);
+  --header-height-mobile: var(--nav-height-mobile);
+  --header-shadow: var(--nav-shadow);
+  --header-z-index: var(--z-sticky);
+
+  /* ============================================
+     FOOTER COMPONENT TOKENS
+     ============================================ */
+  --footer-bg: var(--brand-primary);
+  --footer-text: var(--text-on-primary);
+  --footer-link: rgba(255, 255, 255, 0.8);
+  --footer-link-hover: var(--color-white);
+  --footer-border: rgba(255, 255, 255, 0.2);
+  --footer-padding-y: var(--space-16);
+
+  /* ============================================
+     HERO COMPONENT TOKENS
+     ============================================ */
+  --hero-bg: var(--bg-surface);
+  --hero-text: var(--text-primary);
+  --hero-overlay: rgba(0, 0, 0, 0.4);
+  --hero-min-height: 60vh;
+  --hero-min-height-mobile: 50vh;
+  --hero-padding-y: var(--space-24);
+  --hero-padding-y-mobile: var(--space-16);
+
+  /* ============================================
+     MODAL/DIALOG COMPONENT TOKENS
+     ============================================ */
+  --modal-bg: var(--bg-surface);
+  --modal-backdrop: var(--bg-overlay);
+  --modal-shadow: var(--shadow-modal);
+  --modal-radius: var(--radius-xl);
+  --modal-padding: var(--space-8);
+  --modal-max-width: 600px;
+  --modal-z-index: var(--z-modal);
+  --modal-backdrop-z-index: var(--z-modal-backdrop);
+
+  /* ============================================
+     BREADCRUMB COMPONENT TOKENS
+     ============================================ */
+  --breadcrumb-text: var(--text-secondary);
+  --breadcrumb-link: var(--text-link);
+  --breadcrumb-separator: var(--text-muted);
+  --breadcrumb-font-size: var(--font-size-sm);
+
+  /* ============================================
+     BADGE/TAG COMPONENT TOKENS
+     ============================================ */
+  --badge-padding-x: var(--space-3);
+  --badge-padding-y: var(--space-1);
+  --badge-font-size: var(--font-size-xs);
+  --badge-font-weight: var(--font-weight-semibold);
+  --badge-radius: var(--radius-full);
+
+  --badge-primary-bg: var(--color-primary-500);
+  --badge-primary-text: var(--text-on-primary);
+  --badge-secondary-bg: var(--color-secondary-500);
+  --badge-secondary-text: var(--text-on-primary);
+  --badge-success-bg: var(--status-success-bg);
+  --badge-success-text: var(--color-success-900);
+
+  /* ============================================
+     ALERT COMPONENT TOKENS
+     ============================================ */
+  --alert-padding: var(--space-4);
+  --alert-radius: var(--radius-lg);
+  --alert-border-width: 1px;
+
+  --alert-info-bg: var(--status-info-bg);
+  --alert-info-border: var(--status-info);
+  --alert-info-text: var(--color-info-900);
+
+  --alert-success-bg: var(--status-success-bg);
+  --alert-success-border: var(--status-success);
+  --alert-success-text: var(--color-success-900);
+
+  --alert-warning-bg: var(--status-warning-bg);
+  --alert-warning-border: var(--status-warning);
+  --alert-warning-text: var(--color-warning-900);
+
+  --alert-error-bg: var(--status-error-bg);
+  --alert-error-border: var(--status-error);
+  --alert-error-text: var(--color-error-900);
+
+  /* ============================================
+     SLIDER/CAROUSEL COMPONENT TOKENS
+     ============================================ */
+  --slider-arrow-size: 48px;
+  --slider-arrow-bg: rgba(255, 255, 255, 0.9);
+  --slider-arrow-hover-bg: var(--color-white);
+  --slider-arrow-color: var(--text-primary);
+  --slider-dot-size: 12px;
+  --slider-dot-color: var(--color-neutral-400);
+  --slider-dot-active-color: var(--interactive-default);
+
+  /* ============================================
+     TOOLTIP COMPONENT TOKENS
+     ============================================ */
+  --tooltip-bg: var(--color-neutral-800);
+  --tooltip-text: var(--color-white);
+  --tooltip-padding-x: var(--space-3);
+  --tooltip-padding-y: var(--space-2);
+  --tooltip-font-size: var(--font-size-sm);
+  --tooltip-radius: var(--radius-md);
+  --tooltip-shadow: var(--shadow-lg);
+  --tooltip-z-index: var(--z-tooltip);
+
+  /* ============================================
+     DROPDOWN COMPONENT TOKENS
+     ============================================ */
+  --dropdown-bg: var(--bg-surface);
+  --dropdown-border: var(--border-default);
+  --dropdown-shadow: var(--shadow-dropdown);
+  --dropdown-radius: var(--radius-lg);
+  --dropdown-padding-y: var(--space-2);
+  --dropdown-z-index: var(--z-dropdown);
+
+  --dropdown-item-padding-x: var(--space-4);
+  --dropdown-item-padding-y: var(--space-3);
+  --dropdown-item-hover-bg: var(--bg-surface-secondary);
+  --dropdown-item-active-bg: var(--bg-surface-tertiary);
+
+  /* ============================================
+     TABLE COMPONENT TOKENS
+     ============================================ */
+  --table-bg: var(--bg-surface);
+  --table-border: var(--border-light);
+  --table-header-bg: var(--bg-surface-secondary);
+  --table-header-text: var(--text-secondary);
+  --table-row-hover-bg: var(--bg-surface-secondary);
+  --table-stripe-bg: var(--bg-surface-secondary);
+
+  --table-cell-padding-x: var(--space-4);
+  --table-cell-padding-y: var(--space-3);
+
+  /* ============================================
+     ACCORDION COMPONENT TOKENS
+     ============================================ */
+  --accordion-border: var(--border-light);
+  --accordion-header-bg: var(--bg-surface);
+  --accordion-header-hover-bg: var(--bg-surface-secondary);
+  --accordion-header-padding: var(--space-4);
+  --accordion-content-padding: var(--space-4);
+  --accordion-icon-transition: transform var(--transition-base) var(--transition-ease-in-out);
+
+  /* ============================================
+     TABS COMPONENT TOKENS
+     ============================================ */
+  --tab-text: var(--text-secondary);
+  --tab-active-text: var(--text-link);
+  --tab-border: var(--border-light);
+  --tab-active-border: var(--interactive-default);
+  --tab-hover-bg: var(--bg-surface-secondary);
+  --tab-padding-x: var(--space-4);
+  --tab-padding-y: var(--space-3);
+  --tab-border-width: 2px;
+
+  /* ============================================
+     PROGRESS COMPONENT TOKENS
+     ============================================ */
+  --progress-bg: var(--bg-surface-secondary);
+  --progress-fill: var(--interactive-default);
+  --progress-height: 8px;
+  --progress-radius: var(--radius-full);
+
+  /* ============================================
+     SKELETON COMPONENT TOKENS
+     ============================================ */
+  --skeleton-bg: var(--bg-surface-secondary);
+  --skeleton-shimmer: var(--bg-surface-tertiary);
+  --skeleton-radius: var(--radius-base);
+
+  /* ============================================
+     DIVIDER COMPONENT TOKENS
+     ============================================ */
+  --divider-color: var(--border-light);
+  --divider-thickness: 1px;
+  --divider-spacing: var(--space-6);
+}
+
+/* ============================================
+   CONTAINER QUERY COMPONENT OVERRIDES
+   ============================================ */
+
+/* Card responsive overrides */
+@container (min-width: 480px) {
+  :root {
+    --card-padding: var(--space-8);
+  }
+}
+
+@container (min-width: 768px) {
+  :root {
+    --card-padding: var(--space-10);
+  }
+}
+
+/* Hero responsive overrides */
+@media (min-width: 768px) {
+  :root {
+    --hero-min-height: 70vh;
+    --hero-padding-y: var(--space-32);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --hero-min-height: 80vh;
+  }
+}

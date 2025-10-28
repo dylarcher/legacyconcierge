@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="privacy">
+  <meta name="description" content="Legacy Concierge Privacy Policy - How we collect, use, and protect your personal information.">
+
+  <title>Privacy Policy - Legacy Concierge</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* Legal Page Styles */
+    .legal-page {
+      padding: var(--space-16, 4rem) 0;
+      background: var(--bg-base, #ffffff);
+    }
+
+    .legal-page__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 var(--space-6, 1.5rem);
+    }
+
+    .legal-page__header {
+      margin-bottom: var(--space-12, 3rem);
+      padding-bottom: var(--space-8, 2rem);
+      border-bottom: 2px solid var(--border-light, #e5e7eb);
+    }
+
+    .legal-page__title {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .legal-page__meta {
+      display: flex;
+      gap: var(--space-6, 1.5rem);
+      font-size: var(--font-size-sm, 0.875rem);
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .legal-page__content h2 {
+      margin: var(--space-10, 2.5rem) 0 var(--space-4, 1rem);
+      font-size: var(--font-size-2xl, 1.5rem);
+      font-weight: 700;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .legal-page__content h3 {
+      margin: var(--space-6, 1.5rem) 0 var(--space-3, 0.75rem);
+      font-size: var(--font-size-xl, 1.25rem);
+      font-weight: 600;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .legal-page__content p {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: var(--font-size-base, 1rem);
+      line-height: 1.7;
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .legal-page__content ul,
+    .legal-page__content ol {
+      margin: 0 0 var(--space-4, 1rem);
+      padding-left: var(--space-8, 2rem);
+    }
+
+    .legal-page__content li {
+      margin-bottom: var(--space-2, 0.5rem);
+      line-height: 1.7;
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .legal-page__content a {
+      color: var(--text-link, #2563eb);
+      text-decoration: underline;
+    }
+
+    .legal-page__toc {
+      padding: var(--space-6, 1.5rem);
+      background: var(--bg-subtle, #f9fafb);
+      border-radius: var(--radius-lg, 0.5rem);
+      margin-bottom: var(--space-8, 2rem);
+    }
+
+    .legal-page__toc h2 {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: var(--font-size-lg, 1.125rem);
+      font-weight: 700;
+    }
+
+    .legal-page__toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .legal-page__toc li {
+      margin-bottom: var(--space-2, 0.5rem);
+    }
+
+    .legal-page__toc a {
+      color: var(--text-link, #2563eb);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .legal-page__toc a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .legal-page {
+        padding: var(--space-12, 3rem) 0;
+      }
+
+      .legal-page__meta {
+        flex-direction: column;
+        gap: var(--space-2, 0.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <article class="legal-page">
+      <div class="legal-page__container">
+        <!-- Page Header -->
+        <header class="legal-page__header">
+          <h1 class="legal-page__title">Privacy Policy</h1>
+          <div class="legal-page__meta">
+            <span><strong>Effective Date:</strong> January 1, 2024</span>
+            <span><strong>Last Updated:</strong> January 1, 2024</span>
+          </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav class="legal-page__toc" aria-labelledby="toc-title">
+          <h2 id="toc-title">Table of Contents</h2>
+          <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#information-we-collect">2. Information We Collect</a></li>
+            <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+            <li><a href="#information-sharing">4. Information Sharing</a></li>
+            <li><a href="#data-security">5. Data Security</a></li>
+            <li><a href="#your-rights">6. Your Rights</a></li>
+            <li><a href="#hipaa-compliance">7. HIPAA Compliance</a></li>
+            <li><a href="#contact-us">8. Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <!-- Content -->
+        <div class="legal-page__content">
+          <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>
+              Legacy Concierge ("we," "our," or "us") is committed to protecting your privacy and the confidentiality of your personal and health information. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you use our services or visit our website.
+            </p>
+            <p>
+              As a healthcare provider, we are subject to the Health Insurance Portability and Accountability Act (HIPAA) and comply with all applicable privacy regulations.
+            </p>
+          </section>
+
+          <section id="information-we-collect">
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Personal Information</h3>
+            <p>We may collect the following types of personal information:</p>
+            <ul>
+              <li>Name, address, phone number, and email address</li>
+              <li>Date of birth and Social Security number (for billing purposes)</li>
+              <li>Emergency contact information</li>
+              <li>Insurance information</li>
+            </ul>
+
+            <h3>2.2 Protected Health Information (PHI)</h3>
+            <p>As part of providing healthcare services, we collect and maintain:</p>
+            <ul>
+              <li>Medical history and current health conditions</li>
+              <li>Medication information</li>
+              <li>Treatment plans and care notes</li>
+              <li>Laboratory and diagnostic test results</li>
+              <li>Physician information</li>
+            </ul>
+
+            <h3>2.3 Website Usage Information</h3>
+            <p>When you visit our website, we automatically collect:</p>
+            <ul>
+              <li>IP address and browser information</li>
+              <li>Pages visited and time spent on our site</li>
+              <li>Referring website</li>
+              <li>Device information</li>
+            </ul>
+          </section>
+
+          <section id="how-we-use">
+            <h2>3. How We Use Your Information</h2>
+            <p>We use your information for the following purposes:</p>
+            <ul>
+              <li><strong>Treatment:</strong> To provide, coordinate, and manage your healthcare services</li>
+              <li><strong>Payment:</strong> To bill for services and process insurance claims</li>
+              <li><strong>Healthcare Operations:</strong> To improve our services, train staff, and ensure quality care</li>
+              <li><strong>Communication:</strong> To contact you about appointments, services, and important updates</li>
+              <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
+            </ul>
+          </section>
+
+          <section id="information-sharing">
+            <h2>4. Information Sharing</h2>
+            <p>We do not sell your personal or health information. We may share your information only in the following circumstances:</p>
+            <ul>
+              <li><strong>With Your Consent:</strong> When you explicitly authorize us to share information</li>
+              <li><strong>Healthcare Providers:</strong> With your physicians and other healthcare providers involved in your care</li>
+              <li><strong>Insurance Companies:</strong> For billing and claims processing</li>
+              <li><strong>Legal Requirements:</strong> When required by law, court order, or regulatory authority</li>
+              <li><strong>Business Associates:</strong> With third-party service providers who assist us (all bound by HIPAA agreements)</li>
+            </ul>
+          </section>
+
+          <section id="data-security">
+            <h2>5. Data Security</h2>
+            <p>We implement comprehensive security measures to protect your information:</p>
+            <ul>
+              <li>Encryption of data in transit and at rest</li>
+              <li>Secure, password-protected systems</li>
+              <li>Regular security audits and assessments</li>
+              <li>Staff training on privacy and security protocols</li>
+              <li>Physical security measures at our facilities</li>
+              <li>Limited access to information on a need-to-know basis</li>
+            </ul>
+          </section>
+
+          <section id="your-rights">
+            <h2>6. Your Rights</h2>
+            <p>You have the following rights regarding your information:</p>
+            <ul>
+              <li><strong>Right to Access:</strong> Request a copy of your health records</li>
+              <li><strong>Right to Amend:</strong> Request corrections to your information</li>
+              <li><strong>Right to an Accounting:</strong> Receive a list of disclosures of your information</li>
+              <li><strong>Right to Request Restrictions:</strong> Ask us to limit how we use or share your information</li>
+              <li><strong>Right to Confidential Communications:</strong> Request we contact you in a specific way</li>
+              <li><strong>Right to a Paper Copy:</strong> Receive a paper copy of this Privacy Policy</li>
+            </ul>
+            <p>To exercise these rights, please contact our Privacy Officer using the information below.</p>
+          </section>
+
+          <section id="hipaa-compliance">
+            <h2>7. HIPAA Compliance</h2>
+            <p>
+              As a covered entity under HIPAA, we comply with all requirements of the Privacy Rule, Security Rule, and Breach Notification Rule. We have implemented policies and procedures to:
+            </p>
+            <ul>
+              <li>Protect the privacy of your protected health information (PHI)</li>
+              <li>Ensure the confidentiality, integrity, and availability of electronic PHI</li>
+              <li>Notify you in the event of a breach of your unsecured PHI</li>
+            </ul>
+            <p>
+              For more information about HIPAA and your rights, visit the U.S. Department of Health and Human Services website at <a href="https://www.hhs.gov/hipaa" target="_blank" rel="noopener">www.hhs.gov/hipaa</a>.
+            </p>
+          </section>
+
+          <section id="contact-us">
+            <h2>8. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact:</p>
+            <p>
+              <strong>Legacy Concierge Privacy Officer</strong><br>
+              123 Care Street<br>
+              Miami, FL 33101<br>
+              Phone: +1 (305) 555-0100<br>
+              Email: <a href="mailto:privacy@legacyconcierge.com">privacy@legacyconcierge.com</a>
+            </p>
+            <p>
+              <strong>Filing a Complaint:</strong> If you believe your privacy rights have been violated, you may file a complaint with us or with the U.S. Department of Health and Human Services Office for Civil Rights. You will not be retaliated against for filing a complaint.
+            </p>
+          </section>
+
+          <section>
+            <h2>9. Changes to This Policy</h2>
+            <p>
+              We reserve the right to modify this Privacy Policy at any time. Changes will be posted on our website with an updated "Last Updated" date. We will notify you of material changes via email or prominent notice on our website.
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none !important; }
+    </style>
+  </noscript>
+</body>
+</html>

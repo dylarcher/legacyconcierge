@@ -1,0 +1,461 @@
+<!-- Contact Form Section - Works without JavaScript -->
+<section class="contact-form-section" aria-labelledby="contact-form-title">
+  <div class="contact-form-section__container">
+    <!-- Section Header -->
+    <header class="contact-form-section__header">
+      <h2 id="contact-form-title" class="contact-form-section__title" data-i18n="contact.form.title">
+        Get in Touch
+      </h2>
+      <p class="contact-form-section__description" data-i18n="contact.form.description">
+        Fill out the form below and we'll get back to you within 24 hours. For urgent inquiries, please call us directly.
+      </p>
+    </header>
+
+    <!-- Contact Form -->
+    <form class="contact-form" action="/api/contact" method="POST" novalidate>
+      <div class="contact-form__grid">
+        <!-- First Name -->
+        <div class="contact-form__field">
+          <label for="contact-first-name" class="contact-form__label">
+            <span data-i18n="contact.form.fields.firstName.label">First Name</span>
+            <span class="contact-form__required" aria-label="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="contact-first-name"
+            name="firstName"
+            class="contact-form__input"
+            placeholder="John"
+            data-i18n-attr="placeholder:contact.form.fields.firstName.placeholder"
+            required
+            aria-required="true"
+            autocomplete="given-name"
+          >
+          <span class="contact-form__error" role="alert"></span>
+        </div>
+
+        <!-- Last Name -->
+        <div class="contact-form__field">
+          <label for="contact-last-name" class="contact-form__label">
+            <span data-i18n="contact.form.fields.lastName.label">Last Name</span>
+            <span class="contact-form__required" aria-label="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="contact-last-name"
+            name="lastName"
+            class="contact-form__input"
+            placeholder="Doe"
+            data-i18n-attr="placeholder:contact.form.fields.lastName.placeholder"
+            required
+            aria-required="true"
+            autocomplete="family-name"
+          >
+          <span class="contact-form__error" role="alert"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-form__field">
+          <label for="contact-email" class="contact-form__label">
+            <span data-i18n="contact.form.fields.email.label">Email Address</span>
+            <span class="contact-form__required" aria-label="required">*</span>
+          </label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            class="contact-form__input"
+            placeholder="john.doe@example.com"
+            data-i18n-attr="placeholder:contact.form.fields.email.placeholder"
+            required
+            aria-required="true"
+            autocomplete="email"
+          >
+          <span class="contact-form__error" role="alert"></span>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-form__field">
+          <label for="contact-phone" class="contact-form__label">
+            <span data-i18n="contact.form.fields.phone.label">Phone Number</span>
+            <span class="contact-form__required" aria-label="required">*</span>
+          </label>
+          <input
+            type="tel"
+            id="contact-phone"
+            name="phone"
+            class="contact-form__input"
+            placeholder="(305) 555-0100"
+            data-i18n-attr="placeholder:contact.form.fields.phone.placeholder"
+            required
+            aria-required="true"
+            autocomplete="tel"
+          >
+          <span class="contact-form__error" role="alert"></span>
+        </div>
+
+        <!-- Service Interest -->
+        <div class="contact-form__field contact-form__field--full">
+          <label for="contact-service" class="contact-form__label">
+            <span data-i18n="contact.form.fields.service.label">Service Interest</span>
+          </label>
+          <select
+            id="contact-service"
+            name="service"
+            class="contact-form__select"
+          >
+            <option value="" data-i18n="contact.form.fields.service.options[0]">Select a service</option>
+            <option value="post-surgical" data-i18n="contact.form.fields.service.options[1]">Post-Surgical Recovery</option>
+            <option value="chronic-illness" data-i18n="contact.form.fields.service.options[2]">Chronic Illness Support</option>
+            <option value="elderly-care" data-i18n="contact.form.fields.service.options[3]">Elderly Care</option>
+            <option value="palliative-care" data-i18n="contact.form.fields.service.options[4]">Palliative Care</option>
+            <option value="respite-care" data-i18n="contact.form.fields.service.options[5]">Respite Care</option>
+            <option value="other" data-i18n="contact.form.fields.service.options[6]">Other</option>
+          </select>
+          <span class="contact-form__error" role="alert"></span>
+        </div>
+
+        <!-- Message -->
+        <div class="contact-form__field contact-form__field--full">
+          <label for="contact-message" class="contact-form__label">
+            <span data-i18n="contact.form.fields.message.label">Message</span>
+            <span class="contact-form__required" aria-label="required">*</span>
+          </label>
+          <textarea
+            id="contact-message"
+            name="message"
+            class="contact-form__textarea"
+            rows="5"
+            placeholder="Tell us about your care needs..."
+            data-i18n-attr="placeholder:contact.form.fields.message.placeholder"
+            required
+            aria-required="true"
+          ></textarea>
+          <span class="contact-form__error" role="alert"></span>
+        </div>
+
+        <!-- Preferred Contact Method -->
+        <div class="contact-form__field contact-form__field--full">
+          <fieldset class="contact-form__fieldset">
+            <legend class="contact-form__label" data-i18n="contact.form.fields.preferredContact.label">
+              Preferred Contact Method
+            </legend>
+            <div class="contact-form__radio-group">
+              <label class="contact-form__radio-label">
+                <input
+                  type="radio"
+                  name="preferredContact"
+                  value="email"
+                  class="contact-form__radio"
+                  checked
+                >
+                <span data-i18n="contact.form.fields.preferredContact.options[0]">Email</span>
+              </label>
+              <label class="contact-form__radio-label">
+                <input
+                  type="radio"
+                  name="preferredContact"
+                  value="phone"
+                  class="contact-form__radio"
+                >
+                <span data-i18n="contact.form.fields.preferredContact.options[1]">Phone</span>
+              </label>
+              <label class="contact-form__radio-label">
+                <input
+                  type="radio"
+                  name="preferredContact"
+                  value="either"
+                  class="contact-form__radio"
+                >
+                <span data-i18n="contact.form.fields.preferredContact.options[2]">Either</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="contact-form__field contact-form__field--full">
+          <button type="submit" class="contact-form__submit">
+            <span data-i18n="contact.form.submit">Send Message</span>
+            <svg width="20" height="20" aria-hidden="true">
+              <use href="/assets/icons/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <p class="contact-form__note" data-i18n="contact.form.note">
+            By submitting this form, you agree to our <a href="/privacy">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Success Message -->
+      <div class="contact-form__success" role="alert" hidden>
+        <svg width="24" height="24" aria-hidden="true">
+          <use href="/assets/icons/sprite.svg#check-circle"></use>
+        </svg>
+        <p data-i18n="contact.form.success">Thank you! We'll be in touch within 24 hours.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Base Styles -->
+<style>
+  .contact-form-section {
+    padding: var(--space-16, 4rem) 0;
+    background: var(--bg-base, #ffffff);
+  }
+
+  .contact-form-section__container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--space-6, 1.5rem);
+  }
+
+  .contact-form-section__header {
+    margin-bottom: var(--space-10, 2.5rem);
+    text-align: center;
+  }
+
+  .contact-form-section__title {
+    margin: 0 0 var(--space-4, 1rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .contact-form-section__description {
+    margin: 0;
+    font-size: var(--font-size-lg, 1.125rem);
+    line-height: 1.6;
+    color: var(--text-secondary, #6b7280);
+  }
+
+  .contact-form {
+    padding: var(--space-8, 2rem);
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-light, #e5e7eb);
+    border-radius: var(--radius-xl, 1rem);
+    box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.1));
+  }
+
+  .contact-form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6, 1.5rem);
+  }
+
+  .contact-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2, 0.5rem);
+  }
+
+  .contact-form__field--full {
+    grid-column: 1 / -1;
+  }
+
+  .contact-form__label {
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: 600;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .contact-form__required {
+    color: var(--text-error, #dc2626);
+  }
+
+  .contact-form__input,
+  .contact-form__select,
+  .contact-form__textarea {
+    padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+    font-size: var(--font-size-base, 1rem);
+    font-family: var(--font-family-sans);
+    color: var(--text-primary, #1f2937);
+    background: var(--bg-base, #ffffff);
+    border: 2px solid var(--border-base, #d1d5db);
+    border-radius: var(--radius-lg, 0.5rem);
+    transition: all var(--transition-fast, 150ms);
+  }
+
+  .contact-form__input:focus,
+  .contact-form__select:focus,
+  .contact-form__textarea:focus {
+    outline: none;
+    border-color: var(--border-primary, #2563eb);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .contact-form__input:invalid:not(:placeholder-shown),
+  .contact-form__select:invalid:not(:placeholder-shown),
+  .contact-form__textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--border-error, #dc2626);
+  }
+
+  .contact-form__error {
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--text-error, #dc2626);
+    min-height: 1.25rem;
+  }
+
+  .contact-form__fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-form__radio-group {
+    display: flex;
+    gap: var(--space-4, 1rem);
+    margin-top: var(--space-2, 0.5rem);
+  }
+
+  .contact-form__radio-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+    font-size: var(--font-size-base, 1rem);
+    color: var(--text-primary, #1f2937);
+    cursor: pointer;
+  }
+
+  .contact-form__radio {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .contact-form__submit {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2, 0.5rem);
+    padding: var(--space-4, 1rem) var(--space-6, 1.5rem);
+    font-size: var(--font-size-lg, 1.125rem);
+    font-weight: 600;
+    color: var(--text-on-primary, #ffffff);
+    background: var(--bg-primary, #2563eb);
+    border: none;
+    border-radius: var(--radius-lg, 0.5rem);
+    cursor: pointer;
+    transition: all var(--transition-fast, 150ms);
+  }
+
+  .contact-form__submit:hover,
+  .contact-form__submit:focus {
+    background: var(--bg-primary-hover, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg, 0 10px 15px rgba(0, 0, 0, 0.1));
+  }
+
+  .contact-form__submit:active {
+    transform: translateY(0);
+  }
+
+  .contact-form__note {
+    margin: var(--space-4, 1rem) 0 0;
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--text-secondary, #6b7280);
+    text-align: center;
+  }
+
+  .contact-form__note a {
+    color: var(--text-link, #2563eb);
+    text-decoration: underline;
+  }
+
+  .contact-form__success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3, 0.75rem);
+    padding: var(--space-6, 1.5rem);
+    margin-top: var(--space-6, 1.5rem);
+    background: var(--bg-success, #d1fae5);
+    border: 1px solid var(--border-success, #10b981);
+    border-radius: var(--radius-lg, 0.5rem);
+    color: var(--text-success-dark, #065f46);
+    font-weight: 600;
+  }
+
+  .contact-form__success svg {
+    color: var(--text-success, #10b981);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .contact-form-section {
+      padding: var(--space-12, 3rem) 0;
+    }
+
+    .contact-form {
+      padding: var(--space-6, 1.5rem);
+    }
+
+    .contact-form__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form__radio-group {
+      flex-direction: column;
+    }
+  }
+
+  /* Desktop large */
+  @media (min-width: 1280px) {
+    .contact-form-section {
+      padding: var(--space-20, 5rem) 0;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .contact-form__input,
+    .contact-form__select,
+    .contact-form__textarea,
+    .contact-form__submit {
+      transition: none;
+    }
+
+    .contact-form__submit:hover {
+      transform: none;
+    }
+  }
+
+  /* Dark theme support */
+  @media (prefers-color-scheme: dark) {
+    .contact-form-section {
+      background: var(--bg-base-dark, #111827);
+    }
+
+    .contact-form-section__title {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .contact-form-section__description {
+      color: var(--text-secondary-dark, #9ca3af);
+    }
+
+    .contact-form {
+      background: var(--bg-surface-dark, #1f2937);
+      border-color: var(--border-dark, #374151);
+    }
+
+    .contact-form__label {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .contact-form__input,
+    .contact-form__select,
+    .contact-form__textarea {
+      background: var(--bg-base-dark, #111827);
+      border-color: var(--border-dark, #374151);
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .contact-form__radio-label {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+  }
+</style>

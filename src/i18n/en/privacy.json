@@ -1,0 +1,50 @@
+{
+	"collection": {
+		"aggregateData": {
+			"content": "We gather aggregated, non-identifying traffic data. We may use and share aggregate, de-identified, and anonymous data without restriction. Health information is protected under Legacy Concierge's separate Privacy Practices Notice, which takes precedence in conflicts.",
+			"title": "Aggregate Data"
+		},
+		"personalData": {
+			"content": "We collect personal information when users register, create accounts, or make purchases. Examples include names, phone numbers, addresses, emails, and payment information.",
+			"title": "Personal Data"
+		},
+		"title": "Information Collection"
+	},
+	"contact": {
+		"content": "Users can update information or ask questions by visiting our contact page at https://legacyconcierge.com/contact or calling (310) 974-4517.",
+		"title": "Contact Information"
+	},
+	"controls": {
+		"content": "Users can view, update, or deactivate personal information through account settings where available. However, archived copies may persist due to third-party systems.",
+		"title": "User Controls"
+	},
+	"description": "Privacy Policy for Legacy Concierge - How we collect, use, and protect your personal information.",
+	"effectiveDate": "Effective Date: June 5, 2025",
+	"heading": "Privacy Policy",
+	"restrictions": {
+		"children": "Children: Interactive features aren't designed for users under 17. Contact us if children under 13 provide data without parental consent.",
+		"external": "External Links: We are not responsible for the privacy practices of linked third-party websites.",
+		"forums": "Public Forums: Information shared in message boards or chat rooms becomes public and isn't protected by this policy.",
+		"social": "Social Media: Third-party platforms operate under their own privacy policies.",
+		"title": "Notable Restrictions"
+	},
+	"scope": {
+		"content": "This policy governs information collected through Legacy Concierge websites only. By your use of the Website, You agree to the terms of this Privacy Policy. Third-party sites and social media platforms operate under separate policies.",
+		"title": "Scope"
+	},
+	"security": {
+		"content": "We employ security measures to protect your information. However, data transmission over the Internet cannot be guaranteed to be completely secure. Users assume transmission risks.",
+		"title": "Security & Limitations"
+	},
+	"title": "Privacy Policy - Legacy Concierge",
+	"usage": {
+		"intro": "Legacy Concierge uses personal data to provide services and may share it with:",
+		"items": {
+			"business": "Successor organizations in business transfers or acquisitions",
+			"combined": "Third-party service providers (email vendors, payment processors) and affiliate/subsidiary entities",
+			"legal": "Legal authorities when required by law or to protect our rights",
+			"thirdParty": "Business partners who help deliver our services"
+		},
+		"title": "Data Usage & Sharing"
+	}
+}

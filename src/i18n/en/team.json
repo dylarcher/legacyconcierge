@@ -1,0 +1,46 @@
+{
+	"members": [
+		{
+			"bio": "Jason is an accomplished healthcare leader with over a decade of experience. He has a proven track record of building mission-driven businesses that prioritize excellence.",
+			"image": "/shared/assets/media/photos/team/team-josh.jpg",
+			"name": "Jason Kidushim",
+			"title": "FOUNDER & CEO"
+		},
+		{
+			"bio": "Zehra is a seasoned healthcare professional with a Master's degree in nursing and extensive experience across medical-surgical, orthopedic, and pediatric nursing.",
+			"image": "/shared/assets/media/photos/team/team-zehra.jpg",
+			"name": "Zehra Dhanani",
+			"title": "VICE PRESIDENT OF OPERATIONS"
+		},
+		{
+			"bio": "David brings a wealth of expertise from an extensive background in finance, where he has successfully managed large-scale portfolios.",
+			"image": "/shared/assets/media/photos/team/team-dave.jpg",
+			"name": "David Kidushim",
+			"title": "VICE PRESIDENT OF FINANCE"
+		},
+		{
+			"bio": "Sarah brings over four years of experience in care coordination and three years in risk management within the homecare industry.",
+			"image": "/shared/assets/media/photos/team/team-sarah.jpg",
+			"name": "Sarah Brodbeck",
+			"title": "DIRECTOR OF CARE COORDINATION"
+		},
+		{
+			"bio": "With a strong foundation in psychology and extensive experience in home care operations, Elie brings a strategic and empathetic approach to care coordination.",
+			"image": "/shared/assets/media/photos/team/team-elie.jpg",
+			"name": "Elie Castillo",
+			"title": "MANAGER OF CARE COORDINATION"
+		},
+		{
+			"bio": "Cassie holds a Master's degree in Management & Leadership and a Bachelor's degree in Nutrition and Hospitality, bringing five years of home care industry experience.",
+			"image": "/shared/assets/media/photos/team/team-cassie.jpg",
+			"name": "Cassie Leger",
+			"title": "MANAGER OF CARE COORDINATION"
+		}
+	],
+	"subtitle": "DELIVERING EXCEPTIONAL, PERSONALIZED CARE TO EVERY CORNER OF THE REGION.",
+	"team": {
+		"subtitle": "DELIVERING EXCEPTIONAL, PERSONALIZED CARE TO EVERY CORNER OF THE REGION. AS WE RAPIDLY EXPAND, OUR DEDICATED TEAM PROVIDES COMPASSIONATE NURSING SERVICES WHEREVER YOU ARE IN SOUTHERN CALIFORNIA.",
+		"title": "Team"
+	},
+	"title": "Our Team"
+}

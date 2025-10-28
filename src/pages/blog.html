@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="blog">
+  <meta name="description" content="Health and wellness insights from Legacy Concierge - Expert advice on caregiving, senior health, and home care.">
+
+  <title>Blog - Health & Wellness Insights - Legacy Concierge</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* Blog Hero */
+    .blog-hero {
+      padding: var(--space-16, 4rem) 0;
+      background: linear-gradient(135deg, var(--bg-primary, #2563eb), var(--bg-primary-hover, #1d4ed8));
+      color: var(--text-on-primary, #ffffff);
+      text-align: center;
+    }
+
+    .blog-hero__container {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: 0 var(--space-6, 1.5rem);
+    }
+
+    .blog-hero__title {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .blog-hero__description {
+      margin: 0;
+      font-size: var(--font-size-lg, 1.125rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Blog Filters */
+    .blog-filters {
+      padding: var(--space-8, 2rem) 0;
+      background: var(--bg-base, #ffffff);
+      border-bottom: 1px solid var(--border-light, #e5e7eb);
+    }
+
+    .blog-filters__container {
+      max-width: var(--container-max-width, 1280px);
+      margin: 0 auto;
+      padding: 0 var(--space-6, 1.5rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4, 1rem);
+      justify-content: center;
+    }
+
+    .blog-filter-btn {
+      padding: var(--space-2, 0.5rem) var(--space-4, 1rem);
+      font-size: var(--font-size-sm, 0.875rem);
+      font-weight: 600;
+      color: var(--text-secondary, #6b7280);
+      background: var(--bg-base, #ffffff);
+      border: 2px solid var(--border-base, #d1d5db);
+      border-radius: var(--radius-full, 9999px);
+      cursor: pointer;
+      transition: all var(--transition-fast, 150ms);
+    }
+
+    .blog-filter-btn:hover,
+    .blog-filter-btn.active {
+      background: var(--bg-primary, #2563eb);
+      color: var(--text-on-primary, #ffffff);
+      border-color: var(--bg-primary, #2563eb);
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero {
+        padding: var(--space-12, 3rem) 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <!-- Blog Hero -->
+    <section class="blog-hero" aria-labelledby="blog-hero-title">
+      <div class="blog-hero__container">
+        <h1 id="blog-hero-title" class="blog-hero__title" data-i18n="blog.hero.title">
+          Health & Wellness Insights
+        </h1>
+        <p class="blog-hero__description" data-i18n="blog.hero.description">
+          Expert advice, care tips, and the latest insights in home healthcare from our team of professionals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Filters -->
+    <section class="blog-filters" aria-label="Filter blog posts by category">
+      <div class="blog-filters__container">
+        <button class="blog-filter-btn active" data-filter="all" data-i18n="blog.filters.all">
+          All Posts
+        </button>
+        <button class="blog-filter-btn" data-filter="caregiving" data-i18n="blog.filters.caregiving">
+          Caregiving
+        </button>
+        <button class="blog-filter-btn" data-filter="health" data-i18n="blog.filters.health">
+          Health
+        </button>
+        <button class="blog-filter-btn" data-filter="wellness" data-i18n="blog.filters.wellness">
+          Wellness
+        </button>
+        <button class="blog-filter-btn" data-filter="nutrition" data-i18n="blog.filters.nutrition">
+          Nutrition
+        </button>
+      </div>
+    </section>
+
+    <!-- Blog Preview Template (shows all posts) -->
+    <div id="blog-preview-placeholder">
+      <script>
+        fetch('/src/components/templates/blog-preview.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('blog-preview-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- CTA Template -->
+    <div id="cta-placeholder">
+      <script>
+        fetch('/src/components/templates/cta-section.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('cta-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <!-- Filter enhancement -->
+  <script type="module">
+    document.addEventListener('lc:ready', () => {
+      const filterBtns = document.querySelectorAll('.blog-filter-btn');
+      const articles = document.querySelectorAll('.blog-article');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.dataset.filter;
+
+          // Update active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Filter articles
+          articles.forEach(article => {
+            if (filter === 'all' || article.dataset.category === filter) {
+              article.style.display = '';
+            } else {
+              article.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none !important; }
+    </style>
+  </noscript>
+</body>
+</html>
