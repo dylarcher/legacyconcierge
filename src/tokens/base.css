@@ -4,6 +4,9 @@
  * Mobile-first, progressive enhancement
  */
 
+/* Import accessibility styles */
+@import url('./accessibility.css');
+
 /* ============================================
    RESET & NORMALIZE
    ============================================ */

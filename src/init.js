@@ -7,6 +7,7 @@
 import pathResolver from './utilities/path-resolver.js';
 import themeManager from './utilities/theme-manager.js';
 import i18n from './utilities/i18n.js';
+import AccessibilityManager from './utilities/accessibility.js';
 
 /**
  * Component registry for lazy loading
@@ -104,6 +105,12 @@ class ProgressiveEnhancement {
     const locale = i18n.getLocale();
     console.log(`[Init] Current locale: ${locale}`);
 
+    // Initialize accessibility manager
+    if (!window.accessibilityManager) {
+      window.accessibilityManager = new AccessibilityManager();
+      console.log('[Init] Accessibility manager initialized');
+    }
+
     // Make utilities globally available for convenience
     window.pathResolver = pathResolver;
     window.themeManager = themeManager;
@@ -114,6 +121,7 @@ class ProgressiveEnhancement {
     window.toggleTheme = themeManager.toggle.bind(themeManager);
     window.resolvePath = pathResolver.resolve.bind(pathResolver);
     window.resolveAsset = pathResolver.resolveAsset.bind(pathResolver);
+    window.announce = window.accessibilityManager.announce.bind(window.accessibilityManager);
   }
 
   /**
