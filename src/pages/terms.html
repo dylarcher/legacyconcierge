@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="terms">
+  <meta name="description" content="Legacy Concierge Terms of Service - Legal terms governing the use of our services and website.">
+
+  <title>Terms of Service - Legacy Concierge</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* Legal Page Styles */
+    .legal-page {
+      padding: var(--space-16, 4rem) 0;
+      background: var(--bg-base, #ffffff);
+    }
+
+    .legal-page__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 var(--space-6, 1.5rem);
+    }
+
+    .legal-page__header {
+      margin-bottom: var(--space-12, 3rem);
+      padding-bottom: var(--space-8, 2rem);
+      border-bottom: 2px solid var(--border-light, #e5e7eb);
+    }
+
+    .legal-page__title {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .legal-page__meta {
+      display: flex;
+      gap: var(--space-6, 1.5rem);
+      font-size: var(--font-size-sm, 0.875rem);
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .legal-page__content h2 {
+      margin: var(--space-10, 2.5rem) 0 var(--space-4, 1rem);
+      font-size: var(--font-size-2xl, 1.5rem);
+      font-weight: 700;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .legal-page__content h3 {
+      margin: var(--space-6, 1.5rem) 0 var(--space-3, 0.75rem);
+      font-size: var(--font-size-xl, 1.25rem);
+      font-weight: 600;
+      color: var(--text-primary, #1f2937);
+    }
+
+    .legal-page__content p {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: var(--font-size-base, 1rem);
+      line-height: 1.7;
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .legal-page__content ul,
+    .legal-page__content ol {
+      margin: 0 0 var(--space-4, 1rem);
+      padding-left: var(--space-8, 2rem);
+    }
+
+    .legal-page__content li {
+      margin-bottom: var(--space-2, 0.5rem);
+      line-height: 1.7;
+      color: var(--text-secondary, #6b7280);
+    }
+
+    .legal-page__content a {
+      color: var(--text-link, #2563eb);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .legal-page {
+        padding: var(--space-12, 3rem) 0;
+      }
+
+      .legal-page__meta {
+        flex-direction: column;
+        gap: var(--space-2, 0.5rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <article class="legal-page">
+      <div class="legal-page__container">
+        <!-- Page Header -->
+        <header class="legal-page__header">
+          <h1 class="legal-page__title">Terms of Service</h1>
+          <div class="legal-page__meta">
+            <span><strong>Effective Date:</strong> January 1, 2024</span>
+            <span><strong>Last Updated:</strong> January 1, 2024</span>
+          </div>
+        </header>
+
+        <!-- Content -->
+        <div class="legal-page__content">
+          <section>
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+              By accessing or using the services provided by Legacy Concierge ("Company," "we," "our," or "us"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our services.
+            </p>
+          </section>
+
+          <section>
+            <h2>2. Services Provided</h2>
+            <p>Legacy Concierge provides in-home healthcare services, including but not limited to:</p>
+            <ul>
+              <li>Post-surgical recovery care</li>
+              <li>Chronic illness support and management</li>
+              <li>Elderly care and assistance</li>
+              <li>Palliative care</li>
+              <li>Respite care</li>
+              <li>Custom care plans tailored to individual needs</li>
+            </ul>
+            <p>All services are provided by licensed healthcare professionals in accordance with applicable laws and regulations.</p>
+          </section>
+
+          <section>
+            <h2>3. Service Agreement</h2>
+            <h3>3.1 Assessment and Care Plan</h3>
+            <p>
+              Before services begin, we will conduct an initial assessment to determine your care needs and develop a personalized care plan. This plan will be reviewed and updated regularly.
+            </p>
+
+            <h3>3.2 Scheduling</h3>
+            <p>
+              Services are scheduled based on availability and your care needs. We require at least 24 hours notice for schedule changes or cancellations, except in emergency situations.
+            </p>
+
+            <h3>3.3 Duration</h3>
+            <p>
+              Services may be provided on a short-term or long-term basis as agreed upon in your care plan. Either party may terminate services with appropriate notice as outlined in Section 7.
+            </p>
+          </section>
+
+          <section>
+            <h2>4. Patient Responsibilities</h2>
+            <p>As a recipient of our services, you agree to:</p>
+            <ul>
+              <li>Provide accurate and complete health information</li>
+              <li>Follow the care plan and treatment recommendations</li>
+              <li>Notify us of any changes in your health condition</li>
+              <li>Provide a safe working environment for our caregivers</li>
+              <li>Pay for services in accordance with the agreed payment terms</li>
+              <li>Treat our staff with respect and courtesy</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>5. Payment Terms</h2>
+            <h3>5.1 Fees</h3>
+            <p>
+              Fees for services are based on the type and duration of care provided. Detailed pricing information will be provided before services begin.
+            </p>
+
+            <h3>5.2 Insurance</h3>
+            <p>
+              We accept most major insurance plans. We will work with your insurance provider to process claims, but you are ultimately responsible for any amounts not covered by insurance.
+            </p>
+
+            <h3>5.3 Payment Methods</h3>
+            <p>
+              We accept payment via check, credit card, or electronic funds transfer. Payment is due according to the terms specified in your service agreement.
+            </p>
+
+            <h3>5.4 Late Payments</h3>
+            <p>
+              Late payments may result in suspension of services and/or late fees. Unpaid balances may be sent to collections.
+            </p>
+          </section>
+
+          <section>
+            <h2>6. Cancellation and Rescheduling</h2>
+            <p>
+              We require at least 24 hours notice for cancellations or rescheduling. Cancellations with less than 24 hours notice may be subject to a cancellation fee, except in emergency situations.
+            </p>
+          </section>
+
+          <section>
+            <h2>7. Termination</h2>
+            <p>Either party may terminate services with 14 days written notice. We reserve the right to terminate services immediately if:</p>
+            <ul>
+              <li>Payment obligations are not met</li>
+              <li>Our staff is subjected to unsafe conditions or abusive behavior</li>
+              <li>You fail to comply with the care plan</li>
+              <li>Services are no longer appropriate for your needs</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>8. Limitation of Liability</h2>
+            <p>
+              To the fullest extent permitted by law, Legacy Concierge shall not be liable for any indirect, incidental, special, or consequential damages arising from the provision of services or use of our website.
+            </p>
+            <p>
+              Our total liability shall not exceed the amount paid for services in the three months preceding the claim.
+            </p>
+          </section>
+
+          <section>
+            <h2>9. Confidentiality and Privacy</h2>
+            <p>
+              We are committed to protecting your privacy and health information in accordance with HIPAA and other applicable privacy laws. Please see our <a href="/privacy">Privacy Policy</a> for detailed information.
+            </p>
+          </section>
+
+          <section>
+            <h2>10. Website Use</h2>
+            <h3>10.1 Permitted Use</h3>
+            <p>
+              Our website is provided for informational purposes and to facilitate access to our services. You may not use our website for any unlawful purpose or in violation of these Terms.
+            </p>
+
+            <h3>10.2 Intellectual Property</h3>
+            <p>
+              All content on our website, including text, graphics, logos, and software, is the property of Legacy Concierge and is protected by copyright and other intellectual property laws.
+            </p>
+          </section>
+
+          <section>
+            <h2>11. Governing Law</h2>
+            <p>
+              These Terms shall be governed by and construed in accordance with the laws of the State of Florida, without regard to its conflict of law provisions.
+            </p>
+          </section>
+
+          <section>
+            <h2>12. Dispute Resolution</h2>
+            <p>
+              Any disputes arising from these Terms or our services shall be resolved through binding arbitration in Miami-Dade County, Florida, except that either party may seek injunctive relief in court.
+            </p>
+          </section>
+
+          <section>
+            <h2>13. Changes to Terms</h2>
+            <p>
+              We reserve the right to modify these Terms at any time. Changes will be posted on our website with an updated "Last Updated" date. Continued use of our services after changes constitutes acceptance of the modified Terms.
+            </p>
+          </section>
+
+          <section>
+            <h2>14. Contact Information</h2>
+            <p>For questions about these Terms, please contact:</p>
+            <p>
+              <strong>Legacy Concierge</strong><br>
+              123 Care Street<br>
+              Miami, FL 33101<br>
+              Phone: +1 (305) 555-0100<br>
+              Email: <a href="mailto:info@legacyconcierge.com">info@legacyconcierge.com</a>
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none !important; }
+    </style>
+  </noscript>
+</body>
+</html>
