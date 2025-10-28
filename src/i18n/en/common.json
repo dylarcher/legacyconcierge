@@ -1,0 +1,157 @@
+{
+    "accessibility": {
+        "conciergeTreatmentsSubmenu": "Concierge Treatments submenu",
+        "examplesSubmenu": "Layout Examples submenu",
+        "servicesSubmenu": "Services submenu",
+        "skipToMain": "Skip to main content",
+        "specializedExpertiseSubmenu": "Specialized Expertise submenu",
+        "switchLanguage": "Switch language",
+        "toggleNavigation": "Toggle navigation menu",
+        "toggleTheme": "Toggle between dark/light theme modes"
+    },
+    "contactDialog": {
+        "cancel": "Cancel",
+        "description": "Fill out this form to request a personalized consultation with our team.",
+        "email": "Email Address",
+        "emailError": "Please enter a valid email address",
+        "message": "Message",
+        "messageError": "Please enter a message (10-1000 characters)",
+        "name": "Full Name",
+        "nameError": "Please enter your full name (2-100 characters)",
+        "phone": "Phone Number",
+        "phoneError": "Please enter a valid phone number (123-456-7890)",
+        "selectService": "Select a service...",
+        "service": "Service Interest",
+        "serviceError": "Please select a service",
+        "services": {
+            "chronic": "Chronic Condition Management",
+            "other": "Other",
+            "palliative": "Palliative Care",
+            "postOp": "Post-Operative Care",
+            "wellness": "Wellness & Prevention"
+        },
+        "submit": "Submit Request",
+        "title": "Personalized Consultation"
+    },
+    "footer": {
+        "company": {
+            "careers": "Careers",
+            "contact": "Contact",
+            "news": "News & Updates",
+            "partners": "Partners",
+            "team": "Team",
+            "title": "Company"
+        },
+        "copyright": "© 2025 Legacy Concierge",
+        "credits": "Built with Love by Solve Design Create",
+        "legal": {
+            "privacy": "Privacy",
+            "sitemap": "Sitemap",
+            "terms": "Terms"
+        },
+        "services": {
+            "als": "ALS",
+            "alzheimers": "Alzheimer's",
+            "dementia": "Dementia",
+            "diabetes": "Diabetes Management",
+            "heart": "Heart Disease",
+            "ms": "MS",
+            "oncology": "Oncology Care",
+            "ostomy": "Ostomy Management",
+            "parkinsons": "Parkinson's",
+            "stroke": "Stroke Recovery",
+            "tbi": "Traumatic Brain Injury (TBI)",
+            "title": "Services"
+        },
+        "treatments": {
+            "cardiac": "Cardiac and Pulmonary Oversight",
+            "eating": "Eating Disorders and Monitoring",
+            "iv": "IV and Infusion Therapy",
+            "mental": "Mental Health Services",
+            "pain": "Pain Management",
+            "postOp": "Post-Op Recovery",
+            "rehab": "Rehab and Addiction",
+            "title": "Treatments"
+        }
+    },
+    "language": {
+        "current": "EN",
+        "switch": "ES"
+    },
+    "navigation": {
+        "about": {
+            "about": "About",
+            "contact": {
+                "contact": "Contact",
+                "locations": "Locations"
+            },
+            "jobs": "Careers",
+            "legal": {
+                "legal": "Legal",
+                "privacy": "Privacy Policy",
+                "terms": "Terms of Service"
+            },
+            "partners": "Partners",
+            "team": "Team"
+        },
+        "blog": {
+            "blog": "Blog",
+            "post": {
+                "post": "Posts",
+                "postOpCare": "Post-Op Care Guide"
+            }
+        },
+        "conciergeTreatments": "Concierge Treatments",
+        "demos": {
+            "blog": {
+                "blog": "Blog Gallery",
+                "post": "Blog Post"
+            },
+            "components": "Components",
+            "demos": "Demos",
+            "entry": {
+                "entry": "Entry",
+                "landing": "Landing Page"
+            },
+            "hero": "Hero Layouts",
+            "subpage": {
+                "contact": "Contact Form",
+                "gallery": "Gallery Layout",
+                "sidebar": "Sidebar Layout",
+                "subpage": "Subpage"
+            }
+        },
+        "home": "Home",
+        "services": {
+            "expertise": {
+                "als": "ALS",
+                "alzheimers": "Alzheimer's",
+                "dementia": "Dementia",
+                "diabetes": "Diabetes Management",
+                "expertise": "Expertise",
+                "heart": "Heart Disease",
+                "ms": "Multiple Sclerosis",
+                "oncology": "Oncology Care",
+                "ostomy": "Ostomy Management",
+                "parkinsons": "Parkinson's Disease",
+                "stroke": "Stroke Recovery",
+                "tbi": "Traumatic Brain Injury"
+            },
+            "services": "Services",
+            "treatments": {
+                "cardiac": "Cardiac & Pulmonary",
+                "eating": "Eating Disorders",
+                "iv": "IV & Infusion Therapy",
+                "mental": "Mental Health",
+                "pain": "Pain Management",
+                "postOp": "Post-Op Recovery",
+                "rehab": "Rehab & Addiction",
+                "treatments": "Treatments"
+            }
+        }
+    },
+    "theme": {
+        "dark": "🌙",
+        "light": "☀️"
+    }
+}

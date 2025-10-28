@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Example page demonstrating the Legacy Concierge architecture">
+  <meta name="theme-color" content="#f9f7f4">
+  <title>Example Page - Legacy Concierge</title>
+
+  <!-- Design Tokens & Base Styles -->
+  <link rel="stylesheet" href="../tokens/design-tokens.css">
+  <link rel="stylesheet" href="../tokens/component-tokens.css">
+  <link rel="stylesheet" href="../tokens/base.css">
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Raleway:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Page-specific styles */
+    .hero {
+      min-height: var(--hero-min-height-mobile);
+      background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-500) 100%);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-16) var(--space-4);
+    }
+
+    .hero__content {
+      max-width: 800px;
+    }
+
+    .hero__title {
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--space-6);
+      color: var(--color-white);
+    }
+
+    .hero__subtitle {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--space-8);
+      opacity: 0.9;
+    }
+
+    .hero__buttons {
+      display: flex;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .section {
+      padding: var(--space-16) var(--space-4);
+    }
+
+    .section--alt {
+      background: var(--bg-surface);
+    }
+
+    .section__title {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+      max-width: var(--container-lg);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero {
+        min-height: var(--hero-min-height);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature {
+      padding: var(--space-6);
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .feature:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .feature__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-primary-100);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-4);
+      color: var(--color-primary-700);
+      font-size: var(--font-size-xl);
+    }
+
+    .feature__title {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--space-3);
+    }
+
+    .feature__description {
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      z-index: var(--z-fixed);
+    }
+
+    .lang-toggle {
+      position: fixed;
+      bottom: var(--space-6);
+      left: var(--space-6);
+      z-index: var(--z-fixed);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Hero Section -->
+  <section class="hero" role="banner">
+    <div class="hero__content">
+      <h1 class="hero__title" data-i18n="example.hero.title">
+        Welcome to Legacy Concierge
+      </h1>
+      <p class="hero__subtitle" data-i18n="example.hero.subtitle">
+        Experience the power of vanilla web components with modern design tokens
+      </p>
+      <div class="hero__buttons">
+        <lc-button variant="secondary" size="lg">
+          Get Started
+        </lc-button>
+        <lc-button variant="outline" size="lg">
+          Learn More
+        </lc-button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Features Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="example.features.title">
+          Architecture Features
+        </h2>
+
+        <div class="features">
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">🎨</div>
+            <h3 class="feature__title" data-i18n="example.features.tokens.title">
+              Design Tokens
+            </h3>
+            <p class="feature__description" data-i18n="example.features.tokens.description">
+              Hierarchical CSS custom properties for complete design control and theming.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">🧩</div>
+            <h3 class="feature__title" data-i18n="example.features.components.title">
+              Web Components
+            </h3>
+            <p class="feature__description" data-i18n="example.features.components.description">
+              Standards-based custom elements with progressive enhancement.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">🌍</div>
+            <h3 class="feature__title" data-i18n="example.features.i18n.title">
+              Internationalization
+            </h3>
+            <p class="feature__description" data-i18n="example.features.i18n.description">
+              Multi-language support with automatic DOM application.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">♿</div>
+            <h3 class="feature__title" data-i18n="example.features.a11y.title">
+              WCAG 2.2 AAA
+            </h3>
+            <p class="feature__description" data-i18n="example.features.a11y.description">
+              Comprehensive accessibility features and ARIA patterns.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">⚡</div>
+            <h3 class="feature__title" data-i18n="example.features.performance.title">
+              Performance
+            </h3>
+            <p class="feature__description" data-i18n="example.features.performance.description">
+              Zero build step, lazy loading, and optimized Core Web Vitals.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">📱</div>
+            <h3 class="feature__title" data-i18n="example.features.responsive.title">
+              Mobile First
+            </h3>
+            <p class="feature__description" data-i18n="example.features.responsive.description">
+              Responsive design with container queries and media queries.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title" data-i18n="example.demo.title">
+          Component Demonstration
+        </h2>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center; margin-bottom: var(--space-8);">
+          <lc-button variant="primary">Primary Button</lc-button>
+          <lc-button variant="secondary">Secondary Button</lc-button>
+          <lc-button variant="outline">Outline Button</lc-button>
+          <lc-button variant="ghost">Ghost Button</lc-button>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center; margin-bottom: var(--space-8);">
+          <lc-button variant="primary" size="sm">Small</lc-button>
+          <lc-button variant="primary" size="base">Base</lc-button>
+          <lc-button variant="primary" size="lg">Large</lc-button>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center;">
+          <lc-button variant="primary" disabled>Disabled</lc-button>
+          <lc-button variant="outline" href="#top">As Link</lc-button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Action Buttons -->
+  <div class="theme-toggle">
+    <lc-button variant="secondary" id="theme-toggle-btn" aria-label="Toggle theme">
+      🌓 Toggle Theme
+    </lc-button>
+  </div>
+
+  <div class="lang-toggle">
+    <lc-button variant="secondary" id="lang-toggle-btn" aria-label="Toggle language">
+      🌍 EN/ES
+    </lc-button>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module">
+    // Import utilities
+    import pathResolver from '../utilities/path-resolver.js';
+    import themeManager from '../utilities/theme-manager.js';
+    import i18n from '../utilities/i18n.js';
+
+    // Import components
+    import '../components/atomic/lc-button.js';
+
+    // Initialize page
+    console.log('🚀 Legacy Concierge - Example Page');
+    console.log('Environment:', pathResolver.getEnvironment());
+    console.log('Base Path:', pathResolver.getBasePath());
+    console.log('Current Theme:', themeManager.getTheme());
+    console.log('Current Locale:', i18n.getLocale());
+
+    // Apply translations (create placeholder translations if they don't exist)
+    try {
+      await i18n.apply(document.body, 'example');
+    } catch (error) {
+      console.log('Note: Example translations not found, using default content');
+    }
+
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        themeManager.toggle();
+        console.log('Theme changed to:', themeManager.getTheme());
+      });
+    }
+
+    // Language toggle functionality
+    const langToggleBtn = document.getElementById('lang-toggle-btn');
+    if (langToggleBtn) {
+      langToggleBtn.addEventListener('click', async () => {
+        const newLocale = i18n.getLocale() === 'en' ? 'es' : 'en';
+        await i18n.setLocale(newLocale);
+        console.log('Language changed to:', newLocale);
+      });
+    }
+
+    // Listen for button clicks
+    document.addEventListener('lc-button-click', (event) => {
+      console.log('Button clicked:', event.detail);
+    });
+
+    // Listen for theme changes
+    themeManager.addListener((event, data) => {
+      console.log('Theme event:', event, data);
+    });
+
+    // Listen for locale changes
+    i18n.addListener((event, data) => {
+      console.log('i18n event:', event, data);
+    });
+
+    console.log('✅ Page initialized successfully!');
+    console.log('Try the theme toggle button (bottom right) or language toggle (bottom left)');
+  </script>
+</body>
+</html>
