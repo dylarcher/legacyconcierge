@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Layout Components Demo - Legacy Concierge">
+  <meta name="theme-color" content="#f9f7f4">
+  <title>Layout Components Demo - Legacy Concierge</title>
+
+  <!-- Design Tokens & Base Styles -->
+  <link rel="stylesheet" href="../tokens/design-tokens.css">
+  <link rel="stylesheet" href="../tokens/component-tokens.css">
+  <link rel="stylesheet" href="../tokens/base.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Raleway:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Demo-specific styles */
+    .demo-card {
+      padding: var(--space-6);
+      background: var(--bg-surface);
+      border: 2px dashed var(--border-default);
+      border-radius: var(--radius-lg);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .demo-section-header {
+      text-align: center;
+      margin-bottom: var(--space-8);
+    }
+
+    .demo-section-title {
+      font-size: var(--font-size-2xl);
+      margin-bottom: var(--space-4);
+    }
+
+    .demo-section-description {
+      color: var(--text-secondary);
+    }
+
+    .theme-toggle {
+      position: fixed;
+      bottom: var(--space-6);
+      right: var(--space-6);
+      z-index: var(--z-fixed);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Hero Component Demo -->
+  <lc-hero variant="gradient" height="base" align="center" valign="center">
+    <h1 style="font-size: var(--font-size-4xl); margin-bottom: var(--space-4);">
+      Layout Components
+    </h1>
+    <p style="font-size: var(--font-size-lg); opacity: 0.9; margin-bottom: var(--space-8);">
+      Flexible, responsive layout system for building beautiful pages
+    </p>
+    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+      <lc-button variant="secondary" size="lg">Get Started</lc-button>
+      <lc-button variant="outline" size="lg" href="#components">View Components</lc-button>
+    </div>
+  </lc-hero>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Container Demo -->
+    <lc-section variant="default" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Container Component</h2>
+        <p class="demo-section-description">
+          Responsive container with max-width control
+        </p>
+      </div>
+
+      <lc-container size="lg">
+        <div class="demo-card">
+          <div>
+            <h3>Large Container</h3>
+            <p>Max-width: 1024px</p>
+          </div>
+        </div>
+      </lc-container>
+
+      <div style="margin-top: var(--space-6);"></div>
+
+      <lc-container size="md">
+        <div class="demo-card">
+          <div>
+            <h3>Medium Container</h3>
+            <p>Max-width: 768px</p>
+          </div>
+        </div>
+      </lc-container>
+    </lc-section>
+
+    <!-- Grid Demo -->
+    <lc-section variant="alt" padding="lg" contained container-size="xl" id="components">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Grid Component</h2>
+        <p class="demo-section-description">
+          Responsive CSS Grid with customizable columns and gaps
+        </p>
+      </div>
+
+      <h3 style="margin-bottom: var(--space-4);">Three Columns (Desktop)</h3>
+      <lc-grid cols="1" cols-md="2" cols-lg="3" gap="6">
+        <div class="demo-card">
+          <div>
+            <strong>Column 1</strong>
+            <p>Responsive grid item</p>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div>
+            <strong>Column 2</strong>
+            <p>Responsive grid item</p>
+          </div>
+        </div>
+        <div class="demo-card">
+          <div>
+            <strong>Column 3</strong>
+            <p>Responsive grid item</p>
+          </div>
+        </div>
+      </lc-grid>
+
+      <div style="margin-top: var(--space-12);"></div>
+
+      <h3 style="margin-bottom: var(--space-4);">Auto-Fit Grid</h3>
+      <lc-grid auto-fit min-col-width="250px" gap="4">
+        <div class="demo-card">
+          <strong>Auto Item 1</strong>
+        </div>
+        <div class="demo-card">
+          <strong>Auto Item 2</strong>
+        </div>
+        <div class="demo-card">
+          <strong>Auto Item 3</strong>
+        </div>
+        <div class="demo-card">
+          <strong>Auto Item 4</strong>
+        </div>
+      </lc-grid>
+    </lc-section>
+
+    <!-- Section Demo -->
+    <lc-section variant="primary" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title" style="color: var(--color-white);">Section Component</h2>
+        <p class="demo-section-description" style="color: rgba(255, 255, 255, 0.9);">
+          Semantic section wrapper with padding and background variants
+        </p>
+      </div>
+
+      <lc-grid cols="1" cols-md="2" gap="6">
+        <div class="demo-card" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+          <div>
+            <strong>Primary Variant</strong>
+            <p>Brand color background</p>
+          </div>
+        </div>
+        <div class="demo-card" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); color: white;">
+          <div>
+            <strong>Contained Content</strong>
+            <p>Automatic centering</p>
+          </div>
+        </div>
+      </lc-grid>
+    </lc-section>
+
+    <!-- Hero Variants Demo -->
+    <lc-section variant="default" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Hero Variants</h2>
+        <p class="demo-section-description">
+          Multiple hero styles with background and overlay support
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-8);">
+        <!-- Default Hero -->
+        <div>
+          <h3 style="margin-bottom: var(--space-4);">Default Hero</h3>
+          <lc-hero variant="default" height="sm" align="center" valign="center">
+            <h2>Default Hero Style</h2>
+            <p>Clean background with theme colors</p>
+          </lc-hero>
+        </div>
+
+        <!-- Gradient Hero -->
+        <div>
+          <h3 style="margin-bottom: var(--space-4);">Gradient Hero</h3>
+          <lc-hero variant="gradient" height="sm" align="left" valign="center" contained>
+            <h2>Gradient Background</h2>
+            <p>Smooth color transitions</p>
+          </lc-hero>
+        </div>
+
+        <!-- Split Hero -->
+        <div>
+          <h3 style="margin-bottom: var(--space-4);">Split Hero</h3>
+          <lc-hero variant="split" height="sm" align="center" valign="center">
+            <h2>Split Layout</h2>
+            <p>Half dark, half light</p>
+          </lc-hero>
+        </div>
+      </div>
+    </lc-section>
+
+    <!-- Layout Component Demo -->
+    <lc-section variant="alt" padding="lg">
+      <lc-container size="xl">
+        <div class="demo-section-header">
+          <h2 class="demo-section-title">Layout Component</h2>
+          <p class="demo-section-description">
+            Full page layout with named regions (header, main, aside, footer)
+          </p>
+        </div>
+
+        <div style="border: 2px dashed var(--border-default); border-radius: var(--radius-lg); overflow: hidden;">
+          <lc-layout variant="sidebar-left" sidebar-width="base">
+            <div slot="header" style="background: var(--color-primary-800); color: white; padding: var(--space-4); text-align: center;">
+              <strong>Header Region</strong>
+            </div>
+            <div slot="aside" style="background: var(--color-secondary-200); padding: var(--space-4); min-height: 200px;">
+              <strong>Sidebar Region</strong>
+              <p style="margin-top: var(--space-2); font-size: var(--font-size-sm);">Left sidebar layout</p>
+            </div>
+            <div slot="main" style="background: var(--bg-surface); padding: var(--space-4); min-height: 200px;">
+              <strong>Main Content Region</strong>
+              <p style="margin-top: var(--space-2);">Primary content area that grows to fill available space</p>
+            </div>
+            <div slot="footer" style="background: var(--color-neutral-800); color: white; padding: var(--space-4); text-align: center;">
+              <strong>Footer Region</strong>
+            </div>
+          </lc-layout>
+        </div>
+      </lc-container>
+    </lc-section>
+
+    <!-- Features Grid -->
+    <lc-section variant="default" padding="lg" contained container-size="xl">
+      <div class="demo-section-header">
+        <h2 class="demo-section-title">Layout Features</h2>
+        <p class="demo-section-description">
+          Powerful features for building responsive layouts
+        </p>
+      </div>
+
+      <lc-grid cols="1" cols-md="2" cols-lg="4" gap="6">
+        <div class="demo-card" style="background: var(--color-primary-50); border-color: var(--color-primary-200);">
+          <div>
+            <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-3);">📱</div>
+            <strong>Mobile First</strong>
+            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm);">
+              Starts mobile, enhances for desktop
+            </p>
+          </div>
+        </div>
+
+        <div class="demo-card" style="background: var(--color-success-100); border-color: var(--color-success-300);">
+          <div>
+            <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-3);">⚡</div>
+            <strong>Flexible</strong>
+            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm);">
+              Customizable for any use case
+            </p>
+          </div>
+        </div>
+
+        <div class="demo-card" style="background: var(--color-info-100); border-color: var(--color-info-300);">
+          <div>
+            <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-3);">♿</div>
+            <strong>Accessible</strong>
+            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm);">
+              Semantic HTML structure
+            </p>
+          </div>
+        </div>
+
+        <div class="demo-card" style="background: var(--color-warning-100); border-color: var(--color-warning-300);">
+          <div>
+            <div style="font-size: var(--font-size-3xl); margin-bottom: var(--space-3);">🎨</div>
+            <strong>Themeable</strong>
+            <p style="margin-top: var(--space-2); font-size: var(--font-size-sm);">
+              Design token integration
+            </p>
+          </div>
+        </div>
+      </lc-grid>
+    </lc-section>
+
+    <!-- CTA Section -->
+    <lc-section variant="primary" padding="xl" contained container-size="md">
+      <div style="text-align: center;">
+        <h2 style="font-size: var(--font-size-3xl); margin-bottom: var(--space-4); color: white;">
+          Ready to Build?
+        </h2>
+        <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-8); color: rgba(255, 255, 255, 0.9);">
+          Start building beautiful, responsive layouts with our component library
+        </p>
+        <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+          <lc-button variant="secondary" size="lg">View Documentation</lc-button>
+          <lc-button variant="outline" size="lg">See Examples</lc-button>
+        </div>
+      </div>
+    </lc-section>
+  </main>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <lc-button variant="secondary" id="theme-toggle-btn" aria-label="Toggle theme">
+      🌓 Toggle Theme
+    </lc-button>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module">
+    // Import utilities
+    import pathResolver from '../utilities/path-resolver.js';
+    import themeManager from '../utilities/theme-manager.js';
+    import i18n from '../utilities/i18n.js';
+
+    // Import components
+    import '../components/atomic/lc-button.js';
+    import '../components/layouts/lc-container.js';
+    import '../components/layouts/lc-grid.js';
+    import '../components/layouts/lc-section.js';
+    import '../components/layouts/lc-hero.js';
+    import '../components/layouts/lc-layout.js';
+
+    // Initialize
+    console.log('🚀 Layout Components Demo');
+    console.log('Environment:', pathResolver.getEnvironment());
+    console.log('Theme:', themeManager.getTheme());
+
+    // Theme toggle
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        themeManager.toggle();
+        console.log('Theme changed to:', themeManager.getTheme());
+      });
+    }
+
+    // Listen for section visibility
+    document.addEventListener('lc-section-visible', (event) => {
+      console.log('Section visible:', event.detail);
+    });
+
+    // Listen for hero ready
+    document.addEventListener('lc-hero-ready', (event) => {
+      console.log('Hero ready:', event.detail);
+    });
+
+    console.log('✅ Layout demo initialized!');
+  </script>
+</body>
+</html>
