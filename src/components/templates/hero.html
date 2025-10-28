@@ -1,0 +1,348 @@
+<!-- Semantic Hero Section - Works without JavaScript -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__background">
+    <!-- Background image via CSS or img element -->
+    <img
+      src="/assets/images/hero/home-hero.jpg"
+      alt=""
+      class="hero__background-image"
+      loading="eager"
+      fetchpriority="high"
+    >
+    <div class="hero__overlay" aria-hidden="true"></div>
+  </div>
+
+  <div class="hero__container">
+    <div class="hero__content">
+      <!-- Breadcrumbs (optional) -->
+      <nav class="hero__breadcrumbs" aria-label="Breadcrumb">
+        <ol class="hero__breadcrumb-list">
+          <li><a href="/">Home</a></li>
+          <li aria-current="page">Services</li>
+        </ol>
+      </nav>
+
+      <!-- Main heading -->
+      <h1 id="hero-title" class="hero__title">
+        Compassionate Care at Home
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="hero__subtitle">
+        Expert nursing services tailored to your unique needs. Professional, compassionate care in the comfort of your home.
+      </p>
+
+      <!-- Call to action -->
+      <div class="hero__actions">
+        <a href="/contact" class="button button--primary button--lg">
+          Get Started Today
+        </a>
+        <a href="/services" class="button button--secondary button--lg">
+          Our Services
+        </a>
+      </div>
+
+      <!-- Additional info (optional) -->
+      <ul class="hero__features">
+        <li>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#check-circle"></use>
+          </svg>
+          <span>Licensed & Certified Nurses</span>
+        </li>
+        <li>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#check-circle"></use>
+          </svg>
+          <span>24/7 On-Call Support</span>
+        </li>
+        <li>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#check-circle"></use>
+          </svg>
+          <span>Personalized Care Plans</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Scroll indicator (optional, progressive enhancement) -->
+  <a href="#features" class="hero__scroll-indicator requires-js" aria-label="Scroll to content" hidden>
+    <svg width="24" height="24" aria-hidden="true">
+      <use href="/assets/icons/sprite.svg#chevron-down"></use>
+    </svg>
+  </a>
+</section>
+
+<!-- Base Styles -->
+<style>
+  .hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--text-on-dark, #ffffff);
+  }
+
+  .hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero__background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 58, 95, 0.85) 0%,
+      rgba(30, 58, 95, 0.65) 100%
+    );
+  }
+
+  .hero__container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--container-max-width, 1280px);
+    margin: 0 auto;
+    padding: var(--space-12, 3rem) var(--space-6, 1.5rem);
+    width: 100%;
+  }
+
+  .hero__content {
+    max-width: 720px;
+  }
+
+  .hero__breadcrumbs {
+    margin-bottom: var(--space-4, 1rem);
+  }
+
+  .hero__breadcrumb-list {
+    display: flex;
+    gap: var(--space-2, 0.5rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-sm, 0.875rem);
+  }
+
+  .hero__breadcrumb-list li:not(:last-child)::after {
+    content: '›';
+    margin-left: var(--space-2, 0.5rem);
+    opacity: 0.6;
+  }
+
+  .hero__breadcrumb-list a {
+    color: var(--text-on-dark-secondary, #e5e7eb);
+    text-decoration: none;
+    transition: color var(--transition-fast, 150ms);
+  }
+
+  .hero__breadcrumb-list a:hover,
+  .hero__breadcrumb-list a:focus {
+    color: var(--text-on-dark, #ffffff);
+    text-decoration: underline;
+  }
+
+  .hero__breadcrumb-list li[aria-current="page"] {
+    color: var(--text-on-dark, #ffffff);
+    font-weight: 600;
+  }
+
+  .hero__title {
+    margin: 0 0 var(--space-6, 1.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .hero__subtitle {
+    margin: 0 0 var(--space-8, 2rem);
+    font-size: var(--font-size-xl, 1.25rem);
+    line-height: 1.6;
+    color: var(--text-on-dark-secondary, #e5e7eb);
+    max-width: 600px;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4, 1rem);
+    margin-bottom: var(--space-8, 2rem);
+  }
+
+  .hero__features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-6, 1.5rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero__features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+    font-size: var(--font-size-sm, 0.875rem);
+  }
+
+  .hero__features svg {
+    flex-shrink: 0;
+    color: var(--text-success, #10b981);
+  }
+
+  .hero__scroll-indicator {
+    position: absolute;
+    bottom: var(--space-8, 2rem);
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--radius-full, 9999px);
+    color: var(--text-on-dark, #ffffff);
+    text-decoration: none;
+    animation: hero-scroll-bounce 2s infinite;
+    transition: all var(--transition-fast, 150ms);
+  }
+
+  .hero__scroll-indicator:hover,
+  .hero__scroll-indicator:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Button styles */
+  .button {
+    display: inline-block;
+    padding: var(--space-3, 0.75rem) var(--space-5, 1.25rem);
+    font-size: var(--font-size-base, 1rem);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: var(--radius-lg, 0.5rem);
+    transition: all var(--transition-fast, 150ms);
+    cursor: pointer;
+    border: 2px solid transparent;
+    white-space: nowrap;
+  }
+
+  .button--lg {
+    padding: var(--space-4, 1rem) var(--space-6, 1.5rem);
+    font-size: var(--font-size-lg, 1.125rem);
+  }
+
+  .button--primary {
+    background: var(--bg-primary, #2563eb);
+    color: var(--text-on-primary, #ffffff);
+  }
+
+  .button--primary:hover,
+  .button--primary:focus {
+    background: var(--bg-primary-hover, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg, 0 10px 15px rgba(0, 0, 0, 0.3));
+  }
+
+  .button--secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-on-dark, #ffffff);
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  .button--secondary:hover,
+  .button--secondary:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Animations */
+  @keyframes hero-scroll-bounce {
+    0%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(8px);
+    }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 500px;
+    }
+
+    .hero__container {
+      padding: var(--space-8, 2rem) var(--space-4, 1rem);
+    }
+
+    .hero__actions {
+      flex-direction: column;
+    }
+
+    .hero__actions .button {
+      width: 100%;
+    }
+
+    .hero__features {
+      flex-direction: column;
+      gap: var(--space-3, 0.75rem);
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+      min-height: 550px;
+    }
+  }
+
+  /* Desktop large */
+  @media (min-width: 1280px) {
+    .hero {
+      min-height: 700px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero__scroll-indicator {
+      animation: none;
+    }
+
+    .hero__breadcrumb-list a,
+    .button {
+      transition: none;
+    }
+  }
+
+  /* High contrast */
+  @media (prefers-contrast: high) {
+    .hero__overlay {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+</style>

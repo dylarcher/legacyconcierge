@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="page-name" content="about">
+  <meta name="description" content="Meet our team of expert healthcare professionals dedicated to providing compassionate in-home care.">
+
+  <title>About Us - Legacy Concierge</title>
+
+  <!-- Critical CSS -->
+  <link rel="stylesheet" href="/src/tokens/design-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/component-tokens.css">
+  <link rel="stylesheet" href="/src/tokens/base.css">
+
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--bg-primary, #1e3a5f);
+      color: var(--text-on-primary, #ffffff);
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+      z-index: 10000;
+      font-weight: 600;
+    }
+    .skip-link:focus { top: 0; }
+    .site-header__menu.is-open { display: flex; }
+    @media (max-width: 768px) {
+      .site-header__menu:not(.is-open) { display: none; }
+    }
+
+    /* About Hero Styles */
+    .about-hero {
+      padding: var(--space-20, 5rem) 0 var(--space-16, 4rem);
+      background: linear-gradient(135deg, var(--bg-primary, #2563eb) 0%, var(--bg-primary-hover, #1d4ed8) 100%);
+      color: var(--text-on-primary, #ffffff);
+      text-align: center;
+    }
+
+    .about-hero__container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 var(--space-6, 1.5rem);
+    }
+
+    .about-hero__subtitle {
+      margin: 0 0 var(--space-4, 1rem);
+      font-size: var(--font-size-sm, 0.875rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .about-hero__title {
+      margin: 0 0 var(--space-6, 1.5rem);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .about-hero__description {
+      margin: 0;
+      font-size: var(--font-size-xl, 1.25rem);
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: var(--space-16, 4rem) 0 var(--space-12, 3rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Template -->
+  <div id="header-placeholder">
+    <script>
+      fetch('/src/components/templates/header.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const header = temp.querySelector('header');
+          const style = temp.querySelector('style');
+          if (header) document.getElementById('header-placeholder').replaceWith(header);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <header class="site-header" role="banner">
+      <div class="site-header__container">
+        <div class="site-header__logo">
+          <a href="/"><img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60"></a>
+        </div>
+        <nav><a href="/">Home</a> | <a href="/about">About</a> | <a href="/services">Services</a> | <a href="/contact">Contact</a></nav>
+      </div>
+    </header>
+  </div>
+
+  <main id="main-content" role="main">
+    <!-- About Hero -->
+    <section class="about-hero" aria-labelledby="about-hero-title">
+      <div class="about-hero__container">
+        <p class="about-hero__subtitle" data-i18n="about.hero.subtitle">About Us</p>
+        <h1 id="about-hero-title" class="about-hero__title" data-i18n="about.hero.title">
+          Dedicated to Your Well-Being
+        </h1>
+        <p class="about-hero__description" data-i18n="about.hero.description">
+          For over 15 years, Legacy Concierge has been providing compassionate, professional in-home care to families across Florida. Our team of licensed healthcare professionals is committed to helping you live comfortably and independently.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stats Section Template -->
+    <div id="stats-placeholder">
+      <script>
+        fetch('/src/components/templates/stats-section.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('stats-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- Team Grid Template -->
+    <div id="team-placeholder">
+      <script>
+        fetch('/src/components/templates/team-grid.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('team-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+
+    <!-- CTA Template -->
+    <div id="cta-placeholder">
+      <script>
+        fetch('/src/components/templates/cta-section.html')
+          .then(r => r.text())
+          .then(html => {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            const section = temp.querySelector('section');
+            const style = temp.querySelector('style');
+            if (section) document.getElementById('cta-placeholder').replaceWith(section);
+            if (style) document.head.appendChild(style);
+          });
+      </script>
+    </div>
+  </main>
+
+  <!-- Footer Template -->
+  <div id="footer-placeholder">
+    <script>
+      fetch('/src/components/templates/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const footer = temp.querySelector('footer');
+          const style = temp.querySelector('style');
+          if (footer) document.getElementById('footer-placeholder').replaceWith(footer);
+          if (style) document.head.appendChild(style);
+        });
+    </script>
+    <footer role="contentinfo">
+      <p>&copy; 2024 Legacy Concierge. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Progressive Enhancement Scripts -->
+  <script type="module" src="/src/utilities/path-resolver.js"></script>
+  <script type="module" src="/src/utilities/theme-manager.js"></script>
+  <script type="module" src="/src/utilities/i18n.js"></script>
+  <script type="module" src="/src/init.js" defer></script>
+
+  <noscript>
+    <style>
+      .requires-js { display: none !important; }
+    </style>
+  </noscript>
+</body>
+</html>
