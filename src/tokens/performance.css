@@ -1,0 +1,522 @@
+/**
+ * Performance Optimization Styles
+ *
+ * CSS for:
+ * - Lazy loading animations
+ * - Image placeholders
+ * - Loading states
+ * - Critical rendering path optimization
+ */
+
+/* ==========================================================================
+   Lazy Loading Images
+   ========================================================================== */
+
+/* Images waiting to load */
+img[data-src],
+img[loading="lazy"]:not(.lazy-loaded) {
+  background: var(--bg-subtle, #f3f4f6);
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  min-height: 200px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Images that have loaded */
+img.lazy-loaded {
+  animation: fadeIn var(--transition-base, 300ms) ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Images that failed to load */
+img.lazy-error {
+  background: var(--bg-error, #fef2f2);
+  border: 2px dashed var(--border-error, #dc2626);
+}
+
+img.lazy-error::after {
+  content: 'Image failed to load';
+  display: block;
+  padding: var(--space-4, 1rem);
+  text-align: center;
+  color: var(--text-error, #991b1b);
+  font-size: var(--font-size-sm, 0.875rem);
+}
+
+/* ==========================================================================
+   Lazy Loading Background Images
+   ========================================================================== */
+
+[data-bg] {
+  background-color: var(--bg-subtle, #f3f4f6);
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+[data-bg].lazy-loaded {
+  animation: fadeIn var(--transition-base, 300ms) ease-in;
+}
+
+/* ==========================================================================
+   Lazy Loading Components
+   ========================================================================== */
+
+[data-component] {
+  position: relative;
+  min-height: 100px;
+  background: var(--bg-subtle, #f3f4f6);
+}
+
+[data-component]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  z-index: 1;
+}
+
+[data-component].component-loaded::before {
+  display: none;
+}
+
+[data-component].component-loaded {
+  animation: fadeIn var(--transition-base, 300ms) ease-in;
+}
+
+[data-component].component-error {
+  background: var(--bg-error, #fef2f2);
+  border: 2px dashed var(--border-error, #dc2626);
+}
+
+[data-component].component-error::after {
+  content: 'Component failed to load';
+  display: block;
+  padding: var(--space-4, 1rem);
+  text-align: center;
+  color: var(--text-error, #991b1b);
+  font-size: var(--font-size-sm, 0.875rem);
+  z-index: 2;
+  position: relative;
+}
+
+/* ==========================================================================
+   Video Loading States
+   ========================================================================== */
+
+video[data-video],
+iframe[data-video] {
+  background: var(--bg-subtle, #f3f4f6);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 64px 64px;
+}
+
+video.video-loaded,
+iframe.video-loaded {
+  animation: fadeIn var(--transition-base, 300ms) ease-in;
+}
+
+/* ==========================================================================
+   Loading Spinner
+   ========================================================================== */
+
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border-light, #e5e7eb);
+  border-top-color: var(--bg-primary, #2563eb);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity var(--transition-base, 300ms) ease-out;
+}
+
+.loading-overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Skeleton Screens
+   ========================================================================== */
+
+.skeleton {
+  background: var(--bg-subtle, #f3f4f6);
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md, 0.375rem);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+.skeleton-text {
+  height: 1em;
+  margin-bottom: 0.5em;
+  border-radius: var(--radius-sm, 0.25rem);
+}
+
+.skeleton-heading {
+  height: 2em;
+  margin-bottom: 1em;
+  width: 60%;
+  border-radius: var(--radius-md, 0.375rem);
+}
+
+.skeleton-paragraph {
+  height: 1em;
+  margin-bottom: 0.5em;
+}
+
+.skeleton-paragraph:last-child {
+  width: 80%;
+}
+
+.skeleton-image {
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  border-radius: var(--radius-lg, 0.5rem);
+}
+
+.skeleton-card {
+  padding: var(--space-4, 1rem);
+  border: 1px solid var(--border-light, #e5e7eb);
+  border-radius: var(--radius-lg, 0.5rem);
+}
+
+/* ==========================================================================
+   Critical Content (Above the Fold)
+   ========================================================================== */
+
+/* Prioritize rendering of critical content */
+.critical {
+  contain: layout style;
+}
+
+/* Non-critical content (can be deferred) */
+.non-critical {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* ==========================================================================
+   Font Loading Optimization
+   ========================================================================== */
+
+/* Prevent flash of unstyled text */
+.font-loading {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Fonts loaded */
+.fonts-loaded {
+  font-family: var(--font-family-sans);
+}
+
+/* Optional: Flash of faux text approach */
+@supports (font-display: swap) {
+  @font-face {
+    font-display: swap;
+  }
+}
+
+/* ==========================================================================
+   Reduce Motion Preferences
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable lazy loading animations */
+  img[data-src],
+  img[loading="lazy"]:not(.lazy-loaded),
+  [data-bg],
+  [data-component]::before {
+    animation: none;
+  }
+
+  img.lazy-loaded,
+  [data-bg].lazy-loaded,
+  [data-component].component-loaded {
+    animation: none;
+  }
+
+  .loading-spinner {
+    animation-duration: 2s;
+  }
+}
+
+/* ==========================================================================
+   Print Optimization
+   ========================================================================== */
+
+@media print {
+  /* Load all lazy images for print */
+  img[data-src] {
+    content: attr(data-src);
+  }
+
+  /* Remove loading indicators */
+  .loading-spinner,
+  .loading-overlay,
+  .skeleton {
+    display: none;
+  }
+
+  /* Ensure all content is visible */
+  .non-critical {
+    content-visibility: visible;
+  }
+}
+
+/* ==========================================================================
+   Resource Priority Hints
+   ========================================================================== */
+
+/* High priority content */
+.priority-high {
+  contain: none;
+  content-visibility: visible;
+}
+
+/* Low priority content */
+.priority-low {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* ==========================================================================
+   Responsive Images Optimization
+   ========================================================================== */
+
+/* Prevent layout shift for images */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Aspect ratio boxes */
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.aspect-ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.aspect-ratio-4-3 {
+  padding-bottom: 75%;
+}
+
+.aspect-ratio-1-1 {
+  padding-bottom: 100%;
+}
+
+.aspect-ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   Performance Utilities
+   ========================================================================== */
+
+/* GPU acceleration for animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Contain layout for independent components */
+.contain-layout {
+  contain: layout;
+}
+
+.contain-paint {
+  contain: paint;
+}
+
+.contain-size {
+  contain: size;
+}
+
+.contain-strict {
+  contain: strict;
+}
+
+/* Optimize rendering of lists */
+.virtual-list {
+  overflow-y: auto;
+  contain: strict;
+}
+
+.virtual-list-item {
+  contain: layout style;
+}
+
+/* ==========================================================================
+   Intersection Observer Utilities
+   ========================================================================== */
+
+/* Elements waiting to be observed */
+[data-observe] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--transition-slow, 500ms) ease-out,
+    transform var(--transition-slow, 500ms) ease-out;
+}
+
+/* Elements that have been observed */
+[data-observe].observed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations for multiple elements */
+[data-observe].observed:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+[data-observe].observed:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+[data-observe].observed:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+[data-observe].observed:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+[data-observe].observed:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+/* Disable stagger for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-observe] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  [data-observe].observed {
+    transition-delay: 0ms;
+  }
+}
+
+/* ==========================================================================
+   Code Splitting Loading States
+   ========================================================================== */
+
+.code-splitting-placeholder {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-subtle, #f3f4f6);
+}
+
+.code-splitting-placeholder::before {
+  content: 'Loading...';
+  color: var(--text-tertiary, #9ca3af);
+  font-size: var(--font-size-sm, 0.875rem);
+}
+
+/* ==========================================================================
+   Network-Aware Loading
+   ========================================================================== */
+
+/* Reduce quality for slow connections */
+@media (prefers-reduced-data: reduce) {
+  img[data-src] {
+    /* Skip lazy loading, use low-res immediately */
+    background: none;
+  }
+
+  [data-bg] {
+    /* Skip background images on slow connections */
+    background-image: none;
+  }
+}
+
+/* High-speed connection enhancements */
+@supports (connection: 4g) {
+  /* Safe to preload more resources */
+}
