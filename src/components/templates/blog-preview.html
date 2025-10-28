@@ -1,0 +1,575 @@
+<!-- Blog Preview Section - Works without JavaScript -->
+<section class="blog-preview" aria-labelledby="blog-title">
+  <div class="blog-preview__container">
+    <!-- Section Header -->
+    <header class="blog-preview__header">
+      <div class="blog-preview__header-content">
+        <div>
+          <p class="blog-preview__subtitle" data-i18n="blog.subtitle">From Our Blog</p>
+          <h2 id="blog-title" class="blog-preview__title" data-i18n="blog.title">
+            Latest Health & Wellness Insights
+          </h2>
+        </div>
+        <a href="/blog" class="blog-preview__view-all">
+          <span data-i18n="blog.viewAll">View All Articles</span>
+          <svg width="20" height="20" aria-hidden="true">
+            <use href="/assets/icons/sprite.svg#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Blog Grid -->
+    <div class="blog-preview__grid">
+      <!-- Featured Article -->
+      <article class="blog-article blog-article--featured">
+        <a href="/blog/post-surgical-care-tips" class="blog-article__link">
+          <div class="blog-article__image-container">
+            <img
+              src="/assets/images/blog/post-surgical-tips.jpg"
+              alt=""
+              class="blog-article__image"
+              width="800"
+              height="500"
+              loading="lazy"
+            >
+            <span class="blog-article__category" data-i18n="blog.categories.caregiving">Caregiving</span>
+          </div>
+          <div class="blog-article__content">
+            <div class="blog-article__meta">
+              <time datetime="2024-01-15" class="blog-article__date">January 15, 2024</time>
+              <span class="blog-article__read-time">5 min read</span>
+            </div>
+            <h3 class="blog-article__title" data-i18n="blog.posts[0].title">
+              10 Essential Tips for Post-Surgical Care at Home
+            </h3>
+            <p class="blog-article__excerpt" data-i18n="blog.posts[0].excerpt">
+              Recovery after surgery requires careful attention to wound care, medication management, and physical activity. Learn the essential tips to ensure a smooth recovery.
+            </p>
+            <div class="blog-article__author">
+              <img
+                src="/assets/images/team/dr-smith.jpg"
+                alt=""
+                class="blog-article__author-avatar"
+                width="32"
+                height="32"
+                loading="lazy"
+              >
+              <span class="blog-article__author-name" data-i18n="blog.posts[0].author">Dr. Sarah Smith, RN</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Regular Articles -->
+      <article class="blog-article">
+        <a href="/blog/managing-chronic-conditions" class="blog-article__link">
+          <div class="blog-article__image-container">
+            <img
+              src="/assets/images/blog/chronic-conditions.jpg"
+              alt=""
+              class="blog-article__image"
+              width="400"
+              height="280"
+              loading="lazy"
+            >
+            <span class="blog-article__category" data-i18n="blog.categories.health">Health</span>
+          </div>
+          <div class="blog-article__content">
+            <div class="blog-article__meta">
+              <time datetime="2024-01-12" class="blog-article__date">January 12, 2024</time>
+              <span class="blog-article__read-time">4 min read</span>
+            </div>
+            <h3 class="blog-article__title" data-i18n="blog.posts[1].title">
+              Managing Chronic Conditions: A Guide for Families
+            </h3>
+            <p class="blog-article__excerpt" data-i18n="blog.posts[1].excerpt">
+              Living with chronic illness requires ongoing care and support. Discover strategies for managing daily challenges.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <article class="blog-article">
+        <a href="/blog/elderly-care-nutrition" class="blog-article__link">
+          <div class="blog-article__image-container">
+            <img
+              src="/assets/images/blog/nutrition.jpg"
+              alt=""
+              class="blog-article__image"
+              width="400"
+              height="280"
+              loading="lazy"
+            >
+            <span class="blog-article__category" data-i18n="blog.categories.wellness">Wellness</span>
+          </div>
+          <div class="blog-article__content">
+            <div class="blog-article__meta">
+              <time datetime="2024-01-08" class="blog-article__date">January 8, 2024</time>
+              <span class="blog-article__read-time">6 min read</span>
+            </div>
+            <h3 class="blog-article__title" data-i18n="blog.posts[2].title">
+              Nutrition Guidelines for Elderly Care
+            </h3>
+            <p class="blog-article__excerpt" data-i18n="blog.posts[2].excerpt">
+              Proper nutrition is crucial for senior health. Learn about dietary needs and meal planning tips.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <article class="blog-article">
+        <a href="/blog/family-caregiver-support" class="blog-article__link">
+          <div class="blog-article__image-container">
+            <img
+              src="/assets/images/blog/caregiver-support.jpg"
+              alt=""
+              class="blog-article__image"
+              width="400"
+              height="280"
+              loading="lazy"
+            >
+            <span class="blog-article__category" data-i18n="blog.categories.caregiving">Caregiving</span>
+          </div>
+          <div class="blog-article__content">
+            <div class="blog-article__meta">
+              <time datetime="2024-01-05" class="blog-article__date">January 5, 2024</time>
+              <span class="blog-article__read-time">5 min read</span>
+            </div>
+            <h3 class="blog-article__title" data-i18n="blog.posts[3].title">
+              Supporting Family Caregivers: Resources & Tips
+            </h3>
+            <p class="blog-article__excerpt" data-i18n="blog.posts[3].excerpt">
+              Family caregivers need support too. Explore resources and self-care strategies to prevent burnout.
+            </p>
+          </div>
+        </a>
+      </article>
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="blog-preview__newsletter">
+      <div class="blog-preview__newsletter-content">
+        <div class="blog-preview__newsletter-icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#mail"></use>
+          </svg>
+        </div>
+        <div class="blog-preview__newsletter-text">
+          <h3 class="blog-preview__newsletter-title" data-i18n="blog.newsletter.title">
+            Get Health Tips in Your Inbox
+          </h3>
+          <p class="blog-preview__newsletter-description" data-i18n="blog.newsletter.description">
+            Subscribe to our newsletter for expert health advice and care tips.
+          </p>
+        </div>
+        <form class="blog-preview__newsletter-form" action="/subscribe" method="POST">
+          <label for="blog-newsletter-email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="blog-newsletter-email"
+            name="email"
+            placeholder="Enter your email"
+            data-i18n-attr="placeholder:blog.newsletter.placeholder"
+            required
+            aria-required="true"
+            class="blog-preview__newsletter-input"
+          >
+          <button type="submit" class="button button--primary" data-i18n="blog.newsletter.button">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Base Styles -->
+<style>
+  .blog-preview {
+    padding: var(--space-16, 4rem) 0;
+    background: var(--bg-base, #ffffff);
+  }
+
+  .blog-preview__container {
+    max-width: var(--container-max-width, 1280px);
+    margin: 0 auto;
+    padding: 0 var(--space-6, 1.5rem);
+  }
+
+  .blog-preview__header {
+    margin-bottom: var(--space-12, 3rem);
+  }
+
+  .blog-preview__header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-6, 1.5rem);
+  }
+
+  .blog-preview__subtitle {
+    margin: 0 0 var(--space-3, 0.75rem);
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary-brand, #2563eb);
+  }
+
+  .blog-preview__title {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .blog-preview__view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+    font-size: var(--font-size-base, 1rem);
+    font-weight: 600;
+    color: var(--text-link, #2563eb);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: gap var(--transition-fast, 150ms);
+  }
+
+  .blog-preview__view-all:hover,
+  .blog-preview__view-all:focus {
+    gap: var(--space-3, 0.75rem);
+  }
+
+  .blog-preview__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-8, 2rem);
+    margin-bottom: var(--space-12, 3rem);
+  }
+
+  .blog-article--featured {
+    grid-column: span 2;
+  }
+
+  .blog-article__link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .blog-article {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-surface, #ffffff);
+    border: 1px solid var(--border-light, #e5e7eb);
+    border-radius: var(--radius-xl, 1rem);
+    overflow: hidden;
+    transition: all var(--transition-base, 200ms);
+  }
+
+  .blog-article:hover {
+    border-color: var(--border-primary, #2563eb);
+    box-shadow: var(--shadow-xl, 0 20px 25px rgba(0, 0, 0, 0.15));
+    transform: translateY(-4px);
+  }
+
+  .blog-article__image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 62.5%; /* 16:10 aspect ratio */
+    overflow: hidden;
+  }
+
+  .blog-article--featured .blog-article__image-container {
+    padding-top: 50%; /* 2:1 aspect ratio for featured */
+  }
+
+  .blog-article__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow, 300ms);
+  }
+
+  .blog-article:hover .blog-article__image {
+    transform: scale(1.05);
+  }
+
+  .blog-article__category {
+    position: absolute;
+    top: var(--space-4, 1rem);
+    left: var(--space-4, 1rem);
+    padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+    background: var(--bg-primary, #2563eb);
+    color: var(--text-on-primary, #ffffff);
+    font-size: var(--font-size-xs, 0.75rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: var(--radius-full, 9999px);
+  }
+
+  .blog-article__content {
+    padding: var(--space-6, 1.5rem);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-article__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3, 0.75rem);
+    margin-bottom: var(--space-3, 0.75rem);
+    font-size: var(--font-size-sm, 0.875rem);
+    color: var(--text-tertiary, #9ca3af);
+  }
+
+  .blog-article__meta::before {
+    content: '•';
+  }
+
+  .blog-article__date::after {
+    content: '•';
+    margin-left: var(--space-3, 0.75rem);
+  }
+
+  .blog-article__title {
+    margin: 0 0 var(--space-3, 0.75rem);
+    font-size: var(--font-size-xl, 1.25rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .blog-article--featured .blog-article__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .blog-article__excerpt {
+    margin: 0 0 var(--space-4, 1rem);
+    font-size: var(--font-size-base, 1rem);
+    line-height: 1.6;
+    color: var(--text-secondary, #6b7280);
+    flex: 1;
+  }
+
+  .blog-article__author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2, 0.5rem);
+    padding-top: var(--space-4, 1rem);
+    border-top: 1px solid var(--border-light, #e5e7eb);
+  }
+
+  .blog-article__author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full, 9999px);
+    object-fit: cover;
+  }
+
+  .blog-article__author-name {
+    font-size: var(--font-size-sm, 0.875rem);
+    font-weight: 600;
+    color: var(--text-primary, #1f2937);
+  }
+
+  .blog-preview__newsletter {
+    padding: var(--space-10, 2.5rem);
+    background: linear-gradient(135deg, var(--bg-primary, #2563eb), var(--bg-primary-hover, #1d4ed8));
+    border-radius: var(--radius-2xl, 1.5rem);
+    color: var(--text-on-primary, #ffffff);
+  }
+
+  .blog-preview__newsletter-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--space-6, 1.5rem);
+    align-items: center;
+  }
+
+  .blog-preview__newsletter-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full, 9999px);
+    backdrop-filter: blur(10px);
+  }
+
+  .blog-preview__newsletter-title {
+    margin: 0 0 var(--space-2, 0.5rem);
+    font-size: var(--font-size-xl, 1.25rem);
+    font-weight: 700;
+  }
+
+  .blog-preview__newsletter-description {
+    margin: 0;
+    font-size: var(--font-size-base, 1rem);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .blog-preview__newsletter-form {
+    display: flex;
+    gap: var(--space-3, 0.75rem);
+    min-width: 320px;
+  }
+
+  .blog-preview__newsletter-input {
+    flex: 1;
+    padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+    border-radius: var(--radius-lg, 0.5rem);
+    font-size: var(--font-size-base, 1rem);
+    color: var(--text-primary, #1f2937);
+  }
+
+  .blog-preview__newsletter-input:focus {
+    outline: none;
+    background: var(--bg-surface, #ffffff);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Button styles */
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2, 0.5rem);
+    padding: var(--space-3, 0.75rem) var(--space-5, 1.25rem);
+    font-size: var(--font-size-base, 1rem);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-lg, 0.5rem);
+    transition: all var(--transition-fast, 150ms);
+    cursor: pointer;
+    border: 2px solid transparent;
+    white-space: nowrap;
+  }
+
+  .button--primary {
+    background: var(--bg-surface, #ffffff);
+    color: var(--text-primary, #1f2937);
+  }
+
+  .button--primary:hover,
+  .button--primary:focus {
+    background: var(--bg-hover, #f3f4f6);
+    transform: translateY(-2px);
+  }
+
+  /* Screen reader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .blog-preview {
+      padding: var(--space-12, 3rem) 0;
+    }
+
+    .blog-preview__header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .blog-preview__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6, 1.5rem);
+    }
+
+    .blog-article--featured {
+      grid-column: span 1;
+    }
+
+    .blog-preview__newsletter-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .blog-preview__newsletter-icon {
+      margin: 0 auto;
+    }
+
+    .blog-preview__newsletter-form {
+      flex-direction: column;
+      min-width: auto;
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .blog-preview__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Desktop large */
+  @media (min-width: 1280px) {
+    .blog-preview {
+      padding: var(--space-20, 5rem) 0;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .blog-article,
+    .blog-article__image,
+    .blog-preview__view-all,
+    .button {
+      transition: none;
+    }
+
+    .blog-article:hover,
+    .blog-article:hover .blog-article__image {
+      transform: none;
+    }
+  }
+
+  /* Dark theme support */
+  @media (prefers-color-scheme: dark) {
+    .blog-preview {
+      background: var(--bg-base-dark, #111827);
+    }
+
+    .blog-preview__title {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .blog-article {
+      background: var(--bg-surface-dark, #1f2937);
+      border-color: var(--border-dark, #374151);
+    }
+
+    .blog-article__title {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+
+    .blog-article__excerpt {
+      color: var(--text-secondary-dark, #9ca3af);
+    }
+
+    .blog-article__author-name {
+      color: var(--text-primary-dark, #f9fafb);
+    }
+  }
+</style>
