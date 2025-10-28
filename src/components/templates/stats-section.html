@@ -1,0 +1,243 @@
+<!-- Stats Section - Works without JavaScript -->
+<section class="stats-section" aria-labelledby="stats-title">
+  <div class="stats-section__container">
+    <!-- Section Header (Optional) -->
+    <header class="stats-section__header">
+      <h2 id="stats-title" class="stats-section__title" data-i18n="stats.title">
+        Trusted by Hundreds of Families
+      </h2>
+      <p class="stats-section__description" data-i18n="stats.description">
+        Our commitment to excellence is reflected in our track record of providing exceptional care.
+      </p>
+    </header>
+
+    <!-- Stats Grid -->
+    <div class="stats-section__grid">
+      <!-- Stat 1 -->
+      <div class="stat-item">
+        <div class="stat-item__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#users"></use>
+          </svg>
+        </div>
+        <div class="stat-item__content">
+          <strong class="stat-item__number" data-i18n="stats.items[0].number">500+</strong>
+          <span class="stat-item__label" data-i18n="stats.items[0].label">Families Served</span>
+          <p class="stat-item__description" data-i18n="stats.items[0].description">
+            Trusted by families across Florida for exceptional in-home care
+          </p>
+        </div>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="stat-item">
+        <div class="stat-item__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#calendar"></use>
+          </svg>
+        </div>
+        <div class="stat-item__content">
+          <strong class="stat-item__number" data-i18n="stats.items[1].number">15+</strong>
+          <span class="stat-item__label" data-i18n="stats.items[1].label">Years of Experience</span>
+          <p class="stat-item__description" data-i18n="stats.items[1].description">
+            Over a decade of providing professional healthcare services
+          </p>
+        </div>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="stat-item">
+        <div class="stat-item__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#star"></use>
+          </svg>
+        </div>
+        <div class="stat-item__content">
+          <strong class="stat-item__number" data-i18n="stats.items[2].number">98%</strong>
+          <span class="stat-item__label" data-i18n="stats.items[2].label">Satisfaction Rate</span>
+          <p class="stat-item__description" data-i18n="stats.items[2].description">
+            Our clients rate us highly for quality and compassionate care
+          </p>
+        </div>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="stat-item">
+        <div class="stat-item__icon" aria-hidden="true">
+          <svg width="48" height="48">
+            <use href="/assets/icons/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <div class="stat-item__content">
+          <strong class="stat-item__number" data-i18n="stats.items[3].number">24/7</strong>
+          <span class="stat-item__label" data-i18n="stats.items[3].label">On-Call Support</span>
+          <p class="stat-item__description" data-i18n="stats.items[3].description">
+            Round-the-clock availability for peace of mind
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Base Styles -->
+<style>
+  .stats-section {
+    padding: var(--space-16, 4rem) 0;
+    background: linear-gradient(135deg, var(--bg-primary, #2563eb), var(--bg-primary-hover, #1d4ed8));
+    color: var(--text-on-primary, #ffffff);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .stats-section__container {
+    position: relative;
+    z-index: 1;
+    max-width: var(--container-max-width, 1280px);
+    margin: 0 auto;
+    padding: 0 var(--space-6, 1.5rem);
+  }
+
+  .stats-section__header {
+    max-width: 768px;
+    margin: 0 auto var(--space-12, 3rem);
+    text-align: center;
+  }
+
+  .stats-section__title {
+    margin: 0 0 var(--space-4, 1rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .stats-section__description {
+    margin: 0;
+    font-size: var(--font-size-lg, 1.125rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .stats-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-8, 2rem);
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--space-8, 2rem);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-xl, 1rem);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-base, 200ms);
+  }
+
+  .stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-2xl, 0 25px 50px rgba(0, 0, 0, 0.25));
+  }
+
+  .stat-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin-bottom: var(--space-6, 1.5rem);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full, 9999px);
+    backdrop-filter: blur(10px);
+  }
+
+  .stat-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2, 0.5rem);
+  }
+
+  .stat-item__number {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .stat-item__label {
+    display: block;
+    font-size: var(--font-size-lg, 1.125rem);
+    font-weight: 700;
+    margin-bottom: var(--space-2, 0.5rem);
+  }
+
+  .stat-item__description {
+    margin: 0;
+    font-size: var(--font-size-sm, 0.875rem);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .stats-section {
+      padding: var(--space-12, 3rem) 0;
+    }
+
+    .stats-section__grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6, 1.5rem);
+    }
+
+    .stat-item {
+      padding: var(--space-6, 1.5rem);
+    }
+  }
+
+  /* Tablet */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .stats-section__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Desktop large */
+  @media (min-width: 1280px) {
+    .stats-section {
+      padding: var(--space-20, 5rem) 0;
+    }
+
+    .stats-section__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .stat-item {
+      transition: none;
+    }
+
+    .stat-item:hover {
+      transform: none;
+    }
+  }
+</style>
