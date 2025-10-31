@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="src/utilities/path-resolver-init.js"></script>
         <meta charset="utf-8" />
+        <meta name="page-name" content="home" />
         <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
         <meta name="description" content="Experience the pinnacle of private nursing with Legacy Concierge. Our elite, compassionate nurses provide bespoke in-home care, from post-op recovery to chronic condition management." />
         <meta property="og:type" content="website" />
@@ -19,17 +19,443 @@
         <link rel="icon" href="favicon.svg" />
         <link rel="mask-icon" href="mask-icon.svg" color="#5bbad5" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="stylesheet" href="tokens/styles/design-tokens.css" />
+        <link rel="stylesheet" href="tokens/styles/component-tokens.css" />
         <link rel="stylesheet" href="tokens/styles/base.css" />
+        <link rel="stylesheet" href="tokens/styles/components.css" />
         <title>Legacy Concierge - Premier In-Home Nursing Care</title>
         <script defer src="main.js" type="module"></script>
     </head>
     <body role="document" itemscope itemtype="http://schema.org/WebPage">
-        <div role="application" aria-describedby="metadata controls context">
-            <header id="controls" role="banner"><nav role="navigation"></nav></header>
-            <section id="hero" role="region"></section>
-            <main id="context" role="main"></main>
-            <aside id="support" role="complementary"></aside>
-            <footer id="metadata" role="contentinfo"></footer>
-        </div>
+        <!-- Skip to Main Content -->
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <!-- Header / Navigation -->
+        <header class="site-header" role="banner">
+            <div class="site-header__container">
+                <!-- Logo -->
+                <div class="site-header__logo">
+                    <a href="index.html" aria-label="Legacy Concierge Home">
+                        <img src="../assets/logos/logo-full.svg" alt="Legacy Concierge" width="180" height="60">
+                    </a>
+                </div>
+
+                <!-- Primary Navigation -->
+                <nav class="site-header__nav" role="navigation" aria-label="Main navigation">
+                    <!-- Mobile Menu Toggle (Progressive Enhancement Target) -->
+                    <button
+                        class="site-header__menu-toggle requires-js"
+                        aria-label="Toggle navigation menu"
+                        aria-expanded="false"
+                        aria-controls="primary-menu"
+                        hidden
+                    >
+                        <span class="site-header__menu-icon"></span>
+                    </button>
+
+                    <!-- Navigation Menu -->
+                    <ul class="site-header__menu" id="primary-menu">
+                        <li class="site-header__menu-item">
+                            <a href="index.html" class="site-header__menu-link" aria-current="page" data-i18n="nav.home">Home</a>
+                        </li>
+                        <li class="site-header__menu-item">
+                            <a href="pages/about.html" class="site-header__menu-link" data-i18n="nav.about">About</a>
+                        </li>
+                        <li class="site-header__menu-item">
+                            <a href="pages/services.html" class="site-header__menu-link" data-i18n="nav.services">Services</a>
+                        </li>
+                        <li class="site-header__menu-item">
+                            <a href="pages/team.html" class="site-header__menu-link" data-i18n="nav.team">Our&nbsp;Team</a>
+                        </li>
+                        <li class="site-header__menu-item">
+                            <a href="pages/blog.html" class="site-header__menu-link" data-i18n="nav.blog">Blog</a>
+                        </li>
+                        <li class="site-header__menu-item">
+                            <a href="pages/contact.html" class="site-header__menu-link" data-i18n="nav.contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Utility Actions -->
+                <div class="site-header__actions">
+                    <!-- Language Selector -->
+                    <div class="site-header__language">
+                        <label for="language-select" class="sr-only">Select language</label>
+                        <select id="language-select" class="site-header__language-select" aria-label="Choose language">
+                            <option value="en" selected>English</option>
+                            <option value="es">Español</option>
+                        </select>
+                    </div>
+
+                    <!-- Theme Toggle (Progressive Enhancement Target) -->
+                    <button
+                        class="site-header__theme-toggle requires-js"
+                        aria-label="Toggle dark mode"
+                        title="Toggle dark mode"
+                        hidden
+                    >
+                        <svg class="site-header__theme-icon" width="24" height="24" aria-hidden="true">
+                            <use href="#sun"></use>
+                        </svg>
+                    </button>
+
+                    <!-- CTA Button -->
+                    <a href="pages/contact.html" class="site-header__cta button button--primary" data-i18n="nav.cta">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" role="main">
+            <!-- Hero Section -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero__background">
+                    <img
+                        src="../.tmp/shared/assets/media/images/hero/img-shorebreak-1920x1080.jpg"
+                        alt=""
+                        class="hero__background-image"
+                        loading="eager"
+                        fetchpriority="high"
+                    >
+                    <div class="hero__overlay" aria-hidden="true"></div>
+                </div>
+
+                <div class="hero__container">
+                    <div class="hero__content">
+                        <h1 id="hero-title" class="hero__title" data-i18n="hero.title">
+                            Compassionate Care at Home
+                        </h1>
+
+                        <p class="hero__subtitle" data-i18n="hero.subtitle">
+                            Expert nursing services tailored to your unique needs. Professional, compassionate care in the comfort of your home.
+                        </p>
+
+                        <div class="hero__actions">
+                            <a href="pages/contact.html" class="button button--primary button--lg" data-i18n="hero.cta.primary">
+                                Get Started Today
+                            </a>
+                            <a href="pages/services.html" class="button button--secondary button--lg" data-i18n="hero.cta.secondary">
+                                Our Services
+                            </a>
+                        </div>
+
+                        <ul class="hero__features">
+                            <li>
+                                <svg width="24" height="24" aria-hidden="true">
+                                    <use href="#check-circle"></use>
+                                </svg>
+                                <span data-i18n="hero.features[0]">Licensed & Certified Nurses</span>
+                            </li>
+                            <li>
+                                <svg width="24" height="24" aria-hidden="true">
+                                    <use href="#check-circle"></use>
+                                </svg>
+                                <span data-i18n="hero.features[1]">24/7 On-Call Support</span>
+                            </li>
+                            <li>
+                                <svg width="24" height="24" aria-hidden="true">
+                                    <use href="#check-circle"></use>
+                                </svg>
+                                <span data-i18n="hero.features[2]">Personalized Care Plans</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#features" class="hero__scroll-indicator requires-js" aria-label="Scroll to content" hidden>
+                    <svg width="24" height="24" aria-hidden="true">
+                        <use href="#chevron-down"></use>
+                    </svg>
+                </a>
+            </section>
+
+            <!-- Feature Grid Section -->
+            <section id="features" class="feature-grid" aria-labelledby="features-title">
+                <div class="feature-grid__container">
+                    <header class="feature-grid__header">
+                        <p class="feature-grid__subtitle" data-i18n="features.subtitle">Why Choose Us</p>
+                        <h2 id="features-title" class="feature-grid__title" data-i18n="features.title">
+                            Exceptional Care You Can Trust
+                        </h2>
+                        <p class="feature-grid__description" data-i18n="features.description">
+                            We provide comprehensive in-home nursing care with a focus on compassion, professionalism, and personalized attention.
+                        </p>
+                    </header>
+
+                    <div class="feature-grid__grid">
+                        <article class="feature-grid__item">
+                            <div class="feature-grid__icon" aria-hidden="true">
+                                <svg width="48" height="48">
+                                    <use href="#shield-success"></use>
+                                </svg>
+                            </div>
+                            <h3 class="feature-grid__item-title" data-i18n="features.items[0].title">Licensed Professionals</h3>
+                            <p class="feature-grid__item-description" data-i18n="features.items[0].description">
+                                Our team consists of fully licensed and certified healthcare professionals with years of experience.
+                            </p>
+                        </article>
+
+                        <article class="feature-grid__item">
+                            <div class="feature-grid__icon" aria-hidden="true">
+                                <svg width="48" height="48">
+                                    <use href="#heart"></use>
+                                </svg>
+                            </div>
+                            <h3 class="feature-grid__item-title" data-i18n="features.items[1].title">Compassionate Care</h3>
+                            <p class="feature-grid__item-description" data-i18n="features.items[1].description">
+                                We treat every patient with dignity, respect, and the compassion they deserve during their recovery.
+                            </p>
+                        </article>
+
+                        <article class="feature-grid__item">
+                            <div class="feature-grid__icon" aria-hidden="true">
+                                <svg width="48" height="48">
+                                    <use href="#time-circle"></use>
+                                </svg>
+                            </div>
+                            <h3 class="feature-grid__item-title" data-i18n="features.items[2].title">24/7 Availability</h3>
+                            <p class="feature-grid__item-description" data-i18n="features.items[2].description">
+                                Round-the-clock support ensures you're never alone. Our team is available whenever you need us.
+                            </p>
+                        </article>
+
+                        <article class="feature-grid__item">
+                            <div class="feature-grid__icon" aria-hidden="true">
+                                <svg width="48" height="48">
+                                    <use href="#document"></use>
+                                </svg>
+                            </div>
+                            <h3 class="feature-grid__item-title" data-i18n="features.items[3].title">Personalized Plans</h3>
+                            <p class="feature-grid__item-description" data-i18n="features.items[3].description">
+                                Every care plan is tailored to your unique needs, medical condition, and personal preferences.
+                            </p>
+                        </article>
+
+                        <article class="feature-grid__item">
+                            <div class="feature-grid__icon" aria-hidden="true">
+                                <svg width="48" height="48">
+                                    <use href="#home"></use>
+                                </svg>
+                            </div>
+                            <h3 class="feature-grid__item-title" data-i18n="features.items[4].title">Home Comfort</h3>
+                            <p class="feature-grid__item-description" data-i18n="features.items[4].description">
+                                Receive professional medical care in the familiar, comfortable surroundings of your own home.
+                            </p>
+                        </article>
+
+                        <article class="feature-grid__item">
+                            <div class="feature-grid__icon" aria-hidden="true">
+                                <svg width="48" height="48">
+                                    <use href="#wallet"></use>
+                                </svg>
+                            </div>
+                            <h3 class="feature-grid__item-title" data-i18n="features.items[5].title">Insurance Support</h3>
+                            <p class="feature-grid__item-description" data-i18n="features.items[5].description">
+                                We work with most major insurance providers and help you navigate the billing process.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section" aria-labelledby="cta-title">
+                <div class="cta-section__container">
+                    <div class="cta-section__content">
+                        <div class="cta-section__icon" aria-hidden="true">
+                            <svg width="64" height="64">
+                                <use href="#heart-pulse"></use>
+                            </svg>
+                        </div>
+
+                        <h2 id="cta-title" class="cta-section__title" data-i18n="cta.title">
+                            Ready to Get Started?
+                        </h2>
+
+                        <p class="cta-section__description" data-i18n="cta.description">
+                            Contact us today for a free consultation. Our team is standing by to discuss your care needs and answer any questions.
+                        </p>
+
+                        <div class="cta-section__actions">
+                            <a href="pages/contact.html" class="button button--primary button--lg" data-i18n="cta.actions.schedule">
+                                Schedule Consultation
+                            </a>
+                            <a href="tel:+1-305-555-0100" class="button button--secondary-light button--lg">
+                                <svg width="20" height="20" aria-hidden="true">
+                                    <use href="#call"></use>
+                                </svg>
+                                <span data-i18n="cta.actions.call">Call (305) 555-0100</span>
+                            </a>
+                        </div>
+
+                        <p class="cta-section__note">
+                            <svg width="20" height="20" aria-hidden="true">
+                                <use href="#info-circle"></use>
+                            </svg>
+                            <span data-i18n="cta.note">Available 24/7 • Free consultation • No obligation</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
+            <div class="site-footer__container">
+                <div class="site-footer__columns">
+                    <div class="site-footer__column">
+                        <div class="site-footer__logo">
+                            <img src="../assets/logos/legacy-concierge-logo-small.svg" alt="Legacy Concierge" width="160" height="54">
+                        </div>
+                        <p class="site-footer__tagline" data-i18n="footer.tagline">
+                            Compassionate care at home, tailored to your needs.
+                        </p>
+                        <address class="site-footer__address">
+                            <p data-i18n-html="footer.address.street">123 Care Street<br>Miami, FL 33101</p>
+                            <p>
+                                <a href="tel:+1-305-555-0100" data-i18n="footer.address.phone">+1 (305) 555-0100</a><br>
+                                <a href="mailto:info@legacyconcierge.com">info@legacyconcierge.com</a>
+                            </p>
+                        </address>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h3 class="site-footer__heading" data-i18n="footer.services.heading">Services</h3>
+                        <nav aria-label="Services navigation">
+                            <ul class="site-footer__links">
+                                <li><a href="/services/post-surgical" data-i18n="footer.services.items[0]">Post-Surgical Recovery</a></li>
+                                <li><a href="/services/chronic-illness" data-i18n="footer.services.items[1]">Chronic Illness Support</a></li>
+                                <li><a href="/services/elderly-care" data-i18n="footer.services.items[2]">Elderly Care</a></li>
+                                <li><a href="/services/palliative-care" data-i18n="footer.services.items[3]">Palliative Care</a></li>
+                                <li><a href="/services/respite-care" data-i18n="footer.services.items[4]">Respite Care</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h3 class="site-footer__heading" data-i18n="footer.company.heading">Company</h3>
+                        <nav aria-label="Company navigation">
+                            <ul class="site-footer__links">
+                                <li><a href="pages/about.html" data-i18n="footer.company.items[0]">About Us</a></li>
+                                <li><a href="pages/team.html" data-i18n="footer.company.items[1]">Our Team</a></li>
+                                <li><a href="pages/careers.html" data-i18n="footer.company.items[2]">Careers</a></li>
+                                <li><a href="pages/blog.html" data-i18n="footer.company.items[3]">Blog</a></li>
+                                <li><a href="pages/testimonials.html" data-i18n="footer.company.items[4]">Testimonials</a></li>
+                                <li><a href="pages/contact.html" data-i18n="footer.company.items[5]">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="site-footer__column">
+                        <h3 class="site-footer__heading" data-i18n="footer.resources.heading">Resources</h3>
+                        <nav aria-label="Resources navigation">
+                            <ul class="site-footer__links">
+                                <li><a href="pages/faq.html" data-i18n="footer.resources.items[0]">FAQ</a></li>
+                                <li><a href="pages/insurance.html" data-i18n="footer.resources.items[1]">Insurance</a></li>
+                                <li><a href="pages/pricing.html" data-i18n="footer.resources.items[2]">Pricing</a></li>
+                                <li><a href="pages/privacy.html" data-i18n="footer.resources.items[3]">Privacy Policy</a></li>
+                                <li><a href="pages/terms.html" data-i18n="footer.resources.items[4]">Terms of Service</a></li>
+                                <li><a href="pages/accessibility.html" data-i18n="footer.resources.items[5]">Accessibility</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="site-footer__social-newsletter">
+                    <div class="site-footer__social">
+                        <h3 class="site-footer__heading" data-i18n="footer.social.heading">Follow Us</h3>
+                        <nav aria-label="Social media navigation">
+                            <ul class="site-footer__social-links">
+                                <li>
+                                    <a href="https://facebook.com/legacyconcierge" aria-label="Facebook" target="_blank" rel="noopener">
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="#facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/legacyconcierge" aria-label="Twitter" target="_blank" rel="noopener">
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="#twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/legacyconcierge" aria-label="Instagram" target="_blank" rel="noopener">
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/company/legacyconcierge" aria-label="LinkedIn" target="_blank" rel="noopener">
+                                        <svg width="24" height="24" aria-hidden="true">
+                                            <use href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="site-footer__newsletter">
+                        <h3 class="site-footer__heading" data-i18n="footer.newsletter.heading">Stay Updated</h3>
+                        <p data-i18n="footer.newsletter.description">Subscribe to our newsletter for health tips and updates.</p>
+                        <form class="site-footer__newsletter-form" action="/subscribe" method="POST">
+                            <label for="newsletter-email" class="sr-only">Email address</label>
+                            <input
+                                type="email"
+                                id="newsletter-email"
+                                name="email"
+                                placeholder="Enter your email"
+                                data-i18n-attr="placeholder:footer.newsletter.placeholder"
+                                required
+                                aria-required="true"
+                                class="site-footer__newsletter-input"
+                            >
+                            <button type="submit" class="site-footer__newsletter-button" data-i18n="footer.newsletter.button">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="site-footer__bottom">
+                    <p class="site-footer__copyright">
+                        &copy; 2024 Legacy Concierge. <span data-i18n="footer.copyright">All rights reserved.</span>
+                    </p>
+                    <nav aria-label="Legal navigation">
+                        <ul class="site-footer__legal-links">
+                            <li><a href="pages/privacy.html" data-i18n="footer.legal[0]">Privacy Policy</a></li>
+                            <li><a href="pages/terms.html" data-i18n="footer.legal[1]">Terms of Service</a></li>
+                            <li><a href="pages/sitemap.html" data-i18n="footer.legal[2]">Sitemap</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+
+        <!-- No JavaScript fallback -->
+        <noscript>
+            <style>
+                .requires-js {
+                    display: none;
+                }
+                .no-js-message {
+                    display: block;
+                    padding: 1rem;
+                    background: #fffbea;
+                    border: 1px solid #f59e0b;
+                    color: #92400e;
+                    text-align: center;
+                    margin: 1rem;
+                }
+            </style>
+            <div class="no-js-message">
+                <p><strong>JavaScript is disabled.</strong> Some features may not be available, but the site remains fully functional.</p>
+            </div>
+        </noscript>
     </body>
 </html>

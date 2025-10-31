@@ -139,7 +139,7 @@ class PathResolver {
    * @returns {string} Resolved i18n path
    */
   resolveI18n(locale, file) {
-    return this.resolve(`i18n/${locale}/${file}.json`);
+    return this.resolve(`src/i18n/${locale}/${file}.json`);
   }
 
   /**

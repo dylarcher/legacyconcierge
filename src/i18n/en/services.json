@@ -1,9 +1,71 @@
 {
   "services": {
-    "title": "Our Services",
-    "eyebrow": "Comprehensive Care",
-    "subtitle": "Discover our comprehensive in-home nursing services, from specialized treatments to expert care for chronic conditions",
+    "hero": {
+      "subtitle": "Our Services",
+      "title": "Comprehensive In-Home Care Solutions",
+      "description": "From post-surgical recovery to chronic illness management, we provide specialized nursing care tailored to your unique needs."
+    },
+    "title": "Expert In-Home Healthcare Services",
+    "subtitle": "Our Services",
+    "description": "We provide comprehensive in-home nursing care with a focus on compassion, professionalism, and personalized attention.",
     "learnMore": "Learn More →",
+    "viewAll": "View All Services",
+    "items": [
+      {
+        "title": "Post-Surgical Recovery",
+        "description": "Expert nursing care to support your recovery after surgery, ensuring optimal healing and comfort at home.",
+        "features": [
+          "24/7 monitoring",
+          "Pain management",
+          "Physical therapy support"
+        ]
+      },
+      {
+        "title": "Chronic Illness Support",
+        "description": "Ongoing care for chronic conditions including diabetes, heart disease, and respiratory conditions.",
+        "features": [
+          "Medication management",
+          "Vital signs monitoring",
+          "Diet & lifestyle guidance"
+        ]
+      },
+      {
+        "title": "Elderly Care",
+        "description": "Compassionate care for seniors, helping them maintain independence and quality of life at home.",
+        "features": [
+          "Personal care assistance",
+          "Companionship",
+          "Safety monitoring"
+        ]
+      },
+      {
+        "title": "Palliative Care",
+        "description": "Comfort-focused care for serious illnesses, providing relief from symptoms and stress.",
+        "features": [
+          "Symptom relief",
+          "Emotional support",
+          "Family counseling"
+        ]
+      },
+      {
+        "title": "Respite Care",
+        "description": "Temporary relief for family caregivers, providing professional care so you can rest and recharge.",
+        "features": [
+          "Flexible scheduling",
+          "Trained caregivers",
+          "Peace of mind"
+        ]
+      },
+      {
+        "title": "Custom Care Plans",
+        "description": "Personalized care solutions designed specifically for your unique health needs and preferences.",
+        "features": [
+          "Individual assessment",
+          "Tailored approach",
+          "Ongoing adjustments"
+        ]
+      }
+    ],
     "treatments": {
       "sectionTitle": "Specialized Treatments",
       "sectionSubtitle": "Evidence-based therapeutic interventions delivered with precision and compassion in your home",
@@ -83,5 +145,38 @@
       "subtitle": "Let us create a personalized care plan tailored to your unique needs",
       "button": "Schedule a Consultation"
     }
+  },
+  "testimonials": {
+    "subtitle": "What Our Clients Say",
+    "title": "Trusted by Families Across Florida",
+    "items": [
+      {
+        "quote": "The care team from Legacy Concierge has been a blessing for our family. They treated my mother with such compassion and professionalism during her recovery. We couldn't have asked for better support.",
+        "name": "Maria Gonzalez",
+        "role": "Daughter of Patient"
+      },
+      {
+        "quote": "After my surgery, having a professional nurse at home made all the difference. The level of care and attention to detail was exceptional. I recovered faster than expected thanks to their expertise.",
+        "name": "Robert Chen",
+        "role": "Post-Surgical Patient"
+      },
+      {
+        "quote": "As a family caregiver, the respite care services gave me the break I desperately needed. Knowing my father was in capable, caring hands allowed me to rest without worry.",
+        "name": "Jennifer Williams",
+        "role": "Family Caregiver"
+      }
+    ],
+    "trust": {
+      "families": "Families Served",
+      "years": "Years of Experience",
+      "satisfaction": "Satisfaction Rate",
+      "support": "On-Call Support"
+    }
+  },
+  "meta": {
+    "title": "Our Services - Legacy Concierge Home Healthcare",
+    "description": "Comprehensive in-home healthcare services including post-surgical recovery, chronic illness management, and specialized nursing care.",
+    "ogTitle": "Professional In-Home Healthcare Services",
+    "ogDescription": "Discover our full range of in-home nursing services, from post-operative care to chronic condition management."
   }
 }

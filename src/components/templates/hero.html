@@ -46,19 +46,19 @@
       <ul class="hero__features">
         <li>
           <svg width="24" height="24" aria-hidden="true">
-            <use href="/assets/icons/sprite.svg#check-circle"></use>
+            <use href="#check-circle"></use>
           </svg>
           <span>Licensed & Certified Nurses</span>
         </li>
         <li>
           <svg width="24" height="24" aria-hidden="true">
-            <use href="/assets/icons/sprite.svg#check-circle"></use>
+            <use href="#check-circle"></use>
           </svg>
           <span>24/7 On-Call Support</span>
         </li>
         <li>
           <svg width="24" height="24" aria-hidden="true">
-            <use href="/assets/icons/sprite.svg#check-circle"></use>
+            <use href="#check-circle"></use>
           </svg>
           <span>Personalized Care Plans</span>
         </li>
@@ -69,7 +69,7 @@
   <!-- Scroll indicator (optional, progressive enhancement) -->
   <a href="#features" class="hero__scroll-indicator requires-js" aria-label="Scroll to content" hidden>
     <svg width="24" height="24" aria-hidden="true">
-      <use href="/assets/icons/sprite.svg#chevron-down"></use>
+      <use href="#chevron-down"></use>
     </svg>
   </a>
 </section>
@@ -84,6 +84,17 @@
     justify-content: center;
     overflow: hidden;
     color: var(--text-on-dark, #ffffff);
+  }
+
+  .hero::after {
+    content: '';
+    background: #0148;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .hero__background {

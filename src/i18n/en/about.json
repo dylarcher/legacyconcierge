@@ -1,4 +1,110 @@
 {
+	"about": {
+		"hero": {
+			"subtitle": "About Us",
+			"title": "Dedicated to Your Well-Being",
+			"description": "For over 15 years, Legacy Concierge has been providing compassionate, professional in-home care to families across Florida. Our team of licensed healthcare professionals is committed to helping you live comfortably and independently."
+		}
+	},
+	"stats": {
+		"title": "Trusted by Hundreds of Families",
+		"description": "Our commitment to excellence is reflected in our track record of providing exceptional care.",
+		"items": [
+			{
+				"number": "500+",
+				"label": "Families Served",
+				"description": "Trusted by families across Florida for exceptional in-home care"
+			},
+			{
+				"number": "15+",
+				"label": "Years of Experience",
+				"description": "Over a decade of providing professional healthcare services"
+			},
+			{
+				"number": "98%",
+				"label": "Satisfaction Rate",
+				"description": "Our clients rate us highly for quality and compassionate care"
+			},
+			{
+				"number": "24/7",
+				"label": "On-Call Support",
+				"description": "Round-the-clock availability for peace of mind"
+			}
+		]
+	},
+	"team": {
+		"subtitle": "Meet Our Team",
+		"title": "Expert Caregivers Dedicated to Your Well-Being",
+		"description": "Our team consists of licensed, certified healthcare professionals with years of experience in providing compassionate in-home care.",
+		"members": [
+			{
+				"name": "Dr. Sarah Smith, RN",
+				"role": "Chief Nursing Officer",
+				"bio": "Dr. Smith brings over 20 years of nursing experience, specializing in home healthcare and patient advocacy. She is passionate about providing personalized, compassionate care to every patient.",
+				"credentials": [
+					"Doctor of Nursing Practice (DNP)",
+					"Board Certified in Home Health",
+					"Fellow, American Academy of Nursing"
+				]
+			},
+			{
+				"name": "Michael Chen, RN",
+				"role": "Senior Nurse Practitioner",
+				"bio": "Michael specializes in chronic disease management and post-surgical care. His patient-centered approach and clinical expertise ensure the highest quality of care for our clients.",
+				"credentials": [
+					"Master of Science in Nursing",
+					"Certified Nurse Practitioner",
+					"ACLS & BLS Certified"
+				]
+			},
+			{
+				"name": "Maria Gonzalez, RN",
+				"role": "Geriatric Care Specialist",
+				"bio": "Maria has dedicated her career to elderly care, with specialized training in dementia and Alzheimer's support. She creates nurturing environments that promote dignity and independence.",
+				"credentials": [
+					"Bachelor of Science in Nursing",
+					"Certified Geriatric Nurse",
+					"Alzheimer's Care Specialist"
+				]
+			},
+			{
+				"name": "David Williams, PT",
+				"role": "Physical Therapist",
+				"bio": "David focuses on mobility rehabilitation and pain management. His innovative therapy techniques help patients regain strength and independence in the comfort of their homes.",
+				"credentials": [
+					"Doctor of Physical Therapy",
+					"Orthopedic Clinical Specialist",
+					"Certified Strength & Conditioning Specialist"
+				]
+			},
+			{
+				"name": "Lisa Patel, MSW",
+				"role": "Care Coordinator",
+				"bio": "Lisa ensures seamless coordination between patients, families, and healthcare providers. Her empathetic approach and organizational skills make the care experience smooth and stress-free.",
+				"credentials": [
+					"Master of Social Work",
+					"Licensed Clinical Social Worker",
+					"Case Management Certified"
+				]
+			},
+			{
+				"name": "James Taylor, RN",
+				"role": "Palliative Care Nurse",
+				"bio": "James specializes in palliative and hospice care, providing comfort and support during life's most challenging moments. His compassionate presence brings peace to patients and families.",
+				"credentials": [
+					"Bachelor of Science in Nursing",
+					"Certified Hospice & Palliative Nurse",
+					"Pain Management Specialist"
+				]
+			}
+		]
+	},
+	"meta": {
+		"title": "About Legacy Concierge - Expert In-Home Healthcare",
+		"description": "Learn about Legacy Concierge's mission to provide compassionate, professional in-home care. Meet our team of licensed healthcare professionals dedicated to your well-being.",
+		"ogTitle": "About Legacy Concierge - Compassionate In-Home Care",
+		"ogDescription": "Discover how Legacy Concierge has been providing exceptional in-home healthcare for over 15 years. Meet our expert team of certified nursing professionals."
+	},
 	"columns": [
 		{
 			"text": "The name Legacy Concierge carries a promise—to cherish your family's story as fiercely as we do our own. Founded in 2022, our mission sprang from a truth we know too well: too many families watch their loved ones suffer without the care they deserve. We've walked that path, felt that ache, and vowed to change it. Legacy Concierge delivers elite, compassionate care, woven with dignity and trust, to ensure your family's journey is met with the reverence it demands—<strong>because your legacy matters.</strong>",

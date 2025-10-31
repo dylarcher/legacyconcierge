@@ -76,16 +76,19 @@ class ProgressiveEnhancement {
     // 1. Initialize core utilities
     await this.initUtilities();
 
-    // 2. Reveal JS-only elements
+    // 2. Inject SVG sprite for icon support
+    await this.injectSVGSprite();
+
+    // 3. Reveal JS-only elements
     this.revealJSElements();
 
-    // 3. Load components present on the page
+    // 4. Load components present on the page
     await this.loadPageComponents();
 
-    // 4. Setup interactive enhancements
+    // 5. Setup interactive enhancements
     this.setupInteractiveEnhancements();
 
-    // 5. Apply i18n to the page
+    // 6. Apply i18n to the page
     await this.applyTranslations();
 
     this.initialized = true;
@@ -135,6 +138,48 @@ class ProgressiveEnhancement {
     window.announce = window.accessibilityManager.announce.bind(window.accessibilityManager);
     window.debounce = window.performanceManager.debounce.bind(window.performanceManager);
     window.throttle = window.performanceManager.throttle.bind(window.performanceManager);
+  }
+
+  /**
+   * Inject SVG sprite into the document
+   * This allows <use> references to work reliably across all browsers
+   */
+  async injectSVGSprite() {
+    // Check if already injected
+    if (document.getElementById('svg-sprite-injected')) {
+      return;
+    }
+
+    console.log('[Init] Injecting SVG sprite...');
+
+    try {
+      const spriteUrl = pathResolver.resolveAsset('icons/sprite.svg');
+      const response = await fetch(spriteUrl);
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch sprite: ${response.status}`);
+      }
+
+      const svgText = await response.text();
+
+      // Create a container div
+      const container = document.createElement('div');
+      container.id = 'svg-sprite-injected';
+      container.style.display = 'none';
+      container.setAttribute('aria-hidden', 'true');
+      container.innerHTML = svgText;
+
+      // Inject at the beginning of body
+      if (document.body.firstChild) {
+        document.body.insertBefore(container, document.body.firstChild);
+      } else {
+        document.body.appendChild(container);
+      }
+
+      console.log('[Init] SVG sprite injected successfully');
+    } catch (error) {
+      console.error('[Init] Failed to inject SVG sprite:', error);
+    }
   }
 
   /**
@@ -240,7 +285,7 @@ class ProgressiveEnhancement {
 
     menuToggle.addEventListener('click', () => {
       const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      menuToggle.setAttribute('aria-expanded', `${!isExpanded}`);
       menu.classList.toggle('is-open');
 
       // Prevent body scroll when menu is open
@@ -264,7 +309,7 @@ class ProgressiveEnhancement {
       const currentTheme = themeManager.getTheme();
       const iconName = currentTheme === 'dark' ? 'moon' : 'sun';
       if (themeIcon) {
-        themeIcon.setAttribute('href', `/assets/icons/sprite.svg#${iconName}`);
+        themeIcon.setAttribute('href', `#${iconName}`);
       }
       themeToggle.setAttribute('aria-label',
         currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'

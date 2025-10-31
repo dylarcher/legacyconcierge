@@ -283,22 +283,13 @@ export class PerformanceManager {
   preloadCritical() {
     // Preload critical CSS
     const criticalCSS = [
-      '/src/tokens/design-tokens.css',
-      '/src/tokens/component-tokens.css',
-      '/src/tokens/base.css'
+      '/src/tokens/styles/design-tokens.css',
+      '/src/tokens/styles/component-tokens.css',
+      '/src/tokens/styles/base.css'
     ];
 
     criticalCSS.forEach(href => {
       this.preload(href, 'style');
-    });
-
-    // Preload critical JavaScript
-    const criticalJS = [
-      '/src/init.js'
-    ];
-
-    criticalJS.forEach(href => {
-      this.preload(href, 'script');
     });
 
     // Preload hero images (if present)

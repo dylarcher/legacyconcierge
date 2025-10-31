@@ -1,43 +1,65 @@
 {
 	"contact": {
+		"hero": {
+			"subtitle": "Get in Touch",
+			"title": "We're Here to Help",
+			"description": "Have questions about our services? Ready to schedule a consultation? Contact us today and discover how we can support your healthcare needs."
+		},
+		"form": {
+			"title": "Send Us a Message",
+			"description": "Fill out the form below and our team will get back to you within 24 hours.",
+			"fields": {
+				"firstName": {
+					"label": "First Name",
+					"placeholder": "Jane"
+				},
+				"lastName": {
+					"label": "Last Name",
+					"placeholder": "Doe"
+				},
+				"email": {
+					"label": "Email Address",
+					"placeholder": "jane.doe@example.com"
+				},
+				"phone": {
+					"label": "Phone Number",
+					"placeholder": "(305) 555-0100"
+				},
+				"service": {
+					"label": "Service Interest",
+					"options": [
+						"Select a service",
+						"Post-Surgical Recovery",
+						"Chronic Illness Support",
+						"Elderly Care",
+						"Palliative Care",
+						"Respite Care",
+						"Other"
+					]
+				},
+				"message": {
+					"label": "Message",
+					"placeholder": "Tell us how we can help you..."
+				},
+				"preferredContact": {
+					"label": "Preferred Contact Method",
+					"options": [
+						"Email",
+						"Phone",
+						"Either"
+					]
+				}
+			},
+			"submit": "Send Message",
+			"reset": "Clear Form",
+			"note": "We respect your privacy. Your information will never be shared with third parties.",
+			"success": "Thank you! We'll be in touch within 24 hours."
+		},
 		"emergency": {
 			"description": "For urgent medical needs, contact us immediately.",
 			"href": "tel:+13109744517",
 			"phone": "Call Now: 1 (310) 974-4517",
 			"title": "24/7 Emergency Support"
-		},
-		"form": {
-			"email": {
-				"label": "Email Address",
-				"placeholder": "jane.doe@provider.com"
-			},
-			"message": {
-				"label": "Message",
-				"placeholder": "Tell us how we can help you..."
-			},
-			"name": {
-				"label": "Your Name",
-				"placeholder": "Jane Doe"
-			},
-			"phone": {
-				"help": "Optional — we'll only call if you prefer phone contact",
-				"label": "Phone Number",
-				"placeholder": "1 (310) 974-4517"
-			},
-			"reset": "Clear Form",
-			"subject": {
-				"label": "Subject",
-				"options": {
-					"appointment": "Schedule Appointment",
-					"billing": "Billing Question",
-					"default": "Select a subject",
-					"feedback": "Feedback",
-					"general": "General Inquiry",
-					"services": "Services Information"
-				}
-			},
-			"submit": "Send Message",
-			"title": "Send Us a Message"
 		},
 		"hours": {
 			"closed": "Closed",
@@ -64,7 +86,9 @@
 			"email": {
 				"address": "info@legacyconcierge.com",
 				"href": "mailto:info@legacyconcierge.com",
-				"label": "Email"
+				"label": "Email",
+				"title": "Email Us",
+				"description": "Send us a message and we'll respond within 24 hours"
 			},
 			"fax": {
 				"label": "Fax",
@@ -73,7 +97,24 @@
 			"phone": {
 				"href": "tel:+13109744517",
 				"label": "Phone",
-				"number": "1 (310) 974-4517"
+				"number": "1 (310) 974-4517",
+				"title": "Call Us",
+				"description": "Speak with our team directly for immediate assistance"
+			},
+			"location": {
+				"title": "Visit Us",
+				"description": "Stop by our office during business hours"
+			},
+			"hours": {
+				"title": "Business Hours",
+				"weekdays": "Monday - Friday",
+				"weekdaysTimes": "9:00 AM - 5:00 PM",
+				"saturday": "Saturday",
+				"saturdayTimes": "10:00 AM - 2:00 PM",
+				"sunday": "Sunday",
+				"sundayTimes": "Closed",
+				"emergency": "Emergency Support",
+				"emergencyTimes": "24/7 On-Call"
 			},
 			"title": "Contact Information"
 		},
@@ -82,5 +123,11 @@
 		},
 		"subtitle": "We would love to hear from you. Our team is available 24/7.",
 		"title": "Contact Us"
+	},
+	"meta": {
+		"title": "Contact Legacy Concierge - Get In Touch",
+		"description": "Contact Legacy Concierge for compassionate in-home healthcare. Available 24/7 for consultations and emergency support.",
+		"ogTitle": "Contact Legacy Concierge - We're Here to Help",
+		"ogDescription": "Reach out to our team for personalized in-home healthcare consultations. Available 24/7 to support your needs."
 	}
 }

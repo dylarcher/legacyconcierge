@@ -1,4 +1,19 @@
 {
+	"meta": {
+		"title": "Legacy Concierge - Premier In-Home Nursing Care",
+		"description": "Experience the pinnacle of private nursing with Legacy Concierge. Our elite, compassionate nurses provide bespoke in-home care, from post-surgical recovery to chronic condition management.",
+		"ogTitle": "Legacy Concierge - Premier In-Home Nursing Care",
+		"ogDescription": "Experience the pinnacle of private nursing with Legacy Concierge. Our elite, compassionate nurses provide bespoke in-home care, from post-surgical recovery to chronic condition management."
+	},
+	"nav": {
+		"home": "Home",
+		"about": "About",
+		"services": "Services",
+		"team": "Our Team",
+		"blog": "Blog",
+		"contact": "Contact",
+		"cta": "Get Started"
+	},
 	"careModel": {
 		"steps": [
 			{
@@ -39,9 +54,17 @@
 	},
 	"ctaButton": "Personalized Consultation",
 	"hero": {
-		"ctaButton": "Personalized Consultation",
-		"subtitle": "Our concierge nurses provide comprehensive, bespoke care, from post-surgical recovery and chronic condition management to wellness optimization and palliative support. With 24/7 coordination and clinical oversight, we ensure your health is managed with precision and compassion, wherever you are.",
-		"title": "BEST IN CLASS CONCIERGE<br>CARE PROVIDER IN CALIFORNIA"
+		"title": "Compassionate Care at Home",
+		"subtitle": "Expert nursing services tailored to your unique needs. Professional, compassionate care in the comfort of your home.",
+		"cta": {
+			"primary": "Get Started Today",
+			"secondary": "Our Services"
+		},
+		"features": [
+			"Licensed & Certified Nurses",
+			"24/7 On-Call Support",
+			"Personalized Care Plans"
+		]
 	},
 	"infoCards": [
 		{
@@ -125,5 +148,99 @@
 		],
 		"title": "Testimonials: Real Stories, Real Trust"
 	},
-	"title": "BEST IN CLASS CONCIERGE<br>CARE PROVIDER IN CALIFORNIA"
+	"title": "BEST IN CLASS CONCIERGE<br>CARE PROVIDER IN CALIFORNIA",
+	"features": {
+		"subtitle": "Why Choose Us",
+		"title": "Exceptional Care You Can Trust",
+		"description": "We provide comprehensive in-home nursing care with a focus on compassion, professionalism, and personalized attention.",
+		"items": [
+			{
+				"title": "Licensed Professionals",
+				"description": "Our team consists of fully licensed and certified healthcare professionals with years of experience."
+			},
+			{
+				"title": "Compassionate Care",
+				"description": "We treat every patient with dignity, respect, and the compassion they deserve during their recovery."
+			},
+			{
+				"title": "24/7 Availability",
+				"description": "Round-the-clock support ensures you're never alone. Our team is available whenever you need us."
+			},
+			{
+				"title": "Personalized Plans",
+				"description": "Every care plan is tailored to your unique needs, medical condition, and personal preferences."
+			},
+			{
+				"title": "Home Comfort",
+				"description": "Receive professional medical care in the familiar, comfortable surroundings of your own home."
+			},
+			{
+				"title": "Insurance Support",
+				"description": "We work with most major insurance providers and help you navigate the billing process."
+			}
+		]
+	},
+	"cta": {
+		"title": "Ready to Get Started?",
+		"description": "Contact us today for a free consultation. Our team is standing by to discuss your care needs and answer any questions.",
+		"actions": {
+			"schedule": "Schedule Consultation",
+			"call": "Call (305) 555-0100"
+		},
+		"note": "Available 24/7 • Free consultation • No obligation"
+	},
+	"footer": {
+		"tagline": "Compassionate care at home, tailored to your needs.",
+		"address": {
+			"street": "123 Care Street<br>Miami, FL 33101",
+			"phone": "+1 (305) 555-0100"
+		},
+		"services": {
+			"heading": "Services",
+			"items": [
+				"Post-Surgical Recovery",
+				"Chronic Illness Support",
+				"Elderly Care",
+				"Palliative Care",
+				"Respite Care"
+			]
+		},
+		"company": {
+			"heading": "Company",
+			"items": [
+				"About Us",
+				"Our Team",
+				"Careers",
+				"Blog",
+				"Testimonials",
+				"Contact"
+			]
+		},
+		"resources": {
+			"heading": "Resources",
+			"items": [
+				"FAQ",
+				"Insurance",
+				"Pricing",
+				"Privacy Policy",
+				"Terms of Service",
+				"Accessibility"
+			]
+		},
+		"social": {
+			"heading": "Follow Us"
+		},
+		"newsletter": {
+			"heading": "Stay Updated",
+			"description": "Subscribe to our newsletter for health tips and updates.",
+			"placeholder": "Enter your email",
+			"button": "Subscribe"
+		},
+		"copyright": "All rights reserved.",
+		"legal": [
+			"Privacy Policy",
+			"Terms of Service",
+			"Sitemap"
+		]
+	}
 }

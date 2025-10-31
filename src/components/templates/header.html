@@ -3,7 +3,7 @@
   <div class="site-header__container">
     <!-- Logo -->
     <div class="site-header__logo">
-      <a href="/" aria-label="Legacy Concierge Home">
+      <a href="/src/index.html" aria-label="Legacy Concierge Home">
         <img src="/assets/images/logo.svg" alt="Legacy Concierge" width="180" height="60">
       </a>
     </div>
@@ -24,22 +24,22 @@
       <!-- Navigation Menu -->
       <ul class="site-header__menu" id="primary-menu">
         <li class="site-header__menu-item">
-          <a href="/" class="site-header__menu-link" aria-current="page">Home</a>
+          <a href="/src/index.html" class="site-header__menu-link" aria-current="page">Home</a>
         </li>
         <li class="site-header__menu-item">
-          <a href="/about" class="site-header__menu-link">About</a>
+          <a href="/src/pages/about.html" class="site-header__menu-link">About</a>
         </li>
         <li class="site-header__menu-item">
-          <a href="/services" class="site-header__menu-link">Services</a>
+          <a href="/src/pages/services.html" class="site-header__menu-link">Services</a>
         </li>
         <li class="site-header__menu-item">
-          <a href="/team" class="site-header__menu-link">Our Team</a>
+          <a href="/src/pages/team.html" class="site-header__menu-link">Our Team</a>
         </li>
         <li class="site-header__menu-item">
-          <a href="/blog" class="site-header__menu-link">Blog</a>
+          <a href="/src/pages/blog.html" class="site-header__menu-link">Blog</a>
         </li>
         <li class="site-header__menu-item">
-          <a href="/contact" class="site-header__menu-link">Contact</a>
+          <a href="/src/pages/contact.html" class="site-header__menu-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -63,12 +63,12 @@
         hidden
       >
         <svg class="site-header__theme-icon" width="24" height="24" aria-hidden="true">
-          <use href="/assets/icons/sprite.svg#sun"></use>
+          <use href="#sun"></use>
         </svg>
       </button>
 
       <!-- CTA Button -->
-      <a href="/contact" class="site-header__cta button button--primary">
+      <a href="/src/pages/contact.html" class="site-header__cta button button--primary">
         Get Started
       </a>
     </div>
@@ -103,35 +103,66 @@
   .site-header__logo img {
     display: block;
     height: auto;
+    max-width: 36px;
+    margin-top: 6px;
   }
 
   .site-header__nav {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 0;
     display: flex;
     justify-content: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-base, #d1d5db) transparent;
+  }
+
+  .site-header__nav::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .site-header__nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .site-header__nav::-webkit-scrollbar-thumb {
+    background: var(--border-base, #d1d5db);
+    border-radius: 3px;
   }
 
   .site-header__menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: inline-flex;
+    flex-wrap: nowrap !important;
     gap: var(--space-6, 1.5rem);
     align-items: center;
+    white-space: nowrap;
   }
 
   .site-header__menu-item {
     margin: 0;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .site-header__menu-item a {
+    white-space: nowrap !important;
+    display: inline-block;
   }
 
   .site-header__menu-link {
-    display: block;
+    display: inline-block;
     padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
     color: var(--text-primary, #1f2937);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-fast, 150ms);
     border-radius: var(--radius-sm, 0.25rem);
+    white-space: nowrap !important;
   }
 
   .site-header__menu-link:hover,

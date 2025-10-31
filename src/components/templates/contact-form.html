@@ -178,7 +178,7 @@
           <button type="submit" class="contact-form__submit">
             <span data-i18n="contact.form.submit">Send Message</span>
             <svg width="20" height="20" aria-hidden="true">
-              <use href="/assets/icons/sprite.svg#arrow-right"></use>
+              <use href="#arrow-right"></use>
             </svg>
           </button>
           <p class="contact-form__note" data-i18n="contact.form.note">
@@ -190,7 +190,7 @@
       <!-- Success Message -->
       <div class="contact-form__success" role="alert" hidden>
         <svg width="24" height="24" aria-hidden="true">
-          <use href="/assets/icons/sprite.svg#check-circle"></use>
+          <use href="#check-circle"></use>
         </svg>
         <p data-i18n="contact.form.success">Thank you! We'll be in touch within 24 hours.</p>
       </div>
@@ -295,7 +295,23 @@
   .contact-form__error {
     font-size: var(--font-size-sm, 0.875rem);
     color: var(--text-error, #dc2626);
+    min-height: 0;
+    display: none;
+  }
+
+  .contact-form__error:not(:empty) {
+    display: block;
     min-height: 1.25rem;
+    margin-top: var(--space-2, 0.5rem);
+  }
+
+  .contact-form__input:invalid:not(:placeholder-shown) ~ .contact-form__error:empty::after,
+  .contact-form__select:invalid:not(:placeholder-shown) ~ .contact-form__error:empty::after,
+  .contact-form__textarea:invalid:not(:placeholder-shown) ~ .contact-form__error:empty::after {
+    content: 'This field is required';
+    display: block;
+    min-height: 1.25rem;
+    margin-top: var(--space-2, 0.5rem);
   }
 
   .contact-form__fieldset {
@@ -366,7 +382,7 @@
   }
 
   .contact-form__success {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     gap: var(--space-3, 0.75rem);
@@ -377,6 +393,10 @@
     border-radius: var(--radius-lg, 0.5rem);
     color: var(--text-success-dark, #065f46);
     font-weight: 600;
+  }
+
+  .contact-form__success:not([hidden]) {
+    display: flex;
   }
 
   .contact-form__success svg {
